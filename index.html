@@ -3,25 +3,22 @@
 <html>
     <head>
         <title>
-            Home | Noé Jager
+            About me | Noé Jager
         </title>
     </head>
     <body>
         <header>
-            <h1>Home</h1>
+            <nav>
+                <ul>
+                    <li><a href="./index.html">About Me</a></li>
+                    <li><a href="./projects.html">My Work</a></li>
+                </ul>
+            </nav>
+            <h1>About me</h1>
             <figure>
                 <img src="me.jpg" width="325" height="500"/>
             </figure>
-            <nav>
-                <h3>Table of contents</h3>
-                <ol>
-                    <li><a href="#me">About Me</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact Me</a></li>
-                </ol>
-            </nav>
-            <section id="me">
+            <section>
                 <h3>About Me</h3>
                 <p> 
                     Hi, my name is Noé Jager, I am a master student in Computer Science. Through my university years, <br>
@@ -33,6 +30,7 @@
             </section>
         </header>
         <main>
+            <hr>
             <section id="education">
                 <h3>Education</h3>
                 <article>
@@ -61,6 +59,7 @@
                     </ul>
                 </article>
             </section>
+            <hr>
             <section id="projects">
                 <h3>Projects</h3>
                 <article id="p1">
@@ -70,18 +69,6 @@
                         <li> Developed a real-time drawing application using Python and openCV </li>
                         <li> Analyzed finger positions to determine drawing actions </li>
                     </ul>
-                </article>
-                <article>
-                    <h4>Design of a privacy app with Figma</h4>
-                    <embed 
-                        width="560" 
-                        height="315" 
-                        src="https://www.youtube.com/embed/QCm1njo0ayM?si=wlDq4pp-bgf6woDg" 
-                        title="YouTube video player" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen>
                 </article>
                 <article id="p2">
                     <h4>Handwriting generator with Tensorflow</h4>
@@ -101,34 +88,10 @@
                         <li> Reddit threads with parent commentaries as a dataset between French and English and engages in small talk </li>
                     </ul>
                 </article>
-                <article id="p4">
-                    <h4>Q Learning for a drone in a simulated environment</h4>
-                    <ul>
-                        <li> Date: September 2020 - January 2021 </li>
-                        <li> Trained a drone to navigate while avoiding obstacles in a simulated environment (airsim) using Python </li>
-                        <li> Q-learning with a defined Q table and rewards </li>
-                    </ul>
-                </article>
-                <article id="p5">
-                    <h4> Control of a group of drone with Unreal Engine 4 using Python </h4>
-                    <ul>
-                        <li>Date: February - June 2020</li>
-                        <li>Collaborated with a researcher to create a simulated environment with quadrotors as agents</li>
-                        <li>Controlled drones to avoid obstacles and collisions using Unreal Engine 4 and Python</li>
-                        <li>Applied linear algebra concepts for precise drone movements</li>
-                    </ul>
-                    <embed 
-                        width="560" 
-                        height="315" 
-                        src="https://www.youtube.com/embed/V8-CfdUBPYI?si=k667HmWQLU5A2UTB" 
-                        title="YouTube video player" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen>
-                </article>
+                <p> <a href="./projects.html">More details here</a></p>
             </section>
         </main>
+        <hr>
         <footer>
             <section id="contact">
                 <h3>Contact Me</h3>
@@ -136,6 +99,7 @@
                 <ul>
                     <li><a href="https://github.com/elnukakujo" target="_blank">GitHub</a></li>
                     <li><a href="https://www.linkedin.com/in/no%C3%A9-jager-2b4866236/" target="_blank">Linkedin</a></li>
+                    <li><a href="mailto:noe.p.jager@gmail.com">Send me an email</a></li>
                 </ul>
             </section>
         </footer>
