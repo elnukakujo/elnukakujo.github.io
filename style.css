@@ -30,6 +30,7 @@ nav {
     height: 2.94em;
     position: fixed;
     background-color: rgb(146, 168, 240);
+    z-index: 1;
 }
 
 nav a {
