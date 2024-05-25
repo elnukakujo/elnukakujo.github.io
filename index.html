@@ -1,36 +1,38 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en-us">
     <head>
         <title>
             About me | Noé Jager
         </title>
+        <link href="./style.css" rel="stylesheet">
     </head>
     <body>
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="./index.html">About Me</a></li>
-                    <li><a href="./projects.html">My Work</a></li>
-                </ul>
-            </nav>
-            <h1>About me</h1>
-            <figure>
-                <img src="me.jpg" width="325" height="500"/>
-            </figure>
-            <section>
-                <h3>About Me</h3>
-                <p> 
-                    Hi, my name is Noé Jager, I am a master student in Computer Science. Through my university years, <br>
-                    I have developed a diverse skillset in programming applications, and a hunger for new challenges. <br>
-                    Since my first university year, I have accumulated a wealth of programing experience and computer <br>
-                    knowledge in areas such as Artificial Intelligence, Data Science/Data Visualizations. <br>
-                    Please feel free to explore my portfolio, and I'd be delighted to discuss potential opportunities for collaboration. <br>
-                </p>
+        <nav>
+            <a href="./index.html"><h1>Noe Jager</h1></a>
+            <div id="links">
+                <a href="./index.html">About Me</a>
+                <a href="./projects.html">My Work</a>
+            </div>
+        </nav>
+        <div class='header'>
+            <section class="intro">
+                <figure id="me_container">
+                    <img src="me.jpg" width="325" height="500"/>
+                </figure>
+                <section>
+                    <h3>About Me</h3>
+                    <p> 
+                        Hi, my name is Noé Jager, I am a master student in Computer Science. Through my university years, 
+                        I have developed a diverse skillset in programming applications, and a hunger for new challenges. 
+                        Since then, I have accumulated a wealth of programing experience and computer 
+                        knowledge in areas such as Artificial Intelligence, Data Science/Data Visualizations. 
+                        Please feel free to explore my portfolio, and I'd be delighted to discuss potential opportunities for collaboration. 
+                    </p>
+                </section>
             </section>
-        </header>
+        </div>
         <main>
-            <hr>
             <section id="education">
                 <h3>Education</h3>
                 <article>
@@ -59,7 +61,6 @@
                     </ul>
                 </article>
             </section>
-            <hr>
             <section id="projects">
                 <h3>Projects</h3>
                 <article id="p1">

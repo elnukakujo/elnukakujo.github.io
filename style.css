@@ -1,0 +1,114 @@
+@font-face{
+    font-family: 'Baskervville';
+    src: url('/Baskervville/Baskervville.ttf');
+}
+
+* {
+    font-size: 1em;
+    font-family: 'Baskervville';
+    letter-spacing: -1px;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+h4 {
+    font-size: 1.4em
+}
+
+body {
+    background: white;
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    color:rgb(67, 74, 85);
+    top:0em;
+    width:100%;
+    height: 2.94em;
+    position: fixed;
+    background-color: rgb(146, 168, 240);
+}
+
+nav a {
+    color:rgb(255, 255, 255);
+    float: left;
+    margin-top: 0em;
+    margin-left: 1em;
+    font-size: 2.3em;
+    text-decoration: none;
+}
+
+nav a h1 {
+    margin: 0em;
+}
+
+nav a:hover{
+    color:rgb(57, 54, 65);
+}
+
+#links {
+    float: right;
+    text-align: right;
+}
+
+#links a{
+    color:rgb(255, 255, 255);
+    text-decoration: none;
+    font-size:1.4em;
+    padding: 0.5em;
+    text-align: right;
+}
+
+#links a:hover{
+    color:rgb(57, 54, 65);
+    font-weight: 500;
+}
+
+.header {
+    background-image: url(me_background.jpg);
+    background-position: center;
+    background-size: cover;
+    margin-top: 2.94em;
+    overflow:hidden;
+    padding: 3em;
+    padding-left: 15em;
+    padding-right: 15em;
+}
+
+#me_container {
+    margin: 0em;
+    position: relative;
+    width: 30em;
+    height: 40em;
+    float: left;
+}
+
+#me_container img {
+    width: 30em;
+    height: 40em;
+    overflow: hidden;
+    object-fit:cover;
+}
+
+.intro section{
+    float: right;
+    word-break: break-word;
+    width: 50em;
+    margin-top: 15em;
+}
+
+.intro p, .intro h3 {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.intro p {
+    font-size: 1.6em;
+}
+
+.intro h3 {
+    font-size: 2.4em;
+}
