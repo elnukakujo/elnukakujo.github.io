@@ -3,27 +3,28 @@
 <html lang="en-us">
     <head>
         <title>
-            About me | Noé Jager
+            Home | Noé Jager
         </title>
         <link href="./style.css" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
     <body>
         <div id="nav">
-            <a href="./index.html" id="title_name"><h1>Noe Jager</h1></a>
-            <div id="links">
-                <a href="./index.html">About Me</a>
+            <a href="./index.html" class="title"><h1>Noe Jager</h1></a>
+            <div class="links">
+                <a href="./index.html">Home</a>
+                <a href="./aboutme.html">About Me</a>
                 <a href="./education.html">Education</a>
                 <a href="./projects.html">Projects</a>
             </div>
         </div>
-        <div class='header'>
-            <section class="intro">
-                <figure id="me_container">
-                    <img src="me.jpg" width="325" height="500"/>
+        <div id='header'>
+            <div class="intro">
+                <figure class="fig_me">
+                    <img src="img/me.jpg" alt="A picture of me" width="325" height="500"/>
                 </figure>
                 <section>
-                    <h3>About Me</h3>
+                    <a href="./aboutme.html"><h3>About Me</h3></a>
                     <p> 
                         Hi, my name is Noé Jager, I am a master student in Computer Science. Through my university years, 
                         I have developed a diverse skillset in programming applications, and a hunger for new challenges. 
@@ -32,35 +33,49 @@
                         Please feel free to explore my portfolio, and I'd be delighted to discuss potential opportunities for collaboration. 
                     </p>
                 </section>
-            </section>
+            </div>
         </div>
         <main>
-            <section id="education">
+            <div id="education">
                 <h3>Education</h3>
-                <h4><a href="./education.html#masterUdem">Master in Computer Science at Université de Montréal</a></h4>
-                <h4><a href="./education.html#bacUniLu">Bachelor of Science in Computer Science at University of Luxembourg</a></h4>
-                <h4><a href="./education.html#oc">Online Courses</a></h4>
-            </section>
-            <section id="projects">
+                <div class="img">
+                    <figure class="udem">
+                        <img src="img/udem_ete.jpg" alt="Udem in Summer" width="325" height="500">
+                        <img src="img/udem_neige.jpg" alt="Udem in Winter" width="325" height="500">
+                    </figure>
+                </div>
+                <div class="links">
+                    <a href="./education.html#masterUdem"><h4>Master in Computer Science at Université de Montréal</h4></a>
+                    <a href="./education.html#bacUniLu"><h4>Bachelor of Science in Computer Science at University of Luxembourg</h4></a>
+                    <a href="./education.html#oc"><h4>Online Courses</h4></a>
+                </div>
+            </div>
+            <div id="projects">
                 <h3>Projects</h3>
-                <a href="./projects.html#0"><h4>Drawing with a webcam</h4></a>
-                <a href="./projects.html#1"><h4>Design of a privacy app with Figma</h4></a>
-                <a href="./projects.html#2"><h4>Handwriting generator with Tensorflow</h4></a>
-                <a href="./projects.html#3"><h4>Conversational Chatbot with Tensorflow</h4></a>
-                <a href="./projects.html#4"><h4>Q Learning for a drone in a simulated environment</h4></a>
-                <a href="./projects.html#5"><h4>Control of a group of drone with Unreal Engine 4 using Python</h4></a>
-            </section>
+                <div class="img">
+                    <figure>
+                        <img src="img/projects/sparki.jpg" alt="A little Sparki robot" width="325" height="500">
+                        <img src="img/projects/unreal_engine5.png" alt="A little Sparki robot" width="500" height="325">
+                        <img src="img/projects/Q_learning_drone.png" alt="A little Sparki robot" width="500" height="325">
+                    </figure>
+                </div>
+                <div class="links">
+                    <a href="./projects.html#0"><h4>Drawing with a webcam</h4></a>
+                    <a href="./projects.html#1"><h4>Design of a privacy app with Figma</h4></a>
+                    <a href="./projects.html#2"><h4>Handwriting generator with Tensorflow</h4></a>
+                    <a href="./projects.html#3"><h4>Conversational Chatbot with Tensorflow</h4></a>
+                    <a href="./projects.html#4"><h4>Q Learning for a drone in a simulated environment</h4></a>
+                    <a href="./projects.html#5"><h4>Control of a group of drone with Unreal Engine 4 using Python</h4></a>
+                </div>
+            </div>
         </main>
         <footer>
-            <section id="contact">
-                <h3>Contact Me</h3>
-                <p>You can find me here:</p>
-                <ul>
-                    <li><a href="https://github.com/elnukakujo" target="_blank">GitHub</a></li>
-                    <li><a href="https://www.linkedin.com/in/no%C3%A9-jager-2b4866236/" target="_blank">Linkedin</a></li>
-                    <li><a href="mailto:noe.p.jager@gmail.com">Send me an email</a></li>
-                </ul>
-            </section>
+            <h3>Contact Me</h3>
+            <figure class="contacts">
+                <a href="https://github.com/elnukakujo" target="_blank"><img src="img/logo/github_logo.jpg" width="50px" height="50px" alt="GitHub"></a>
+                <a href="https://www.linkedin.com/in/no%C3%A9-jager-2b4866236/" target="_blank"><img src="img/logo/linkedin_logo.jpg" width="50px" height="50px" alt="Linkedin"></a>
+                <a href="mailto:noe.p.jager@gmail.com"><img src="img/logo/gmail_logo.jpg" width="50px" height="50px" alt="Gmail"></a>
+            </figure>
         </footer>
     </body>
 </html>
