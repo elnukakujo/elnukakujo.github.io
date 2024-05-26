@@ -62,8 +62,8 @@ body {
     background-image: url(img/shimanami_kaido_island.jpg);
     background-position: center;
     background-size: cover;
-    padding: 50px 0px;
-    margin: 150px 0px 50px;
+    padding: 60px 0px;
+    margin: 100px 0px 50px;
     text-align: center;
     color: #FFFFF0;
 }
@@ -76,7 +76,7 @@ body {
     
 }
 
-#header .intro .fig_me img {
+#header .intro .fig_me a img {
     width: 400px;
     height: 400px;
     border: 3px solid rgb(56, 130, 190);
