@@ -27,7 +27,7 @@ body {
     z-index: 1;
     border-radius: 40px;
     border-top-left-radius: 0px;
-    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
     overflow: hidden;
 }
 
@@ -62,8 +62,9 @@ body {
     background-image: url(img/shimanami_kaido_island.jpg);
     background-position: center;
     background-size: cover;
-    padding: 50px;
-    margin: 150px 200px 50px;
+    padding: 50px 0px;
+    margin: 150px 0px 50px;
+    text-align: center;
     color: #FFFFF0;
 }
 
@@ -204,7 +205,7 @@ footer {
 
 footer h3 {
     padding: 20px 50px;
-    font-size: 55px;
+    font-size: 40px;
     color:#FFFFF0;
 }
 
@@ -214,7 +215,11 @@ footer .contacts {
 }
 
 footer .contacts a {
-    padding: 0px 5px;
+    margin: 0px 5px;
+}
+
+footer .contacts a img:hover {
+    transform: scale(1.1); 
 }
 
 footer .contacts a img{
