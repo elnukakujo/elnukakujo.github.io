@@ -65,7 +65,6 @@ body {
     padding: 60px 0px;
     margin: 100px 0px 50px;
     text-align: center;
-    color: #FFFFF0;
 }
 
 #header .intro .fig_me {
@@ -92,7 +91,7 @@ body {
 }
 
 .intro p, .intro a {
-    color: rgb(255, 255, 255);
+    color: #FFFFF0;
     display: inline-block;
 }
 
@@ -106,6 +105,7 @@ body {
 
 .intro p {
     font-size: 20px;
+    font-weight: bold;
 }
 
 .intro h3 {
