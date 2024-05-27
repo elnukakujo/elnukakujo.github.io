@@ -1,3 +1,7 @@
+/*
+This part of the code is common for all pages
+*/
+
 @font-face{
     font-family: 'Baskervville';
     src: url('/Baskervville/Baskervville.ttf');
@@ -5,17 +9,38 @@
 
 * {
     font-family: 'Baskervville';
-        margin: 0px;
+    margin: 0px;
     padding:0px;
 }
 
 a {
     text-decoration: none;
+    color: rgb(22, 78, 124);
+    font-weight: bold;
 }
 
 body {
     background: #FFFFF0;
+    color: #0C0B0A; 
 }
+
+main {
+    margin: 130px 0px 50px;
+}
+
+main h3{
+    padding: 20px 50px;
+    font-size: 45px;
+}
+
+.anchor {
+    position: absolute;
+    margin: -150px;
+}
+
+/*
+This part of the code designs the navigation bar at the top of all pages
+*/
 
 #nav {
     top:0px;
@@ -29,12 +54,13 @@ body {
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
     overflow: hidden;
+    text-align: center;
 }
 
 #nav .title {
-    color:rgb(0, 0, 0);
+    color:rgb(22, 78, 124);
     font-size: 24px;
-    text-align: center;
+    display: inline-block;
 }
 
 #nav .title:hover{
@@ -48,7 +74,6 @@ body {
 }
 
 #nav .links a{
-    color:rgb(0, 0, 0);
     font-size:18px;
     padding: 0px 8px;
     text-align: right;
@@ -58,12 +83,16 @@ body {
     color:rgb(79, 75, 90);
 }
 
+/*
+Home page about me introduction
+*/
+
 #header {
     background-image: url(img/shimanami_kaido_island.jpg);
     background-position: center;
     background-size: cover;
     padding: 60px 0px;
-    margin: 100px 0px 50px;
+    margin: 50px 0px;
     text-align: center;
 }
 
@@ -78,7 +107,7 @@ body {
 #header .intro .fig_me a img {
     width: 400px;
     height: 400px;
-    border: 3px solid rgb(56, 130, 190);
+    border: 3px solid rgb(22, 78, 124);
     overflow: hidden;
     object-fit:cover;
     border-radius:50%;
@@ -113,98 +142,154 @@ body {
     margin: 20px 0px;
 }
 
-#education{
+/*
+Home page education_intro section
+*/
+
+#education_intro{
     margin: 50px;
     text-align: center;
-    color: #0C0B0A; 
 }
 
-#education h3{
-    padding: 20px 50px;
-    font-size: 45px;
-}
-
-#education .links {
+#education_intro .links {
     padding: 10px 0px;
     font-size: 22px;
     overflow: hidden;
 }
 
-#education .links a{
-    color: #0C0B0A;
+#education_intro .links a{
+    display: inline-block;
 }
 
-#education .links a h4 {
+#education_intro .links a h4 {
     padding-top: 25px;
 }
 
-#education .links a:hover {
+#education_intro .links a:hover {
     color: rgb(79, 75, 90);
 }
 
-#education .img {
+#education_intro .img {
     padding-top: 10px;
 }
 
-#education .img img{
+#education_intro .img img{
     padding: 0px 10px;
     object-fit: cover;
     width: 230px;
     height: 230px;
 }
 
-#projects {
+/*
+Home page projects_intro section
+*/
+
+#projects_intro {
     margin: 50px;
-    color: #0C0B0A; 
+    
     text-align: center;
 }
 
-#projects h3{
+#projects_intro h3{
     padding: 20px 50px;
     font-size: 45px;
 }
 
-#projects .links {
+#projects_intro .links {
     padding: 10px 0px;
     font-size: 22px;
     overflow: hidden;
 }
 
-#projects .links a {
-    color: #0C0B0A;
+#projects_intro .links a {
+    display: inline-block;
 }
 
-#projects .links a h4 {
+#projects_intro .links a h4 {
     padding-top: 25px;
 }
 
-#projects .links a:hover {
+#projects_intro .links a:hover {
     color: rgb(79, 75, 90);
 }
 
-#projects .img {
+#projects_intro .img {
     padding-top: 10px;
 }
 
-#projects .img img{
+#projects_intro .img img{
     padding: 0px 10px;
     object-fit: cover;
     width: 230px;
     height: 230px;
 }
+
+/*
+Projects page
+*/
+
+#projects a:hover {
+    color: rgb(79, 75, 90);
+}
+
+#projects .date {
+    font-style: italic;
+}
+
+#projects div {
+    padding: 30px 100px;
+}
+
+#projects div .title {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#projects div ul {
+    font-size: 20px;
+}
+
+#projects div embed {
+    margin: 20px;
+}
+
+/*
+Education page
+*/
+
+#education .date {
+    font-style: italic;
+}
+
+#education div {
+    padding: 30px 100px;
+}
+
+#education div .title {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#education div ul {
+    font-size: 20px;
+}
+
+/*
+This part of the code designs the contact me footer at the bottom of all pages
+*/
 
 footer {
     background-image: url(img/tokyo_sky_tree_view.jpg);
     background-position: 50% 68%;
     background-size: cover;
-    padding: 100px;
+    padding: 20px 20px 0px;
     border-radius: 40px;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
 }
 
 footer h3 {
-    padding: 20px 50px;
+    padding: 20px 50px 0px;
     font-size: 40px;
     color:#FFFFF0;
 }
