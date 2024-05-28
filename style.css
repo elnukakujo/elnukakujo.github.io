@@ -27,6 +27,8 @@ body {
 main {
     margin: 130px 0px 50px;
     min-width: 600px;
+    max-width: 1400px;
+    width: 100%;
 }
 
 main h3{
