@@ -74,7 +74,7 @@ This part of the code designs the navigation bar at the top of all pages
 }
 
 #nav.scrolled .title {
-    font-size: 20px; /* Smaller font size when scrolled */
+    font-size: 16px; /* Smaller font size when scrolled */
 }
 
 #nav .links {
@@ -85,7 +85,7 @@ This part of the code designs the navigation bar at the top of all pages
 }
 
 #nav.scrolled .links {
-    font-size: 16px; /* Smaller font size when scrolled */
+    font-size: 10px; /* Smaller font size when scrolled */
     padding: 0px 6px; /* Adjust padding when scrolled */
 }
 
@@ -245,6 +245,21 @@ Home page projects_intro section
     object-fit: cover;
     width: 230px;
     height: 230px;
+}
+
+/*
+    About me page
+*/
+
+#aboutme{
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 40px 0;
+}
+
+#aboutme p{
+    padding: 30px 50px;
+    font-size: 20px;
 }
 
 /*
