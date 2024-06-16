@@ -4,7 +4,7 @@ This part of the code is common for all pages
 
 @font-face{
     font-family: 'Baskervville';
-    src: url('/Baskervville/Baskervville.ttf');
+    src: url('font/Baskervville/Baskervville.ttf');
 }
 
 * {
@@ -110,7 +110,7 @@ Home page about me introduction
 */
 
 #header {
-    background-image: url(img/shimanami_kaido_island.jpg);
+    background-image: url(img/index/shimanami_kaido_island.jpg);
     background-position: center;
     background-size: cover;
     padding: 60px 0px;
