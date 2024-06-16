@@ -262,6 +262,10 @@ Home page projects_intro section
     font-size: 20px;
 }
 
+#aboutme a:hover {
+    color: rgb(79, 75, 90);
+}
+
 /*
 Education page
 */
