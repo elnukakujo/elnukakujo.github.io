@@ -29,9 +29,14 @@ main {
     min-width: 600px;
 }
 
-main h3{
+h2 {
     padding: 20px 50px;
     font-size: 45px;
+}
+
+h3{
+    padding: 20px 70px;
+    font-size: 35px;
 }
 
 .anchor {
@@ -55,6 +60,7 @@ This part of the code designs the navigation bar at the top of all pages
     overflow: hidden;
     text-align: center;
     transition: height 0.3s ease, padding 0.3s ease; /* Add transition for smooth animation */
+    overflow: visible;
 }
 
 #nav.scrolled {
@@ -92,7 +98,6 @@ This part of the code designs the navigation bar at the top of all pages
 #nav .links a{
     font-size:18px;
     padding: 0px 8px;
-    text-align: right;
     transition: font-size 0.3s ease, padding 0.3s ease; /* Add transition for smooth animation */
 }
 
@@ -105,6 +110,43 @@ This part of the code designs the navigation bar at the top of all pages
     color:rgb(79, 75, 90);
 }
 
+/* Styles for the dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Styles for the dropdown trigger */
+.drop-trigger {
+    padding: 16px;
+    font-size: 10px;
+    cursor: pointer;
+    border: none;
+}
+
+/* Hide the dropdown content by default */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #F9F6EE;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    min-width: 200px;  /* Ensure minimum width */
+}
+
+/* Style the links inside the dropdown */
+.dropdown-content a {
+    margin: 12px;
+    text-decoration: none;
+    display: block;
+    box-sizing: border-box;  /* Ensure padding is included in width */
+    text-align: left;  /* Ensure text is aligned to the left */
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
 /*
 Home page about me introduction
 */
@@ -331,7 +373,7 @@ footer {
     min-width: 600px;
 }
 
-footer h3 {
+footer h2 {
     padding: 20px 50px 0px;
     font-size: 40px;
     color:#FFFFF0;
