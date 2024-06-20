@@ -56,7 +56,7 @@ This part of the code designs the navigation bar at the top of all pages
     padding: 15px 20px;
     position: fixed;
     background-color: #F9F6EE;
-    z-index: 1;
+    z-index: 2;
     overflow: hidden;
     text-align: center;
     transition: height 0.3s ease, padding 0.3s ease;
@@ -139,28 +139,66 @@ This part of the code designs the navigation bar at the top of all pages
     display: block;
 }
 
+/* Display side bar button */
+
+#menu-toggle {
+    position: fixed;
+    cursor: pointer;
+    text-align: left;
+    width: 50px;
+    padding-top: 7px;
+    visibility: hidden;
+}
+
+#menu-toggle.scrolled {
+    visibility: visible;
+}
+  
+.line {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(22, 78, 124);
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+
+  
+/* Styles to change the button appearance when toggled */
+.menu-open .line:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+    background-color:rgb(79, 75, 90);
+}
+  
+.menu-open .line:nth-child(2) {
+    opacity: 0;
+}
+  
+.menu-open .line:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+    background-color:rgb(79, 75, 90);
+}
+
 /* Side bar */
 
 #sidebar {
     visibility: hidden;
     position: fixed;
-    margin-top: -150px;
+    margin-top: -100px;
     background-color: #EEF1F9;
     height: 1000px;
     width: 18%;
     text-align: center;
     display: inline-block;
-    z-index: 2;
+    z-index: 1;
 }
 
-#sidebar.scrolled {
+#sidebar.visible {
     visibility: visible;
 }
 
 #sidebar .links{
     height: 90%;
     margin: 40px;
-    margin: 100px;
 }
 
 #sidebar .links a{
@@ -173,7 +211,7 @@ This part of the code designs the navigation bar at the top of all pages
     color:rgb(79, 75, 90);
 }
 
-#sidebar .line{
+#sidebar .separator{
     border-bottom: 0px solid #888;
     margin: 0px 40%;
 }
