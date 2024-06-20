@@ -13,7 +13,7 @@ window.addEventListener('scroll', function() {
     }
 });
 document.querySelector('#menu-toggle').addEventListener('click', function() {
-    this.classList.add('menu-open');
+    this.classList.toggle('menu-open');
     var sidebar = document.getElementById('sidebar');
-    sidebar.classList.add('visible');
+    sidebar.classList.toggle('visible');
 });
