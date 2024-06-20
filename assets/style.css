@@ -144,12 +144,13 @@ This part of the code designs the navigation bar at the top of all pages
 #sidebar {
     visibility: hidden;
     position: fixed;
-    margin-top: -85px;
+    margin-top: -150px;
     background-color: #EEF1F9;
     height: 1000px;
     width: 18%;
     text-align: center;
     display: inline-block;
+    z-index: 2;
 }
 
 #sidebar.scrolled {
@@ -159,6 +160,7 @@ This part of the code designs the navigation bar at the top of all pages
 #sidebar .links{
     height: 90%;
     margin: 40px;
+    margin: 100px;
 }
 
 #sidebar .links a{
