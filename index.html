@@ -15,32 +15,32 @@
                 <div class="line"></div>
                 <div class="line"></div>
             </div>
-            <a href="./index.html" class="title"><h1>Noe Jager</h1></a>
-            <div class="links">
-                <a href="./index.html">Home</a>
-                <a href="./pages/aboutme/aboutme.html">About Me</a>
-                <div class="dropdown">
-                    <a class="drop-trigger" href="./pages/education/education.html">Education</a>
-                    <div class="dropdown-content">
-                        <a href="./pages/education/education.html#masterUdem">Master</a>
-                        <a href="./pages/education/education.html#bacUniLu">Bachelor</a>
-                        <a href="./pages/education/education.html#oc">Online Courses</a>
+            <div class="nav_content">
+                <a href="./index.html"><h1>Noe Jager</h1></a>
+                <div class="links">
+                    <a href="./index.html">Home</a>
+                    <a href="./pages/aboutme/aboutme.html">About Me</a>
+                    <div class="dropdown">
+                        <a class="drop-trigger" href="./pages/education/education.html">Education</a>
+                        <div class="dropdown-content">
+                            <a href="./pages/education/education.html#masterUdem">Master</a>
+                            <a href="./pages/education/education.html#bacUniLu">Bachelor</a>
+                            <a href="./pages/education/education.html#oc">Online Courses</a>
+                        </div>
                     </div>
-                </div>
-                <div class="dropdown">
-                    <a class="drop-trigger" href="./pages/projects/projects.html">Projects</a>
-                    <div class="dropdown-content">
-                        <a href="./pages/projects/projects.html#bachelor_projects">Bachelor Projects</a>
+                    <div class="dropdown">
+                        <a class="drop-trigger" href="./pages/projects/projects.html">Projects</a>
+                        <div class="dropdown-content">
+                            <a href="./pages/projects/projects.html#bachelor_projects">Bachelor Projects</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <div id="sidebar">
-            <div class="links">
+            <div class="sidebar_content">
                 <a href="./index.html">Home</a>
-                <hr class="separator">
                 <a href="./pages/aboutme/aboutme.html">About Me</a>
-                <hr class="separator">
                 <div class="dropdown">
                     <a class="drop-trigger" href="./pages/education/education.html">Education</a>
                     <div class="dropdown-content">
@@ -49,7 +49,6 @@
                         <a href="./pages/education/education.html#oc">Online Courses</a>
                     </div>
                 </div>
-                <hr class="separator">
                 <div class="dropdown">
                     <a class="drop-trigger" href="./pages/projects/projects.html">Projects</a>
                     <div class="dropdown-content">
@@ -59,12 +58,14 @@
             </div>
         </div>
         <main>
-            <div id='header'>
-                <div class="intro">
-                    <figure class="fig_me">
-                        <a href="./pages/aboutme/aboutme.html"><img src="assets/img/index/me.jpg" alt="A picture of me" width="325" height="500"/></a>
+            <div class='section' id='intro'>
+                <div class="content">
+                    <figure>
+                        <a class="img_container" href="./pages/aboutme/aboutme.html">
+                            <img src="assets/img/index/me.jpg" alt="A picture of me"/>
+                        </a>
                     </figure>
-                    <section>
+                    <div class="description">
                         <a href="./pages/aboutme/aboutme.html"><h2>About Me</h2></a>
                         <p> 
                             I'm Noé Jager, a master's student in Computer Science, with a diverse skillset honed during my university years and 
@@ -72,64 +73,74 @@
                             Artificial Intelligence, Data Science, Data Visualizations, and more. Feel free to browse my portfolio. I'm excited to discuss 
                             potential collaboration opportunities with you.
                         </p>
-                    </section>
+                    </div>
                 </div>
             </div>
-            <div id="education_intro">
-                <h2>Education</h2>
-                <div class="img">
-                    <figure class="udem">
-                        <img src="assets/img/index/udem_ete.jpg" alt="Udem in Summer" width="325" height="500">
-                        <img src="assets/img/index/udem_neige.jpg" alt="Udem in Winter" width="325" height="500">
-                    </figure>
-                </div>
-                <div class="links">
-                    <a href="./pages/education/education.html#masterUdem"><h4>Master in Computer Science at Université de Montréal</h4></a>
-                    <br>
-                    <a href="./pages/education/education.html#bacUniLu"><h4>Bachelor of Science in Computer Science at University of Luxembourg</h4></a>
-                    <br>
-                    <a href="./pages/education/education.html#oc"><h4>Online Courses</h4></a>
+            <div class='section' id="education_intro">
+                <div class="content">
+                    <h2>Education</h2>
+                    <div id="udem_pictures">
+                        <figure class="img_container">
+                            <img src="assets/img/index/udem_ete.jpg" alt="Udem in Summer">
+                        </figure>
+                        <figure class="img_container">
+                            <img src="assets/img/index/udem_neige.jpg" alt="Udem in Winter">
+                        </figure>
+                    </div>
+                    <div class="links">
+                        <a href="./education.html#masterUdem">
+                            <h4>Master in Computer Science at Université de Montréal</h4>
+                        </a>
+                        <a href="./education.html#bacUniLu">
+                            <h4>Bachelor of Science in Computer Science at University of Luxembourg</h4>
+                        </a>
+                        <a href="./education.html#oc">
+                            <h4>Online Courses</h4>
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div id="projects_intro">
-                <h2>Projects</h2>
-                <div class="img">
-                    <figure>
-                        <a href="./pages/projects/projects.html#sparki">
-                            <img src="assets/img/projects/sparki.jpg" alt="A little Sparki robot" width="325" height="500">
+            <div class="section" id="projects_intro">
+                <div class="content">
+                    <h2>Projects</h2>
+                    <figure id="projects_pictures">
+                        <a class="img_container" href="./pages/projects/projects.html#sparki">
+                            <img src="assets/img/projects/sparki.jpg" alt="A little Sparki robot">
                         </a>
-                        <a href="./pages/projects/projects.html#group_drone">
-                            <img src="assets/img/projects/unreal_engine4.png" alt="Unreal Engine 5 interface" width="500" height="325">
+                        <a class="img_container" href="./pages/projects/projects.html#group_drone">
+                            <img src="assets/img/projects/unreal_engine4.png" alt="Unreal Engine 5 interface">
                         </a>
-                        <a href="./pages/projects/projects.html#q_learning_drone">
-                            <img src="assets/img/projects/Q_learning_drone.png" alt="Q learning simluation environment" width="500" height="325">
+                        <a class="img_container" href="./pages/projects/projects.html#q_learning_drone">
+                            <img src="assets/img/projects/Q_learning_drone.png" alt="Q learning simluation environment">
                         </a>
                     </figure>
-                </div>
-                <div class="links">
-                    <a href="./pages/projects/projects.html#drawing_with_webcam"><h4>Drawing with a webcam</h4></a>
-                    <br>
-                    <a href="./pages/projects/projects.html#privacy_app_figma"><h4>Design of a privacy app with Figma</h4></a>
-                    <br>
-                    <a href="./pages/projects/projects.html#handwriting_generator"><h4>Handwriting generator with Tensorflow</h4></a>
-                    <br>
-                    <a href="./pages/projects/projects.html#chatbot"><h4>Conversational Chatbot with Tensorflow</h4></a>
-                    <br>
-                    <a href="./pages/projects/projects.html#q_learning_drone"><h4>Q Learning for a drone in a simulated environment</h4></a>
-                    <br>
-                    <a href="./pages/projects/projects.html#group_drone"><h4>Control of a group of drone with Unreal Engine 4 using Python</h4></a>
-                    <br>
-                    <a href="./pages/projects/projects.html#sparki"><h4> Chase with Sparki </h4></a> 
+                    <div class="links">
+                        <a href="./pages/projects/projects.html#drawing_with_webcam"><h4>Drawing with a webcam</h4></a>
+                        <a href="./pages/projects/projects.html#privacy_app_figma"><h4>Design of a privacy app with Figma</h4></a>
+                        <a href="./pages/projects/projects.html#handwriting_generator"><h4>Handwriting generator with Tensorflow</h4></a>
+                        <a href="./pages/projects/projects.html#chatbot"><h4>Conversational Chatbot with Tensorflow</h4></a>
+                        <a href="./pages/projects/projects.html#q_learning_drone"><h4>Q Learning for a drone in a simulated environment</h4></a>
+                        <a href="./pages/projects/projects.html#group_drone"><h4>Control of a group of drone with Unreal Engine 4 using Python</h4></a>
+                        <a href="./pages/projects/projects.html#sparki"><h4> Chase with Sparki </h4></a> 
+                    </div>
                 </div>
             </div>
         </main>
         <footer>
-            <h2>Contact Me</h2>
-            <figure class="contacts">
-                <a href="https://github.com/elnukakujo" target="_blank"><img src="assets/img/logo/github_logo.jpg" width="50px" height="50px" alt="GitHub"></a>
-                <a href="https://www.linkedin.com/in/no%C3%A9-jager-2b4866236/" target="_blank"><img src="assets/img/logo/linkedin_logo.jpg" width="50px" height="50px" alt="Linkedin"></a>
-                <a href="mailto:noe.p.jager@gmail.com"><img src="assets/img/logo/gmail_logo.jpg" width="50px" height="50px" alt="Gmail"></a>
-            </figure>
+            <div class="content">
+                <h3>Contact Me</h3>
+                <figure id="contacts_links">
+                    <a class="img_container" href="https://github.com/elnukakujo" target="_blank">
+                        <img src="assets/img/logo/github_logo.jpg" alt="GitHub">
+                    </a>
+                    <a class="img_container" href="https://www.linkedin.com/in/no%C3%A9-jager-2b4866236/" target="_blank">
+                        <img src="assets/img/logo/linkedin_logo.jpg" alt="Linkedin">
+                    </a>
+                    <a class="img_container" href="mailto:noe.p.jager@gmail.com">
+                        <img src="assets/img/logo/gmail_logo.jpg" alt="Gmail">
+                    </a>
+                </figure>
+            </div>
         </footer>
         <script src="./events/script.js"></script>
     </body>

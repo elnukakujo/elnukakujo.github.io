@@ -3,45 +3,95 @@ This part of the code is common for all pages
 */
 
 @font-face{
-    font-family: 'Baskervville';
-    src: url('font/Baskervville/Baskervville.ttf');
+    font-family: 'OpenSans-Regular';
+    src: url('assets/font/OpenSans-Regular.ttf');
 }
 
-* {
-    font-family: 'Baskervville';
-    margin: 0px;
-    padding:0px;
-}
-
-a {
-    text-decoration: none;
-    color: rgb(22, 78, 124);
-    font-weight: bold;
+@font-face{
+    font-family: 'PlayfairDisplay-SemiBold';
+    src: url('assets/font/PlayfairDisplay-SemiBold.ttf');
 }
 
 body {
     background: #FFFFF0;
     color: #0C0B0A; 
+    font-family: 'OpenSans-Regular';
+    text-shadow:  2px 8px 16px rgba(0,0,0,0.2);
+    margin: 0px;
 }
 
-main {
-    margin: 130px 0px 50px;
-    min-width: 600px;
+h1, h2, h3, h4 {
+    font-family: 'PlayfairDisplay-SemiBold';
 }
 
 h2 {
-    padding: 20px 50px;
     font-size: 45px;
 }
 
 h3{
-    padding: 20px 70px;
     font-size: 35px;
+}
+
+h4{
+    font-size: 20px;
+}
+
+p{
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(22, 78, 124);
+}
+
+main {
+    margin: 130px 0px 0px;
 }
 
 .anchor {
     position: absolute;
     margin: -150px;
+}
+
+.img_container {
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    display: inline-block;
+    margin: 0px auto;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.section {
+    margin: 0px auto;
+    padding: 50px;
+    min-width: 800px;
+    max-width: 1200px;
+    height: auto;
+}
+
+.content{
+    min-width: 600px;
+    max-width: 1000px;
+    display: block;
+    margin: 25px auto;
+    text-align: center;
+}
+
+.content a:hover {
+    color: rgb(79, 75, 90);
+}
+
+.content p{
+    display: block;
+    text-align: left;
 }
 
 /*
@@ -50,42 +100,42 @@ This part of the code designs the navigation bar at the top of all pages
 
 #nav {
     top:0px;
-    min-width: 600px;
     width:100%;
     height: 100px;
     padding: 15px 20px;
     position: fixed;
     background-color: #F9F6EE;
     z-index: 3;
-    overflow: hidden;
-    text-align: center;
     transition: height 0.3s ease, padding 0.3s ease;
-    overflow: visible;
+    font-size: 18px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    min-width: 800px;
 }
 
 #nav.scrolled {
     height: 40px;
     padding: 5px 20px;
 }
-
-#nav .title {
-    color:rgb(22, 78, 124);
-    font-size: 24px;
-    display: inline-block;
-    transition: font-size 0.3s ease;
+#nav .nav_content{
+    text-align: center;
+    display: inline;
 }
 
-#nav .title:hover{
+#nav h1 {
+    transition: font-size 0.3s ease;
+    font-size: 50px;
+    margin: 0px;
+}
+
+#nav h1:hover{
     color:rgb(79, 75, 90);
 }
 
-#nav.scrolled .title {
-    font-size: 16px;
+#nav.scrolled h1 {
+    font-size: 35px;
 }
 
 #nav .links {
-    text-align: center;
-    width: auto;
     padding-top: 25px;
     transition: padding-top 0.3s ease;
 }
@@ -95,19 +145,15 @@ This part of the code designs the navigation bar at the top of all pages
 }
 
 #nav .links a{
-    font-size:18px;
     padding: 0px 8px;
     transition: font-size 0.3s ease, padding 0.3s ease;
-}
-
-#nav.scrolled .links a {
-    font-size: 16px;
-    padding: 0px 6px;
 }
 
 #nav .links a:hover {
     color:rgb(79, 75, 90);
 }
+
+/* Display dropdown */
 
 .dropdown {
     position: relative;
@@ -124,7 +170,7 @@ This part of the code designs the navigation bar at the top of all pages
     background-color: #F9F6EE;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 2;
-    min-width: 200px;
+    width: 200px;
 }
 
 .dropdown-content a {
@@ -167,6 +213,7 @@ This part of the code designs the navigation bar at the top of all pages
 .menu-open .line:nth-child(1) {
     transform: translateY(7px) rotate(45deg);
     background-color:rgb(79, 75, 90);
+    width: 30px;
 }
   
 .menu-open .line:nth-child(2) {
@@ -176,6 +223,7 @@ This part of the code designs the navigation bar at the top of all pages
 .menu-open .line:nth-child(3) {
     transform: translateY(-7px) rotate(-45deg);
     background-color:rgb(79, 75, 90);
+    width: 30px;
 }
 
 /* Side bar */
@@ -185,7 +233,7 @@ This part of the code designs the navigation bar at the top of all pages
     position: fixed;
     margin-top: -100px;
     background-color: #EEF1F9;
-    height: 2000px;
+    height: 100%;
     width: 300px;
     text-align: center;
     display: inline-block;
@@ -194,175 +242,71 @@ This part of the code designs the navigation bar at the top of all pages
 
 #sidebar.visible {
     visibility: visible;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
-#sidebar .links{
+#sidebar .sidebar_content{
     height: 90%;
     margin: 40px;
 }
 
-#sidebar .links a{
+#sidebar a{
     display: block;
     font-size: 20px;
     padding: 10px 0;
+    width: 220px;
 }
 
-#sidebar .links a:hover{
+#sidebar a:hover{
     color:rgb(79, 75, 90);
 }
 
-#sidebar .separator{
-    border-bottom: 0px solid #888;
-    margin: 0px 40%;
-}
-
 #sidebar .dropdown-content a{
-    font-size: 15px;
     padding: 0px;
-    margin: 12px;
+    font-size: 18px;
 }
 
 /*
 Home page about me introduction
 */
 
-#header {
+#intro {
     background-image: url(img/index/shimanami_kaido_island.jpg);
     background-position: center;
     background-size: cover;
-    padding: 60px 0px;
-    margin: 50px 0px;
-    text-align: center;
-}
-
-#header .intro .fig_me {
-    position: relative;
-    width: 400px;
-    height: 400px;
-    margin: 0px auto;
-    
-}
-
-#header .intro .fig_me a img {
-    width: 400px;
-    height: 400px;
-    border: 3px solid rgb(22, 78, 124);
-    overflow: hidden;
-    object-fit:cover;
-    border-radius:50%;
-}
-
-.intro section{
-    min-width: 400px;
-    max-width: 800px;
-    margin: 0px auto;
-}
-
-.intro p, .intro a {
     color: #FFFFF0;
-    display: inline-block;
+    max-width: none;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
-.intro a {
-    width: auto;
+#intro a {
+    color: #FFFFF0;
 }
 
-.intro a:hover {
-    color: rgb(57, 54, 65);
+#intro a:hover{
+    color: rgb(79, 75, 90);
 }
 
-.intro p {
-    font-size: 20px;
-    font-weight: bold;
+#intro h2{
+    margin:0px;
 }
 
-.intro h3 {
-    font-size: 45px;
-    padding: 0px;
-    margin: 20px 0px;
+#intro .img_container {
+    width: 400px;
+    height: 400px;
+}
+
+#intro .img_container img {
+    border: 3px solid rgb(22, 78, 124);
+    border-radius:50%;
+    width: 98%;
+    height: 98%;
 }
 
 /*
 Home page education_intro section
 */
 
-#education_intro{
-    margin: 50px;
-    text-align: center;
-}
-
-#education_intro .links {
-    padding: 10px 0px;
-    font-size: 22px;
-    overflow: hidden;
-}
-
-#education_intro .links a{
-    display: inline-block;
-}
-
-#education_intro .links a h4 {
-    padding-top: 25px;
-}
-
-#education_intro .links a:hover {
-    color: rgb(79, 75, 90);
-}
-
-#education_intro .img {
-    padding-top: 10px;
-}
-
-#education_intro .img img{
-    padding: 0px 10px;
-    object-fit: cover;
-    width: 230px;
-    height: 230px;
-}
-
-/*
-Home page projects_intro section
-*/
-
-#projects_intro {
-    margin: 50px;
-    
-    text-align: center;
-}
-
-#projects_intro h3{
-    padding: 20px 50px;
-    font-size: 45px;
-}
-
-#projects_intro .links {
-    padding: 10px 0px;
-    font-size: 22px;
-    overflow: hidden;
-}
-
-#projects_intro .links a {
-    display: inline-block;
-}
-
-#projects_intro .links a h4 {
-    padding-top: 25px;
-}
-
-#projects_intro .links a:hover {
-    color: rgb(79, 75, 90);
-}
-
-#projects_intro .img {
-    padding-top: 10px;
-}
-
-#projects_intro .img img{
-    padding: 0px 10px;
-    object-fit: cover;
-    width: 230px;
-    height: 230px;
-}
 
 /*
     About me page
@@ -441,34 +385,40 @@ footer {
     background-image: url(img/tokyo_sky_tree_view.jpg);
     background-position: 50% 68%;
     background-size: cover;
+    max-width: none;
+    margin: 0px;
+}
+
+footer .content {
     padding: 20px 20px 0px;
-    border-radius: 40px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-    min-width: 600px;
+    margin: 0px auto;
 }
 
-footer h2 {
-    padding: 20px 50px 0px;
-    font-size: 40px;
+footer h3 {
+    padding: 0px;
+    margin: 5px;
     color:#FFFFF0;
+    text-align: left;
 }
 
-footer .contacts {
-    padding: 50px 0px;
+footer #contacts_links {
+    padding: 25px 0px;
     text-align: center;
+    margin:0px;
 }
 
-footer .contacts a {
+footer .img_container {
+    width: 50px;
+    height: 50px;
     margin: 0px 5px;
+    display: inline-block;
+    overflow: visible;
 }
 
-footer .contacts a img:hover {
-    transform: scale(1.1); 
-}
-
-footer .contacts a img{
-    overflow: hidden;
-    object-fit:cover;
+footer img{
     border-radius:50%;
+}
+
+footer #contacts_links img:hover {
+    transform: scale(1.1); 
 }
