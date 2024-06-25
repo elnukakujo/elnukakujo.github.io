@@ -169,7 +169,7 @@ This part of the code designs the navigation bar at the top of all pages
     position: absolute;
     background-color: #F9F6EE;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 2;
+    z-index: 1;
     width: 200px;
 }
 
@@ -185,62 +185,20 @@ This part of the code designs the navigation bar at the top of all pages
     display: block;
 }
 
-/* Display side bar button */
-
-#menu-toggle {
-    position: fixed;
-    cursor: pointer;
-    text-align: left;
-    width: 50px;
-    padding-top: 7px;
-    visibility: hidden;
-}
-
-#menu-toggle.scrolled {
-    visibility: visible;
-}
-  
-.line {
-    width: 25px;
-    height: 3px;
-    background-color: rgb(22, 78, 124);
-    margin: 4px 0;
-    transition: all 0.3s ease;
-}
-
-  
-/* Styles to change the button appearance when toggled */
-.menu-open .line:nth-child(1) {
-    transform: translateY(7px) rotate(45deg);
-    background-color:rgb(79, 75, 90);
-    width: 30px;
-}
-  
-.menu-open .line:nth-child(2) {
-    opacity: 0;
-}
-  
-.menu-open .line:nth-child(3) {
-    transform: translateY(-7px) rotate(-45deg);
-    background-color:rgb(79, 75, 90);
-    width: 30px;
-}
-
 /* Side bar */
 
 #sidebar {
     visibility: hidden;
     position: fixed;
-    margin-top: -100px;
-    background-color: #EEF1F9;
-    height: 100%;
-    width: 300px;
-    text-align: center;
+    margin-top: -80px;
+    background-color: #F9F6EE;
+    height: auto;
+    width: 175px;
     display: inline-block;
-    z-index: 1;
+    z-index: 2;
 }
 
-#sidebar.visible {
+#sidebar.scrolled {
     visibility: visible;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
@@ -302,11 +260,6 @@ Home page about me introduction
     width: 98%;
     height: 98%;
 }
-
-/*
-Home page education_intro section
-*/
-
 
 /*
     About me page
