@@ -36,7 +36,7 @@ h4{
     font-size: 20px;
 }
 
-p{
+p, ul, ol, a{
     font-size: 20px;
 }
 
@@ -190,12 +190,14 @@ This part of the code designs the navigation bar at the top of all pages
 #sidebar {
     visibility: hidden;
     position: fixed;
-    margin-top: -80px;
+    margin-top: -40px;
+    margin-left: 20px;
     background-color: #F9F6EE;
     height: auto;
     width: 175px;
     display: inline-block;
     z-index: 2;
+    border-radius: 15px;
 }
 
 #sidebar.scrolled {
@@ -265,15 +267,13 @@ Home page about me introduction
     About me page
 */
 
-#aboutme{
-    margin-left: 20%;
-    margin-right: 20%;
-    padding: 40px 0;
-}
-
 #aboutme p{
     padding: 30px 50px;
     font-size: 20px;
+}
+
+#aboutme .content {
+    margin: 0px auto;
 }
 
 #aboutme a:hover {
@@ -288,17 +288,14 @@ Education page
     font-style: italic;
 }
 
-#education div {
-    padding: 30px 100px;
+#education h2{
+    text-align: left;
 }
 
-#education div .title {
-    font-size: 30px;
-    font-weight: bold;
-}
-
-#education div ul {
-    font-size: 20px;
+#education .description {
+    margin: 30px 0px;
+    display: block;
+    text-align: left;
 }
 
 /*
@@ -313,21 +310,19 @@ Projects page
     font-style: italic;
 }
 
-#projects div {
-    padding: 30px 100px;
+#projects h2{
+    text-align: left;
 }
 
-#projects div .title {
-    font-size: 30px;
-    font-weight: bold;
+#projects h3{
+    text-align: left;
+    margin-left: 20px;
 }
 
-#projects div ul {
-    font-size: 20px;
-}
-
-#projects div embed {
-    margin: 20px;
+#projects .description {
+    margin: 30px 0px;
+    display: block;
+    text-align: left;
 }
 
 /*
@@ -338,6 +333,7 @@ footer {
     background-image: url(img/tokyo_sky_tree_view.jpg);
     background-position: 50% 68%;
     background-size: cover;
+    min-width: 800px;
     max-width: none;
     margin: 0px;
 }

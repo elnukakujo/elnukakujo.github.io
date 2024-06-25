@@ -9,150 +9,157 @@
     </head>
     <body>
         <div id="nav">
-            <div id="menu-toggle">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
-            <a href="./../../index.html" class="title"><h1>Noe Jager</h1></a>
-            <div class="links">
-                <a href="./../../index.html">Home</a>
-                <a href="../aboutme/aboutme.html">About Me</a>
-                <div class="dropdown">
-                    <a class="drop-trigger" href="../education/education.html">Education</a>
-                    <div class="dropdown-content">
-                        <a href="../education/education.html#masterUdem">Master</a>
-                        <a href="../education/education.html#bacUniLu">Bachelor</a>
-                        <a href="../education/education.html#oc">Online Courses</a>
+            <div class="nav_content">
+                <a href="./../../index.html"><h1>Noe Jager</h1></a>
+                <div class="links">
+                    <a href="./../../index.html">Home</a>
+                    <a href="../aboutme/aboutme.html">About Me</a>
+                    <div class="dropdown">
+                        <a class="drop-trigger" href="../education/education.html">Education</a>
+                        <div class="dropdown-content">
+                            <a href="../education/education.html#masterUdem">Master</a>
+                            <a href="../education/education.html#bacUniLu">Bachelor</a>
+                            <a href="../education/education.html#oc">Online Courses</a>
+                        </div>
                     </div>
-                </div>
-                <div class="dropdown">
-                    <a class="drop-trigger" href="./projects.html">Projects</a>
-                    <div class="dropdown-content">
-                        <a href="./projects.html#bachelor_projects">Bachelor Projects</a>
+                    <div class="dropdown">
+                        <a class="drop-trigger" href="./projects.html">Projects</a>
+                        <div class="dropdown-content">
+                            <a href="./projects.html#bachelor_projects">Bachelor Projects</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <div id="sidebar">
-            <div class="links">
-                <a href="./../../index.html">Home</a>
-                <hr class="separator">
-                <a href="../aboutme/aboutme.html">About Me</a>
-                <hr class="separator">
-                <div class="dropdown">
-                    <a class="drop-trigger" href="../education/education.html">Education</a>
-                    <div class="dropdown-content">
-                        <a href="../education/education.html#masterUdem">Master</a>
-                        <a href="../education/education.html#bacUniLu">Bachelor</a>
-                        <a href="../education/education.html#oc">Online Courses</a>
+            <div class="sidebar_content">
+                <div class="links">
+                    <a href="./../../index.html">Home</a>
+                    <a href="../aboutme/aboutme.html">About Me</a>
+                    <div class="dropdown">
+                        <a class="drop-trigger" href="../education/education.html">Education</a>
+                        <div class="dropdown-content">
+                            <a href="../education/education.html#masterUdem">Master</a>
+                            <a href="../education/education.html#bacUniLu">Bachelor</a>
+                            <a href="../education/education.html#oc">Online Courses</a>
+                        </div>
                     </div>
-                </div>
-                <hr class="separator">
-                <div class="dropdown">
-                    <a class="drop-trigger" href="./projects.html">Projects</a>
-                    <div class="dropdown-content">
-                        <a href="./projects.html#bachelor_projects">Bachelor Projects</a>
+                    <div class="dropdown">
+                        <a class="drop-trigger" href="./projects.html">Projects</a>
+                        <div class="dropdown-content">
+                            <a href="./projects.html#bachelor_projects">Bachelor Projects</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <main id="projects">
-            <h2>Projects</h2>
-            <div class="anchor" id="bachelor_projects"></div>
-            <h3>Bachelor Projects</h3>
-            <div class="anchor" id="drawing_with_webcam"></div>
-            <div>
-                <h4 class="title"><a href="https://github.com/elnukakujo/BSP06-Drawing-with-a-webcam" target="_blank">Drawing with a webcam</a></h4 class="title">
-                <ul>
-                    <li class="date"> Date: February - June 2022 </li>
-                    <li> With the tutoring of Prof. Dr. Luis A. LEIVA at University of Luxembourg </li>
-                    <li> Developed a real-time drawing application using Python and openCV </li>
-                    <li> Analyzed finger positions to determine drawing actions </li>
-                </ul>
-            </div>
-            <div class="anchor" id="privacy_app_figma"></div>
-            <div>
-                <h4 class="title">Design of a privacy app with Figma</h4 class="title">
-                <embed 
-                    width="560" 
-                    height="315" 
-                    src="https://www.youtube.com/embed/QCm1njo0ayM?si=wlDq4pp-bgf6woDg" 
-                    title="YouTube video player" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    referrerpolicy="strict-origin-when-cross-origin" 
-                    allowfullscreen>
-            </div>
-            <div class="anchor" id="handwriting_generator"></div>
-            <div>
-                <h4 class="title">Handwriting generator with Tensorflow</h4 class="title">
-                <ul>
-                    <li class="date"> Date: September 2021 - January 2022 </li>
-                    <li> With the tutoring of Prof. Dr. Luis A. LEIVA at University of Luxembourg </li>
-                    <li> Created a Recurrent Neural Network in Python with the TensorFlow library </li>
-                    <li> Data extraction, cleaning, definition of a model, its training, then creation of the Chatbot interface </li>
-                    <li> The model had 3 parts: encoding, Bahdanau Attention, and decoding </li>
-                    <li> Replicated various handwriting styles using a dataset from a separate project </li>
-                </ul>
-            </div>
-            <div class="anchor" id="chatbot"></div>
-            <div>
-                <h4 class="title">Conversational Chatbot with Tensorflow </h4 class="title">
-                <ul>
-                    <li class="date"> Date: February - June 2021 </li>
-                    <li> With the tutoring of Prof Dr Christoph Schommer at University of Luxembourg </li>
-                    <li> Implemented a Convolutional Neural Network for chatbot functions in Python with TensorFlow </li>
-                    <li> Reddit threads with parent commentaries as a dataset between French and English and engages in small talk </li>
-                </ul>
-            </div>
-            <div class="anchor" id="q_learning_drone"></div>
-            <div>
-                <h4 class="title">Q Learning for a drone in a simulated environment</h4 class="title">
-                <ul>
-                    <li class="date"> Date: September 2020 - January 2021 </li>
-                    <li> With the tutoring of Dr Jose Luis Sanchez Lopez at University of Luxembourg </li>
-                    <li> Trained a drone to navigate while avoiding obstacles in a simulated environment (airsim) using Python </li>
-                    <li> Q-learning with a defined Q table and rewards </li>
-                </ul>
-            </div>
-            <div class="anchor" id="group_drone"></div>
-            <div>
-                <h4 class="title"> Control of a group of drone with Unreal Engine 4 using Python </h4 class="title">
-                <ul>
-                    <li class="date">Date: February - June 2020</li>
-                    <li>With the tutoring of Dr Gregoire Danoy at University of Luxembourg to create a simulated environment with quadrotors as agents</li>
-                    <li>Controlled drones to avoid obstacles and collisions using Unreal Engine 4 and Python</li>
-                    <li>Applied linear algebra concepts for precise drone movements</li>
-                </ul>
-                <embed 
-                    width="560" 
-                    height="315" 
-                    src="https://www.youtube.com/embed/V8-CfdUBPYI?si=k667HmWQLU5A2UTB" 
-                    title="YouTube video player" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    referrerpolicy="strict-origin-when-cross-origin" 
-                    allowfullscreen>
-            </div>
-            <div class="anchor" id="sparki"></div>
-            <div>
-                <h4 class="title"> Chase with Sparki </h4 class="title">
-                <ul>
-                    <li class="date">Date: September 2019 - January 2020</li>
-                    <li>With the tutoring of Dr Gregoire Danoy at University of Luxembourg, learned about Sparki </li>
-                    <li>Coded Sparki in Sparkiduino to chase another Sparki</li>
-                    <li>They also needed to remain in an enclosure delimited by markers on the ground</li>
-                </ul>
-            </div>
+        <main>
+            <div class="section" id="projects">
+                <div class="content">
+                    <h2>Projects</h2>
+                    <div class="anchor" id="bachelor_projects"></div>
+                    <h3>Bachelor Projects</h3>
+                    <div class="anchor" id="drawing_with_webcam"></div>
+                    <div class="description">
+                        <h4><a href="https://github.com/elnukakujo/BSP06-Drawing-with-a-webcam" target="_blank">Drawing with a webcam</a></h4>
+                        <ul>
+                            <li class="date"> Date: February - June 2022 </li>
+                            <li> With the tutoring of Prof. Dr. Luis A. LEIVA at University of Luxembourg </li>
+                            <li> Developed a real-time drawing application using Python and openCV </li>
+                            <li> Analyzed finger positions to determine drawing actions </li>
+                        </ul>
+                    </div>
+                    <div class="anchor" id="privacy_app_figma"></div>
+                    <div class="description">
+                        <h4>Design of a privacy app with Figma</h4>
+                        <embed 
+                            width="560" 
+                            height="315" 
+                            src="https://www.youtube.com/embed/QCm1njo0ayM?si=wlDq4pp-bgf6woDg" 
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen>
+                    </div>
+                    <div class="anchor" id="handwriting_generator"></div>
+                    <div class="description">
+                        <h4>Handwriting generator with Tensorflow</h4>
+                        <ul>
+                            <li class="date"> Date: September 2021 - January 2022 </li>
+                            <li> With the tutoring of Prof. Dr. Luis A. LEIVA at University of Luxembourg </li>
+                            <li> Created a Recurrent Neural Network in Python with the TensorFlow library </li>
+                            <li> Data extraction, cleaning, definition of a model, its training, then creation of the Chatbot interface </li>
+                            <li> The model had 3 parts: encoding, Bahdanau Attention, and decoding </li>
+                            <li> Replicated various handwriting styles using a dataset from a separate project </li>
+                        </ul>
+                    </div>
+                    <div class="anchor" id="chatbot"></div>
+                    <div class="description">
+                        <h4>Conversational Chatbot with Tensorflow </h4>
+                        <ul>
+                            <li class="date"> Date: February - June 2021 </li>
+                            <li> With the tutoring of Prof Dr Christoph Schommer at University of Luxembourg </li>
+                            <li> Implemented a Convolutional Neural Network for chatbot functions in Python with TensorFlow </li>
+                            <li> Reddit threads with parent commentaries as a dataset between French and English and engages in small talk </li>
+                        </ul>
+                    </div>
+                    <div class="anchor" id="q_learning_drone"></div>
+                    <div class="description">
+                        <h4>Q Learning for a drone in a simulated environment</h4>
+                        <ul>
+                            <li class="date"> Date: September 2020 - January 2021 </li>
+                            <li> With the tutoring of Dr Jose Luis Sanchez Lopez at University of Luxembourg </li>
+                            <li> Trained a drone to navigate while avoiding obstacles in a simulated environment (airsim) using Python </li>
+                            <li> Q-learning with a defined Q table and rewards </li>
+                        </ul>
+                    </div>
+                    <div class="anchor" id="group_drone"></div>
+                    <div class="description">
+                        <h4> Control of a group of drone with Unreal Engine 4 using Python </h4>
+                        <ul>
+                            <li class="date">Date: February - June 2020</li>
+                            <li>With the tutoring of Dr Gregoire Danoy at University of Luxembourg to create a simulated environment with quadrotors as agents</li>
+                            <li>Controlled drones to avoid obstacles and collisions using Unreal Engine 4 and Python</li>
+                            <li>Applied linear algebra concepts for precise drone movements</li>
+                        </ul>
+                        <embed 
+                            width="560" 
+                            height="315" 
+                            src="https://www.youtube.com/embed/V8-CfdUBPYI?si=k667HmWQLU5A2UTB" 
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen>
+                    </div>
+                    <div class="anchor" id="sparki"></div>
+                    <div class="description">
+                        <h4> Chase with Sparki </h4>
+                        <ul>
+                            <li class="date">Date: September 2019 - January 2020</li>
+                            <li>With the tutoring of Dr Gregoire Danoy at University of Luxembourg, learned about Sparki </li>
+                            <li>Coded Sparki in Sparkiduino to chase another Sparki</li>
+                            <li>They also needed to remain in an enclosure delimited by markers on the ground</li>
+                        </ul>
+                    </div>
+                </div>
         </main>
         <footer>
-            <h2>Contact Me</h2>
-            <figure class="contacts">
-                <a href="https://github.com/elnukakujo" target="_blank"><img src="../../assets/img/logo/github_logo.jpg" width="50px" height="50px" alt="GitHub"></a>
-                <a href="https://www.linkedin.com/in/no%C3%A9-jager-2b4866236/" target="_blank"><img src="../../assets/img/logo/linkedin_logo.jpg" width="50px" height="50px" alt="Linkedin"></a>
-                <a href="mailto:noe.p.jager@gmail.com"><img src="../../assets/img/logo/gmail_logo.jpg" width="50px" height="50px" alt="Gmail"></a>
-            </figure>
+            <div class="content">
+                <h3>Contact Me</h3>
+                <figure id="contacts_links">
+                    <a class="img_container" href="https://github.com/elnukakujo" target="_blank">
+                        <img src="../../assets/img/logo/github_logo.jpg" alt="GitHub">
+                    </a>
+                    <a class="img_container" href="https://www.linkedin.com/in/no%C3%A9-jager-2b4866236/" target="_blank">
+                        <img src="../../assets/img/logo/linkedin_logo.jpg" alt="Linkedin">
+                    </a>
+                    <a class="img_container" href="mailto:noe.p.jager@gmail.com">
+                        <img src="../../assets/img/logo/gmail_logo.jpg" alt="Gmail">
+                    </a>
+                </figure>
+            </div>
         </footer>
         <script src="../../events/script.js"></script>
     </body>
