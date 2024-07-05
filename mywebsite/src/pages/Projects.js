@@ -1,5 +1,4 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 import { useEffect } from 'react';
 
 import '../assets/css/pages/projects.css';
@@ -34,7 +33,7 @@ function EmbedVideo({url}){
                 frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                 referrerpolicy="strict-origin-when-cross-origin" 
-                allowfullscreen/>
+                allowFullScreen/>
     );
 }
 

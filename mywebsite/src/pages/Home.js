@@ -79,7 +79,7 @@ function IntroSection(){
 
 function EducationSection(){
     return(
-        <SectionOpener id="education" title={"Education"}>
+        <SectionOpener id="education_intro" title={"Education"}>
             <div id="udem_pictures">
                 <Figure src={udemEte} alt={"Udem in Summer"}/>
                 <Figure src={udemNeige} alt={"Udem in Winter"}/>
