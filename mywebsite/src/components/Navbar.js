@@ -1,11 +1,28 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../assets/css/components/navbar.css';
 
 export default function Navbar()
 {
+    const [scrolled, setScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const isScrolled = window.scrollY > 80;
+            if(isScrolled !== scrolled){
+                setScrolled(isScrolled);
+            }
+
+        };
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [scrolled]);
+
     return (
-        <div id="nav">
+        <div id="nav" className={scrolled?'scrolled':''}>
             <div className="nav_content">
                 <Link to="/">
                     <h1>Noe Jager</h1>

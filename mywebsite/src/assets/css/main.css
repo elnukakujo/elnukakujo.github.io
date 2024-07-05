@@ -45,8 +45,8 @@ a {
     color: rgb(22, 78, 124);
 }
 
-main {
-    margin: 130px 0px 0px;
+.main {
+    margin: 120px 0px 0px;
 }
 
 .anchor {

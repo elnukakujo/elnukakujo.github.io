@@ -1,10 +1,28 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {Link} from 'react-router-dom';
 import '../assets/css/components/sidebar.css';
 
 export default function Sidebar(){
+
+    const [scrolled, setScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const isScrolled = window.scrollY > 80;
+            if(isScrolled !== scrolled){
+                setScrolled(isScrolled);
+            }
+
+        };
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [scrolled]);
+
     return (
-        <div id="sidebar">
+        <div id="sidebar" className={scrolled?'scrolled':''}>
             <div className="sidebar_content">
                 <Link to="/">Home</Link>
                 <Link to="/aboutme">About Me</Link>
