@@ -1,0 +1,13 @@
+#education .date {
+    font-style: italic;
+}
+
+#education h2{
+    text-align: left;
+}
+
+#education .description {
+    margin: 30px 0px;
+    display: block;
+    text-align: left;
+}

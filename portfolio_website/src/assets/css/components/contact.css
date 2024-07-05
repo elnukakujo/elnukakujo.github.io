@@ -1,0 +1,42 @@
+footer {
+    background-image: url(../../img/tokyo_sky_tree_view.jpg);
+    background-position: 50% 68%;
+    background-size: cover;
+    min-width: 800px;
+    max-width: none;
+    margin: 0px;
+}
+
+footer .content {
+    padding: 20px 20px 0px;
+    margin: 0px auto;
+}
+
+footer h3 {
+    padding: 0px;
+    margin: 5px;
+    color:#FFFFF0;
+    text-align: left;
+}
+
+footer #contacts_links {
+    padding: 25px 0px;
+    text-align: center;
+    margin:0px;
+}
+
+footer .img_container {
+    width: 50px;
+    height: 50px;
+    margin: 0px 5px;
+    display: inline-block;
+    overflow: visible;
+}
+
+footer img{
+    border-radius:50%;
+}
+
+footer #contacts_links img:hover {
+    transform: scale(1.1); 
+}
