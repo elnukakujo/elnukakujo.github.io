@@ -1,0 +1,41 @@
+#intro {
+    background-image: url(../../img/index/shimanami_kaido_island.jpg);
+    background-position: center;
+    background-size: cover;
+    color: #FFFFF0;
+    max-width: none;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+#intro a {
+    color: #FFFFF0;
+}
+
+#intro a:hover{
+    color: rgb(79, 75, 90);
+}
+
+#intro h2{
+    margin:0px;
+}
+
+#intro .img_container {
+    width: 400px;
+    height: 400px;
+    margin: 0px;
+}
+
+#intro .img_container img {
+    border: 3px solid rgb(22, 78, 124);
+    border-radius:50%;
+    width: 98%;
+    height: 98%;
+}
+
+.img_container{
+    margin: 6px;
+}
+
+a.img_container:hover img{
+    filter: brightness(90%);
+}
