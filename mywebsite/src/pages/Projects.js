@@ -80,6 +80,12 @@ export default function Projects(){
         <SectionOpener id="projects" title="Projects">
             <SectionTitle id="master_projects" title="Master Projects"/>
             <Project
+                anchorId="movie_search_app"
+                title="Movie search app"
+                date="July 2024 - In Progress"
+                githubUrl="https://github.com/elnukakujo/movieSearchApp"
+            />
+            <Project
                 anchorId="lol_analytics"
                 title="Analytics website for League of Legends"
                 date="June 2024 - In Progress"

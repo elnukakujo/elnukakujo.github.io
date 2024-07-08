@@ -108,6 +108,8 @@ function ProjectsSection(){
             </figure>
             <Links 
             urls={[
+                "./projects#movie_search_app",
+                "./projects#lol_analysis",
                 "./projects#sportsai_website",
                 "./projects#drawing_with_webcam",
                 "./projects#privacy_app_figma",
@@ -117,6 +119,8 @@ function ProjectsSection(){
                 "./projects#group_drone",
                 "./projects#sparki"]}
             headers={[
+                "Movie search app",
+                "Analytics website for League of Legends",
                 "Soccer coaching with SportsAI",
                 "Drawing with a webcam",
                 "Design of a privacy app with Figma",
