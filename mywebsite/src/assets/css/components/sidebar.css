@@ -1,7 +1,6 @@
 #sidebar {
     visibility: hidden;
     position: fixed;
-    margin-top: -40px;
     margin-left: 20px;
     background-color: #F9F6EE;
     height: auto;
@@ -65,4 +64,10 @@
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
+@media (max-width: 1400px) {
+    #sidebar *,
+    #sidebar.scrolled{
+        visibility: hidden;
+    }
 }

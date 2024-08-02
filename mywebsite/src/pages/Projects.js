@@ -25,7 +25,9 @@ function SectionTitle({id, title}){
 
 function EmbedVideo({url}){
     return (
-        <embed 
+        <div class="video-container">
+            <embed 
+                className='video'
                 width="560" 
                 height="315" 
                 src={url} 
@@ -33,7 +35,9 @@ function EmbedVideo({url}){
                 frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                 referrerpolicy="strict-origin-when-cross-origin" 
-                allowFullScreen/>
+                allowfullscreen
+            />
+        </div>
     );
 }
 
@@ -43,10 +47,10 @@ function Project({anchorId, title, date, githubUrl, videoUrl, websiteUrl, descri
         output.push(<li class="date" key="date"> Date: {date} </li>);
     }
     if (websiteUrl) {
-        output.push(<li><a href={websiteUrl} target='_blank'>See the website</a></li>);
+        output.push(<li><a href={websiteUrl} target='_blank' rel='noopener'>See the website</a></li>);
     }
     if (githubUrl) {
-        output.push(<li><a href={githubUrl} target='_blank'>See the GitHub repository</a></li>);
+        output.push(<li><a href={githubUrl} target='_blank' rel='noopener'>See the GitHub repository</a></li>);
     }
     if (description) {
         output.push(
@@ -54,19 +58,22 @@ function Project({anchorId, title, date, githubUrl, videoUrl, websiteUrl, descri
             <li key={index}>{sentence}</li>
         )));
     }
-    if (videoUrl) {
-        output.push(
-            <EmbedVideo url={videoUrl}/>
-        );
-    }
+    const video = videoUrl ? <EmbedVideo url={videoUrl} /> : null;
+    const outputList=output.length!==0?
+        <div class="description">
+            <ul>
+                {output}
+            </ul>
+        </div>
+        :null;
+    
     return (
-        <div>
+        <div className='section' id='project'>
             <div class="anchor" id={anchorId}></div>
-            <div class="description">
-                <h4>{title}</h4>
-                <ul>
-                    {output}
-                </ul>
+            <h4>{title}</h4>
+            <div class="content">
+                {outputList}
+                {video}
             </div>
         </div>
     );
@@ -82,8 +89,16 @@ export default function Projects(){
             <Project
                 anchorId="movie_search_app"
                 title="Movie search app"
-                date="July 2024 - In Progress"
+                date="July 2024"
+                description={[
+                    "Created a local movie search app with a React frontend and a .Net backend",
+                    "Result has a lot of options: main page with recommendations, search page, movie/series page, actors page, commentaries and ratings",
+                    "All the data used on the website is collected from the TMDB API",
+                    "I could polish it more like filtering the comments and movie data, adding more movies on the home page too, but I feel like I did enough for now",
+                    "I had a fun time exploring React and .Net with this project"
+                ]}
                 githubUrl="https://github.com/elnukakujo/movieSearchApp"
+                videoUrl={"https://www.youtube.com/embed/4F4O1xsQ4WU?si=7nBexlFtNQ4BTcMg"}
             />
             <Project
                 anchorId="lol_analytics"

@@ -31,7 +31,7 @@ function Links({urls, headers}){
     return (
         <div className="links">
             {urls.map((url, index) => (
-                <Link key={index} to={url}><h4>{headers[index]}</h4></Link>
+                <a href={url}><h4>{headers[index]}</h4></a>
             ))}
         </div>
     );
@@ -107,28 +107,28 @@ function ProjectsSection(){
                 <Figure src={qLearningEnvImage} alt={"Q learning simluation environment"} url={"./projects#q_learning_drone"}/>
             </figure>
             <Links 
-            urls={[
-                "./projects#movie_search_app",
-                "./projects#lol_analysis",
-                "./projects#sportsai_website",
-                "./projects#drawing_with_webcam",
-                "./projects#privacy_app_figma",
-                "./projects#handwriting_generator",
-                "./projects#chatbot",
-                "./projects#q_learning_drone",
-                "./projects#group_drone",
-                "./projects#sparki"]}
-            headers={[
-                "Movie search app",
-                "Analytics website for League of Legends",
-                "Soccer coaching with SportsAI",
-                "Drawing with a webcam",
-                "Design of a privacy app with Figma",
-                "Handwriting generator with Tensorflow",
-                "Conversational Chatbot with Tensorflow",
-                "Q Learning for a drone in a simulated environment",
-                "Control of a group of drone with Unreal Engine 4 using Python",
-                "Chase with Sparki"]}
+                urls={[
+                    "./projects#movie_search_app",
+                    "./projects#lol_analysis",
+                    "./projects#sportsai_website",
+                    "./projects#drawing_with_webcam",
+                    "./projects#privacy_app_figma",
+                    "./projects#handwriting_generator",
+                    "./projects#chatbot",
+                    "./projects#q_learning_drone",
+                    "./projects#group_drone",
+                    "./projects#sparki"]}
+                headers={[
+                    "Movie search app",
+                    "Analytics website for League of Legends",
+                    "Soccer coaching with SportsAI",
+                    "Drawing with a webcam",
+                    "Design of a privacy app with Figma",
+                    "Handwriting generator with Tensorflow",
+                    "Conversational Chatbot with Tensorflow",
+                    "Q Learning for a drone in a simulated environment",
+                    "Control of a group of drone with Unreal Engine 4 using Python",
+                    "Chase with Sparki"]}
             />
         </SectionOpener>
     );
