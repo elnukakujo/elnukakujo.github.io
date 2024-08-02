@@ -31,7 +31,7 @@ function Links({urls, headers}){
     return (
         <div className="links">
             {urls.map((url, index) => (
-                <a href={url}><h4>{headers[index]}</h4></a>
+                <Link key={index} to={url}><h4>{headers[index]}</h4></Link>
             ))}
         </div>
     );
