@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.ee74f6f6.css",
-    "main.js": "/static/js/main.3180eda0.js",
+    "main.js": "/static/js/main.31dbc8ec.js",
     "static/media/udem_neige.jpg": "/static/media/udem_neige.ca0c5ed1561894e0bdb3.jpg",
     "static/media/udem_ete.jpg": "/static/media/udem_ete.78709446744e15d34384.jpg",
     "static/media/shimanami_kaido_island.jpg": "/static/media/shimanami_kaido_island.ffdf4802fdbe76e709a3.jpg",
@@ -17,10 +17,10 @@
     "static/media/github_logo.jpg": "/static/media/github_logo.3fc5ead9ff318bda611c.jpg",
     "index.html": "/index.html",
     "main.ee74f6f6.css.map": "/static/css/main.ee74f6f6.css.map",
-    "main.3180eda0.js.map": "/static/js/main.3180eda0.js.map"
+    "main.31dbc8ec.js.map": "/static/js/main.31dbc8ec.js.map"
   },
   "entrypoints": [
     "static/css/main.ee74f6f6.css",
-    "static/js/main.3180eda0.js"
+    "static/js/main.31dbc8ec.js"
   ]
 }
