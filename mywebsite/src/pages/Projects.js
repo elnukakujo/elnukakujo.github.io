@@ -44,7 +44,9 @@ function EmbedVideo({url}){
 function Graph({src,legend}){
     return (
         <figure className="graph_container">
-            <img src={src}/>
+            <a href={src} target='_blank' rel='noopener'>
+                <img src={src}/>
+            </a>
             <figcaption>{legend}</figcaption>
         </figure>
     );
@@ -91,7 +93,13 @@ function Project({anchorId, title, date, githubUrl, videoUrl, websiteUrl, descri
             <div class="content">
                 {outputList}
                 {video}
-                {graphs}
+                {
+                    graphs ? 
+                    <div class="graphs">
+                        {graphs}
+                    </div> 
+                    : null
+                }
             </div>
         </div>
     );
