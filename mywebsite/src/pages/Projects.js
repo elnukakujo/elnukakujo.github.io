@@ -41,7 +41,15 @@ function EmbedVideo({url}){
     );
 }
 
-function Project({anchorId, title, date, githubUrl, videoUrl, websiteUrl, description}){
+function Graph({src}){
+    return (
+        <figure className="graph_container">
+            <img src={src}/>
+        </figure>
+    );
+}
+
+function Project({anchorId, title, date, githubUrl, videoUrl, websiteUrl, description, graphUrls}){
     const output = [];
     if (date) {
         output.push(<li class="date" key="date"> Date: {date} </li>);
@@ -59,6 +67,14 @@ function Project({anchorId, title, date, githubUrl, videoUrl, websiteUrl, descri
         )));
     }
     const video = videoUrl ? <EmbedVideo url={videoUrl} /> : null;
+    const graphs = [];
+    if (graphUrls) {
+        graphs.push(
+            ...graphUrls.map((url, index) => (
+                <Graph src={url}/>
+            ))
+        );
+    }
     const outputList=output.length!==0?
         <div class="description">
             <ul>
@@ -74,6 +90,7 @@ function Project({anchorId, title, date, githubUrl, videoUrl, websiteUrl, descri
             <div class="content">
                 {outputList}
                 {video}
+                {graphs}
             </div>
         </div>
     );
@@ -86,6 +103,25 @@ export default function Projects(){
     return (
         <SectionOpener id="projects" title="Projects">
             <SectionTitle id="master_projects" title="Master Projects"/>
+            <Project
+                anchorId="clothing_classification"
+                title="Clothing classification Shallow Neural Networks with NumPy"
+                date="August 2024"
+                description={[
+                    "Implemented shallow neural networks in Python with NumPy to classify clothing images",
+                    "Used the Fashion MNIST dataset to train and test the model",
+                    "Two neural networks created :",
+                    "A single layer neural network, mimicking a logistic regression gradient descent for binary classification. "+
+                    "Metrics : 97% training/testing accuracy for tshirts and trousers and 0,075 cost",
+                    "A 2 layer neural network, using ReLU and softmax activation function to classify 10 classes. "+
+                    "Metrics : 81% training accuracy, 80% testing accuracy and 0,513 cost"
+                ]}
+                githubUrl="https://github.com/elnukakujo/clothing_classification"
+                graphUrls={[
+                    "https://private-user-images.githubusercontent.com/61209679/354824360-b15b9eb0-0743-44fc-ba94-4b58f802edc0.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjI3ODc3MjMsIm5iZiI6MTcyMjc4NzQyMywicGF0aCI6Ii82MTIwOTY3OS8zNTQ4MjQzNjAtYjE1YjllYjAtMDc0My00NGZjLWJhOTQtNGI1OGY4MDJlZGMwLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA4MDQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwODA0VDE2MDM0M1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWYwOTQyMzZkYTM4N2IwZTRkNzBiZjU5MzdlOWMyNWY0NTkxZjZkODI2NjhjMjgwYmEwZTY5NDdlMzQ4NWE0ZjImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.UsOGQd9wR4YB1OOxVEZVxP8foz7PH1_KA9FD3JAvwy8",
+                    "https://private-user-images.githubusercontent.com/61209679/354912410-0f2418bf-ee52-4879-a881-cf146eab43a9.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjI3ODc3MjMsIm5iZiI6MTcyMjc4NzQyMywicGF0aCI6Ii82MTIwOTY3OS8zNTQ5MTI0MTAtMGYyNDE4YmYtZWU1Mi00ODc5LWE4ODEtY2YxNDZlYWI0M2E5LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA4MDQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwODA0VDE2MDM0M1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTExZjkxYTE2ZDU1ZjBmYjFlNDNkMmI4NmE3Zjg0YWE5Zjg5MzdlOTU3ZTYxOTg2Njk5ZjIwZGY5Nzg1MmMzNjQmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.ROgaUCiTtJbY8-UO6M0hv24-84rJ3mKBnZcFaiUZpSM"
+                ]}
+            />
             <Project
                 anchorId="movie_search_app"
                 title="Movie search app"
