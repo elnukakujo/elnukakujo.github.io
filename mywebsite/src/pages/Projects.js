@@ -41,15 +41,16 @@ function EmbedVideo({url}){
     );
 }
 
-function Graph({src}){
+function Graph({src,legend}){
     return (
         <figure className="graph_container">
             <img src={src}/>
+            <figcaption>{legend}</figcaption>
         </figure>
     );
 }
 
-function Project({anchorId, title, date, githubUrl, videoUrl, websiteUrl, description, graphUrls}){
+function Project({anchorId, title, date, githubUrl, videoUrl, websiteUrl, description, graphInfos}){
     const output = [];
     if (date) {
         output.push(<li class="date" key="date"> Date: {date} </li>);
@@ -68,10 +69,10 @@ function Project({anchorId, title, date, githubUrl, videoUrl, websiteUrl, descri
     }
     const video = videoUrl ? <EmbedVideo url={videoUrl} /> : null;
     const graphs = [];
-    if (graphUrls) {
+    if (graphInfos) {
         graphs.push(
-            ...graphUrls.map((url, index) => (
-                <Graph src={url}/>
+            ...graphInfos.map((infos, index) => (
+                <Graph src={infos[0]} legend={infos[1]}/>
             ))
         );
     }
@@ -117,9 +118,15 @@ export default function Projects(){
                     "Metrics : 81% training accuracy, 80% testing accuracy and 0,513 cost"
                 ]}
                 githubUrl="https://github.com/elnukakujo/clothing_classification"
-                graphUrls={[
-                    "https://raw.githubusercontent.com/elnukakujo/clothing_classification/main/plot/binary/step_2000_train_acc_0.98.png",
-                    "https://raw.githubusercontent.com/elnukakujo/clothing_classification/main/plot/multi_class/step_6000_train_acc_0.8257333333333333_cost_0.5130132978716956.png"
+                graphInfos={[
+                    [
+                        "https://raw.githubusercontent.com/elnukakujo/clothing_classification/main/plot/binary/step_2000_train_acc_0.98.png",
+                        "The binary classification training evolution curve"
+                    ],
+                    [
+                        "https://raw.githubusercontent.com/elnukakujo/clothing_classification/main/plot/multi_class/step_6000_train_acc_0.8257333333333333_cost_0.5130132978716956.png",
+                        "The multi-class classification training evolution curve"
+                    ]
                 ]}
             />
             <Project
