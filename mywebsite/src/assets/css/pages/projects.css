@@ -47,6 +47,7 @@
     text-align: right;
     width:40px;
     height: auto;
+    flex-shrink: 0;
 }
 
 #project .top-row .github_container img {
