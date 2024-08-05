@@ -49,10 +49,6 @@ a {
     min-width: 600px;
 }
 
-.main {
-    margin: 120px 0px 0px;
-}
-
 .img_container {
     width: 250px;
     height: 250px;
@@ -69,7 +65,7 @@ img {
 
 .section {
     margin: 0px auto;
-    padding: 50px 0px;
+    padding: 120px 0px 50px;
     max-width: 1200px;
     height: auto;
 }

@@ -3,11 +3,15 @@
     width:100%;
     position: fixed;
     height: auto;
-    background-color: #F9F6EE;
     z-index: 3;
-    transition: height 0.3s ease, padding 0.3s ease;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    background-color: rgb(249, 246, 238, 0.3);
+    transition: height 0.8s ease, padding 0.8s ease;
     min-width: 600px;
+}
+#nav.scrolled{
+    background-color: rgb(249, 246, 238);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    transition: background-color 0.8s ease, box-shadow 0.8s ease;
 }
 #nav .nav_content {
     margin: 0 auto;
@@ -111,6 +115,9 @@
     #nav.scrolled {
         padding-top:0;
         height:auto;
+        background-color: rgb(249, 246, 238);
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        transition: background-color 0.8s ease, box-shadow 0.8s ease;
     }
     #nav.scrolled .menu-icon{
         visibility: visible;
