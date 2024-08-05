@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.c5828b12.css",
+    "main.css": "/static/css/main.9824a35f.css",
     "main.js": "/static/js/main.ca14c742.js",
     "static/media/udem_neige.jpg": "/static/media/udem_neige.ca0c5ed1561894e0bdb3.jpg",
     "static/media/udem_ete.jpg": "/static/media/udem_ete.78709446744e15d34384.jpg",
@@ -18,11 +18,11 @@
     "static/media/github_logo.jpg": "/static/media/github_logo.3fc5ead9ff318bda611c.jpg",
     "static/media/coursera_logo.jpg": "/static/media/coursera_logo.431ae41c410504a56b7e.jpg",
     "index.html": "/index.html",
-    "main.c5828b12.css.map": "/static/css/main.c5828b12.css.map",
+    "main.9824a35f.css.map": "/static/css/main.9824a35f.css.map",
     "main.ca14c742.js.map": "/static/js/main.ca14c742.js.map"
   },
   "entrypoints": [
-    "static/css/main.c5828b12.css",
+    "static/css/main.9824a35f.css",
     "static/js/main.ca14c742.js"
   ]
 }
