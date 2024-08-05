@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.6496ed9c.css",
-    "main.js": "/static/js/main.46445d02.js",
+    "main.css": "/static/css/main.88f6d383.css",
+    "main.js": "/static/js/main.e3384aee.js",
     "static/media/udem_neige.jpg": "/static/media/udem_neige.ca0c5ed1561894e0bdb3.jpg",
     "static/media/udem_ete.jpg": "/static/media/udem_ete.78709446744e15d34384.jpg",
     "static/media/shimanami_kaido_island.jpg": "/static/media/shimanami_kaido_island.ffdf4802fdbe76e709a3.jpg",
@@ -13,14 +13,16 @@
     "static/media/PlayfairDisplay-SemiBold.ttf": "/static/media/PlayfairDisplay-SemiBold.998e0c55848f5a03cdeb.ttf",
     "static/media/OpenSans-Regular.ttf": "/static/media/OpenSans-Regular.b8cc747a58ffa52b7ff9.ttf",
     "static/media/linkedin_logo.jpg": "/static/media/linkedin_logo.acd3dcedaa5100e52859.jpg",
+    "static/media/unilu_logo.jpg": "/static/media/unilu_logo.344b94e8a8a2eb69a1db.jpg",
     "static/media/gmail_logo.jpg": "/static/media/gmail_logo.cedd028e950785a70350.jpg",
     "static/media/github_logo.jpg": "/static/media/github_logo.3fc5ead9ff318bda611c.jpg",
+    "static/media/coursera_logo.jpg": "/static/media/coursera_logo.431ae41c410504a56b7e.jpg",
     "index.html": "/index.html",
-    "main.6496ed9c.css.map": "/static/css/main.6496ed9c.css.map",
-    "main.46445d02.js.map": "/static/js/main.46445d02.js.map"
+    "main.88f6d383.css.map": "/static/css/main.88f6d383.css.map",
+    "main.e3384aee.js.map": "/static/js/main.e3384aee.js.map"
   },
   "entrypoints": [
-    "static/css/main.6496ed9c.css",
-    "static/js/main.46445d02.js"
+    "static/css/main.88f6d383.css",
+    "static/js/main.e3384aee.js"
   ]
 }
