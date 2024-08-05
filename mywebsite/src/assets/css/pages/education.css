@@ -12,6 +12,7 @@
     display: block;
     text-align: left;
     border: 1px solid black;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
 #education .top-row {
@@ -76,23 +77,23 @@
 #education .description .images {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
+    justify-content: center;
     height: auto;
-    text-align: center;
+    margin: 0 auto;
 }
 
 #education .image-container {
     flex: 1;
     text-align: center;
-    min-width: 400px;
-    margin: 10px;
+    max-width: 400px;
+    min-width: 300px;
+    height: auto;
+    margin: auto 10px;
 }
 #education .image-container img {
-    width: 100%;
-    height: auto;
-    max-height: 350px;
     object-fit: cover;
     object-position: center;
+    aspect-ratio: 16/9;
 }
 #education .image-container img:hover {
     filter: brightness(95%);

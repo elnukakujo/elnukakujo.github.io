@@ -79,8 +79,8 @@ function EducationSection(){
     return(
         <SectionOpener id="education_intro" title={"Education"}>
             <div id="udem_pictures">
-                <Figure src={udemEte} alt={"Udem in Summer"}/>
-                <Figure src={udemNeige} alt={"Udem in Winter"}/>
+                <Figure src={udemEte} alt={"Udem in Summer"} url={"/education#masterUdem"}/>
+                <Figure src={udemNeige} alt={"Udem in Winter"} url={"/education#masterUdem"}/>
             </div>
             <Links 
             urls={[
