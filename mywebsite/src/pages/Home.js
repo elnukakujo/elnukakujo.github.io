@@ -64,14 +64,12 @@ function IntroSection(){
         <SectionOpener id="intro">
             <Figure src={meImage} alt={"A picture of me"} url={"/aboutme"}/>
             <div className="description">
-                <Link to="/aboutme"><h2>About Me</h2></Link>
                 <p> 
-                    I'm Noé Jager, a master's student in Computer Science, with a diverse skillset honed during my university years and 
-                    a passion for tackling new challenges. Over time, I've gained extensive experience in programming, specializing in 
-                    Artificial Intelligence, Data Science, Data Visualizations, and more. I take great pride in all my projects, 
-                    because of all the skills they gave me so I warmly invite you to browse my portfolio. 
-                    I'm excited to discuss potential collaboration opportunities with you.
+                    I'm Noé Jager, a master's student in Computer Science with extensive experience in programming, specializing in Artificial Intelligence, 
+                    Data Science, Data Visualizations, and Full-Stack Web Development. I take great pride in my diverse projects and invite you to explore 
+                    my portfolio, looking forward to potential collaboration opportunities.
                 </p>
+                <Link to="/aboutme"><h4>Learn more about me</h4></Link>
             </div>
         </SectionOpener>
     );

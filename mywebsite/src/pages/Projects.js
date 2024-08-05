@@ -1,13 +1,13 @@
 import React from 'react';
 import { useEffect } from 'react';
+import githubLogo from '../assets/img/logo/github_logo.jpg';
 
 import '../assets/css/pages/projects.css';
 
-function SectionOpener({id, title, children}){
+function SectionOpener({id, children}){
     return (
-        <div class="section" id={id}>
-            <div class="content">
-                <h2>{title}</h2>
+        <div className="section" id={id}>
+            <div className="content">
                 {children}
             </div>
         </div>
@@ -17,7 +17,7 @@ function SectionOpener({id, title, children}){
 function SectionTitle({id, title}){
     return (
         <div>
-            <div class="anchor" id={id}/>
+            <div className="anchor" id={id}/>
             <h3>{title}</h3>
         </div>
     );
@@ -25,7 +25,7 @@ function SectionTitle({id, title}){
 
 function EmbedVideo({url}){
     return (
-        <div class="video-container">
+        <div className="video-container">
             <embed 
                 className='video'
                 width="560" 
@@ -44,8 +44,8 @@ function EmbedVideo({url}){
 function Graph({src,legend}){
     return (
         <figure className="graph_container">
-            <a href={src} target='_blank' rel='noopener'>
-                <img src={src}/>
+            <a href={src} target='_blank' rel='noreferrer'>
+                <img src={src} alt={"Graph"}/>
             </a>
             <figcaption>{legend}</figcaption>
         </figure>
@@ -55,13 +55,7 @@ function Graph({src,legend}){
 function Project({anchorId, title, date, githubUrl, videoUrl, websiteUrl, description, graphInfos}){
     const output = [];
     if (date) {
-        output.push(<li class="date" key="date"> Date: {date} </li>);
-    }
-    if (websiteUrl) {
-        output.push(<li><a href={websiteUrl} target='_blank' rel='noopener'>See the website</a></li>);
-    }
-    if (githubUrl) {
-        output.push(<li><a href={githubUrl} target='_blank' rel='noopener'>See the GitHub repository</a></li>);
+        output.push(<li className="date" key="date"> Date: {date} </li>);
     }
     if (description) {
         output.push(
@@ -79,7 +73,7 @@ function Project({anchorId, title, date, githubUrl, videoUrl, websiteUrl, descri
         );
     }
     const outputList=output.length!==0?
-        <div class="description">
+        <div className="description">
             <ul>
                 {output}
             </ul>
@@ -88,17 +82,33 @@ function Project({anchorId, title, date, githubUrl, videoUrl, websiteUrl, descri
     
     return (
         <div className='section' id='project'>
-            <div class="anchor" id={anchorId}></div>
-            <h4>{title}</h4>
-            <div class="content">
+            <div className="anchor" id={anchorId}></div>
+            <div className="top-row">
+                <h4>{title}</h4>
+                {
+                    githubUrl?
+                    <a className="github_container" href={githubUrl} target="_blank" rel="noreferrer">
+                        <img src={githubLogo} alt="GitHub"/>
+                    </a>
+                    :null
+                }
+            </div>
+            <div className="content">
                 {outputList}
                 {video}
                 {
                     graphs ? 
-                    <div class="graphs">
+                    <div className="graphs">
                         {graphs}
                     </div> 
                     : null
+                }
+                {
+                    websiteUrl?
+                    <a className="websiteLink" href={websiteUrl} target='_blank' rel='noreferrer'>
+                        <h4>Go see the website!</h4>
+                    </a>
+                    :null
                 }
             </div>
         </div>
@@ -163,12 +173,22 @@ export default function Projects(){
                 date="May 2024 - June 2024"
                 description={[
                     "With the tutoring of Hellen Vasquez teacher at Polytechnique Montreal and Tarik Agday co-founder of SportsAI",
-                    "Worked as a team to create a website for soccer coaches to analyze and boost their players' performance",
+                    "Worked as a team to create a website for soccer coaches to analyze and boost their players' performance using data from the 2020 Euro Cup",
                     "A final project team in the course INF8808E: Data Visualization at Polytechnique Montreal",
                     "Implemented using Python Dash and Plotly, as well as Flask and CSS"
                 ]}
                 githubUrl="https://github.com/elnukakujo/INF8808_DataViz_SportsAIProject"
                 websiteUrl="https://sportsaiproject.onrender.com/"
+                graphInfos={[
+                    [
+                        "https://raw.githubusercontent.com/elnukakujo/INF8808_DataViz_SportsAIProject/main/plots/italyperformance.png",
+                        "Stacked bar charts showcasing Italy's performance in Euro 2020 across various metrics, with an added layer indicating their positions."
+                    ],
+                    [
+                        "https://raw.githubusercontent.com/elnukakujo/INF8808_DataViz_SportsAIProject/main/plots/radarchart.png",
+                        "Radar Chart comparing Italy and England's performance in Euro 2020 across various metrics."
+                    ]
+                ]}
             />
             <SectionTitle id="bachelor_projects" title="Bachelor Projects"/>
             <Project

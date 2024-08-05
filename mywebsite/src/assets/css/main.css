@@ -89,3 +89,10 @@ img {
     display: block;
     text-align: left;
 }
+
+@media (max-width: 600px) {
+    .your-element {
+        width: 100%; /* Adjust the width to fit the screen */
+        min-width: auto; /* Remove the minimum width */
+    }
+}
