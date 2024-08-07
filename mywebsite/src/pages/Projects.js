@@ -131,9 +131,9 @@ export default function Projects(){
                     "Used the Fashion MNIST dataset to train and test the model",
                     "Two neural networks created :",
                     "A single layer neural network, mimicking a logistic regression gradient descent for binary classification. "+
-                    "Metrics : 97% training/testing accuracy for tshirts and trousers and 0,075 cost",
+                    "Metrics after 2000 steps: 97% training/testing accuracy for tshirts and trousers and 0,075 cost",
                     "A 2 layer neural network, using ReLU and softmax activation function to classify 10 classes. "+
-                    "Metrics : 81% training accuracy, 80% testing accuracy and 0,513 cost"
+                    "Metrics after 2000 steps: 83% training accuracy, 82% testing accuracy and 0,496 cost"
                 ]}
                 githubUrl="https://github.com/elnukakujo/clothing_classification"
                 graphInfos={[
