@@ -142,7 +142,7 @@ export default function Projects(){
                         "The binary classification training evolution curve"
                     ],
                     [
-                        "https://raw.githubusercontent.com/elnukakujo/clothing_classification/main/plot/multi_class/step_6000_train_acc_0.8257333333333333_cost_0.5130132978716956.png",
+                        "https://raw.githubusercontent.com/elnukakujo/clothing_classification/main/plot/multi_class/step_2000_train_acc_0.8317_cost_0.4962773316467636.png",
                         "The multi-class classification training evolution curve"
                     ]
                 ]}
