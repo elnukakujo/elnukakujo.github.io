@@ -98,23 +98,19 @@
 #project .content .graphs {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
-    height: auto;
-    text-align: center;
-    max-width: none;
+    justify-content: center;
+    gap:20px;
 }
 
 #project .graph_container {
-    flex: 1;
-    text-align: center;
-    min-width: 300px;
-    max-width: 500px;
-    margin-top: 0px;
+    flex-basis: 425px; /* Ensures each container is 400px wide */
+    flex-grow: 0;      /* Prevents the containers from growing */
+    flex-shrink: 0;    /* Prevents the containers from shrinking */
+    height: auto;
 }
 #project .graph_container img {
     width: 100%;
     height: auto;
-    margin: 10px;
 }
 #project .graph_container img:hover {
     filter: brightness(95%);
@@ -122,5 +118,4 @@
 
 #project .graph_container figcaption {
     font-style: italic;
-    margin: 10px;
-}
+    text-align: center;}

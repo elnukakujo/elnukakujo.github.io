@@ -132,8 +132,10 @@ export default function Projects(){
                     "Two neural networks created :",
                     "A single layer neural network, mimicking a logistic regression gradient descent for binary classification. "+
                     "Metrics after 2000 steps: 97% training/testing accuracy for tshirts and trousers and 0,075 cost",
-                    "A 2 layer neural network, using ReLU and softmax activation function to classify 10 classes. "+
-                    "Metrics after 2000 steps: 83% training accuracy, 82% testing accuracy and 0,496 cost"
+                    "A 3 layer neural network, using ReLU and Softmax activation functions, and mini batch gradient descent to classify 10 classes. "+
+                    "Metrics after 10 epochs: 85% training accuracy, 83% testing accuracy and 0,45 cost",
+                    "The same 3 layer neural network, but using the adam optimizer to classify the 10 classes. "+
+                    "Metrics after 10 epochs: 90% training accuracy, 87% testing accuracy and 0,27 cost"
                 ]}
                 githubUrl="https://github.com/elnukakujo/clothing_classification"
                 graphInfos={[
@@ -142,8 +144,12 @@ export default function Projects(){
                         "The binary classification training evolution curve"
                     ],
                     [
-                        "https://raw.githubusercontent.com/elnukakujo/clothing_classification/main/plot/multi_class/step_2000_train_acc_0.8317_cost_0.4962773316467636.png",
-                        "The multi-class classification training evolution curve"
+                        "https://raw.githubusercontent.com/elnukakujo/clothing_classification/main/plot/multi_class/epoch_10_optimizer_none.png",
+                        "The mini batch gradient descent for the multi classification"
+                    ],
+                    [
+                        "https://raw.githubusercontent.com/elnukakujo/clothing_classification/main/plot/multi_class/epoch_10_optimizer_adam.png",
+                        "The mini batch gradient descent with Adam optimizer for the multi classification"
                     ]
                 ]}
             />
