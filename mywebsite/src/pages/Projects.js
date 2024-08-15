@@ -123,6 +123,17 @@ export default function Projects(){
         <SectionOpener id="projects" title="Projects">
             <SectionTitle id="master_projects" title="Master Projects"/>
             <Project
+                anchorId="sign_language_recognition"
+                title="Sign Language Recognition with Deep Neural Network using TensorFlow"
+                date="August 2024"
+                description={[
+                    "Implementing a Neural Network using TensorFlow to recognize the American Sign Language",
+                    "The dataset used is the Sign Language MNIST from Kaggle containing 24 letters (excluding J and Z)",
+                    "Still in Progress"
+                ]}
+                githubUrl="https://github.com/elnukakujo/sign_language_recognition"
+            />
+            <Project
                 anchorId="clothing_classification"
                 title="Clothing classification Shallow Neural Networks with NumPy"
                 date="August 2024"
