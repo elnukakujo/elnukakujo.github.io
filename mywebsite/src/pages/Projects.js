@@ -124,14 +124,27 @@ export default function Projects(){
             <SectionTitle id="master_projects" title="Master Projects"/>
             <Project
                 anchorId="sign_language_recognition"
-                title="Sign Language Recognition with Deep Neural Network using TensorFlow"
+                title="Sign Language Recognition with Deep Neural Network using basic TensorFlow"
                 date="August 2024"
                 description={[
                     "Implementing a Neural Network using TensorFlow to recognize the American Sign Language",
                     "The dataset used is the Sign Language MNIST from Kaggle containing 24 letters (excluding J and Z)",
-                    "Still in Progress"
+                    "Used OpenCV to preprocess the images and TensorFlow (not Keras) to do the computations for a very basic model (No CNN only 'dense layers')",
+                    "The best hyperparameters are a learning rate starting from 6.5e-6 decaying manually to 5e-7, a mini batch size of 2**9 (512), two hidden layers with each 85 and 84 nodes, and a l2 lambda of 0 (not enough time to do the tuning for it but was still implemented)",
+                    "I created two pipelines for hypertuning with respective graphs: panda and caviar tuning (See the graphs below and the github for more info)",
+                    "The model has a 81% training accuracy, 65% testing accuracy and a 0.67 cost which is a good achievement for such a simple model"
                 ]}
                 githubUrl="https://github.com/elnukakujo/sign_language_recognition"
+                graphInfos={[
+                    [
+                        "https://raw.githubusercontent.com/elnukakujo/sign_language_recognition/main/data/plots/20240816_172458.png",
+                        "The evolution curve of my best training model"
+                    ],
+                    [
+                        "https://raw.githubusercontent.com/elnukakujo/sign_language_recognition/main/data/plots/example_caviar_tuning.png",
+                        "Example of a caviar tuning plot"
+                    ]
+                ]}
             />
             <Project
                 anchorId="clothing_classification"
