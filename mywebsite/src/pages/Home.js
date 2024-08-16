@@ -106,6 +106,7 @@ function ProjectsSection(){
             </figure>
             <Links 
                 urls={[
+                    "./projects#sign_language_recognition",
                     "./projects#clothing_classification",
                     "./projects#movie_search_app",
                     "./projects#lol_analysis",
@@ -118,6 +119,7 @@ function ProjectsSection(){
                     "./projects#group_drone",
                     "./projects#sparki"]}
                 headers={[
+                    "Sign Language Recognition with Deep Neural Network using basic TensorFlow",
                     "Clothing classification Shallow Neural Networks with NumPy",
                     "Movie search app",
                     "Analytics website for League of Legends",
