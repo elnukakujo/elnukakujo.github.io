@@ -239,13 +239,11 @@ export default function Projects(){
             />
             <Project
                 anchorId="handwriting_generator"
-                title="Handwriting generator with Tensorflow"
+                title="Handwriting Recognition with Tensorflow"
                 date="September 2021 - January 2022"
                 description={[
                     "With the tutoring of Prof. Dr. Luis A. LEIVA at University of Luxembourg",
-                    "Created a Recurrent Neural Network in Python with the TensorFlow library",
-                    "Data extraction, cleaning, definition of a model, its training, then creation of the Chatbot interface",
-                    "The model had 3 parts: encoding, Bahdanau Attention, and decoding",
+                    "Implemented a Convolutional Neural Network in Python with TensorFlow to recognize from diverse handwriting",
                     "Replicated various handwriting styles using a dataset from a separate project"
                 ]}
             />
@@ -255,7 +253,9 @@ export default function Projects(){
                 date="February - June 2021"
                 description={[
                     "With the tutoring of Prof Dr Christoph Schommer at University of Luxembourg",
-                    "Implemented a Convolutional Neural Network for chatbot functions in Python with TensorFlow",
+                    "Created a Recurrent Neural Network in Python with the TensorFlow library",
+                    "Data extraction, cleaning, definition of a model, its training, then creation of the Chatbot interface",
+                    "The model had 3 parts: encoding, Bahdanau Attention, and decoding",
                     "Reddit threads with parent commentaries as a dataset between French and English and engages in small talk"
                 ]}
             />
