@@ -63,6 +63,12 @@ export default function Navbar()
                             <Link to="/projects#bachelor_projects">Bachelor Projects</Link>
                         </div>
                     </div>
+                    <a 
+                    href="https://raw.githubusercontent.com/elnukakujo/elnukakujo.github.io/main/mywebsite/src/assets/docs/cv.pdf" 
+                    target="_blank" 
+                    rel="noopener noreferrer">
+                        CV
+                    </a>
                 </div>
             </div>
         </div>
