@@ -35,7 +35,7 @@ function Images({images}){
   )
 }
 
-function Description({anchorId, title, date, GPA, relevantCourses, onlineCourses, websiteLink, images}){
+function Description({anchorId, title, date, GPA, courses, onlineCourses, websiteLink, images}){
   if (onlineCourses) {
     return (
       <div>
@@ -61,18 +61,18 @@ function Description({anchorId, title, date, GPA, relevantCourses, onlineCourses
   const output = [];
 
   if (date) {
-    output.push(<li className="date" key="date">Date: {date}</li>);
+    output.push(<p className="date" key="date">Date: {date}</p>);
   }
 
   if (GPA) {
-    output.push(<li key="gpa">GPA: {GPA}</li>);
+    output.push(<p key="gpa">GPA: {GPA}</p>);
   }
 
-  if (relevantCourses) {
+  if (courses) {
     output.push(
-      <li key="relevantCourses">
-        Relevant courses: {relevantCourses.join(', ')}
-      </li>
+      <p key="courses">
+        Courses: {courses.join(', ')}
+      </p>
     );
   }
 
@@ -86,6 +86,14 @@ function Description({anchorId, title, date, GPA, relevantCourses, onlineCourses
             websiteLink &&
             <a className="school-container" href={websiteLink[0]} target="_blank" rel="noreferrer">
               <img src={websiteLink[1]} alt="University of Luxembourg"/>
+            </a>
+          }
+        </div>
+        <div className='link-row'>
+          {
+            websiteLink &&
+            <a href={websiteLink[0]} target="_blank" rel="noreferrer">
+              See the University's website
             </a>
           }
         </div>
@@ -111,7 +119,11 @@ export default function Education(){
               anchorId={"masterUdem"}
               title={"Master in Computer Science at Université de Montréal"}
               date={"September 2022 - Upcoming"}
-              relevantCourses={["Data Science", "Machine Learning Fundamentals", "Data Visualization"]}
+              GPA={"2.9"}
+              courses={[
+                "Data Science", "Machine Learning Fundamentals", "Data Visualization", "Model based software engineering",
+                "Empirical methods in HCI", "Tridimensional vision"
+              ]}
               websiteLink={[
                 "https://admission.umontreal.ca/programmes/maitrise-en-informatique/",
                 udemLogo
@@ -138,7 +150,7 @@ export default function Education(){
               ]}
               date={"September 2019 - July 2022"}
               GPA={"3.0"}
-              relevantCourses={["Web development", "Software Engineering", "Networking and Communication", "Cybersecurity 1 and 2", 
+              courses={["Web development", "Software Engineering", "Networking and Communication", "Cybersecurity 1 and 2", 
               "Human Computer Interaction and User Centered Design"]}
               images={[
                 [

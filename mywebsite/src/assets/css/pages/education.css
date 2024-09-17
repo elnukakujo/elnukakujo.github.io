@@ -42,8 +42,22 @@
     transition: transform 0.3s ease;
 }
 
-#education .description h4{
+#education .link-row {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-left: 10px;
+}
+
+#education .link-row a {
     margin: 0;
+    font-size: 15px;
+    margin-top: -20px;
+}
+
+#education .description p{
+    margin: 0;
+    margin-bottom: 5px;
 }
 
 #education .description#oc-content li{
