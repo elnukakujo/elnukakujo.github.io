@@ -145,7 +145,7 @@ export default function Education(){
               anchorId={"bacUniLu"}
               title={"Bachelor of Science in Computer Science at University of Luxembourg"}
               websiteLink={[
-                "https://wwwen.uni.lu/studies/fstc/bachelor_in_computer_science",
+                "https://www.uni.lu/fstm-en/study-programs/bachelor-in-computer-science/",
                 uniluLogo
               ]}
               date={"September 2019 - July 2022"}
