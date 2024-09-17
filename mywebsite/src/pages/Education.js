@@ -45,7 +45,9 @@ function Description({anchorId, title, date, GPA, relevantCourses, onlineCourses
           <ul>
             {onlineCourses.map((course, index) => (
               <li key={index}>
-                <p>{course[0]}</p>
+                <a href={course[1]} target="_blank" rel="noreferrer">
+                  {course[0]}
+                </a>
                 <a className="coursera_container" href={course[1]} target="_blank" rel="noreferrer">
                   <img src={courseraLogo} alt="Coursera"/>
                 </a>

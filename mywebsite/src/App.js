@@ -7,7 +7,6 @@ import Home from './pages/Home';
 import AboutMe from './pages/AboutMe';
 import Education from './pages/Education';
 import Projects from './pages/Projects';
-import OpenPDF from './pages/OpenPDF';
 import './assets/css/main.css';
 
 
@@ -23,7 +22,6 @@ export default function App(){
                         <Route path="/aboutme" element={<AboutMe />} />
                         <Route path="/education" element={<Education />} />
                         <Route path="/projects" element={<Projects />} />
-                        <Route path="/pdf" element={<OpenPDF/>} />
                     </Routes>
                 </div>
                 <Contact />
