@@ -139,7 +139,7 @@ export default function Projects(){
             <Project
                 anchorId="sign_language_recognition"
                 title="Sign Language Recognition with Deep Neural Network using basic TensorFlow"
-                genre={['Python', 'TensorFlow', 'Deep Learning']}
+                genre={['Python', 'TensorFlow', 'Deep Learning', 'CNN']}
                 date="August 2024"
                 description={[
                     "Implementing a Neural Network using TensorFlow to recognize the American Sign Language",
