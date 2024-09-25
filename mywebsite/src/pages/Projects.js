@@ -52,7 +52,7 @@ function Graph({src,legend}){
     );
 }
 
-function Project({anchorId, title, genre, date, githubUrl, videoUrl, websiteUrl, description, graphInfos}){
+function Project({anchorId, title, tag, date, githubUrl, videoUrl, websiteUrl, description, graphInfos}){
     const output = [];
     if (date) {
         output.push(<p className="date" key="date"> Date: {date} </p>);
@@ -93,9 +93,9 @@ function Project({anchorId, title, genre, date, githubUrl, videoUrl, websiteUrl,
                     :null
                 }
             </div>
-            <div className='genre-row'>
-                {genre.map((genre, index) => (
-                    <button key={index} className='genre'>{genre}</button>
+            <div className='tag-row'>
+                {tag.map((tag, index) => (
+                    <button key={index} className='tag'>{tag}</button>
                 ))}
             </div>
             <div className='link-row'>
@@ -137,9 +137,32 @@ export default function Projects(){
         <SectionOpener id="projects" title="Projects">
             <SectionTitle id="master_projects" title="Master Projects"/>
             <Project
+                anchorId="math_storytelling_LLM_human_comparative_study"
+                title="Empirical Study on teaching Math through Storytelling"
+                tag={["Empirical methods", "Mixed Methods", "Human-Computer Interaction", "Education", "Storytelling"]}
+                date="September 2024 - In Progress"
+                description={[
+                    "IFT6075 Empirical Methods in Human-Computer Interaction Final Project at University of Montreal",
+                    "Using the research from the CHI 2024 conference article 'Mathemyths: Leveraging LLMs to Teach Mathematical Language through Child-AI Co-Creative Storytelling'",
+                    "Verifying their findings and enlarging its scope to multiple LLMs apps, multiple math teachers story tellers, as well as more complex problems and an older population"
+                ]}
+            />
+            <Project
+                anchorId="OpenAI_Assistant_M2_Gen"
+                title="Model assistant for the design of meta-models using OpenAI API"
+                tag={['Python', 'OpenAI', 'API', 'Model-Driven Engineering', 'Software Engineering', 'Prompt Engineering']}
+                date="September 2024 - In Progress"
+                description={[
+                    "IFT6253 Model-Driven Engineering final project at University of Montreal",
+                    "Using the research from the paper 'Automated Domain Modeling with LLMs: A Comparative Study'",
+                    "Creating a Modeling Assistant to help designers create meta-models for Domain Specific Languages"
+                ]}
+                githubUrl="https://github.com/elnukakujo/OpenAI_Assistant_M2_Gen"
+            />
+            <Project
                 anchorId="sign_language_recognition"
                 title="Sign Language Recognition with Deep Neural Network using basic TensorFlow"
-                genre={['Python', 'TensorFlow', 'Deep Learning', 'CNN']}
+                tag={['Python', 'TensorFlow', 'Deep Learning', 'CNN']}
                 date="August 2024"
                 description={[
                     "Implementing a Neural Network using TensorFlow to recognize the American Sign Language",
@@ -164,7 +187,7 @@ export default function Projects(){
             <Project
                 anchorId="clothing_classification"
                 title="Clothing classification Shallow Neural Networks with NumPy"
-                genre={['Python', 'Numpy', 'Deep Learning']}
+                tag={['Python', 'Numpy', 'Deep Learning']}
                 date="August 2024"
                 description={[
                     "Implemented shallow neural networks in Python with NumPy to classify clothing images",
@@ -196,7 +219,7 @@ export default function Projects(){
             <Project
                 anchorId="movie_search_app"
                 title="Movie search app"
-                genre={['C#', '.Net', 'JavaScript', 'React', 'Frontend', 'Backend', 'API', 'Software Engineering']}
+                tag={['C#', '.Net', 'JavaScript', 'React', 'Frontend', 'Backend', 'API', 'Software Engineering']}
                 date="July 2024"
                 description={[
                     "Created a local movie search app with a React frontend and a .Net backend",
@@ -211,14 +234,14 @@ export default function Projects(){
             <Project
                 anchorId="lol_analytics"
                 title="Analytics website for League of Legends"
-                genre={[]}
+                tag={[]}
                 date="June 2024 - In Progress"
                 githubUrl="https://github.com/AnalyticsLoL"
             />
             <Project
                 anchorId="sportsai_website"
                 title="Soccer coaching with SportsAI"
-                genre={['Python', 'Plotly', 'Data Visualization', 'Frontend', 'Story Telling']}
+                tag={['Python', 'Plotly', 'Data Visualization', 'Frontend', 'Story Telling']}
                 date="May 2024 - June 2024"
                 description={[
                     "With the tutoring of Hellen Vasquez teacher at Polytechnique Montreal and Tarik Agday co-founder of SportsAI",
@@ -243,7 +266,7 @@ export default function Projects(){
             <Project
                 anchorId="drawing_with_webcam"
                 title="Drawing with a webcam"
-                genre={['Python', 'OpenCV', 'Computer Vision', 'MediaPipe']}
+                tag={['Python', 'OpenCV', 'Computer Vision', 'MediaPipe']}
                 date="February - June 2022"
                 description={[
                     "With the tutoring of Prof. Dr. Luis A. LEIVA at University of Luxembourg",
@@ -255,13 +278,13 @@ export default function Projects(){
             <Project
                 anchorId="privacy_app_figma"
                 title="Design of a privacy app with Figma"
-                genre={['Figma', 'Human-Computer Interaction', 'Design']}
+                tag={['Figma', 'Human-Computer Interaction', 'Design']}
                 videoUrl={"https://www.youtube.com/embed/QCm1njo0ayM?si=wlDq4pp-bgf6woDg"}
             />
             <Project
                 anchorId="handwriting_generator"
                 title="Handwriting Recognition with Tensorflow"
-                genre={['Python', 'TensorFlow', 'Deep Learning', 'CNN']}
+                tag={['Python', 'TensorFlow', 'Deep Learning', 'CNN']}
                 date="September 2021 - January 2022"
                 description={[
                     "With the tutoring of Prof. Dr. Luis A. LEIVA at University of Luxembourg",
@@ -272,7 +295,7 @@ export default function Projects(){
             <Project
                 anchorId="chatbot"
                 title="Conversational Chatbot with Tensorflow"
-                genre={['Python', 'TensorFlow', 'Deep Learning', 'Chatbot', 'RNN']}
+                tag={['Python', 'TensorFlow', 'Deep Learning', 'Chatbot', 'RNN']}
                 date="February - June 2021"
                 description={[
                     "With the tutoring of Prof Dr Christoph Schommer at University of Luxembourg",
@@ -285,7 +308,7 @@ export default function Projects(){
             <Project
                 anchorId="q_learning_drone"
                 title="Q Learning for a drone in a simulated environment"
-                genre={['Python', 'TensorFlow', 'Q Learning', "Robotics"]}
+                tag={['Python', 'TensorFlow', 'Q Learning', "Robotics"]}
                 date="September 2020 - January 2021"
                 description={[
                     "With the tutoring of Dr Jose Luis Sanchez Lopez at University of Luxembourg",
@@ -296,7 +319,7 @@ export default function Projects(){
             <Project
                 anchorId="group_drone"
                 title="Control of a group of drone with Unreal Engine 4 using Python"
-                genre={['Python', 'Unreal Engine 4', 'Linear Algebra', 'Robotics']}
+                tag={['Python', 'Unreal Engine 4', 'Linear Algebra', 'Robotics']}
                 date="February - June 2020"
                 description={[
                     "With the tutoring of Dr Gregoire Danoy at University of Luxembourg to create a simulated environment with quadrotors as agents",
@@ -308,7 +331,7 @@ export default function Projects(){
             <Project
                 anchorId="sparki"
                 title="Chase with Sparki"
-                genre={['Arduino', 'Robotics']}
+                tag={['Arduino', 'Robotics']}
                 date="September 2019 - January 2020"
                 description={[
                     "With the tutoring of Dr Gregoire Danoy at University of Luxembourg, learned about Sparki",

@@ -74,7 +74,7 @@
     font-size: 15px;
 }
 
-#project .genre-row {
+#project .tag-row {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -84,7 +84,7 @@
     margin-bottom: 10px;
 }
 
-#project .genre-row .genre {
+#project .tag-row .tag {
     padding: 5px 10px;
     border: none;
     border-radius: 5px;
@@ -93,7 +93,7 @@
     cursor: pointer;
 }
 
-#project .genre-row .genre:hover {
+#project .tag-row .tag:hover {
     color: #f1f1f1;
     background-color: rgb(22, 78, 124,0.9);
     transition: background-color 0.5s ease, color 0.5s ease;

@@ -106,6 +106,8 @@ function ProjectsSection(){
             </figure>
             <Links 
                 urls={[
+                    "./projects#math_storytelling_LLM_human_comparative_study",
+                    "./projects#OpenAI_Assistant_M2_Gen",
                     "./projects#sign_language_recognition",
                     "./projects#clothing_classification",
                     "./projects#movie_search_app",
@@ -119,6 +121,8 @@ function ProjectsSection(){
                     "./projects#group_drone",
                     "./projects#sparki"]}
                 headers={[
+                    "Empirical Study on teaching Math through Storytelling",
+                    "Model assistant for the design of meta-models using OpenAI API",
                     "Sign Language Recognition with Deep Neural Network using basic TensorFlow",
                     "Clothing classification Shallow Neural Networks with NumPy",
                     "Movie search app",
