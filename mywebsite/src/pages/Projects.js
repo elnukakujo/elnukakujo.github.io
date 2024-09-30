@@ -52,7 +52,7 @@ function Graph({src,legend}){
     );
 }
 
-function Project({anchorId, title, tag, date, githubUrl, videoUrl, websiteUrl, description, graphInfos}){
+function Project({anchorId, title, tags, date, githubUrl, videoUrl, websiteUrl, description, graphInfos}){
     const output = [];
     if (date) {
         output.push(<p className="date" key="date"> Date: {date} </p>);
@@ -95,7 +95,7 @@ function Project({anchorId, title, tag, date, githubUrl, videoUrl, websiteUrl, d
                 }
             </div>
             <div className='tag-row'>
-                {tag.map((tag, index) => (
+                {tags.map((tag, index) => (
                     <button key={index} className='tag'>{tag}</button>
                 ))}
             </div>
@@ -154,7 +154,7 @@ export default function Projects(){
                     key={index}
                     anchorId={project.anchorId}
                     title={project.title}
-                    tag={project.tag || []}
+                    tags={project.tags}
                     date={project.date}
                     githubUrl={project.githubUrl}
                     videoUrl={project.videoUrl}
