@@ -14,15 +14,6 @@ function SectionOpener({id, children}){
     );
 }
 
-function SectionTitle({id, title}){
-    return (
-        <div>
-            <div className="anchor" id={id}/>
-            <h3>{title}</h3>
-        </div>
-    );
-}
-
 function EmbedVideo({url}){
     return (
         <div className="video-container">
@@ -66,7 +57,6 @@ function Project({anchorId, title, tags, date, githubUrl, videoUrl, websiteUrl, 
     const video = videoUrl ? <EmbedVideo url={videoUrl} /> : null;
     const graphs = [];
     if (graphInfos) {
-        console.log(graphInfos);
         graphs.push(
             ...graphInfos.map((infos, index) => (
                 <Graph src={infos.image} legend={infos.description}/>
@@ -130,8 +120,48 @@ function Project({anchorId, title, tags, date, githubUrl, videoUrl, websiteUrl, 
     );
 }
 
+function FilterWindow({tags}){
+    const [filterVisibility, setFilterVisibility] = useState("hidden"); // Initialize with "hidden"
+
+    const toggleFilterWindow = () => {
+        setFilterVisibility(prev => prev === "hidden" ? "visible" : "hidden"); // Toggle visibility
+    };
+    return (
+        <div className="filters">
+            <div id="filter-window" style={{visibility: filterVisibility}}>
+                <div className='header'>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="28"
+                        height="28"
+                        fill="currentColor"
+                        className="bi bi-x"
+                        viewBox="0 0 16 16"
+                        onClick={toggleFilterWindow}
+                    >
+                        <path fillRule="evenodd" d="M1.646 1.646a.5.5 0 0 1 .708 0L8 7.293 13.646 1.646a.5.5 0 1 1 .708.708L8.707 8l5.647 5.646a.5.5 0 0 1-.708.708L8 8.707l-5.646 5.647a.5.5 0 0 1-.708-.708L7.293 8 1.646 2.354a.5.5 0 0 1 0-.708z" />
+                    </svg>
+                    <h4>Filter by tag</h4>
+                </div>
+                <div className='tag-row'>
+                    {tags.map((tag, index) => (
+                        <button key={index} className='tag'>{tag}</button>
+                    ))}
+                </div>
+                <div className='footer'>
+                    <button>All</button>
+                    <button>Reset filters</button>
+                </div>
+            </div>
+            <button className="filter-button" onClick={toggleFilterWindow}>Show filters</button>
+        </div>
+    );
+}
+
 export default function Projects(){
     const [projects, setProjects] = useState([]);
+    const [uniqueTags, setUniqueTags] = useState([]);
+
     useEffect(() => {
         fetch('https://raw.githubusercontent.com/elnukakujo/elnukakujo.github.io/refs/heads/main/mywebsite/src/assets/projects.json').then(response => {
             if (!response.ok) {
@@ -140,15 +170,21 @@ export default function Projects(){
             return response.json();
         }).then(data => {
             setProjects(data.projects);
+            const allTags = data.projects.flatMap((project) => project.tags); // Flatten all tags into a single array
+            const uniqueTags = [...new Set(allTags)]; // Remove duplicates by creating a Set
+            setUniqueTags(uniqueTags);
         }).catch(error => {
             console.error('There has been a problem with your fetch operation:', error);
         })
     }, []);
+
     useEffect(() => {
         document.title = 'Projects | Noe Jager';
     }, []);
+
     return (
         <SectionOpener id="projects" title="Projects">
+            <FilterWindow tags={uniqueTags}/>
             {projects.map((project, index) => (
                 <Project 
                     key={index}

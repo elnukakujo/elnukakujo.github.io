@@ -74,7 +74,7 @@
     font-size: 15px;
 }
 
-#project .tag-row {
+#projects .tag-row {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -84,7 +84,7 @@
     margin-bottom: 10px;
 }
 
-#project .tag-row .tag {
+#projects .tag {
     padding: 5px 10px;
     border: none;
     border-radius: 5px;
@@ -93,7 +93,7 @@
     cursor: pointer;
 }
 
-#project .tag-row .tag:hover {
+#projects .tag:hover {
     color: #f1f1f1;
     background-color: rgb(22, 78, 124,0.9);
     transition: background-color 0.5s ease, color 0.5s ease;
@@ -155,4 +155,100 @@
 
 #project .graph_container figcaption {
     font-style: italic;
-    text-align: center;}
+    text-align: center;
+}
+
+#projects .filter-button{
+    position: fixed;
+    bottom:0;
+    right:0;
+    margin:0px 10px 10px;  
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    color: #333;
+    cursor: pointer;
+}
+
+#projects .filter-button:hover {
+    color: #f1f1f1;
+    background-color: rgb(22, 78, 124,0.9);
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+#filter-window {
+    visibility: hidden;
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 450px;
+    height: 100%;
+    border: 0.5px solid black;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    background-color: #F9F6EE;
+}
+
+#filter-window .header {
+    text-align: center;
+    padding: 30px 0px;
+    border-bottom: 0.5px solid black;
+}
+
+#filter-window .header svg {
+    position: fixed;
+    right: 400px;
+    cursor: pointer;
+}
+
+#filter-window .header svg:hover {
+    color: #636363;
+    background-color: #d8d6cfc9;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+#filter-window h4 {
+    margin: 0;
+}
+
+#filter-window .tag-row {
+    flex: 1;
+    margin: 30px 0px;
+    padding: 0px 20px;
+    display: inline-block;
+    text-align: left;
+    max-height: 720px;
+    overflow-y: auto;
+}
+
+#filter-window .tag {
+    margin: 5px;
+    max-height: 30px;
+}
+
+#filter-window .footer {
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: right;
+    border-top: 0.5px solid black;
+}
+
+#filter-window .footer button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    color: #333;
+    cursor: pointer;
+}
+
+#filter-window .footer button:hover {
+    color: #f1f1f1;
+    background-color: rgb(22, 78, 124,0.9);
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
