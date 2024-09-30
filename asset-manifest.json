@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.ef2f2132.css",
-    "main.js": "/static/js/main.fba9f5b3.js",
+    "main.css": "/static/css/main.7b7ad4e1.css",
+    "main.js": "/static/js/main.ab248b98.js",
     "static/media/udem_neige.jpg": "/static/media/udem_neige.ca0c5ed1561894e0bdb3.jpg",
     "static/media/udem_ete.jpg": "/static/media/udem_ete.78709446744e15d34384.jpg",
     "static/media/shimanami_kaido_island.jpg": "/static/media/shimanami_kaido_island.ffdf4802fdbe76e709a3.jpg",
@@ -18,11 +18,11 @@
     "static/media/github_logo.jpg": "/static/media/github_logo.3fc5ead9ff318bda611c.jpg",
     "static/media/coursera_logo.jpg": "/static/media/coursera_logo.431ae41c410504a56b7e.jpg",
     "index.html": "/index.html",
-    "main.ef2f2132.css.map": "/static/css/main.ef2f2132.css.map",
-    "main.fba9f5b3.js.map": "/static/js/main.fba9f5b3.js.map"
+    "main.7b7ad4e1.css.map": "/static/css/main.7b7ad4e1.css.map",
+    "main.ab248b98.js.map": "/static/js/main.ab248b98.js.map"
   },
   "entrypoints": [
-    "static/css/main.ef2f2132.css",
-    "static/js/main.fba9f5b3.js"
+    "static/css/main.7b7ad4e1.css",
+    "static/js/main.ab248b98.js"
   ]
 }
