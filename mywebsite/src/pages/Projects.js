@@ -132,16 +132,18 @@ function Project({anchorId, title, tag, date, githubUrl, videoUrl, websiteUrl, d
 
 export default function Projects(){
     const [projects, setProjects] = useState([]);
-    fetch('https://raw.githubusercontent.com/elnukakujo/elnukakujo.github.io/refs/heads/main/mywebsite/src/assets/projects.json').then(response => {
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        return response.json();
-    }).then(data => {
-        setProjects(data.projects);
-    }).catch(error => {
-        console.error('There has been a problem with your fetch operation:', error);
-    });
+    useEffect(() => {
+        fetch('https://raw.githubusercontent.com/elnukakujo/elnukakujo.github.io/refs/heads/main/mywebsite/src/assets/projects.json').then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        }).then(data => {
+            setProjects(data.projects);
+        }).catch(error => {
+            console.error('There has been a problem with your fetch operation:', error);
+        })
+    }, []);
     useEffect(() => {
         document.title = 'Projects | Noe Jager';
     }, []);

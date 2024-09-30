@@ -1,6 +1,6 @@
 import React from "react";
 import {Link} from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 import meImage from '../assets/img/index/me.jpg';
 import udemEte from '../assets/img/index/udem_ete.jpg';
@@ -97,6 +97,19 @@ function EducationSection(){
 }
 
 function ProjectsSection(){
+    const [projects, setProjects] = useState([]);
+    useEffect(() => {
+        fetch('https://raw.githubusercontent.com/elnukakujo/elnukakujo.github.io/refs/heads/main/mywebsite/src/assets/projects.json').then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        }).then(data => {
+            setProjects(data.projects);
+        }).catch(error => {
+            console.error('There has been a problem with your fetch operation:', error);
+        })
+    }, []);
     return(
         <SectionOpener id="projects_intro" title={"Projects"}>
             <figure id="projects_pictures">
@@ -105,36 +118,8 @@ function ProjectsSection(){
                 <Figure src={qLearningEnvImage} alt={"Q learning simluation environment"} url={"./projects#q_learning_drone"}/>
             </figure>
             <Links 
-                urls={[
-                    "./projects#math_storytelling_LLM_human_comparative_study",
-                    "./projects#OpenAI_Assistant_M2_Gen",
-                    "./projects#sign_language_recognition",
-                    "./projects#clothing_classification",
-                    "./projects#movie_search_app",
-                    "./projects#lol_analysis",
-                    "./projects#sportsai_website",
-                    "./projects#drawing_with_webcam",
-                    "./projects#privacy_app_figma",
-                    "./projects#handwriting_generator",
-                    "./projects#chatbot",
-                    "./projects#q_learning_drone",
-                    "./projects#group_drone",
-                    "./projects#sparki"]}
-                headers={[
-                    "Empirical Study on teaching Math through Storytelling",
-                    "Model assistant for the design of meta-models using OpenAI API",
-                    "Sign Language Recognition with Deep Neural Network using basic TensorFlow",
-                    "Clothing classification Shallow Neural Networks with NumPy",
-                    "Movie search app",
-                    "Analytics website for League of Legends",
-                    "Soccer coaching with SportsAI",
-                    "Drawing with a webcam",
-                    "Design of a privacy app with Figma",
-                    "Handwriting generator with Tensorflow",
-                    "Conversational Chatbot with Tensorflow",
-                    "Q Learning for a drone in a simulated environment",
-                    "Control of a group of drone with Unreal Engine 4 using Python",
-                    "Chase with Sparki"]}
+                urls={projects.map((project) => "./projects#" + project.anchorId)}
+                headers={projects.map((project) => project.title)}
             />
         </SectionOpener>
     );
@@ -142,7 +127,7 @@ function ProjectsSection(){
 
 export default function Home() {
     useEffect(() => {
-         document.title = 'Home | Noe Jager';
+        document.title = 'Home | Noe Jager';
     }, []);
     return (
         <div>
