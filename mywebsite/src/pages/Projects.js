@@ -121,19 +121,24 @@ function Project({anchorId, title, tags, date, githubUrl, videoUrl, websiteUrl, 
     );
 }
 
-function FilterWindow({uniqueTags}){
+function FilterWindow({uniqueTags,selectedTags}){
     const [filterVisibility, setFilterVisibility] = useState("hidden"); // Initialize with "hidden"
 
     const toggleFilterWindow = () => {
         setFilterVisibility(prev => prev === "hidden" ? "visible" : "hidden"); // Toggle visibility
     };
 
+    const location = useLocation();
+
     const [tags, setTags]=useState([]);
     useEffect(() => {
-        setTags(uniqueTags.map(tag=>({name:tag,clicked:false})))
-    }, []);
+        const updatedTags = uniqueTags.map(tag => ({
+            name: tag,
+            clicked: selectedTags.includes(tag), // Keep the clicked state based on selectedTags
+        }));
+        setTags(updatedTags);
+    }, [uniqueTags, selectedTags]);
 
-    const location = useLocation();
     const navigate = useNavigate();
 
     const updateQueryParams = (selectedTags) => {
@@ -245,7 +250,7 @@ export default function Projects(){
 
     useEffect(() => {
         fetchProjects(); // Fetch projects when selectedTags change
-    }, [useLocation()]);
+    }, [location]);
 
     useEffect(() => {
         document.title = 'Projects | Noe Jager';
@@ -253,7 +258,7 @@ export default function Projects(){
 
     return (
         <SectionOpener id="projects" title="Projects">
-            <FilterWindow uniqueTags={uniqueTags}/>
+            <FilterWindow uniqueTags={uniqueTags} selectedTags={selectedTags}/>
             {projects.map((project, index) => (
                 <Project 
                     key={index}
