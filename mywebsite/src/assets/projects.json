@@ -1,6 +1,11 @@
 {
     "projects": [
         {
+            "anchorId": "peepee",
+            "title": "poopoo",
+            "date": "September 2024 - In Progress",
+        },
+        {
             "anchorId": "math_storytelling_LLM_human_comparative_study",
             "title": "Empirical Study on teaching Math through Storytelling",
             "tags": ["Empirical methods", "Mixed Methods", "Human-Computer Interaction", "Education", "Storytelling"],
