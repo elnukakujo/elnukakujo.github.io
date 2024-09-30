@@ -224,9 +224,8 @@
     overflow-y: auto;
 }
 
-#filter-window .tag {
+#filter-window .tag-row button{
     margin: 5px;
-    max-height: 30px;
 }
 
 #filter-window .footer {
@@ -238,7 +237,7 @@
     border-top: 0.5px solid black;
 }
 
-#filter-window .footer button {
+#filter-window button {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -247,7 +246,13 @@
     cursor: pointer;
 }
 
-#filter-window .footer button:hover {
+#filter-window button:hover {
+    color: #f1f1f1;
+    background-color: rgb(22, 78, 124,0.9);
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+#filter-window button.clicked {
     color: #f1f1f1;
     background-color: rgb(22, 78, 124,0.9);
     transition: background-color 0.5s ease, color 0.5s ease;

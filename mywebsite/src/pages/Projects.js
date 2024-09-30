@@ -1,5 +1,6 @@
 import React from 'react';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import githubLogo from '../assets/img/logo/github_logo.jpg';
 
 import '../assets/css/pages/projects.css';
@@ -23,10 +24,10 @@ function EmbedVideo({url}){
                 height="315" 
                 src={url} 
                 title="YouTube video player" 
-                frameborder="0" 
+                frameBorder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerpolicy="strict-origin-when-cross-origin" 
-                allowfullscreen
+                referrerPolicy="strict-origin-when-cross-origin" 
+                allowFullScreen
             />
         </div>
     );
@@ -120,12 +121,59 @@ function Project({anchorId, title, tags, date, githubUrl, videoUrl, websiteUrl, 
     );
 }
 
-function FilterWindow({tags}){
+function FilterWindow({uniqueTags}){
     const [filterVisibility, setFilterVisibility] = useState("hidden"); // Initialize with "hidden"
 
     const toggleFilterWindow = () => {
         setFilterVisibility(prev => prev === "hidden" ? "visible" : "hidden"); // Toggle visibility
     };
+
+    const [tags, setTags]=useState([]);
+    useEffect(() => {
+        setTags(uniqueTags.map(tag=>({name:tag,clicked:false})))
+    }, []);
+
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    const updateQueryParams = (selectedTags) => {
+        const searchParams = new URLSearchParams(location.search);
+    
+        // Remove all existing 'tags' queries to start clean
+        searchParams.delete('tags');
+    
+        // Add the selected tags to the query string
+        if (selectedTags.length > 0) {
+          searchParams.set('tags', selectedTags.join(','));
+        }
+    
+        // Update the URL without refreshing the page
+        navigate({ search: searchParams.toString() }, { replace: true });
+    };
+
+    const handleTagClick = (index) => {
+        const updatedTags = tags.map((tag, i) =>
+            i === index ? { ...tag, clicked: !tag.clicked } : tag
+          );
+        setTags(updatedTags);
+
+        // Update query params
+        const selectedTags = updatedTags
+        .filter(tag => tag.clicked)
+        .map(tag => tag.name);
+
+        updateQueryParams(selectedTags);
+    };
+
+    const resetFilters = () => {
+        const resetTags = tags.map(tag => ({ ...tag, clicked: false }));
+        setTags(resetTags);
+
+        const searchParams = new URLSearchParams(location.search);
+        searchParams.delete('tags');
+        navigate({ search: searchParams.toString() }, { replace: true });
+    };
+
     return (
         <div className="filters">
             <div id="filter-window" style={{visibility: filterVisibility}}>
@@ -145,12 +193,17 @@ function FilterWindow({tags}){
                 </div>
                 <div className='tag-row'>
                     {tags.map((tag, index) => (
-                        <button key={index} className='tag'>{tag}</button>
+                        <button
+                            key={index}
+                            className={tag.clicked ? 'tag clicked' : 'tag'}
+                            onClick={() => handleTagClick(index)}
+                        >
+                            {tag.name}
+                        </button>
                     ))}
                 </div>
                 <div className='footer'>
-                    <button>All</button>
-                    <button>Reset filters</button>
+                    <button onClick={resetFilters}>Reset filters</button>
                 </div>
             </div>
             <button className="filter-button" onClick={toggleFilterWindow}>Show filters</button>
@@ -162,21 +215,37 @@ export default function Projects(){
     const [projects, setProjects] = useState([]);
     const [uniqueTags, setUniqueTags] = useState([]);
 
-    useEffect(() => {
-        fetch('https://raw.githubusercontent.com/elnukakujo/elnukakujo.github.io/refs/heads/main/mywebsite/src/assets/projects.json').then(response => {
+    const location = useLocation();
+    const searchParams = new URLSearchParams(location.search);
+    const selectedTags = searchParams.get('tags')?.split(',') || [];
+
+    const fetchProjects = useCallback(async () => {
+        try {
+            const response = await fetch('https://raw.githubusercontent.com/elnukakujo/elnukakujo.github.io/refs/heads/main/mywebsite/src/assets/projects.json');
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
-            return response.json();
-        }).then(data => {
-            setProjects(data.projects);
-            const allTags = data.projects.flatMap((project) => project.tags); // Flatten all tags into a single array
-            const uniqueTags = [...new Set(allTags)]; // Remove duplicates by creating a Set
+            const data = await response.json();
+            // Set projects based on selectedTags
+            const allTags = data.projects.flatMap((project) => project.tags);
+            const uniqueTags = [...new Set(allTags)];
             setUniqueTags(uniqueTags);
-        }).catch(error => {
+
+            const filteredProjects = selectedTags.length > 0
+                ? data.projects.filter(project =>
+                    project.tags.some(tag => selectedTags.includes(tag))
+                )
+                : data.projects;
+
+            setProjects(filteredProjects); // Set the filtered projects
+        } catch (error) {
             console.error('There has been a problem with your fetch operation:', error);
-        })
-    }, []);
+        }
+    }, [selectedTags]); // Dependency on selectedTags
+
+    useEffect(() => {
+        fetchProjects(); // Fetch projects when selectedTags change
+    }, [useLocation().search]);
 
     useEffect(() => {
         document.title = 'Projects | Noe Jager';
@@ -184,7 +253,7 @@ export default function Projects(){
 
     return (
         <SectionOpener id="projects" title="Projects">
-            <FilterWindow tags={uniqueTags}/>
+            <FilterWindow uniqueTags={uniqueTags}/>
             {projects.map((project, index) => (
                 <Project 
                     key={index}
