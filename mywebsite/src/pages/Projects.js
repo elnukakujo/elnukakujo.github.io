@@ -137,18 +137,18 @@ function FilterWindow({uniqueTags}){
     const navigate = useNavigate();
 
     const updateQueryParams = (selectedTags) => {
-        const searchParams = new URLSearchParams(location.search);
+        const hashParams = new URLSearchParams(location.hash.slice(1));
     
         // Remove all existing 'tags' queries to start clean
-        searchParams.delete('tags');
+        hashParams.delete('tags');
     
         // Add the selected tags to the query string
         if (selectedTags.length > 0) {
-          searchParams.set('tags', selectedTags.join(','));
+            hashParams.set('tags', selectedTags.join(','));
         }
     
         // Update the URL without refreshing the page
-        navigate({ search: searchParams.toString() }, { replace: true });
+        navigate({ hash: `#${hashParams.toString()}` }, { replace: true });
     };
 
     const handleTagClick = (index) => {
@@ -169,9 +169,9 @@ function FilterWindow({uniqueTags}){
         const resetTags = tags.map(tag => ({ ...tag, clicked: false }));
         setTags(resetTags);
 
-        const searchParams = new URLSearchParams(location.search);
-        searchParams.delete('tags');
-        navigate({ search: searchParams.toString() }, { replace: true });
+        const hashParams = new URLSearchParams(location.hash.slice(1));
+        hashParams.delete('tags');
+        navigate({ hash: `#${hashParams.toString()}` }, { replace: true });
     };
 
     return (
@@ -216,8 +216,8 @@ export default function Projects(){
     const [uniqueTags, setUniqueTags] = useState([]);
 
     const location = useLocation();
-    const searchParams = new URLSearchParams(location.search);
-    const selectedTags = searchParams.get('tags')?.split(',') || [];
+    const hashParams = new URLSearchParams(location.hash.slice(1));
+    const selectedTags = hashParams.get('tags')?.split(',') || [];
 
     const fetchProjects = useCallback(async () => {
         try {
@@ -245,7 +245,7 @@ export default function Projects(){
 
     useEffect(() => {
         fetchProjects(); // Fetch projects when selectedTags change
-    }, [useLocation().search]);
+    }, [useLocation()]);
 
     useEffect(() => {
         document.title = 'Projects | Noe Jager';
