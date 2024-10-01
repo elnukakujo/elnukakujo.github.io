@@ -76,21 +76,28 @@ function IntroSection(){
 }
 
 function EducationSection(){
+    const [universities, setUniversities] = useState([]);
+    useEffect(() => {
+        fetch('https://raw.githubusercontent.com/elnukakujo/elnukakujo.github.io/refs/heads/main/mywebsite/src/assets/data/education.json').then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        }).then(data => {
+            setUniversities(data.uni);
+        }).catch(error => {
+            console.error('There has been a problem with your fetch operation:', error);
+        })
+    }, []);
     return(
         <SectionOpener id="education_intro" title={"Education"}>
             <div id="udem_pictures">
                 <Figure src={udemEte} alt={"Udem in Summer"} url={"/education#masterUdem"}/>
                 <Figure src={udemNeige} alt={"Udem in Winter"} url={"/education#masterUdem"}/>
             </div>
-            <Links 
-            urls={[
-                "/education#masterUdem", 
-                "/education#bacUniLu", 
-                "/education#oc"]}
-            headers={[
-                "Master in Computer Science at Université de Montréal", 
-                "Bachelor of Science in Computer Science at University of Luxembourg",
-                "Online Courses"]}
+            <Links
+                urls={universities.map((university) => "./education#" + university.anchorId)}
+                headers={universities.map((university) => university.title)}
             />
         </SectionOpener>
     );
