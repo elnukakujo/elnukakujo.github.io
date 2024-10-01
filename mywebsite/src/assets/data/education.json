@@ -15,16 +15,16 @@
             ],
             "websiteLink": [
               "https://admission.umontreal.ca/programmes/maitrise-en-informatique/",
-              "udemLogo"
+              "https://raw.githubusercontent.com/elnukakujo/elnukakujo.github.io/refs/heads/main/mywebsite/src/assets/img/logo/udem_logo.jpg"
             ],
             "images": [
               [
-                "udemEte",
+                "https://raw.githubusercontent.com/elnukakujo/elnukakujo.github.io/refs/heads/main/mywebsite/src/assets/img/index/udem_ete.jpg",
                 "https://admission.umontreal.ca/programmes/maitrise-en-informatique/",
                 "The campus of Université de Montréal in the summer"
               ],
               [
-                "udemNeige",
+                "https://raw.githubusercontent.com/elnukakujo/elnukakujo.github.io/refs/heads/main/mywebsite/src/assets/img/index/udem_neige.jpg",
                 "https://admission.umontreal.ca/programmes/maitrise-en-informatique/",
                 "The campus of Université de Montréal in the winter"
               ]
@@ -44,7 +44,7 @@
             ],
             "websiteLink": [
               "https://www.uni.lu/fstm-en/study-programs/bachelor-in-computer-science/",
-              "uniluLogo"
+              "https://raw.githubusercontent.com/elnukakujo/elnukakujo.github.io/refs/heads/main/mywebsite/src/assets/img/logo/unilu_logo.jpg"
             ],
             "images": [
               [
