@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.17e4c118.css",
-    "main.js": "/static/js/main.27ebb2d5.js",
+    "main.js": "/static/js/main.857b9bd4.js",
     "static/media/udem_neige.jpg": "/static/media/udem_neige.ca0c5ed1561894e0bdb3.jpg",
     "static/media/udem_ete.jpg": "/static/media/udem_ete.78709446744e15d34384.jpg",
     "static/media/shimanami_kaido_island.jpg": "/static/media/shimanami_kaido_island.ffdf4802fdbe76e709a3.jpg",
@@ -18,10 +18,10 @@
     "static/media/coursera_logo.jpg": "/static/media/coursera_logo.431ae41c410504a56b7e.jpg",
     "index.html": "/index.html",
     "main.17e4c118.css.map": "/static/css/main.17e4c118.css.map",
-    "main.27ebb2d5.js.map": "/static/js/main.27ebb2d5.js.map"
+    "main.857b9bd4.js.map": "/static/js/main.857b9bd4.js.map"
   },
   "entrypoints": [
     "static/css/main.17e4c118.css",
-    "static/js/main.27ebb2d5.js"
+    "static/js/main.857b9bd4.js"
   ]
 }
