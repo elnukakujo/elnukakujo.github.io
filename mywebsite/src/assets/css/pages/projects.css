@@ -160,9 +160,8 @@
 
 #projects .filter-button{
     position: fixed;
-    bottom:0;
-    right:0;
-    margin:0px 10px 10px;  
+    bottom:20px;
+    right:20px;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
