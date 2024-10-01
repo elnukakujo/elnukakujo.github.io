@@ -99,7 +99,7 @@ function EducationSection(){
 function ProjectsSection(){
     const [projects, setProjects] = useState([]);
     useEffect(() => {
-        fetch('https://raw.githubusercontent.com/elnukakujo/elnukakujo.github.io/refs/heads/main/mywebsite/src/assets/projects.json').then(response => {
+        fetch('https://raw.githubusercontent.com/elnukakujo/elnukakujo.github.io/refs/heads/main/mywebsite/src/assets/data/projects.json').then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }

@@ -226,7 +226,7 @@ export default function Projects(){
 
     const fetchProjects = useCallback(async () => {
         try {
-            const response = await fetch('https://raw.githubusercontent.com/elnukakujo/elnukakujo.github.io/refs/heads/main/mywebsite/src/assets/projects.json');
+            const response = await fetch('https://raw.githubusercontent.com/elnukakujo/elnukakujo.github.io/refs/heads/main/mywebsite/src/assets/data/projects.json');
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
