@@ -44,7 +44,7 @@ function Graph({src,legend}){
     );
 }
 
-function Project({anchorId, title, tags, date, githubUrl, videoUrl, websiteUrl, description, graphInfos}){
+function Project({anchorId, title, tags, date, githubUrl, videoUrl, websiteUrl, description, graphInfos, pdfLink}){
     const output = [];
     if (date) {
         output.push(<p className="date" key="date"> Date: {date} </p>);
@@ -60,7 +60,7 @@ function Project({anchorId, title, tags, date, githubUrl, videoUrl, websiteUrl, 
     if (graphInfos) {
         graphs.push(
             ...graphInfos.map((infos, index) => (
-                <Graph src={infos.image} legend={infos.description}/>
+                <Graph src={infos.image} legend={infos.description} key={index}/>
             ))
         );
     }
@@ -91,20 +91,31 @@ function Project({anchorId, title, tags, date, githubUrl, videoUrl, websiteUrl, 
                 ))}
             </div>
             <div className='link-row'>
-                {
-                    websiteUrl?
+                {websiteUrl && (
                     <a className="websiteLink" href={websiteUrl} target='_blank' rel='noreferrer'>
                         <p>See the website</p>
                     </a>
-                    :null
-                }
-                {
-                    githubUrl?
+                )}
+
+                {githubUrl && (
                     <a className="githubLink" href={githubUrl} target='_blank' rel='noreferrer'>
-                        <p>See the github repository</p>
+                        <p>See the GitHub repository</p>
                     </a>
-                    :null
-                }
+                )}
+
+                {pdfLink && (
+                    <div className='pdf-links'>
+                        {Object.entries(pdfLink).map(([key, value]) => (
+                            <div key={key}>
+                                {value && (
+                                    <a className="pdfLink" href={value} target='_blank' rel='noreferrer'>
+                                        <p>See the {key}</p>
+                                    </a>
+                                )}
+                            </div>
+                        ))}
+                    </div>
+                )}
             </div>
             <div className="content">
                 {outputList}
@@ -250,7 +261,7 @@ export default function Projects(){
 
     useEffect(() => {
         fetchProjects(); // Fetch projects when selectedTags change
-    }, [location]);
+    }, [fetchProjects,location]);
 
     useEffect(() => {
         document.title = 'Projects | Noe Jager';
@@ -271,6 +282,7 @@ export default function Projects(){
                     websiteUrl={project.websiteUrl}
                     description={project.description}
                     graphInfos={project.graphInfos}
+                    pdfLink={project.pdfLink}
                 />
             ))}
         </SectionOpener>

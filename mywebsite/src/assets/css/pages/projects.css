@@ -74,6 +74,13 @@
     font-size: 15px;
 }
 
+#project .pdf-links {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-left: 10px;
+}
+
 #projects .tag-row {
     display: flex;
     flex-direction: row;
