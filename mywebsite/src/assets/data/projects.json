@@ -23,8 +23,8 @@
             "description": [
             "IFT6253 Model-Driven Engineering final project at University of Montreal",
             "Using the Prompt/Model Evaluation methods, as well as metamodels descriptions and solutions from the paper 'Automated Domain Modeling with LLMs: A Comparative Study'",
-            "Creating a Modeling Assistant to help designers create meta-models for Domain Specific Languages, finding the method with the best F1 Score",
-            "Additionally, the application will automatically evaluate the results of the generated meta-models"
+            "Creating a Modeling Assistant to help designers create meta-models for Domain Specific Languages, using 3-Shot method consisting as giving 3 examples of problem description with the solution as well as an EBNF custom format",
+            "Additionally, the application will automatically evaluate the results of the generated meta-models by first converting the metamodels in ecore files using ANTLR and then using EMF Compare in Eclipse to compare the generated metamodels with the expected ones"
             ],
             "githubUrl": "https://github.com/elnukakujo/OpenAI_Assistant_M2_Gen"
         },
