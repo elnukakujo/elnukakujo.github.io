@@ -13,7 +13,8 @@
             ],
             "pdfLink":{
                 "project proposal":"https://raw.githubusercontent.com/elnukakujo/elnukakujo.github.io/main/mywebsite/src/assets/docs/IFT6075%20Project%20Proposal.pdf"
-            }
+            },
+            "githubUrl": "https://github.com/elnukakujo/LLM_maths_storytelling/tree/main"
         },
         {
             "anchorId": "OpenAI_Assistant_M2_Gen",
@@ -100,9 +101,9 @@
         {
             "anchorId": "lol_analytics",
             "title": "Analytics website for League of Legends",
-            "tags": [],
+            "tags": ["React", "JavaScript", "Frontend", "API", "Software Engineering", ".Net", "C#"],
             "date": "June 2024 - In Progress",
-            "githubUrl": "https://github.com/AnalyticsLoL"
+            "githubUrl": "https://github.com/AnalyticsLoL/SummonerInsight"
         },
         {
             "anchorId": "sportsai_website",
