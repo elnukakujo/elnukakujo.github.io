@@ -103,7 +103,8 @@
             "title": "Analytics website for League of Legends",
             "tags": ["React", "JavaScript", "Frontend", "API", "Software Engineering", ".Net", "C#"],
             "date": "June 2024 - In Progress",
-            "githubUrl": "https://github.com/AnalyticsLoL/SummonerInsight"
+            "githubUrl": "https://github.com/AnalyticsLoL/SummonerInsight",
+            "videoUrl": "https://www.youtube.com/embed/5Jl8C4LcDDs?si=M6R4aeey91EhztYo"
         },
         {
             "anchorId": "sportsai_website",
