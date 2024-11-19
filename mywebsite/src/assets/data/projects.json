@@ -99,7 +99,7 @@
             "videoUrl": "https://www.youtube.com/embed/4F4O1xsQ4WU?si=7nBexlFtNQ4BTcMg"
         },
         {
-            "anchorId": "lol_analytics",
+            "anchorId": "summoner_insight",
             "title": "Analytics website for League of Legends",
             "tags": ["React", "JavaScript", "Frontend", "API", "Software Engineering", ".Net", "C#"],
             "date": "June 2024 - In Progress",
