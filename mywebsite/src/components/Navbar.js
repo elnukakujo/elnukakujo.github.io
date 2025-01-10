@@ -22,11 +22,13 @@ export default function Navbar()
         };
     }, [scrolled]);
 
+    const location = useLocation();
+
     useEffect(()=> {
         setMenuOpen(false);
         setScrolled(false);
         window.scrollTo(0, 0);
-    }, [useLocation()])
+    }, [location])
 
     const handleClick = () => {
         setMenuOpen(!menuOpen);

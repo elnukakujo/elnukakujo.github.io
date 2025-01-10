@@ -232,8 +232,10 @@ export default function Projects(){
     const [uniqueTags, setUniqueTags] = useState([]);
 
     const location = useLocation();
-    const hashParams = new URLSearchParams(location.hash.slice(1));
-    const selectedTags = hashParams.get('tags')?.split(',') || [];
+    const selectedTags = React.useMemo(() => {
+        const hashParams = new URLSearchParams(location.hash.slice(1));
+        return hashParams.get('tags') ? hashParams.get('tags').split(',') : [];
+    }, [location.hash]);
 
     const fetchProjects = useCallback(async () => {
         try {
