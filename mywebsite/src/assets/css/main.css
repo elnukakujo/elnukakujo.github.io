@@ -1,0 +1,42 @@
+body{
+    margin:0;
+}
+
+@font-face {
+    font-family: 'Poppins-Medium';
+    src: url('../font/Poppins-Medium.ttf');
+}
+@font-face {
+    font-family: 'Inter-Regular';
+    src: url('../font/Inter_18pt-Regular.ttf');
+}
+
+h1, h2 {
+    font-family: 'Poppins-Medium';
+    margin: 0;
+}
+
+h1 {
+    font-size: 40px;
+}
+h2 {
+    font-size: 20px;
+}
+
+p, a {
+    font-family: 'Inter-Regular';
+    font-size: 18px;
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 24px;
+    }
+    h2 {
+        font-size: 16px;
+    }
+    p, a {
+        font-size: 14px;
+    }
+}

@@ -1,5 +1,6 @@
 import React from "react";
 import profileImage from "../assets/img/noe_aout_2022.png";
+import '../assets/css/sections/herosection.css';
 
 export default function HeroSection() {
   return (
