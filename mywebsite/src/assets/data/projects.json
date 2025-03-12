@@ -1,21 +1,41 @@
 [
     {
+        "anchorId": "my_memory_chat",
+        "title": "My Memory Chat: A LLM Chatbot for Memory Recall",
+        "tags": ["graph_rag", "generative_agents", "llm", "langchain", "neo4j", "flask", "react", "js", "full_stack", "prompt_eng", "gemini", "py", "api", "soft_eng", "ux_design"],
+        "summary": "A client-server application integrating Gemini, Neo4j knowledge graphs, and the ReAct (Reason + Act) prompting method, allowing users to interact with an LLM to store life events and entities in a memory graph and receive insightful responses.",
+        "description": "",
+        "date": "February - March 2025",
+        "githubUrl": "https://github.com/MyMemoryChat",
+        "image": [
+            {
+                "imageUrl": "https://raw.githubusercontent.com/MyMemoryChat/LLM_agent/main/neo4jconsole.png",
+                "description": "Image of the Neo4j console with the memory graph"
+            },
+            {
+                "imageUrl": "https://private-user-images.githubusercontent.com/61209679/420021407-8977d3de-bc22-4a4c-9251-c8bff36f3c7d.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDE4MTM1ODMsIm5iZiI6MTc0MTgxMzI4MywicGF0aCI6Ii82MTIwOTY3OS80MjAwMjE0MDctODk3N2QzZGUtYmMyMi00YTRjLTkyNTEtYzhiZmYzNmYzYzdkLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTAzMTIlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwMzEyVDIxMDEyM1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPThmODdkMjRiYjczYTZjOWUzMDdkMjUwM2E0OGU1YjYyMWQzMjFiYTdmZDc0NjFjOGVlNDVhM2UxYWJlNDMxYjImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.YnLgJxYoDmfmFbFPlX6MDOrdyKkcOVa5D2bNK99UQrE",
+                "description": "Example history of a conversation in the React client"
+            },
+            {
+                "imageUrl": "https://private-user-images.githubusercontent.com/61209679/420021117-3a984395-1e9c-4bae-aaa0-14b1b5b93309.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDE4MTM1ODMsIm5iZiI6MTc0MTgxMzI4MywicGF0aCI6Ii82MTIwOTY3OS80MjAwMjExMTctM2E5ODQzOTUtMWU5Yy00YmFlLWFhYTAtMTRiMWI1YjkzMzA5LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTAzMTIlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwMzEyVDIxMDEyM1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTA4N2Q1MmI0YjZjYWQzNTAwNGZlOTlkMWJlM2NmNjQ1ZTM2NzQ5NDhmMGQ3MGYzOWE4N2Q1MTJiODE3NmZjYzEmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.OxaExnm3Jih3WNMOwZE5xobuFjLicJgKIhAD7LdHdSI",
+                "description": "Example image informations display in the React client"
+            }
+        ],
+        "featured": true
+    },{
         "anchorId": "my_family_story",
         "title": "Generative Agents for Large Language Model Family Story Generation",
-        "tags": ["gemini","langchain","prompt_eng", "generative_agents", "llm", "py", "graph_rag", "neo4j"],
-        "description": [
-            "Generation of neo4j graphs using Large Language Models and GraphRAG from Images, comments, and short descriptions",
-            "Generation of stories and image description using the generated graphs, and generative Agents pulling contextual informations from outside sources and with the ReAct prompt method from Google Research and Princeton University",
-            "Focusing on making the generated stories more interesting and complete by adding external context and a structured plan"
-        ],
-        "date": "January 2025 - In Progress",
-        "featured": true
+        "tags": ["generative_agents", "graph_rag", "llm", "langchain", "neo4j", "prompt_eng", "gemini", "py"],
+        "summary": "Leveraging advancements in Retrieval-Augmented Generation (RAG) and Generative Agents, this application stores family images and comments in a knowledge graph to generate a personalized family storybook.",
+        "description": "",
+        "date": "January - February 2025"
     },
     {
         "anchorId": "summoner_insight",
         "title": "Analytics website for League of Legends",
         "tags": ["react", "js", "full_stack", "api", "soft_eng", "dotnet", "cs", "devops", "ux_design", "redux"],
-        "description": "A real-time visualization and prediction assistant for League of Legends, leveraging Deep Learning models for highly accurate recommendations and predictions, combined with D3.js for dynamic visualizations.",
+        "summary": "A real-time visualization and prediction assistant for League of Legends, leveraging Deep Learning models for highly accurate recommendations and predictions, combined with D3.js for dynamic visualizations.",
+        "description": "",
         "date": "June 2024 - In Progress",
         "githubUrl": "https://github.com/AnalyticsLoL/SummonerInsight",
         "videoUrl": "https://www.youtube.com/embed/ZksTQdx19MU?si=YGJKUTVtG4t4aUyP",

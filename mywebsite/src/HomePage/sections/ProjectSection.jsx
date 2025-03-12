@@ -25,7 +25,7 @@ export default function ProjectSection() {
                                     ) : project.image ? (
                                         <img src={project.image[0].imageUrl} alt={project.title} className="project-section__content__project__image" />
                                     ) : null}
-                                    <p >{project.description}</p>
+                                    <p >{project.summary}</p>
                                 </div>
                                 <div className="project-section__content__project__tags">
                                     {project.tags.map((tag, index) => {

@@ -29,6 +29,11 @@
     border-radius: 16px;
     padding: 0 15px;
     width: fit-content;
+    cursor: pointer;
+}
+.skills-section__content__skill:hover {
+    filter: opacity(0.8);
+    transition: filter 0.3s;
 }
 .skills-section__content__skill__tag {
     padding: 14px 0;

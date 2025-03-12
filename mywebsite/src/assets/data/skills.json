@@ -401,5 +401,14 @@
             "sparki"
         ],
         "logo": "language/arduino.png"
+    },
+    {
+        "id": "flask",
+        "type": "framework",
+        "name": "Flask",
+        "projects": [
+            "my_memory_chat"
+        ],
+        "logo": "framework/flask.png"
     }
 ]
