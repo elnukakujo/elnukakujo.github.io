@@ -1,0 +1,20 @@
+.contact-me-section {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.contact-me-section__content {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    margin-left: 50px;
+}
+
+.contact-me-section__content__button__img {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}

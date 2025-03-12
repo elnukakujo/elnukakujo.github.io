@@ -1,5 +1,7 @@
 import React from "react";
 
+import '../assets/css/sections/contactmesection.css';
+
 import githubLogo from "../../assets/img/logo/github_logo.jpg";
 import linkedinLogo from "../../assets/img/logo/linkedin_logo.jpg";
 import gmailLogo from "../../assets/img/logo/gmail_logo.jpg";

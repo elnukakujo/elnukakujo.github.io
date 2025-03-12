@@ -1,5 +1,7 @@
 import React from "react";
 
+import '../assets/css/sections/skillstechsection.css';
+
 import skills from "../../assets/data/skills.json";
 
 const images = import.meta.glob('../../assets/img/logo/skills/**', { eager: true });

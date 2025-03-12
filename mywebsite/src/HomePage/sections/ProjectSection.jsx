@@ -7,7 +7,6 @@ import '../assets/css/sections/projectsection.css';
 
 export default function ProjectSection() {
     const featuredProjects = projects.filter(project => project.featured === true).slice(0,4);
-    console.log(featuredProjects);
     return (
         <div className="project-section">
             <h1 className="project-section__title">Featured Projects</h1>

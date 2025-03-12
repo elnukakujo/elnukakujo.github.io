@@ -5,7 +5,7 @@ import '../assets/css/sections/aboutmesection.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBookOpen } from '@fortawesome/free-solid-svg-icons';
 import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
-import { faUnlock } from '@fortawesome/free-solid-svg-icons';
+import { faCircleInfo } from '@fortawesome/free-solid-svg-icons';
 import { faMessage } from '@fortawesome/free-solid-svg-icons';
 
 
@@ -31,7 +31,7 @@ export default function AboutMeSection() {
                     <p>Experience</p>
                 </a>
                 <a href="" className="about-me-section__cta-button">
-                    <FontAwesomeIcon icon={faUnlock} />
+                    <FontAwesomeIcon icon={faCircleInfo} />
                     <p>Not Enough?</p>
                 </a>
                 <a href="" className="about-me-section__cta-button">
