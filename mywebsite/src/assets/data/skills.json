@@ -72,12 +72,12 @@
     },
     {
         "id": "gemini",
-        "type": "api",
+        "type": "tool",
         "name": "Gemini",
         "projects": [
             "my_family_story"
         ],
-        "logo": "api/gemini.png"
+        "logo": "tool/gemini.png"
     },
     {
         "id": "langchain",
@@ -101,7 +101,7 @@
     {
         "id": "generative_agents",
         "type": "concept",
-        "name": "Generative Agents",
+        "name": "LLM Agents",
         "projects": [
             "my_family_story"
         ]
@@ -109,7 +109,7 @@
     {
         "id": "llm",
         "type": "concept",
-        "name": "Large Language Model",
+        "name": "LLM",
         "projects": [
             "my_family_story",
             "math_storytelling_llm_human_comparative_study",
@@ -119,24 +119,24 @@
     {
         "id": "graph_rag",
         "type": "concept",
-        "name": "Graph Retrieval-Augmented-Generation",
+        "name": "Graph RAG",
         "projects": [
             "my_family_story"
         ]
     },
     {
         "id": "neo4j",
-        "type": "framework",
+        "type": "tool",
         "name": "Neo4j",
         "projects": [
             "my_family_story"
         ],
-        "logo": "framework/neo4j.png"
+        "logo": "tool/neo4j.png"
     },
     {
         "id": "full_stack",
         "type": "concept",
-        "name": "Full Stack Development",
+        "name": "Full-Stack",
         "projects": [
             "summoner_insight",
             "movie_search_app"
@@ -145,7 +145,7 @@
     {
         "id": "api",
         "type": "concept",
-        "name": "Application Programming Interface",
+        "name": "API",
         "projects": [
             "summoner_insight",
             "openai_assistant_m2_gen",
@@ -207,30 +207,30 @@
     },
     {
         "id": "aws_elastic_beanstalk",
-        "type": "framework",
+        "type": "tool",
         "name": "AWS Elastic Beanstalk",
         "projects": [
             "math_storytelling_llm_human_comparative_study"
         ],
-        "logo": "framework/aws.png"
+        "logo": "tool/aws.png"
     },
     {
         "id": "aws_cloudfront",
-        "type": "framework",
+        "type": "tool",
         "name": "AWS Cloudfront",
         "projects": [
             "math_storytelling_llm_human_comparative_study"
         ],
-        "logo": "framework/aws.png"
+        "logo": "tool/aws.png"
     },
     {
         "id": "aws_amplify",
-        "type": "framework",
+        "type": "tool",
         "name": "AWS Amplify",
         "projects": [
             "math_storytelling_llm_human_comparative_study"
         ],
-        "logo": "framework/aws.png"
+        "logo": "tool/aws.png"
     },
     {
         "id": "r",
@@ -243,12 +243,12 @@
     },
     {
         "id": "openai",
-        "type": "api",
+        "type": "tool",
         "name": "OpenAI",
         "projects": [
             "openai_assistant_m2_gen"
         ],
-        "logo": "api/openai.png"
+        "logo": "tool/openai.png"
     },
     {
         "id": "mde",
@@ -292,7 +292,7 @@
     {
         "id": "cnn",
         "type": "concept",
-        "name": "Convolutional Neural Networks",
+        "name": "CNN",
         "projects": [
             "sign_language_recognition",
             "handwriting_generator"
@@ -353,17 +353,17 @@
     },
     {
         "id": "figma",
-        "type": "framework",
+        "type": "tool",
         "name": "Figma",
         "projects": [
             "privacy_app_figma"
         ],
-        "logo": "framework/figma.png"
+        "logo": "tool/figma.png"
     },
     {
         "id": "rnn",
         "type": "concept",
-        "name": "Recurrent Neural Networks",
+        "name": "RNN",
         "projects": [
             "chatbot"
         ]
@@ -386,12 +386,12 @@
     },
     {
         "id": "ue4",
-        "type": "framework",
+        "type": "tool",
         "name": "Unreal Engine 4",
         "projects": [
             "group_drone"
         ],
-        "logo": "framework/ue4.png"
+        "logo": "tool/ue4.png"
     },
     {
         "id": "arduino",

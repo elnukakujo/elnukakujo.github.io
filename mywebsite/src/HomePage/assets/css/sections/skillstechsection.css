@@ -1,11 +1,19 @@
 .skills-section {
     max-width: 1200px;
+    min-width: 350px;
     display: flex;
     flex-direction: column;
     gap:20px;
 }
 
 .skills-section__content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.skills-section__content__tags {
     display: flex;
     flex-direction: row;
     gap: 10px;
