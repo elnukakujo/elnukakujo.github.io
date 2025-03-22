@@ -410,5 +410,68 @@
             "my_memory_chat"
         ],
         "logo": "framework/flask.png"
+    },
+    {
+        "id": "dash",
+        "type": "framework",
+        "name": "Dash",
+        "projects": [
+            "sportsai_website"
+        ],
+        "logo": "framework/dash.png"
+    },
+    {
+        "id": "css",
+        "type": "language",
+        "name": "CSS",
+        "projects": [
+            "sportsai_website"
+        ],
+        "logo": "language/css.png"
+    },
+    {
+        "id": "swift",
+        "type": "language",
+        "name": "Swift",
+        "projects": [],
+        "logo": "language/swift.png"
+    },
+    {
+        "id": "cpp",
+        "type": "language",
+        "name": "C++",
+        "projects": [],
+        "logo": "language/cpp.png"
+    },
+    {
+        "id": "html",
+        "type": "language",
+        "name": "HTML",
+        "projects": [],
+        "logo": "language/html.png"
+    },
+    {
+        "id": "java",
+        "type": "language",
+        "name": "Java",
+        "projects": [],
+        "logo": "language/java.png"
+    },
+    {
+        "id": "transformer",
+        "type": "concept",
+        "name": "Transformer AI",
+        "projects": [
+            "chatbot"
+        ]
+    },
+    {
+        "id": "huggingface",
+        "type": "framework",
+        "name": "HuggingFace",
+        "projects": [
+            "summoner_insight"
+        ],
+        "logo": "framework/huggingface.png"
     }
 ]
