@@ -1,5 +1,7 @@
 import '../assets/css/sections/projectssection.css';
 
+import Markdown from 'react-markdown';
+
 import projects from "../../assets/data/projects.json";
 import skills from "../../assets/data/skills.json";
 
@@ -23,12 +25,12 @@ export default function ProjectsSection() {
                             </div>
                             <div className="projects-section__project__header__cta">
                                 {project.articleUrl ? (
-                                    <a href="" className="projects-section__project__header__cta-button">
+                                    <a href="" className="projects-section__project__header__cta-button" target="_blank" rel="noreferrer">
                                         <FontAwesomeIcon icon={faGoogleScholar} />
                                     </a>
                                 ) : null}
                                 {project.websiteUrl ? (
-                                    <a href={project.websiteUrl} className="projects-section__project__header__cta-button">
+                                    <a href={project.websiteUrl} className="projects-section__project__header__cta-button" target="_blank" rel="noreferrer">
                                         <FontAwesomeIcon icon={faCompass} />
                                     </a>
                                 ) : null}
@@ -39,25 +41,34 @@ export default function ProjectsSection() {
                                 ) : null}
                             </div>
                         </div>
-                        <div className="projects-section__project__medias">
-                            {project.images ? (
-                                project.images.map((image, index) => {
-                                    return (
-                                        <figure key={index}>
-                                            <img key={index} src={image.imageUrl} alt={project.title} className="projects-section__project__image" />
-                                            <figcaption className="projects-section__project__image__caption">{image.description}</figcaption>
-                                        </figure>
-                                    );
-                                }))
-                                :null
-                            }
-                            {project.videoUrl ? (
-                                <iframe src={project.videoUrl} title={project.title} className="projects-section__project__video"></iframe>
-                            ) : null}
-                        </div>
+                        {(project.images || project.videoUrl) ? (
+                            <div className="projects-section__project__medias">
+                                {project.images ? (
+                                    project.images.map((image, index) => {
+                                        return (
+                                            <figure key={index}>
+                                                <img key={index} src={image.imageUrl} alt={project.title} className="projects-section__project__image" />
+                                                <figcaption className="projects-section__project__image__caption">{image.description}</figcaption>
+                                            </figure>
+                                        );
+                                    }))
+                                    : null
+                                }
+                                {project.videoUrl ? (
+                                    <iframe src={project.videoUrl} title={project.title} className="projects-section__project__video"></iframe>
+                                ) : null}
+                            </div>
+                        ) : null}
                         <div className="projects-section__project__content">
-                            <p className="projects-section__project__summary">{project.summary}</p>
-                            <p className="projects-section__project__description">{project.description}</p>
+                            {Object.entries(project.description).map(([key, value], index) => {
+                                const capitalizedKey = key.charAt(0).toUpperCase() + key.slice(1);
+                                return (
+                                    <div className={`projects-section__project__content__${key}`} key={index}>
+                                        <h2 className={`projects-section__project__content__${key}__title`}>{capitalizedKey}</h2>
+                                        <Markdown>{value}</Markdown>
+                                    </div>
+                                );
+                            })}
                         </div>
                         <div className="projects-section__project__tags">
                             {project.tags.map((tag, index) => {
@@ -66,6 +77,9 @@ export default function ProjectsSection() {
                                     <p key={index} className="projects-section__project__tags__tag tag">{skill}</p>
                                 );
                             })}
+                        </div>
+                        <div className="projects-section__project__references">
+                            <h2 className="projects-section__project__references__title">External References</h2>
                         </div>
                     </div>
                 );

@@ -23,7 +23,7 @@ h2 {
     font-size: 20px;
 }
 
-p, a {
+p, a, figcaption {
     font-family: 'Inter-Regular';
     font-size: 18px;
     margin: 0;

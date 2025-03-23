@@ -1,6 +1,7 @@
 .projects-section {
     width: 80vw;
     max-width: 1200px;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -69,9 +70,51 @@
 
 .projects-section__project__medias figure img {
     width: 100%;
-    height: fit-content;
+    height: auto;
 }
 .projects-section__project__medias figure figcaption {
     text-align: center;
-    font-size: 18px;
+    font-size: 14px;
+}
+
+.projects-section__project__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.projects-section__project__content div {
+    background-color: var(--hero-bg);
+    border-radius: 16px;
+    padding: 25px;
+}
+.projects-section__project__content h2 {
+    margin-bottom: 10px;
+}
+.projects-section__project__content p {
+    text-align: justify;
+}
+
+.projects-section__project__tags{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px;
+    overflow-y: hidden;
+}
+.projects-section__project__tags p {
+    overflow: hidden;
+    text-overflow: clip;
+    white-space: nowrap;
+}
+.projects-section__project__tags__tag {
+    padding: 8px 12px;
+    height: fit-content;
+    background-color: var(--hero-bg);
+    border-radius: 8px;
+}
+
+.projects-section__project__references {
+    width: 100%;
 }
