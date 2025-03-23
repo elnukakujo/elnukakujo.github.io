@@ -62,13 +62,13 @@
     overflow: hidden;
     text-overflow: clip;
     white-space: nowrap;
-}
-.project-section__content__project__tags__tag {
     padding: 8px 12px;
     height: fit-content;
     background-color: var(--hero-bg);
     border-radius: 8px;
+    cursor: pointer;
 }
+
 .project-section__content__project-button {
     margin-top: auto;
 }

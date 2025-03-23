@@ -12,6 +12,7 @@ import { faGoogleScholar } from '@fortawesome/free-brands-svg-icons';
 import { faCompass } from '@fortawesome/free-regular-svg-icons';
 
 export default function ProjectsSection() {
+
     return (
         <section className='projects-section'>
             {projects.map((project, index) => {
@@ -60,21 +61,25 @@ export default function ProjectsSection() {
                             </div>
                         ) : null}
                         <div className="projects-section__project__content">
-                            {Object.entries(project.description).map(([key, value], index) => {
-                                const capitalizedKey = key.charAt(0).toUpperCase() + key.slice(1);
-                                return (
-                                    <div className={`projects-section__project__content__${key}`} key={index}>
-                                        <h2 className={`projects-section__project__content__${key}__title`}>{capitalizedKey}</h2>
-                                        <Markdown>{value}</Markdown>
-                                    </div>
-                                );
-                            })}
+                            {typeof project.description === 'object' ? (
+                                Object.entries(project.description).map(([key, value], index) => {
+                                    const capitalizedKey = key.charAt(0).toUpperCase() + key.slice(1);
+                                    return (
+                                        <div className={`projects-section__project__content__${key}`} key={index}>
+                                            <h2 className={`projects-section__project__content__${key}__title`}>{capitalizedKey}</h2>
+                                            <Markdown>{value}</Markdown>
+                                        </div>
+                                    );
+                                })
+                            ) : (
+                                <Markdown>{project.description}</Markdown>
+                            )}
                         </div>
                         <div className="projects-section__project__tags">
                             {project.tags.map((tag, index) => {
                                 const skill = skills.find(skill => skill.id === tag).name;
                                 return (
-                                    <p key={index} className="projects-section__project__tags__tag tag">{skill}</p>
+                                    <p key={index}>{skill}</p>
                                 );
                             })}
                         </div>

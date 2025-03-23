@@ -107,12 +107,15 @@
     overflow: hidden;
     text-overflow: clip;
     white-space: nowrap;
-}
-.projects-section__project__tags__tag {
     padding: 8px 12px;
     height: fit-content;
     background-color: var(--hero-bg);
     border-radius: 8px;
+    cursor: pointer;
+}
+.projects-section__project__tags p:hover {
+    filter: opacity(0.8);
+    transition: filter 0.5s;
 }
 
 .projects-section__project__references {

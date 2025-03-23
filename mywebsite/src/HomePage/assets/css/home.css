@@ -25,6 +25,7 @@
 .home-page a {
     color: var(--link);
     text-decoration: none;
+    cursor: pointer;
 }
 
 .home-page a:hover {
