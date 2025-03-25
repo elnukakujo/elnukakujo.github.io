@@ -2,6 +2,10 @@
     --background: #0D1117;
     --header-bg: #161B22;
     --project-bg: #1E252F;
+    --nav-bg:#13171D;
+    --p: #E6EDF3;
+    --h: #F0F6FC;
+    --link: #00D8FF;
 }
 
 .projects-page {
@@ -13,7 +17,7 @@
     padding: 100px 0;
 }
 
-.projects-page p, .projects-page figcaption {
+.projects-page p, .projects-page figcaption, .projects-page ul {
     color: var(--p);
 }
 .projects-page h1, h2 {

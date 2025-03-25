@@ -1,6 +1,8 @@
 import React from "react";
 import {useNavigate} from "react-router-dom";
 
+import ExpandableImage from "../../ReusableComponents/ExpandableImage";
+
 import projects from "../../assets/data/projects.json";
 import skills from "../../assets/data/skills.json";
 
@@ -30,7 +32,7 @@ export default function ProjectSection() {
                                 {project.videoUrl ? (
                                     <iframe src={project.videoUrl} title={project.title} className="project-section__content__project__video"></iframe>
                                 ) : project.images ? (
-                                    <img src={project.images[0].imageUrl} alt={project.title} className="project-section__content__project__image" />
+                                    <ExpandableImage image={project.images[0]} />
                                 ) : null}
                                 <p >{project.summary}</p>
                             </div>

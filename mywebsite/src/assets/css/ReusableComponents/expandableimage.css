@@ -1,0 +1,59 @@
+.default-view {
+    width: auto;
+    max-width: 450px;
+    height: auto;
+    margin:0;
+    height: auto;
+    cursor: pointer;
+}
+.default-view img {
+    width: 100%;
+    aspect-ratio: 16/8;
+}
+.default-view figcaption {
+    text-align: center;
+    font-size: 14px;
+}
+
+.expanded-view{
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80vw;
+    height: 90vh;
+    padding: 5vh 10vw;
+    background: #13171dd8;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    cursor: pointer;
+}
+
+.expanded-view img {
+    width: 80vw;
+    height: auto;
+}
+
+.expanded-view figcaption {
+    text-align: center;
+    font-size: 20px;
+}
+
+@media (max-width: 600px) {
+    .default-view {
+        min-width: 300px;
+    }
+    .expanded-view {
+        width: 100vw;
+        height: 100vh;
+        padding: 0;
+    }
+    .expanded-view img {
+        width: 100vw;
+        height: auto;
+    }
+}

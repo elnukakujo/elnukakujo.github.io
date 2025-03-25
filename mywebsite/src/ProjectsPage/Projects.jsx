@@ -3,6 +3,8 @@ import React from 'react';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
+import { SidebarProvider, useSidebar } from './SidebarContext';
+
 import SideMenu from '../ReusableComponents/SideMenu';
 import HeaderSection from './sections/HeaderSection';
 import ProjectsSection from './sections/ProjectsSection';
@@ -34,10 +36,12 @@ export default function Projects() {
     }, [location]);
 
     return (
-        <div className='projects-page'>
-            <SideMenu sections={projects}/>
-            <HeaderSection />
-            <ProjectsSection />
-        </div>
+        <SidebarProvider>
+            <div className='projects-page'>
+                <SideMenu sections={projects} useSidebar={useSidebar} />
+                <HeaderSection />
+                <ProjectsSection />
+            </div>
+        </SidebarProvider>
     );
 }

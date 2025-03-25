@@ -25,6 +25,20 @@
                 "description": "Example image informations display in the React client"
             }
         ],
+        "external_ref": [
+            {
+                "title": "Gemini 1.5",
+                "url": "https://aistudio.google.com/welcome?gclsrc=aw.ds&gad_source=1&gclid=Cj0KCQjwhYS_BhD2ARIsAJTMMQbEn7bJ0G52fWdF0NZPnlr-Ggw70ZxUIvn1MUpzdY7tkSBwnjQmeRYaAk_DEALw_wcB"
+            },
+            {
+                "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+                "url": "https://arxiv.org/abs/2210.03629"
+            },
+            {
+                "title": "GraphRAG: Unlocking LLM discovery on narrative private data ",
+                "url": "https://www.microsoft.com/en-us/research/blog/graphrag-unlocking-llm-discovery-on-narrative-private-data/"
+            }
+        ],
         "featured": true
     },
     {
@@ -32,27 +46,25 @@
         "title": "Generative Agents for Large Language Model Family Story Generation",
         "tags": ["generative_agents", "graph_rag", "llm", "langchain", "neo4j", "prompt_eng", "gemini", "py"],
         "summary": "Leveraging advancements in Retrieval-Augmented Generation (RAG) and Generative Agents, this application stores family images and comments in a knowledge graph to generate a personalized family storybook.",
-        "description": {
-            "context":"",
-            "problem":"",
-            "contribution":""
-        },
+        "description": "This project leverages Retrieval-Augmented Generation (RAG) and Generative Agents to create a personalized family storybook enriched with both text and visuals. A Neo4j knowledge graph stores family images, memories, and comments, allowing an LLM-powered agent to generate dynamic, context-aware narratives that reflect personal histories and relationships. Additionally, a dedicated image-selection agent explores the graph to retrieve relevant photos for each generated paragraph, ensuring meaningful visual storytelling. The final output is automatically formatted and converted into a Word document, providing a beautifully structured, shareable family album that brings memories to life in a seamless, AI-assisted storytelling experience.",
         "date": "January - February 2025"
     },
     {
         "anchorId": "summoner_insight",
-        "title": "Analytics website for League of Legends",
+        "title": "Summoner-Insight: Real-Time Visualization and Prediction Assistant",
         "tags": ["react", "full_stack", "transformer", "huggingface", "js", "redux", "api", "soft_eng", "dotnet", "cs", "devops", "ux_design"],
         "summary": "A real-time visualization and prediction assistant for League of Legends, leveraging Deep Learning models for highly accurate recommendations and predictions, combined with D3.js for dynamic visualizations.",
         "description": {
-            "context":"",
-            "problem":"",
-            "contribution":""
-        },
+            "context":"In League of Legends, players must process large amounts of information in real time to make strategic decisions. However, understanding game dynamics, predicting outcomes, and identifying optimal plays can be overwhelming, especially given the complexity of team compositions, item choices, and in-game events. Traditional analytics tools offer post-game statistics but often fail to provide actionable insights during gameplay. At the same time, recent advancements in Deep Learning, particularly Transformer-based models, have significantly improved the ability to process and interpret sequential data. These models excel at capturing long-range dependencies and contextual patterns, making them well-suited for analyzing evolving game states and predicting future scenarios with high accuracy.",
+            "problem":"How can real-time analysis and prediction in League of Legends be improved using Transformer-based models to process complex game states and provide actionable insights during gameplay with a high degree of certainty?"},
         "date": "June 2024 - In Progress",
         "githubUrl": "https://github.com/AnalyticsLoL/SummonerInsight",
         "videoUrl": "https://www.youtube.com/embed/ZksTQdx19MU?si=YGJKUTVtG4t4aUyP",
         "websiteUrl": "http://dev.summonerinsight.com/",
+        "progress": {
+            "phase": "implementation",
+            "status_infos": "- Basic UI designed with visualization tools and user profiles. \n - Backend API with connection to Riot API done.\n - Previous deployed but currently down due to a hardware problem.\n - Working on training a win prediction model using only start of the game players information."
+        },
         "featured": true
     },
     {
