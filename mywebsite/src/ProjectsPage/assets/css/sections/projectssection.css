@@ -88,7 +88,7 @@
     padding: 0 !important;
     display: flex;
     flex-direction: row;
-    gap: 25px;
+    justify-content: space-between;
     align-items: center;
 }
 .projects-section__project__content__progress__content svg {
@@ -100,7 +100,7 @@
     flex-direction: column;
     gap: 10px;
     width:40vw;
-    max-width: 600px;
+    max-width: 725px;
 }
 .projects-section__project__content__progress__content__details ul {
     padding-left: 20px;

@@ -156,7 +156,7 @@ function Project({project}) {
                 </div>
                 <div className="projects-section__project__header__cta">
                     {project.articleUrl ? (
-                        <a href="" className="projects-section__project__header__cta-button" target="_blank" rel="noreferrer">
+                        <a href={project.articleUrl} className="projects-section__project__header__cta-button" target="_blank" rel="noreferrer">
                             <FontAwesomeIcon icon={faGoogleScholar} />
                         </a>
                     ) : null}
@@ -174,13 +174,14 @@ function Project({project}) {
             </div>
             {(project.images || project.videoUrl) ? (
                 <div className="projects-section__project__medias">
-                    {project.images ? (
+                    {project.videoUrl ? (
+                        <iframe src={project.videoUrl} title={project.title} className="projects-section__project__video"></iframe>
+                    ) : project.images ? (
                         project.images.map((image, index) => {
                             return (
                                 <ExpandableImage key={index} image={image} />
-                        );
-                    })): project.videoUrl ? (
-                        <iframe src={project.videoUrl} title={project.title} className="projects-section__project__video"></iframe>
+                            );
+                        })
                     ): null}
                 </div>
             ) : null}
