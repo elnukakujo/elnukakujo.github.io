@@ -179,7 +179,7 @@ function Project({project}) {
                     ) : project.images ? (
                         project.images.map((image, index) => {
                             return (
-                                <ExpandableImage key={index} image={image} />
+                                <ExpandableImage key={index} imageUrl={image.imageUrl} description={image.description} />
                             );
                         })
                     ): null}

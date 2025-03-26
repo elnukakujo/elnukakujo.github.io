@@ -11,7 +11,7 @@ body{
     src: url('../font/Inter_18pt-Regular.ttf');
 }
 
-h1, h2 {
+h1, h2, h3 {
     font-family: 'Poppins-Medium';
     margin: 0;
 }
@@ -21,6 +21,9 @@ h1 {
 }
 h2 {
     font-size: 20px;
+}
+h3 {
+    font-size: 18px;
 }
 
 p, a, figcaption, ul, li {
@@ -34,6 +37,9 @@ p, a, figcaption, ul, li {
         font-size: 24px;
     }
     h2 {
+        font-size: 18px;
+    }
+    h3 {
         font-size: 16px;
     }
     p, a, ul, li {

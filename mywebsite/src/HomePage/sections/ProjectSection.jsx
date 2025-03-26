@@ -32,7 +32,7 @@ export default function ProjectSection() {
                                 {project.videoUrl ? (
                                     <iframe src={project.videoUrl} title={project.title} className="project-section__content__project__video"></iframe>
                                 ) : project.images ? (
-                                    <ExpandableImage image={project.images[0]} />
+                                    <ExpandableImage imageUrl={project.images[0].imageUrl} description={project.images[0].description} />
                                 ) : null}
                                 <p >{project.summary}</p>
                             </div>

@@ -21,7 +21,7 @@
 .aboutme-page p, .aboutme-page figcaption, .aboutme-page ul, .aboutme-page li {
     color: var(--p);
 }
-.aboutme-page h1, h2 {
+.aboutme-page h1, h2, h3 {
     color: var(--h);
 }
 .aboutme-page a {

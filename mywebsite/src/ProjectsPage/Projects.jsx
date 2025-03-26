@@ -15,7 +15,7 @@ import projects from '../assets/data/projects.json';
 export default function Projects() {
     useEffect(() => {
         document.title = 'Projects | Noe Jager';
-      }, []);
+    }, []);
 
     const location = useLocation();
 

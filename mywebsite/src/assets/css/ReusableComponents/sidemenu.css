@@ -49,7 +49,7 @@
     top: 0;
     transform: translateY(-20%);
     visibility: hidden;
-    width: 380px;
+    max-width: 380px;
     display: flex;
     flex-direction: column;
     gap: 10px;

@@ -8,7 +8,7 @@
 }
 .default-view img {
     width: 100%;
-    aspect-ratio: 16/8;
+    height: auto;
 }
 .default-view figcaption {
     text-align: center;
@@ -36,6 +36,7 @@
 .expanded-view img {
     width: 80vw;
     height: auto;
+    min-width: 350px;
 }
 
 .expanded-view figcaption {

@@ -57,7 +57,7 @@ export default function SideMenu({ sections, useSidebar }) {
                                 />
                                 <div className="side-menu-content__item__content">
                                     <h2>{section.title}</h2>
-                                    <p>{section.summary}</p>
+                                    {section.summary ? (<p>{section.summary}</p>) : null}
                                 </div>
                             </div>
                         ))}
