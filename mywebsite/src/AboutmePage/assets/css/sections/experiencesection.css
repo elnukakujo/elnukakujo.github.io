@@ -1,0 +1,16 @@
+.experience-section {
+    width: 70vw;
+    min-width: 250px;
+    max-width: 900px;
+    background-color: var(--experience-bg);
+    padding: 50px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap:25px;
+    text-align: center;
+}
+.experience-section__title {
+    width:100%;
+    text-align: left;
+}

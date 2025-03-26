@@ -9,7 +9,7 @@ export default function HeroSection() {
         <div className="hero-section__header">
             <img src={profileImage} alt="Profile Image of Noé" className="hero-section__image" />
             <h1 className="hero-section__title">Hi, I’m Noé Jager</h1>
-            <h2 className="hero-section__description">AI Engineer & Full-Stack Developer | Democratizing Artificial Intelligence</h2>
+            <h2 className="hero-section__description">AI Engineer & Full-Stack Developer | Turning Data into Intelligence</h2>
         </div>
         <div className="hero-section__text">
             <p>I build AI-powered applications that solve real-world problems. Passionate about deep learning, machine learning, and full-stack development.</p>

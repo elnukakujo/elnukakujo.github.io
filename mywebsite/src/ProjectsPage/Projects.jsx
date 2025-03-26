@@ -8,6 +8,7 @@ import { SidebarProvider, useSidebar } from './SidebarContext';
 import SideMenu from '../ReusableComponents/SideMenu';
 import HeaderSection from './sections/HeaderSection';
 import ProjectsSection from './sections/ProjectsSection';
+import ContactMe from './sections/ContactMeSection';
 
 import projects from '../assets/data/projects.json';
 
@@ -41,6 +42,7 @@ export default function Projects() {
                 <SideMenu sections={projects} useSidebar={useSidebar} />
                 <HeaderSection />
                 <ProjectsSection />
+                <ContactMe />
             </div>
         </SidebarProvider>
     );
