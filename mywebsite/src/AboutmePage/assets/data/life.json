@@ -102,32 +102,32 @@
     ],
     "hobbies": [
         {
-            "title":"Play video games",
-            "description":"I have been playing video games since I was a child. I enjoy playing games that have a good story, such as The Witcher 3, or games that require strategy and teamwork, such as League of Legends."
+            "title":"Video Games",
+            "description":"I feel like I have been playing video games for as long as I can remember. My tastes changed over the years starting with Pokemon Pearl on Nintendo DS, then moving to Minecraft, and now I enjoy many genres of games, including RPGs, strategy games, and MOBAs."
         },
-        { 
-            "title": "Read books", 
-            "description": "" 
+        {
+            "title": "Books",
+            "description": "I've been an avid reader since childhood, starting with fantasy like LOTR and The Hobbit, then moving to historical subjects like the French Revolution and Roman Empire. More recently, I've been exploring philosophy and rhetoric classics."
         },
-        { 
-            "title": "Learn new languages", 
-            "description": "" 
+        {
+            "title": "Learning languages",
+            "description": "I enjoy learning new languages through various methods such as Duolingo, classes, and textbooks. I have studied French, English, and German in school. Additionally, I have self-studied Japanese, including formal study at a language school in Japan for two months. Currently, I am learning Chinese and Japanese."
         },
         { 
             "title": "Participate in Role-Play sessions", 
-            "description": "" 
+            "description": "I started playing Role Play games with initiation sessions at University of Montréal. I played in different settings such as fantasy, post-apocalyptic, and lovecraftian universes. I enjoy playing with friends in such a creative and free setting."
         },
-        { 
-            "title": "Do Sports", 
-            "description": "" 
+        {
+            "title": "Sports", 
+             "description": "I do a wide range of sports, from going to the gym, bouldering, boxing, and running. I enjoy the physical and mental benefits of sports, find it a great way to relax after the stress of the day and enjoy seeing a constant progress in my performances." 
         },
-        { 
+        {
             "title": "Walk Around", 
-            "description": "" 
+            "description": "I constantly walk around the city, be it to walk my dog, go to the grocery store, or just change ideas when in mental deadlock. Looking at the nature or the cityscape helps me relax and think about my projects." 
         },
         { 
-            "title": "Watch series/movies", 
-            "description": "" 
+            "title": "Series/Movies", 
+            "description": "I watched tons of Japanese animated series in Highschool, probably the reason why I started learning Japanese. I also enjoy watching movies, especially science-fiction, historical movies, as well as animated or comedy movies."
         }
     ]
 }

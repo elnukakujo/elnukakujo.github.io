@@ -16,6 +16,10 @@ const images = import.meta.glob('../assets/img/life/**', { eager: true });
 
 function TravelMap() {
     const svgRef = useRef(null);
+    const { ref, inView } = useInView({
+        threshold: 0.05,
+        triggerOnce: false,
+    });
 
     const visitedCountries = life.countries
   
@@ -46,14 +50,19 @@ function TravelMap() {
         });
     }, []);
     return(
-        <div className='life-section__content travel-map'>
+        <motion.div
+        ref={ref}
+        initial={{ opacity: 0, y: 50 }}
+        animate={inView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className='life-section__content travel-map'>
             <h2 className='life-section__content__title'>I have visited {visitedCountries ? visitedCountries.length:null} countries!</h2>
             <svg
             ref={svgRef}
             className="world-map"
             viewBox="0 0 1000 500"
             />
-        </div>
+        </motion.div>
     )
 }
 
@@ -77,8 +86,19 @@ function FavPlaces(){
             <h2 className='life-section__content__title'>My favorite places are ...</h2>
             <div className='life-section__content__places'>
                 {favPlaces.map((place, index) => {
+                    const { ref, inView } = useInView({
+                        threshold: 0.05,  // Detects when 50% of the section is visible
+                        triggerOnce: false, // Keeps updating as user scrolls
+                    });                
                     return (
-                        <div key={index} className='life-section__content__places__place'>
+                        <motion.div
+                        key={index}
+                        ref={ref}
+                        className='life-section__content__places__place'
+                        initial={{ opacity: 0, y: 50 }}
+                        animate={inView ? { opacity: 1, y: 0 } : {}}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                        >
                             <div className='life-section__content__places__place__header'>
                                 <h1>
                                     {
@@ -107,7 +127,7 @@ function FavPlaces(){
                                     <ExpandableImage imageUrl={images[image]?.default || null} />
                                 )) : null}
                             </div>
-                        </div>
+                        </motion.div>
                     );
                 })}
             </div>
