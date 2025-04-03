@@ -17,7 +17,7 @@
     padding: 100px 0;
 }
 
-.projects-page p, .projects-page figcaption, .projects-page ul {
+.projects-page p, .projects-page figcaption, .projects-page ul, .projects-page ol {
     color: var(--p);
 }
 .projects-page h1, h2 {

@@ -473,5 +473,54 @@
             "summoner_insight"
         ],
         "logo": "framework/huggingface.png"
+    },
+    {
+        "id": "svd",
+        "type": "concept",
+        "name": "Singular Value Decomposition",
+        "projects": [
+            "hackos4-2025"
+        ]
+    },
+    {
+        "id": "embedding",
+        "type": "concept",
+        "name": "Embeddings",
+        "projects": [
+            "hackos4-2025"
+        ]
+    },
+    {
+        "id": "attention",
+        "type": "concept",
+        "name": "Attention Layers",
+        "projects": [
+            "hackos4-2025"
+        ]
+    },
+    {
+        "id": "regression",
+        "type": "concept",
+        "name": "Regression Tasks",
+        "projects": [
+            "hackos4-2025"
+        ]
+    },
+    {
+        "id": "bioeng",
+        "type": "concept",
+        "name": "Bio-Engineering",
+        "projects": [
+            "hackos4-2025"
+        ]
+    },
+    {
+        "id": "sk",
+        "type": "framework",
+        "name": "Scikit-Learn",
+        "projects": [
+            "hackos4-2025"
+        ],
+        "logo": "framework/sk.png"
     }
 ]

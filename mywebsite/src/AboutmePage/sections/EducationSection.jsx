@@ -14,7 +14,7 @@ export default function EducationSection() {
 
     const { setActiveSection } = useSidebar();
     const { ref, inView } = useInView({
-        threshold: 0.2,  // Detects when 50% of the section is visible
+        threshold: 0.01,  // Detects when 50% of the section is visible
         triggerOnce: false, // Keeps updating as user scrolls
     });
 

@@ -56,6 +56,7 @@
     flex-direction: row;
     gap: 50px;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
 }
 .projects-section__project__medias iframe {
@@ -83,6 +84,14 @@
 }
 .projects-section__project__content p {
     text-align: justify;
+    line-height: 1.2;
+}
+.projects-section__project__content ol, .projects-section__project__content ul {
+    margin: 15px 0;
+    text-align: justify;
+}
+.projects-section__project__content ul {
+    padding-left: 50px;
 }
 .projects-section__project__content__progress__content {
     padding: 0 !important;

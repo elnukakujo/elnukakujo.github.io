@@ -170,7 +170,7 @@ function Hobbies() {
 export default function LifeSection() {
     const { setActiveSection } = useSidebar();
     const { ref, inView } = useInView({
-        threshold: 0.1,  // Detects when 50% of the section is visible
+        threshold: 0.01,  // Detects when 50% of the section is visible
         triggerOnce: false, // Keeps updating as user scrolls
     });
 

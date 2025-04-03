@@ -1,5 +1,44 @@
 [
     {
+        "anchorId":"hackos4-2025",
+        "title":"HackOS4-2025 Single Cell Perturbation Challenge",
+        "tags": ["transformer", "svd", "embedding", "attention", "cnn", "regression", "deepl", "bioeng", "py", "r", "pd", "np", "sk", "huggingface", "plotly"],
+        "date": "March 24th - April 2nd 2025",
+        "summary":"First place in the HackOS4 organized by McGill and Waterloo Universities. Developed a custom Encoder only Transformer model with 1d CNN to predict perturbations in a cell RNA under the influence of a drug molecule.",
+        "images": [
+            {
+                "imageUrl": "https://raw.githubusercontent.com/elnukakujo/hackos-4/refs/heads/main/images/CustomTransformerTrainingLineChart.png",
+                "description": "Training and validation Mean Rowwise RMSE loss of the custom transformer model reaching 0.5685 on validation set at epoch 13."
+            },
+            {
+                "imageUrl": "https://raw.githubusercontent.com/elnukakujo/hackos-4/refs/heads/main/images/cell_type_df_train_distribution.png",
+                "description": "Distribution of the cell types in the training and testing set. The dataset contains 6 cell types common to both datasets."
+            }
+        ],
+        "description": {
+            "overview": "This high-stakes 9-day challenge from McGill and Waterloo universities tested my ability to predict how drugs affect cell RNA. We were evaluated on prediction accuracy using Mean Rowwise Root Mean Squared Error (MRRMSE).",
+            "preprocessing": "I tackled the challenge of limited data (just 500 samples) by implementing smart dimensionality reduction. After normalizing gene perturbations to a 0-1 scale, I used Truncated SVD to compress 18,211 dimensions down to just 5 key features. To overcome the complete lack of overlap between training and test molecules, I generated molecular isomers using RDkit, forcing the model to understand fundamental chemical structures rather than memorizing specific molecules.",
+            "model": "My winning solution featured a custom transformer architecture with four powerful components:\n\n1. **Smart Molecule Understanding (Embeddings)**:\n- Used pre-trained ChemBERTa embeddings to grasp complex molecular structures\n- Combined with cell type information for context-aware predictions\n\n2. **Pattern Recognition Layer (1D CNN)**:\n- 1D CNN with optimized kernel size captures local molecular patterns\n- Applied strong regularization (80% dropout) to prevent overfitting\n\n3. **Chemical Relationship Modeling (Encoder)**:\n- 8-head transformer attention mechanism identifies critical interactions\n- Robust regularization ensures generalization to unseen molecules\n\n4. **Precision Prediction System (Normalized Regression Head)**:\n- Carefully designed output layers with normalization for stability\n- Sigmoid activation captures the non-linear nature of biological responses\n\nThis balanced architecture combined deep chemical understanding with powerful regularization techniques—essential for excellent performance with limited training data.",
+            "results": "My custom transformer achieved remarkable success:\n\n- **1st place 🏆** in the competition\n- **0.5685 validation MRRMSE** (at epoch 13)\n\nThis achievement is particularly impressive considering:\n- Nearly zero overlap between training and test molecules\n- Extremely limited training data (500 samples)\n\nThe results demonstrate the model's exceptional ability to understand fundamental chemical-biological interactions rather than simply memorizing patterns from training data."
+        },
+        "githubUrl": "https://github.com/elnukakujo/hackos-4/tree/main",
+        "external_ref":[
+            {
+                "title": "HackOS4-2025",
+                "url": "https://lu.ma/xrt0iiqx"
+            },
+            {
+                "title": "NeurIPS 2023 Competition",
+                "url": "https://www.kaggle.com/competitions/open-problems-single-cell-perturbations/overview"
+            },
+            {
+                "title": "ChemBERTa transformer",
+                "url": "https://huggingface.co/seyonec/ChemBERTa-zinc-base-v1"
+            }
+        ],
+        "featured":true
+    },
+    {
         "anchorId": "my_memory_chat",
         "title": "My Memory Chat: A LLM Chatbot for Memory Recall",
         "tags": ["graph_rag", "generative_agents", "llm", "langchain", "neo4j", "flask", "react", "js", "full_stack", "prompt_eng", "gemini", "py", "figma", "api", "soft_eng", "ux_design"],
@@ -136,8 +175,7 @@
                 "imageUrl": "https://raw.githubusercontent.com/elnukakujo/sign_language_recognition/main/data/plots/example_caviar_tuning.png",
                 "description": "Example of a caviar tuning plot"
             }
-        ],
-        "featured": true
+        ]
     },
     {
         "anchorId": "clothing_classification",

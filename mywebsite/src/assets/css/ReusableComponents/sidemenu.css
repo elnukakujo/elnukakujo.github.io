@@ -27,7 +27,7 @@
     border-radius: 18px;
 }
 .side-menu-content__item {
-    position: relative;;
+    position: relative;
 }
 .side-menu-content__item svg{
     cursor: pointer;
@@ -49,6 +49,7 @@
     top: 0;
     transform: translateY(-20%);
     visibility: hidden;
+    width: auto;
     max-width: 380px;
     display: flex;
     flex-direction: column;
@@ -63,14 +64,17 @@
     opacity: 1;
 }
 
+.side-menu-content__item__content h2, .side-menu-content__item__content p{
+    width: max-content;
+    max-width: inherit;
+}
+
 @media (max-width : 600px) {
     .side-menu-content{
         width:90vw;
         height:90vh;
         padding: 5vh 5vw;
         overflow-y: scroll;
-    }
-    .side-menu-content{
         left: 0;
     }
     .side-menu-button-control{
