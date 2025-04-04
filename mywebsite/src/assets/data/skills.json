@@ -1,0 +1,526 @@
+[
+    {
+        "id":"cs",
+        "type": "language",
+        "name":"C#",
+        "projects": [
+            "summoner_insight",
+            "math_storytelling_llm_human_comparative_study",
+            "movie_search_app"
+        ],
+        "logo": "language/cs.png"
+    },
+    {
+        "id":"py",
+        "type": "language",
+        "name":"Python",
+        "projects": [
+            "my_family_story",
+            "openai_assistant_m2_gen",
+            "sign_language_recognition",
+            "clothing_classification",
+            "sportsai_website",
+            "drawing_with_webcam",
+            "handwriting_generator",
+            "chatbot",
+            "q_learning_drone",
+            "group_drone"
+        ],
+        "logo": "language/py.png"
+    },
+    {
+        "id":"js",
+        "type": "language",
+        "name":"JavaScript",
+        "projects": [
+            "summoner_insight",
+            "math_storytelling_llm_human_comparative_study",
+            "movie_search_app"
+        ],
+        "logo": "language/js.png"
+    },
+    {
+        "id":"react",
+        "type": "framework",
+        "name":"React",
+        "projects": [
+            "summoner_insight",
+            "math_storytelling_llm_human_comparative_study",
+            "movie_search_app"
+        ],
+        "logo": "framework/react.png"
+    },
+    {
+        "id":"dotnet",
+        "type": "framework",
+        "name": ".Net",
+        "projects": [
+            "summoner_insight",
+            "math_storytelling_llm_human_comparative_study",
+            "movie_search_app"
+        ],
+        "logo": "framework/dotnet.png"
+    },
+    {
+        "id": "redux",
+        "type": "framework",
+        "name": "Redux",
+        "projects": [
+            "summoner_insight"
+        ],
+        "logo": "framework/redux.png"
+    },
+    {
+        "id": "gemini",
+        "type": "tool",
+        "name": "Gemini",
+        "projects": [
+            "my_family_story"
+        ],
+        "logo": "tool/gemini.png"
+    },
+    {
+        "id": "langchain",
+        "type": "framework",
+        "name": "LangChain",
+        "projects": [
+            "my_family_story",
+            "openai_assistant_m2_gen"
+        ],
+        "logo": "framework/langchain.png"
+    },
+    {
+        "id": "prompt_eng",
+        "type": "concept",
+        "name": "Prompt Engineering",
+        "projects": [
+            "my_family_story",
+            "openai_assistant_m2_gen"
+        ]
+    },
+    {
+        "id": "generative_agents",
+        "type": "concept",
+        "name": "LLM Agents",
+        "projects": [
+            "my_family_story"
+        ]
+    },
+    {
+        "id": "llm",
+        "type": "concept",
+        "name": "LLM",
+        "projects": [
+            "my_family_story",
+            "math_storytelling_llm_human_comparative_study",
+            "openai_assistant_m2_gen"
+        ]
+    },
+    {
+        "id": "graph_rag",
+        "type": "concept",
+        "name": "Graph RAG",
+        "projects": [
+            "my_family_story"
+        ]
+    },
+    {
+        "id": "neo4j",
+        "type": "tool",
+        "name": "Neo4j",
+        "projects": [
+            "my_family_story"
+        ],
+        "logo": "tool/neo4j.png"
+    },
+    {
+        "id": "full_stack",
+        "type": "concept",
+        "name": "Full-Stack",
+        "projects": [
+            "summoner_insight",
+            "movie_search_app"
+        ]
+    },
+    {
+        "id": "api",
+        "type": "concept",
+        "name": "API",
+        "projects": [
+            "summoner_insight",
+            "openai_assistant_m2_gen",
+            "movie_search_app"
+        ]
+    },
+    {
+        "id": "soft_eng",
+        "type": "concept",
+        "name": "Software Engineering",
+        "projects": [
+            "summoner_insight",
+            "openai_assistant_m2_gen",
+            "movie_search_app"
+        ]
+    },
+    {
+        "id": "devops",
+        "type": "concept",
+        "name": "DevOps",
+        "projects": [
+            "summoner_insight",
+            "math_storytelling_llm_human_comparative_study"
+        ]
+    },
+    {
+        "id": "ux_design",
+        "type": "concept",
+        "name": "UX Design",
+        "projects": [
+            "summoner_insight",
+            "movie_search_app"
+        ]
+    },
+    {
+        "id": "empirical_methods",
+        "type": "concept",
+        "name": "Empirical Methods",
+        "projects": [
+            "math_storytelling_llm_human_comparative_study"
+        ]
+    },
+    {
+        "id": "mixed_methods",
+        "type": "concept",
+        "name": "Mixed Methods",
+        "projects": [
+            "math_storytelling_llm_human_comparative_study"
+        ]
+    },
+    {
+        "id": "hci",
+        "type": "concept",
+        "name": "Human-Computer Interaction",
+        "projects": [
+            "math_storytelling_llm_human_comparative_study",
+            "privacy_app_figma"
+        ]
+    },
+    {
+        "id": "aws_elastic_beanstalk",
+        "type": "tool",
+        "name": "AWS Elastic Beanstalk",
+        "projects": [
+            "math_storytelling_llm_human_comparative_study"
+        ],
+        "logo": "tool/aws.png"
+    },
+    {
+        "id": "aws_cloudfront",
+        "type": "tool",
+        "name": "AWS Cloudfront",
+        "projects": [
+            "math_storytelling_llm_human_comparative_study"
+        ],
+        "logo": "tool/aws.png"
+    },
+    {
+        "id": "aws_amplify",
+        "type": "tool",
+        "name": "AWS Amplify",
+        "projects": [
+            "math_storytelling_llm_human_comparative_study"
+        ],
+        "logo": "tool/aws.png"
+    },
+    {
+        "id": "r",
+        "type": "language",
+        "name": "R",
+        "projects": [
+            "math_storytelling_llm_human_comparative_study"
+        ],
+        "logo": "language/r.png"
+    },
+    {
+        "id": "openai",
+        "type": "tool",
+        "name": "OpenAI",
+        "projects": [
+            "openai_assistant_m2_gen"
+        ],
+        "logo": "tool/openai.png"
+    },
+    {
+        "id": "mde",
+        "type": "concept",
+        "name": "Model-Driven Engineering",
+        "projects": [
+            "openai_assistant_m2_gen"
+        ]
+    },
+    {
+        "id": "pd",
+        "type": "framework",
+        "name": "Pandas",
+        "projects": [
+            "openai_assistant_m2_gen"
+        ],
+        "logo": "framework/pd.png"
+    },
+    {
+        "id": "tf",
+        "type": "framework",
+        "name": "Tensorflow",
+        "projects": [
+            "sign_language_recognition",
+            "handwriting_generator",
+            "chatbot"
+        ],
+        "logo": "framework/tf.png"
+    },
+    {
+        "id": "deepl",
+        "type": "concept",
+        "name": "Deep Learning",
+        "projects": [
+            "sign_language_recognition",
+            "clothing_classification",
+            "handwriting_generator",
+            "chatbot"
+        ]
+    },
+    {
+        "id": "cnn",
+        "type": "concept",
+        "name": "CNN",
+        "projects": [
+            "sign_language_recognition",
+            "handwriting_generator"
+        ]
+    },
+    {
+        "id": "np",
+        "type": "framework",
+        "name": "Numpy",
+        "projects": [
+            "clothing_classification",
+            "handwriting_generator"
+        ],
+        "logo": "framework/np.png"
+    },
+    {
+        "id": "plotly",
+        "type": "framework",
+        "name": "Plotly",
+        "projects": [
+            "sportsai_website"
+        ],
+        "logo": "framework/plotly.png"
+    },
+    {
+        "id": "data_viz",
+        "type": "concept",
+        "name": "Data Visualization",
+        "projects": [
+            "sportsai_website"
+        ]
+    },
+    {
+        "id": "cv2",
+        "type": "framework",
+        "name": "OpenCV",
+        "projects": [
+            "sign_language_recognition",
+            "drawing_with_webcam"
+        ],
+        "logo": "framework/cv2.png"
+    },
+    {
+        "id": "comp_viz",
+        "type": "concept",
+        "name": "Computer Vision",
+        "projects": [
+            "drawing_with_webcam"
+        ]
+    },
+    {
+        "id": "mediapipe",
+        "type": "framework",
+        "name": "Mediapipe",
+        "projects": [
+            "drawing_with_webcam"
+        ]
+    },
+    {
+        "id": "figma",
+        "type": "tool",
+        "name": "Figma",
+        "projects": [
+            "privacy_app_figma"
+        ],
+        "logo": "tool/figma.png"
+    },
+    {
+        "id": "rnn",
+        "type": "concept",
+        "name": "RNN",
+        "projects": [
+            "chatbot"
+        ]
+    },
+    {
+        "id": "q_learning",
+        "type": "concept",
+        "name": "Q-Learning",
+        "projects": [
+            "q_learning_drone"
+        ]
+    },
+    {
+        "id": "robot",
+        "type": "concept",
+        "name": "Robotics",
+        "projects": [
+            "q_learning_drone"
+        ]
+    },
+    {
+        "id": "ue4",
+        "type": "tool",
+        "name": "Unreal Engine 4",
+        "projects": [
+            "group_drone"
+        ],
+        "logo": "tool/ue4.png"
+    },
+    {
+        "id": "arduino",
+        "type": "language",
+        "name": "Arduino",
+        "projects": [
+            "sparki"
+        ],
+        "logo": "language/arduino.png"
+    },
+    {
+        "id": "flask",
+        "type": "framework",
+        "name": "Flask",
+        "projects": [
+            "my_memory_chat"
+        ],
+        "logo": "framework/flask.png"
+    },
+    {
+        "id": "dash",
+        "type": "framework",
+        "name": "Dash",
+        "projects": [
+            "sportsai_website"
+        ],
+        "logo": "framework/dash.png"
+    },
+    {
+        "id": "css",
+        "type": "language",
+        "name": "CSS",
+        "projects": [
+            "sportsai_website"
+        ],
+        "logo": "language/css.png"
+    },
+    {
+        "id": "swift",
+        "type": "language",
+        "name": "Swift",
+        "projects": [],
+        "logo": "language/swift.png"
+    },
+    {
+        "id": "cpp",
+        "type": "language",
+        "name": "C++",
+        "projects": [],
+        "logo": "language/cpp.png"
+    },
+    {
+        "id": "html",
+        "type": "language",
+        "name": "HTML",
+        "projects": [],
+        "logo": "language/html.png"
+    },
+    {
+        "id": "java",
+        "type": "language",
+        "name": "Java",
+        "projects": [],
+        "logo": "language/java.png"
+    },
+    {
+        "id": "transformer",
+        "type": "concept",
+        "name": "Transformer AI",
+        "projects": [
+            "chatbot"
+        ]
+    },
+    {
+        "id": "huggingface",
+        "type": "framework",
+        "name": "HuggingFace",
+        "projects": [
+            "summoner_insight"
+        ],
+        "logo": "framework/huggingface.png"
+    },
+    {
+        "id": "svd",
+        "type": "concept",
+        "name": "Singular Value Decomposition",
+        "projects": [
+            "hackos4-2025"
+        ]
+    },
+    {
+        "id": "embedding",
+        "type": "concept",
+        "name": "Embeddings",
+        "projects": [
+            "hackos4-2025"
+        ]
+    },
+    {
+        "id": "attention",
+        "type": "concept",
+        "name": "Attention Layers",
+        "projects": [
+            "hackos4-2025"
+        ]
+    },
+    {
+        "id": "regression",
+        "type": "concept",
+        "name": "Regression Tasks",
+        "projects": [
+            "hackos4-2025"
+        ]
+    },
+    {
+        "id": "bioeng",
+        "type": "concept",
+        "name": "Bio-Engineering",
+        "projects": [
+            "hackos4-2025"
+        ]
+    },
+    {
+        "id": "sk",
+        "type": "framework",
+        "name": "Scikit-Learn",
+        "projects": [
+            "hackos4-2025"
+        ],
+        "logo": "framework/sk.png"
+    }
+]

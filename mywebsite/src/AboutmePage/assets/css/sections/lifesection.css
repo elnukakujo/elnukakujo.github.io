@@ -1,0 +1,100 @@
+.life-section {
+    width: 80vw;
+    min-width: 350px;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+}
+
+.life-section__title {
+    width: 100%;
+}
+
+.life-section__content {
+    border-radius: 18px;
+    background-color: var(--life-bg);
+    width:70vw;
+    min-width: 300px;
+    max-width: 1200px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap:50px;
+    align-items: center;
+
+}
+.life-section__content__title {
+    width: 100%;
+}
+.world-map {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+}
+.life-section__content__places {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+}
+
+.life-section__content__places__place {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    border-radius: 18px;
+    background-color: var(--experience-bg);
+    padding: 50px;
+}
+.life-section__content__places__place__header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.life-section__content__places__place__medias {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.life-section__content__places__place__medias img {
+    border-radius: 18px;
+    height: auto;
+    aspect-ratio: auto;
+}
+
+.life-section__content__places__place__medias .default-view img {
+    width: auto;
+    min-width: 200px;
+    max-width: 300px;
+    min-height: 200px;
+    max-height: 300px;
+}
+.life-section__content__places__place__medias .expanded-view img {
+    width: 80vw;
+    max-width: 1000px;
+    max-height: 800px;
+    object-fit: contain;
+}
+
+@media (max-width: 600px) {
+    .life-section__content {
+        padding: 25px;
+    }
+    .life-section__content__places__place {
+        padding: 25px;
+    }
+    .life-section__content__places__place__medias .default-view {
+        min-width: 250px;
+    }
+}

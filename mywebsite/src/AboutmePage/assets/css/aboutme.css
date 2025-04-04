@@ -1,0 +1,35 @@
+:root {
+    --background: #0D1117;
+    --experience-bg: #1E252F;
+    --life-bg: #13171D;
+    --nav-bg:#13171D;
+    --p: #E6EDF3;
+    --h: #F0F6FC;
+    --link: #00D8FF;
+}
+
+.aboutme-page {
+    background-color: var(--background);
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    align-items: center;
+    padding: 100px 0;
+    min-width: 350px;
+}
+
+.aboutme-page p, .aboutme-page figcaption, .aboutme-page ul, .aboutme-page li {
+    color: var(--p);
+}
+.aboutme-page h1, h2, h3 {
+    color: var(--h);
+}
+.aboutme-page a {
+    color: var(--link);
+    text-decoration: none;
+}
+
+.aboutme-page a:hover {
+    filter: opacity(0.8);
+    transition: filter 0.1s;
+}
