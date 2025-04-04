@@ -14,7 +14,7 @@
         const appPath = path.replace(new RegExp(`^${basePath}`), '');
         
         // Redirect to index.html with hash and prevent loops
-        l.replace(`${basePath}/${appPath}`);
+        l.replace(`${basePath}/?redirected=true#${appPath}`);
       }
     </script>
   </head>
