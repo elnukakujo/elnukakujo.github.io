@@ -1,0 +1,39 @@
+.navbar {
+    position: fixed;
+    z-index: 2;
+    height: auto;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+.navbar.scrolled {
+    background-color: var(--experience-bg);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.navbar__content {
+    margin: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 60vw;
+    min-width: 320px;
+    max-width: 800px;
+}
+
+.navbar__content a {
+    text-decoration: none;
+    color: var(--h);
+    font-family: 'Poppins-Medium';
+    font-size: 20px;
+}
+
+.navbar__content a:hover {
+    filter: opacity(0.7);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}

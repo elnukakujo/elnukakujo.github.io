@@ -11,7 +11,6 @@ import '../assets/css/sections/projectsection.css';
 export default function ProjectSection() {
     const featuredProjects = projects.filter(project => project.featured === true).slice(0,4);
     const navigate = useNavigate();
-    console.log(featuredProjects);
 
     const handleNavigate = (anchorId) => {
         navigate('/projects', {state: {scrollTo : anchorId}});

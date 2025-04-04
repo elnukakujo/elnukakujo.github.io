@@ -24,12 +24,14 @@ export default function Projects() {
             if (location.state?.scrollTo) {
                 if (location.state.scrollTo === '0') {
                     window.scrollTo({ top: 0, behavior: 'smooth' });
-                    return;
+                } else {
+                    const element = document.querySelector(`.${location.state.scrollTo}`);
+                    if (element) {
+                        element.scrollIntoView({ behavior: 'smooth' });
+                    }
                 }
-                const element = document.querySelector(`.${location.state.scrollTo}`);
-                if (element) {
-                    element.scrollIntoView({ behavior: 'smooth' });
-                }
+                // Reset location state after scrolling to prevent future navigation from re-scrolling
+                window.history.replaceState({}, document.title);
             }
         };
         // Delay the execution to after the component has rendered

@@ -21,19 +21,21 @@ export default function Projects() {
     useEffect(() => {
         const scrollToElement = () => {
             if (location.state?.scrollTo) {
-                if (location.state.scrollTo === '0') {
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                    return;
-                }
-                const element = document.querySelector(`.${location.state.scrollTo}`);
-                if (element) {
-                    element.scrollIntoView({ behavior: 'smooth' });
-                }
+              if (location.state.scrollTo === '0') {
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+              } else {
+                  const element = document.querySelector(`.${location.state.scrollTo}`);
+                  if (element) {
+                      element.scrollIntoView({ behavior: 'smooth' });
+                  }
+              }
+              // Reset location state after scrolling to prevent future navigation from re-scrolling
+              window.history.replaceState({}, document.title);
             }
         };
         // Delay the execution to after the component has rendered
         requestAnimationFrame(scrollToElement);
-    }, [location]);
+      }, [location]);
 
     const sections = [
         { title: 'Education', anchorId: 'education' },
