@@ -4,18 +4,21 @@
     <meta charset="utf-8">
     <title>Redirecting...</title>
     <script>
-      const segment = 1;
       const l = window.location;
-      l.replace(
-        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-        l.pathname.split('/').slice(0, 1 + segment).join('/') + '/?p=/' +
-        l.pathname.slice(1).split('/').slice(segment).join('/').replace(/&/g, '~and~') +
-        (l.search ? '&q=' + l.search.slice(1).replace(/&/g, '~and~') : '') +
-        l.hash
-      );
+      const repoName = 'elnukakujo.github.io'; // Replace with your repo name
+      
+      // Check if we're already in a redirect loop
+      if (!l.search.includes('redirected=true')) {
+        const path = l.pathname;
+        const basePath = path.startsWith(`/${repoName}/`) ? `/${repoName}` : '';
+        const appPath = path.replace(new RegExp(`^${basePath}`), '');
+        
+        // Redirect to index.html with hash and prevent loops
+        l.replace(`${basePath}/?redirected=true#${appPath}`);
+      }
     </script>
   </head>
   <body>
-    <h1>Redirecting...</h1>
+    <h1>Loading application...</h1>
   </body>
 </html>
