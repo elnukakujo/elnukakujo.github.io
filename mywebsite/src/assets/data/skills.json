@@ -522,5 +522,15 @@
             "hackos4-2025"
         ],
         "logo": "framework/sk.png"
+    },
+    {
+        "id":"torch",
+        "type": "framework",
+        "name":"PyTorch",
+        "projects": [
+            "summoner_insight",
+            "hackos4-2025"
+        ],
+        "logo": "framework/torch.png"
     }
 ]

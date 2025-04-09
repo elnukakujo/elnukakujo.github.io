@@ -207,7 +207,7 @@ function Project({project}) {
                         <section className='projects-section__project__content__progress__content'>
                             <LifeCycleChart phase={project.progress.phase}/>
                             <section className='projects-section__project__content__progress__content__details'>
-                                {project.githubUrl ? (<GitHubCommit githubUrl={project.githubUrl}/>) : null}
+                                {project.progress.githubUrl ? (<GitHubCommit githubUrl={project.progress.githubUrl}/>) : project.githubUrl ?? (<GitHubCommit githubUrl={project.githubUrl}/>)}
                                 {project.progress.status_infos ? (
                                     <span className="projects-section__project__content__progress__content__details__infos">
                                         <h2>Last Update:</h2>
