@@ -1,0 +1,32 @@
+.cta-button {
+    background-color: transparent;
+    position : relative;
+    transition: all 0.7s, font-size 0s linear, visibility 0s linear;
+    z-index: 1;
+    overflow: hidden;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    transition: all 0.7s ease;
+
+}
+.cta-button::before {
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    width: 10%;
+    height: 10%;
+    border-radius: 100%;
+    transition: all 0.7s;
+    z-index: -1;
+}
+.cta-button:hover::before {
+    top: -20%;
+    left: -40%;
+    width: 200%;
+    height: 200%;
+}
