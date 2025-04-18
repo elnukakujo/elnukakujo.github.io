@@ -5,7 +5,7 @@ function ContactFooter() {
         <div className="contact-footer">
             <div className="content flex-col bg-transparent gap-10">
                 <h1>Want to collaborate ? Let's talk !</h1>
-                <SocialsBar/>
+                <SocialsBar size={14}/>
             </div>
         </div>
     );

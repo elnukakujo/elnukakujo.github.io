@@ -2,6 +2,8 @@ import CtaButton from "../CtaButton/CtaButton";
 import { skills } from "../../pages/ProjectsPage/Projects.constants";
 import Tags from "../Tags/Tags";
 
+import "./SmallProjectCard.css";
+
 function SmallProjectCard({ project }) {
   return (
     <div className="project-card rounded-xl bg-secondary max-w-lg p-8 flex flex-col gap-3 justify-between">
@@ -25,8 +27,7 @@ function SmallProjectCard({ project }) {
                 const skill = skills.find(s => s.id === tag);
                 return { name: skill.name };
             })} 
-        containerClass="tags" 
-        tagClass="tag bg-primary" />
+        />
         <CtaButton>More Details</CtaButton>
     </div>
   );

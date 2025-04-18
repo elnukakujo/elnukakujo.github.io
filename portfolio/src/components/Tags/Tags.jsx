@@ -1,8 +1,8 @@
-function Tags({ items, containerClass = "tags", tagClass = "tag" }) {
+function Tags({ items }) {
     return (
-      <div className={containerClass}>
+      <div className='tags flex flex-row flex-wrap gap-2'>
         {items.map((item, index) => (
-          <p key={index} className={tagClass}>
+          <p key={index} className='tag interact cursor-pointer px-3 py-1 bg-secondary rounded-lg flex flex-row gap-1 items-center'>
             {item.logo && (
               <img src={item.logo} alt={item.name} className="h-9 rounded-full" />
             )}

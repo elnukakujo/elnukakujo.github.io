@@ -41,17 +41,22 @@
     .content {
         @apply w-10/12 max-w-[1200px] mx-auto bg-secondary flex rounded-2xl;
     }
-    .tags {
-        @apply flex flex-row flex-wrap gap-2;
-    }
-    .tag {
-        @apply cursor-pointer px-3 py-1 bg-secondary rounded-lg flex flex-row gap-1 items-center hover:opacity-80 hover:-translate-y-1 hover:shadow-md hover:shadow-enhanced transition-all duration-300 ease-in-out;
-    }
     .interact {
-        @apply cursor-pointer hover:opacity-80 hover:-translate-y-1 hover:shadow-md hover:shadow-enhanced transition-all duration-300 ease-in-out;
+        @apply cursor-pointer 
+            hover:text-enhanced 
+            hover:opacity-80 
+            hover:-translate-y-1 
+            hover:shadow-md 
+            hover:shadow-enhanced 
+            transition-opacity 
+            transition-transform 
+            transition-shadow 
+            transition-colors 
+            duration-300 
+            ease-in-out;
     }
     .logo {
-        @apply rounded-full size-12;
+        @apply rounded-full;
     }
     .header {
         @apply flex flex-col md:flex-row gap-4 items-center justify-center;

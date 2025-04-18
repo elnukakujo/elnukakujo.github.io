@@ -2,8 +2,10 @@ import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 import CV from '../../assets/docs/CV March 2025.pdf';
+import SocialsBar from "../SocialsBar/SocialsBar";
 import { handleDownload } from "../../utils/Download";
 import './NavBar.css';
+import StatusComponent from "../StatusComponent/StatusComponent";
 
 function NavBar() {
     const location = useLocation();
@@ -30,11 +32,17 @@ function NavBar() {
 
     return (
         <nav className={`fixed top-0 left-0 w-full min-w-sm ${scrolled?'bg-secondary shadow-lg':null} z-3 transition-all duration-300 ease-in-out`}>
-            <div className="max-w-lg h-14 mx-auto flex flex-row justify-evenly items-center ">
+            <div className="invisible lg:visible absolute top-2 left-5">
+                <StatusComponent/>
+            </div>
+            <div className="header-navigation max-w-lg h-14 mx-auto flex flex-row justify-evenly items-center ">
                 <h2 className={currentPage == "home" ? "current" : null} onClick={() => handleNavigate("")}>Home</h2>
                 <h2 className={currentPage == "aboutme" ? "current" : null}>About Me</h2>
                 <h2 className={currentPage == "projects" ? "current" : null}>Projects</h2>
                 <h2 onClick={() => handleDownload(CV, 'NoeJagerCV.pdf')}>CV</h2>
+            </div>
+            <div className="invisible lg:visible absolute top-2 right-5">
+                <SocialsBar size={10}/>
             </div>
         </nav>
     );

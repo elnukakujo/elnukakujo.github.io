@@ -16,7 +16,7 @@ function HeroSection() {
 
     return (
         <section className="hero-section h-2/4 mt-30 md:mt-0">
-            <div className="content md:invisible max-w-3xl p-10 flex-col items-center gap-4 bg-secondary/85 transition duration-0">
+            <div className="content lg:invisible max-w-3xl p-10 flex-col items-center gap-4 bg-secondary/85 transition duration-0">
                 <div className="header">
                     <img src={Profile} alt="Noé Jager" className="rounded-full size-38 -mt-30 md:mt-0" />
                     <div className='flex flex-col gap-2'>
