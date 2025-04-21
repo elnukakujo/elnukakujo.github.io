@@ -1,34 +1,55 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+    --color-primary:        #F2F2F2;
+    --color-secondary:      #FCFCFC;
+    --color-text:           #202124;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-primary:   #171616;
+        --color-secondary: #161B22;
+        --color-text:      #F0F6FC;
+    }
+}
+
 @theme {
-    --font-domine: 'Domine', serif;
+    --font-poppins: 'Poppins', sans-serif;
     --font-inter: 'Inter', sans-serif;
 
-    --color-primary: #0D1117;
-    --color-secondary: #161B22;
     --color-enhanced: #00D8FF;
-    --color-header: #F0F6FC;
-    --color-text: #C9D1D9;
+    --color-primary: var(--color-primary);
+    --color-secondary: var(--color-secondary);
+    --color-text: var(--color-text);
 
     --shadow-xl: 0 0 5px rgba(0, 0, 0, 0.1), 0 0 10px rgba(0, 0, 0, 0.1), 0 0 20px rgba(0, 0, 0, 0.1), 0 0 40px rgba(0, 0, 0, 0.1);
     --shadow-lg: 0 0 5px rgba(0, 0, 0, 0.1), 0 0 10px rgba(0, 0, 0, 0.1), 0 0 20px rgba(0, 0, 0, 0.1);
     --shadow-md: 0 0 5px rgba(0, 0, 0, 0.1), 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 @layer base {
+    h1, h2, h3, p, li, button {
+        @apply text-text;
+    }
+    
     h1, h2, h3 {
-        @apply font-domine text-header;
+        @apply font-poppins;
     }
     h1 {
-        @apply text-2xl md:text-4xl;
+        @apply text-2xl;
     }
     h2 {
-        @apply text-lg md:text-2xl;
+        @apply text-lg;
     }
     h3 {
-        @apply text-base md:text-lg;
+        @apply text-base;
     }
+
     p, li, button {
-        @apply font-inter text-sm md:text-base text-text;
+        @apply font-inter text-sm;
     }
     body {
         @apply bg-primary;
@@ -36,29 +57,15 @@
 }
 @layer components {
     .page {
-        @apply my-16 flex flex-col gap-32 min-w-sm;
+        @apply my-25 mx-auto flex flex-col gap-50;
     }
     .content {
-        @apply w-10/12 max-w-[1200px] mx-auto bg-secondary flex rounded-2xl;
+        @apply mx-auto max-w-5xl flex;
     }
     .interact {
-        @apply cursor-pointer 
-            hover:text-enhanced 
-            hover:opacity-80 
-            hover:-translate-y-1 
-            hover:shadow-md 
-            hover:shadow-enhanced 
-            transition-opacity 
-            transition-transform 
-            transition-shadow 
-            transition-colors 
-            duration-300 
-            ease-in-out;
-    }
-    .logo {
-        @apply rounded-full;
-    }
-    .header {
-        @apply flex flex-col md:flex-row gap-4 items-center justify-center;
+        @apply hover:shadow-md hover:shadow-enhanced
+            hover:text-enhanced
+            hover:opacity-80
+            hover:-translate-y-1 transition-all duration-500 ease-in-out;
     }
 }

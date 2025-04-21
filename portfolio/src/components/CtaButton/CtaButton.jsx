@@ -1,9 +1,11 @@
-import './CtaButton.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 const CtaButton = ({children , onClick}) => {
     return (
-        <button onClick={onClick} className={`cta-button w-[fit-content] font-regular text-enhanced hover:text-secondary dark:hover:text-primary-dark before:bg-enhanced dark:before:bg-secondary-dark border-enhanced dark:border-secondary-dark dark:text-secondary-dark border-2 rounded-full shadow-lg hover:shadow-md hover:shadow-enhanced/80 dark:hover:shadow-enhanced/80`}>
+        <button onClick={onClick} className='cursor-pointer shadow-none translate-0 interact flex flex-row items-center gap-[10px] hover:gap-[15px] transition-all duration-300 ease-in-out'> 
             {children}
+            <FontAwesomeIcon icon={faChevronRight} />
         </button>
     );
 }

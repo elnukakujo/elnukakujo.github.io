@@ -1,9 +1,9 @@
-.header-navigation h2 {
+nav h2 {
     position: relative;
     cursor: pointer;
 }
 
-.header-navigation h2::after {
+nav h2::after {
     content: '';
     position: absolute;
     left: 0;
@@ -15,7 +15,7 @@
     transition: transform 0.3s;
 }
 
-.header-navigation h2:hover::after,
-.header-navigation h2.current::after {
+nav h2:hover::after,
+nav h2.current::after {
     transform: scaleX(1);
 }
