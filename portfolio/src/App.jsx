@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import './styles/global.css';
 
 import HomePage from './pages/HomePage/HomePage.jsx';
+import ProjectsPage from './pages/ProjectsPage/ProjectsPage.jsx';
 import NavBar from './components/NavBar/NavBar.jsx';
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
         <NavBar />
         <Routes>
           <Route path='/' element={<HomePage/>} />
+          <Route path='/projects' element={<ProjectsPage/>} />
         </Routes>
       </Router>
     </main>

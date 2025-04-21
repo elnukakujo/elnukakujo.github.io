@@ -20,7 +20,7 @@ function HeroLayout(){
         <div className="hero-layout mx-auto lg:my-[50px]">
             <div className="flex flex-col gap-[50px] items-center lg:flex-row lg:space-evenly lg:items-center">
                 <div className='flex flex-col gap-[50px] order-1 lg:order-0'>
-                <CtaBubble
+                    <CtaBubble
                         frontCard={
                             <>
                                 <img src={steveHead} alt="Icon" className="size-[75px]" />
