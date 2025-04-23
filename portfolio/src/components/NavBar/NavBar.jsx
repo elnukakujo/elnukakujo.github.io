@@ -27,14 +27,14 @@ function NavBar() {
     }, [location]);
 
     return (
-        <nav className={`fixed top-0 left-0 w-full min-w-sm ${scrolled?'bg-secondary shadow-lg':null} z-3 transition-all duration-300 ease-in-out`}>
-            <div className="max-w-lg h-14 mx-auto flex flex-row justify-evenly items-center ">
+        <header className={`fixed top-0 left-0 w-full ${scrolled?'bg-secondary shadow-lg':null} z-2 transition-all duration-300 ease-in-out`}>
+            <nav className="min-w-[15rem] max-w-xl w-8/10 h-14 mx-auto flex flex-row justify-evenly items-center ">
                 <h2 className={currentPage == "home" ? "current" : null} onClick={() => navigateTo("/")}>Home</h2>
                 <h2 className={currentPage == "aboutme" ? "current" : null} onClick={() => navigateTo("/aboutme")}>About Me</h2>
                 <h2 className={currentPage == "projects" ? "current" : null} onClick={() => navigateTo("/projects")}>Projects</h2>
                 <h2 onClick={() => handleDownload(CV, 'NoeJagerCV.pdf')}>CV</h2>
-            </div>
-        </nav>
+            </nav>
+        </header>
     );
 }
 

@@ -10,8 +10,8 @@ function SkillsSection(){
     };
 
     return (
-        <div className="skills-section">
-            <div className="content flex-col bg-transparent gap-10">
+        <div className="w-main mx-auto">
+            <div className="flex flex-col bg-transparent gap-lg">
                 <h1>Skills & Technologies</h1>
                 {
                     Object.entries(skillsByType).map(([type, skills]) => (

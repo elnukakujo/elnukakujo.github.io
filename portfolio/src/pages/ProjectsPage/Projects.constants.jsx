@@ -1,6 +1,6 @@
 export const projects = [
     {
-        "anchorId":"hackos4-2025",
+        "id":"hackos4-2025",
         "title":"HackOS4-2025 Single Cell Perturbation Challenge",
         "tags": ["transformer", "svd", "embedding", "attention", "cnn", "regression", "deepl", "bioeng", "torch", "py", "r", "pd", "np", "sk", "huggingface", "plotly"],
         "date": "March 24th - April 2nd 2025",
@@ -18,7 +18,7 @@ export const projects = [
         "description": {
             "overview": "This high-stakes 9-day challenge from McGill and Waterloo universities tested my ability to predict how drugs affect cell RNA. We were evaluated on prediction accuracy using Mean Rowwise Root Mean Squared Error (MRRMSE).",
             "preprocessing": "I tackled the challenge of limited data (just 500 samples) by implementing smart dimensionality reduction. After normalizing gene perturbations to a 0-1 scale, I used Truncated SVD to compress 18,211 dimensions down to just 5 key features. To overcome the complete lack of overlap between training and test molecules, I generated molecular isomers using RDkit, forcing the model to understand fundamental chemical structures rather than memorizing specific molecules.",
-            "model": "My winning solution featured a custom transformer architecture with four powerful components:\n\n1. **Smart Molecule Understanding (Embeddings)**:\n- Used pre-trained ChemBERTa embeddings to grasp complex molecular structures\n- Combined with cell type information for context-aware predictions\n\n2. **Pattern Recognition Layer (1D CNN)**:\n- 1D CNN with optimized kernel size captures local molecular patterns\n- Applied strong regularization (80% dropout) to prevent overfitting\n\n3. **Chemical Relationship Modeling (Encoder)**:\n- 8-head transformer attention mechanism identifies critical interactions\n- Robust regularization ensures generalization to unseen molecules\n\n4. **Precision Prediction System (Normalized Regression Head)**:\n- Carefully designed output layers with normalization for stability\n- Sigmoid activation captures the non-linear nature of biological responses\n\nThis balanced architecture combined deep chemical understanding with powerful regularization techniques—essential for excellent performance with limited training data.",
+            "model": "My winning solution featured a custom transformer architecture with four powerful components:\n\n 1. **Smart Molecule Understanding (Embeddings)**:\n- Used pre-trained ChemBERTa embeddings to grasp complex molecular structures\n- Combined with cell type information for context-aware predictions\n\n2. **Pattern Recognition Layer (1D CNN)**:\n- 1D CNN with optimized kernel size captures local molecular patterns\n- Applied strong regularization (80% dropout) to prevent overfitting\n\n3. **Chemical Relationship Modeling (Encoder)**:\n- 8-head transformer attention mechanism identifies critical interactions\n- Robust regularization ensures generalization to unseen molecules\n\n4. **Precision Prediction System (Normalized Regression Head)**:\n- Carefully designed output layers with normalization for stability\n- Sigmoid activation captures the non-linear nature of biological responses\n\nThis balanced architecture combined deep chemical understanding with powerful regularization techniques—essential for excellent performance with limited training data.",
             "results": "My custom transformer achieved remarkable success:\n\n- **1st place 🏆** in the competition\n- **0.5685 validation MRRMSE** (at epoch 13)\n\nThis achievement is particularly impressive considering:\n- Nearly zero overlap between training and test molecules\n- Extremely limited training data (500 samples)\n\nThe results demonstrate the model's exceptional ability to understand fundamental chemical-biological interactions rather than simply memorizing patterns from training data."
         },
         "githubUrl": "https://github.com/elnukakujo/hackos-4/tree/main",
@@ -39,7 +39,7 @@ export const projects = [
         "featured":true
     },
     {
-        "anchorId": "my_memory_chat",
+        "id": "my_memory_chat",
         "title": "My Memory Chat: A LLM Chatbot for Memory Recall",
         "tags": ["graph_rag", "generative_agents", "llm", "langchain", "neo4j", "flask", "react", "js", "full_stack", "prompt_eng", "gemini", "py", "figma", "api", "soft_eng", "ux_design"],
         "summary": "A client-server application integrating Gemini, Neo4j knowledge graphs, and the ReAct (Reason + Act) prompting method, allowing users to interact with an LLM to store life events and entities in a memory graph and receive insightful responses.",
@@ -81,13 +81,11 @@ export const projects = [
         "featured": true
     },
     {
-        "anchorId": "summoner_insight",
+        "id": "summoner_insight",
         "title": "Summoner-Insight: Real-Time Visualization and Prediction Assistant",
         "tags": ["react", "full_stack", "transformer", "huggingface", "torch", "js", "redux", "api", "soft_eng", "dotnet", "cs", "devops", "ux_design"],
         "summary": "A real-time visualization and prediction assistant for League of Legends, leveraging Deep Learning models for highly accurate recommendations and predictions, combined with D3.js for dynamic visualizations.",
         "description": {
-            "context":"League of Legends players face a constant challenge: processing massive amounts of real-time information to make winning decisions. Traditional tools only provide after-the-match statistics, leaving players without actionable insights during games. Our solution leverages cutting-edge Deep Learning models—specifically Transformers—that excel at understanding patterns and relationships in complex game data, making them ideal for predicting outcomes and recommending optimal plays with unprecedented accuracy.",
-            "problem":"*How can we harness Transformer technology to deliver real-time insights during League of Legends matches, helping players make better decisions when it matters most?*",
             "v0.1": "Version 0.1 features a clean interface where players can search for summoners across regions, view comprehensive player statistics, analyze detailed match histories, and easily navigate between different player profiles."
         },
         "date": "June 2024 - In Progress",
@@ -102,7 +100,7 @@ export const projects = [
         "featured": true
     },
     {
-        "anchorId": "my_family_story",
+        "id": "my_family_story",
         "title": "Generative Agents for Large Language Model Family Story Generation",
         "tags": ["generative_agents", "graph_rag", "llm", "langchain", "neo4j", "prompt_eng", "gemini", "py"],
         "summary": "Leveraging advancements in Retrieval-Augmented Generation (RAG) and Generative Agents, this application stores family images and comments in a knowledge graph to generate a personalized family storybook.",
@@ -110,7 +108,7 @@ export const projects = [
         "date": "January - February 2025"
     },
     {
-        "anchorId": "math_storytelling_llm_human_comparative_study",
+        "id": "math_storytelling_llm_human_comparative_study",
         "title": "Empirical Study on Teaching Math through Storytelling",
         "tags": ["empirical_methods", "mixed_methods", "aws_elastic_beanstalk", "aws_cloudfront", "aws_amplify", "r", "llm", "hci", "js", "react", "cs", "dotnet"],
         "date": "September - December 2024",
@@ -130,7 +128,7 @@ export const projects = [
         ]
     },
     {
-        "anchorId": "openai_assistant_m2_gen",
+        "id": "openai_assistant_m2_gen",
         "title": "Model assistant for the design of meta-models using OpenAI API",
         "tags": ["mde", "prompt_eng", "openai", "api", "soft_eng", "py", "pd", "llm"],
         "date": "September - December 2024",
@@ -158,7 +156,7 @@ export const projects = [
         ]
     },
     {
-        "anchorId": "sign_language_recognition",
+        "id": "sign_language_recognition",
         "title": "Sign Language Recognition with Deep Neural Network using basic TensorFlow",
         "tags": ["py", "tf", "deepl", "cnn", "cv2", "plotly"],
         "date": "August 2024",
@@ -181,7 +179,7 @@ export const projects = [
         ]
     },
     {
-        "anchorId": "clothing_classification",
+        "id": "clothing_classification",
         "title": "Clothing classification Shallow Neural Networks with NumPy",
         "tags": ["py", "np", "deepl"],
         "date": "August 2024",
@@ -208,7 +206,7 @@ export const projects = [
         ]
     },
     {
-        "anchorId": "movie_search_app",
+        "id": "movie_search_app",
         "title": "Movie search app",
         "tags": ["cs", "dotnet", "js", "react", "full_stack", "api", "soft_eng"],
         "date": "July 2024",
@@ -228,7 +226,7 @@ export const projects = [
         ]
     },
     {
-        "anchorId": "sportsai_website",
+        "id": "sportsai_website",
         "title": "Soccer coaching with SportsAI",
         "tags": ["plotly", "dash", "flask", "css", "data_viz", "py"],
         "date": "May - June 2024",
@@ -253,7 +251,7 @@ export const projects = [
         "featured": true
     },
     {
-        "anchorId": "drawing_with_webcam",
+        "id": "drawing_with_webcam",
         "title": "Drawing with a webcam",
         "tags": ["py", "cv2", "comp_viz", "mediapipe"],
         "date": "February - June 2022",
@@ -273,7 +271,7 @@ export const projects = [
         ]
     },
     {
-        "anchorId": "privacy_app_figma",
+        "id": "privacy_app_figma",
         "title": "Design of a privacy app with Figma",
         "tags": ["figma", "hci"],
         "summary": "A figma prototype of an IOS privacy app, designed in the context of my HCI bachelor course at the University of Luxembourg.",
@@ -282,7 +280,7 @@ export const projects = [
         "videoUrl": "https://www.youtube.com/embed/QCm1njo0ayM?si=wlDq4pp-bgf6woDg"
     },
     {
-        "anchorId": "handwriting_generator",
+        "id": "handwriting_generator",
         "title": "Handwriting Recognition with Tensorflow",
         "tags": ["deepl", "cnn", "tf", "py"],
         "date": "September 2021 - January 2022",
@@ -290,7 +288,7 @@ export const projects = [
         "description": "Under the guidance of Prof. Dr. Luis A. Leiva at the University of Luxembourg, I implemented a Convolutional Neural Network (CNN) in Python with TensorFlow to recognize diverse handwriting styles. Using a dataset from a separate project, the model was trained to replicate various handwriting styles, showcasing the power of CNNs in pattern recognition for handwritten text. This project provided valuable insights into the application of deep learning for handwriting analysis."
     },
     {
-        "anchorId": "chatbot",
+        "id": "chatbot",
         "title": "Conversational Chatbot with Tensorflow",
         "tags": ["deepl", "transformer", "tf", "py"],
         "date": "February - June 2021",
@@ -298,7 +296,7 @@ export const projects = [
         "description": "Under the guidance of Prof. Dr. Christoph Schommer at the University of Luxembourg, I created a transformer architecture in Python using the TensorFlow library for building a chatbot. The project involved data extraction, cleaning, online article research, and defining and training a model before creating the chatbot interface. The model consisted of three parts: an encoding layer, an Attention layer, and a decoding layer. It was trained on Reddit threads containing parent commentaries in both French and English, allowing the chatbot to engage in small talk effectively."
     },
     {
-        "anchorId": "q_learning_drone",
+        "id": "q_learning_drone",
         "title": "Q Learning for a drone in a simulated environment",
         "tags": ["q_learning", "py", "robot"],
         "date": "September 2020 - January 2021",
@@ -306,7 +304,7 @@ export const projects = [
         "description": "Under the guidance of Dr. Jose Luis Sanchez Lopez at the University of Luxembourg, I trained a drone to navigate and avoid obstacles in a simulated environment (AirSim) using Python. The drone's navigation was powered by Q-learning, where I defined a Q-table and implemented rewards to enable the drone to learn and improve its navigation strategy autonomously."
     },
     {
-        "anchorId": "group_drone",
+        "id": "group_drone",
         "title": "Control of a group of drone with Unreal Engine 4 using Python",
         "tags": ["py", "ue4", "robot"],
         "date": "February - June 2020",
@@ -315,7 +313,7 @@ export const projects = [
         "videoUrl": "https://www.youtube.com/embed/V8-CfdUBPYI?si=k667HmWQLU5A2UTB"
     },
     {
-        "anchorId": "sparki",
+        "id": "sparki",
         "title": "Chase with Sparki",
         "tags": ["arduino", "robot"],
         "date": "September 2019 - January 2020",

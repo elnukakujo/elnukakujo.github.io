@@ -1,11 +1,9 @@
-import { useState, Children } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircle } from '@fortawesome/free-solid-svg-icons';
+import { useState, Children, useCallback } from 'react';
+import { useSwipe } from '../hooks/useSwipe';
 
 function SwipeLayout ({ children }) {
     const validChildren = Children.toArray(children).flat().filter(child => child !== null);
     const [currentIndex, setCurrentIndex] = useState(0);
-    console.log(validChildren);
 
     const itemCount = validChildren.length;
 
@@ -17,39 +15,43 @@ function SwipeLayout ({ children }) {
         setCurrentIndex(prev => Math.min(prev + 1, itemCount - 1));
     };
 
-  return (
-    <div className="swipe-layout flex flex-col gap-[20px]">
-        <div className={`relative flex justify-center`}>
-            {currentIndex > 0 && 
-                <div className="absolute left-0 cursor-pointer opacity-50 scale-90 hover:opacity-75 z-0 transition-opacity duration-300" onClick={goToPrevious}>
-                    {validChildren[currentIndex - 1]}
+    const handleSwipe = useCallback((dir) => {
+        if (dir === 'left') goToNext();
+        if (dir === 'right') goToPrevious();
+    }, [itemCount]);
+    
+    const swipeRef = useSwipe(handleSwipe);
+
+    return (
+        <section ref={swipeRef} className="swipe-layout flex flex-col gap-md">
+            <div className={`relative flex justify-center`}>
+                {currentIndex > 0 && 
+                    <div className="absolute -left-[2rem] cursor-pointer opacity-50 scale-90 hover:opacity-75 z-0 transition-opacity duration-300" onClick={goToPrevious}>
+                        {validChildren[currentIndex - 1]}
+                    </div>
+                }
+                <div className="z-1">
+                    {validChildren[currentIndex]}
                 </div>
-            }
-            <div className="items-center z-1">
-                {validChildren[currentIndex]}
+                {currentIndex < itemCount - 1 && 
+                    <div className="cursor-pointer absolute -right-[2rem] opacity-50 scale-90 hover:opacity-75 z-0 transition-opacity duration-300" onClick={goToNext}>
+                        {validChildren[currentIndex + 1]}
+                    </div>
+                }
             </div>
-            {currentIndex < itemCount - 1 && 
-                <div className="cursor-pointer absolute right-0 opacity-50 scale-90 hover:opacity-75 z-0 transition-opacity duration-300" onClick={goToNext}>
-                    {validChildren[currentIndex + 1]}
-                </div>
-            }
-        </div>
-        { itemCount > 1 &&   
-            <nav className='flex justify-center'>
-                <div className='w-[fit-content] flex flex-row gap-[5px]'>
+            { itemCount > 1 &&   
+                <nav className='mx-auto flex flex-row gap-sm p-2 bg-secondary rounded-full'>
                     {Array.from({ length: itemCount }).map((_, i) => (
                         <button
                             key={i}
-                            className={`cursor-pointer size-[10px] ${currentIndex === i ? 'active' : 'opacity-50'} hover:opacity-100 transition-opacity duration-300`}
+                            className={`cursor-pointer size-2.5 bg-text rounded-full ${currentIndex === i ? '' : 'opacity-50'} hover:opacity-100 transition-opacity duration-300`}
                             onClick={() => setCurrentIndex(i)}
-                        >
-                            <FontAwesomeIcon icon={faCircle} className='size-[10px]'/>
-                        </button>
+                        />
                     ))}
-                </div>
-            </nav>}
-    </div>
-  );
+                </nav>
+            }
+        </section>
+    );
 };
 
 export default SwipeLayout;

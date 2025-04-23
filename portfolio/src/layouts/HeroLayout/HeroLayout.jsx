@@ -17,100 +17,98 @@ import useNavigateTo from '../../utils/navigateTo';
 function HeroLayout(){
     const navigateTo = useNavigateTo();
     return (
-        <div className="hero-layout mx-auto lg:my-[50px]">
-            <div className="flex flex-col gap-[50px] items-center lg:flex-row lg:space-evenly lg:items-center">
-                <div className='flex flex-col gap-[50px] order-1 lg:order-0'>
-                    <CtaBubble
-                        frontCard={
-                            <>
-                                <img src={steveHead} alt="Icon" className="size-[75px]" />
+        <section className="hero-layout w-main mx-auto lg:my-[3rem] flex flex-col lg:flex-row gap-lg items-center justify-center">
+            <nav className='flex flex-col gap-lg order-1 lg:order-0'>
+                <CtaBubble
+                    frontCard={
+                        <>
+                            <img src={steveHead} alt="Icon" className="size-[5rem]" />
+                            <CtaButton onClick={() => navigateTo('/aboutme')}>
+                                About Me
+                            </CtaButton>
+                        </>
+                    }
+                    backCard={
+                        <>
+                            <div className='w-full text-left'>
                                 <CtaButton onClick={() => navigateTo('/aboutme')}>
-                                    <h3>About Me</h3>
+                                    About Me
                                 </CtaButton>
-                            </>
-                        }
-                        backCard={
-                            <>
-                                <div className='w-8/10 text-left'>
-                                    <CtaButton onClick={() => navigateTo('/aboutme')}>
-                                        <h3>About Me</h3>
-                                    </CtaButton>
-                                </div>
-                                <hr className='w-8/10 border-1 border-text'/>
-                                <img src={shimanamiKaido} alt="Picture of University of Montreal" className='w-8/10 rounded-xl'/>
-                            </>
-                        }
-                    />
-                    <CtaBubble
-                        frontCard={
-                            <>
-                                <img src={book} alt="Icon" className="size-[75px]" />
+                            </div>
+                            <hr className='w-full border-1 border-text'/>
+                            <img src={shimanamiKaido} alt="Picture of University of Montreal" className='rounded-xl'/>
+                        </>
+                    }
+                />
+                <CtaBubble
+                    frontCard={
+                        <>
+                            <img src={book} alt="Icon" className="size-[5rem]" />
+                            <CtaButton onClick={() => navigateTo('/aboutme')}>
+                            Education
+                            </CtaButton>
+                        </>
+                    }
+                    backCard={
+                        <>
+                            <div className='w-full text-left'>
                                 <CtaButton onClick={() => navigateTo('/aboutme')}>
-                                <h3>Education</h3>
+                                    Education
                                 </CtaButton>
-                            </>
-                        }
-                        backCard={
-                            <>
-                                <div className='w-8/10 text-left'>
-                                    <CtaButton onClick={() => navigateTo('/aboutme')}>
-                                        <h3>Education</h3>
-                                    </CtaButton>
-                                </div>
-                                <hr className='w-8/10 border-1 border-text'/>
-                                <img src={udemImage} alt="Picture of University of Montreal" className='w-8/10 rounded-xl'/>
-                            </>
-                        }
-                    />
-                </div>
-                <div className='mt-45 order-0 lg:mt-0 lg:order-1'>
-                    <CtaBubble
-                        size='main'
-                        frontCard={
-                            <>
-                                <img src={profile} alt="Icon" className="size-[186px] rounded-full -mt-45 shadow-lg" />
-                                <h1 className=''>Noe Jager</h1>
-                                <h2 className='w-[250px] text-wrap text-center'>AI Engineer | Full-Stack Developer</h2>
-                                <SocialsBar size={12}/>
-                            </>
-                        }
-                    />
-                </div>
-                <div className='flex flex-col gap-[50px] order-2'>
-                    <CtaBubble
-                        frontCard={
-                            <>
-                                <img src={pickaxe} alt="Icon" className="size-[75px]" />
+                            </div>
+                            <hr className='w-full border-1 border-text'/>
+                            <img src={udemImage} alt="Picture of University of Montreal" className='rounded-xl'/>
+                        </>
+                    }
+                />
+            </nav>
+            <article className='mt-45 order-0 lg:mt-0 lg:order-1'>
+                <CtaBubble
+                    size='main'
+                    frontCard={
+                        <>
+                            <img src={profile} alt="Icon" className="size-[12rem] rounded-full -mt-45 shadow-lg" />
+                            <h1>Noe Jager</h1>
+                            <h2 className='text-wrap text-center'>AI Engineer | Full-Stack Developer</h2>
+                            <SocialsBar size={3}/>
+                        </>
+                    }
+                />
+            </article>
+            <nav className='flex flex-col gap-lg order-2'>
+                <CtaBubble
+                    frontCard={
+                        <>
+                            <img src={pickaxe} alt="Icon" className="size-[5rem]" />
+                            <CtaButton onClick={() => navigateTo('/projects')}>
+                                Projects
+                            </CtaButton>
+                        </>
+                    }
+                    backCard={
+                        <>
+                            <div className='w-full text-left'>
                                 <CtaButton onClick={() => navigateTo('/projects')}>
-                                    <h3>Projects</h3>
+                                    Projects
                                 </CtaButton>
-                            </>
-                        }
-                        backCard={
-                            <>
-                                <div className='w-8/10 text-left'>
-                                    <CtaButton onClick={() => navigateTo('/projects')}>
-                                        <h3>Projects</h3>
-                                    </CtaButton>
-                                </div>
-                                <hr className='w-8/10 border-1 border-text'/>
-                                <img src={neuralNetwork} alt="Picture of University of Montreal" className='w-8/10 rounded-xl'/>
-                            </>
-                        }
-                    />
-                    <CtaBubble
-                        frontCard={
-                            <>
-                                <img src={expBottle} alt="Icon" className="size-[75px]" />
-                                <CtaButton onClick={() => navigateTo('/aboutme')}>
-                                    <h3>Experience</h3>
-                                </CtaButton>
-                            </>
-                        }
-                    />
-                </div>
-            </div>
-        </div>
+                            </div>
+                            <hr className='w-full border-1 border-text'/>
+                            <img src={neuralNetwork} alt="Picture of University of Montreal" className='rounded-xl'/>
+                        </>
+                    }
+                />
+                <CtaBubble
+                    frontCard={
+                        <>
+                            <img src={expBottle} alt="Icon" className="size-[5rem]" />
+                            <CtaButton onClick={() => navigateTo('/aboutme')}>
+                                Experience
+                            </CtaButton>
+                        </>
+                    }
+                />
+            </nav>
+        </section>
     );
 }
 
