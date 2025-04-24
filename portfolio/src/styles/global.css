@@ -1,0 +1,127 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+    --color-primary:        #F2F2F2;
+    --color-secondary:      #FCFCFC;
+    --color-text:           #202124;
+    --color-enhanced:       #0059FF;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-primary:   #171616;
+        --color-secondary: #161B22;
+        --color-text:      #F0F6FC;
+        --color-enhanced: #00D8FF;
+    }
+}
+
+@theme {
+    --font-poppins: 'Poppins', sans-serif;
+    --font-inter: 'Inter', sans-serif;
+
+    --color-enhanced: var(--color-enhanced);
+    --color-primary: var(--color-primary);
+    --color-secondary: var(--color-secondary);
+    --color-text: var(--color-text);
+
+    --shadow-xl: 0 0 5px rgba(0, 0, 0, 0.1), 0 0 10px rgba(0, 0, 0, 0.1), 0 0 20px rgba(0, 0, 0, 0.1), 0 0 40px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 0 5px rgba(0, 0, 0, 0.1), 0 0 10px rgba(0, 0, 0, 0.1), 0 0 20px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 0 5px rgba(0, 0, 0, 0.1), 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@layer base {
+    h1, h2, h3, p, li, button, svg {
+        @apply text-text;
+    }
+    
+    h1, h2, h3 {
+        @apply font-poppins;
+    }
+    h1 {
+        @apply text-xl sm:text-2xl;
+    }
+    h2 {
+        @apply text-base sm:text-lg;
+    }
+    h3 {
+        @apply text-sm sm:text-base;
+    }
+
+    p, li, button {
+        @apply font-inter text-sm;
+    }
+
+    ul {
+        @apply list-disc list-inside;
+    }
+    ol {
+        @apply list-decimal list-inside;
+    }
+
+    body {
+        @apply bg-primary min-w-xs; /* min-w-xs 20rem 320px*/
+    }
+}
+@layer components {
+    .page {
+        @apply my-[6rem] mx-auto flex flex-col gap-[3rem];
+    }
+    .interact {
+        @apply hover:shadow-md hover:shadow-enhanced hover:drop-shadow-md
+            hover:text-enhanced
+            hover:opacity-80
+            hover:-translate-y-1 transition-all duration-500 ease-in-out;
+    }
+    .card {
+        @apply bg-secondary shadow-xl rounded-[3rem] gap-6 py-6 px-10
+            flex flex-col justify-between items-center;
+    }
+    
+}
+@layer utilities {
+    .w-main {
+        @apply w-full max-w-[40rem] sm:max-w-[64rem];
+    }
+    .w-card {
+        @apply w-full max-w-[35rem] sm:max-w-[56rem];
+    }
+    .w-card-sm {
+        @apply w-full max-w-[26rem];
+    }
+
+    .size-media {
+        @apply w-[18rem] lg:w-md aspect-[1.62];
+    }
+    .size-media-sm {
+        @apply w-[16rem] aspect-[1.62];
+    }
+
+    .gap-sm {
+        @apply gap-[0.5rem];
+    }
+    .gap-md {
+        @apply gap-[1.5rem];
+    }
+    .gap-lg {
+        @apply gap-[3rem];
+    }
+    .gap-xl {
+        @apply gap-[6rem];
+    }
+
+    .p-sm {
+        @apply p-[0.5rem];
+    }
+    .p-md {
+        @apply p-[1.5rem];
+    }
+    .p-lg {
+        @apply p-[3rem];
+    }
+    .p-xl {
+        @apply p-[6rem];
+    }
+}
