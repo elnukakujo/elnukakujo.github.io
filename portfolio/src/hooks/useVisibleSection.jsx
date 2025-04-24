@@ -10,7 +10,7 @@ function useVisibleSection(sectionIds) {
       const sectionMap = new Map();
   
       observer = new IntersectionObserver(handleIntersect, {
-        threshold: 0.1,
+        threshold: 0.05,
       });
   
       sectionIds.forEach((id) => {

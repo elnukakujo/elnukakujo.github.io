@@ -1,5 +1,5 @@
-import HeroLayout from "../../layouts/HeroLayout/HeroLayout";
-import SkillsSection from "./SkillsSection/SkillsSection";
+import HeroLayout from "../../layouts/HeroLayout";
+import SkillsSection from "./SkillsSection";
 
 function HomePage() {
     return (

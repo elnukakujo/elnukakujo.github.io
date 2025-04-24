@@ -37,7 +37,7 @@ function SideNav({ sections }) {
                         <div className={`cursor-pointer size-2.5 bg-text rounded-full opacity-50 group-hover/navitem:opacity-100 ${activeSection===section.id ? 'opacity-100' : '' }`}/>
                         <summary className="list-none absolute invisible bg-secondary p-3 rounded-md group-hover/navitem:visible top-[50%] left-[1.5rem] w-[18rem] translate-y-[-50%] flex flex-col gap-sm items-center shadow-md">
                             <h3>{section.title}</h3>
-                            <p className='text-justify'>{section.summary}</p>
+                            {section.summary ? (<p className='text-justify'>{section.summary}</p>) : null}
                         </summary>
                     </div>
                 ))}
@@ -50,9 +50,9 @@ function SideNav({ sections }) {
                         <FontAwesomeIcon icon={faBars} className='text-text text-[1.5rem]' onClick={() => setIsOpen(true)}/>
                     }
                 </button>
-                <nav className={`${isOpen?'w-full':'w-0'} fixed top-14 left-0 opacity-90 bg-secondary h-[calc(100lvh-3.5rem)] overflow-x-hidden overflow-y-scroll flex flex-col gap-md transition-all duration-500 ease-in-out`}>
-                    {sections.map((section, _) => (
-                        <h3 className='cursor-pointer interact shadow-none w-[100vw]' onClick={() => handleScroll(section.id)}>{section.title}</h3>
+                <nav className={`${isOpen?'w-full':'w-0'} fixed top-14 left-0 bg-secondary h-[calc(100lvh-3.5rem)] overflow-x-hidden overflow-y-scroll flex flex-col gap-md transition-all duration-500 ease-in-out`}>
+                    {sections.map((section, index) => (
+                        <h3 key={index} className='cursor-pointer interact shadow-none w-[100vw]' onClick={() => handleScroll(section.id)}>{section.title}</h3>
                     ))}
                 </nav>
             </div>
