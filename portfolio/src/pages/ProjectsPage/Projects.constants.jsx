@@ -900,5 +900,32 @@ export const skills = [
         "name": "Tailwind CSS",
         "projects": [],
         "logo": tailwindLogo
+    },
+    {
+        'id': 'data_anonymization',
+        'type': 'concept',
+        'name': 'Data Anonymization',
+        'projects': [],
+        'experience': [
+            'internshipAppOX'
+        ]
+    },
+    {
+        'id': 'synthetic_data',
+        'type': 'concept',
+        'name': 'Synthetic Data',
+        'projects': [],
+        'experience': [
+            'internshipAppOX'
+        ]
+    },
+    {
+        'id': 'research',
+        'type': 'concept',
+        'name': 'Research',
+        'projects': [],
+        'experience': [
+            'internshipAppOX'
+        ]
     }
 ]

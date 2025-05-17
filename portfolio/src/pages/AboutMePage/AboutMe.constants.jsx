@@ -66,6 +66,23 @@ export const ol = [
     }
 ];
 
+import appoxLogo from "../../assets/logo/experience/appox.png";
+
+export const experience = [
+    {
+        'anchorId': "internshipAppOX",
+        'status': 1,
+        'title': "Research Internship",
+        'company': "AppOX",
+        'date': "May 2025 - November 2025",
+        'logo': appoxLogo,
+        'websiteUrl': "https://appox.ai/",
+        'summary': "I am currently working on a research internship at AppOX, where I am researching about what is the current state-of-the-art in synthetic data generation for tabular data anonymization.",
+        'tags': ['data_anonymization', 'synthetic_data', 'research'],
+
+    }
+];
+
 export const countriesVisited = [
     "France", "Germany", "Italy", "Spain", "United Kingdom", "United States of America", "Canada", "Japan", "Morocco", "Vietnam",
     "Belgium", "Czechia", "Netherlands", "Switzerland", "Austria", "Greece", "Poland", "Russia", "Montenegro", "Croatia", "Latvia", "Romania"
