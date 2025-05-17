@@ -6,22 +6,6 @@ import udemLogo from "../../assets/logo/education/udem.png";
 
 export const education = [
     {
-        "anchorId": "bacUniLu",
-        "title": "Bachelor of Science in Computer Science",
-        "logo": uniLuLogo,
-        "websiteUrl": "https://www.uni.lu/fstm-en/study-programs/bachelor-in-computer-science/",
-        "image":uniluPicture,
-        "date": "September 2019 - July 2022",
-        "courses": [
-            "Web development",
-            "Software Engineering",
-            "Networking and Communication",
-            "Cybersecurity",
-            "Human Computer Interaction",
-            "User Centered Design"
-        ]
-    },
-    {
         "anchorId": "masterUdem",
         "title": "Master in Informatics",
         "date": "September 2022 - Upcoming",
@@ -35,6 +19,22 @@ export const education = [
             "Model-Based Software Design",
             "Empirical methods in HCI", 
             "3D Vision"
+        ]
+    },
+    {
+        "anchorId": "bacUniLu",
+        "title": "Bachelor of Science in Computer Science",
+        "logo": uniLuLogo,
+        "websiteUrl": "https://www.uni.lu/fstm-en/study-programs/bachelor-in-computer-science/",
+        "image":uniluPicture,
+        "date": "September 2019 - July 2022",
+        "courses": [
+            "Web development",
+            "Software Engineering",
+            "Networking and Communication",
+            "Cybersecurity",
+            "Human Computer Interaction",
+            "User Centered Design"
         ]
     }
 ];
@@ -77,9 +77,23 @@ export const experience = [
         'date': "May 2025 - November 2025",
         'logo': appoxLogo,
         'websiteUrl': "https://appox.ai/",
-        'summary': "I am currently working on a research internship at AppOX, where I am researching about what is the current state-of-the-art in synthetic data generation for tabular data anonymization.",
-        'tags': ['data_anonymization', 'synthetic_data', 'research'],
-
+        'summary': "Evaluation of the robustness of data anonymization against re-identification attacks.",
+        'description': "Since May 2025, I’ve been interning on a project that focuses on testing the robustness of anonymization techniques and synthetic data generation using AI-based re-identification models. Currently, I’m in the first phase of the internship, where I’m reviewing literature on the concepts and the state of the art in data anonymization. I’m also planning the next steps of the project.",
+        'tags': ['data_anonymization', 'synthetic_data', 'research', 'py', 'torch', 'tf', 'gan', 'ae', 'data_privacy'],
+        "external_ref":[
+            {
+                "title": "Modeling Tabular Data using Conditional GAN",
+                "url": "https://arxiv.org/abs/1907.00503"
+            },
+            {
+                "title": "Anonymization Procedures for Tabular Data : An Explanatory Technical and Legal Synthesis",
+                "url": "https://www.mdpi.com/2078-2489/14/9/487#"
+            },
+            {
+                "title": "PATE-GAN, Generating synthetic data with differential privacy guarantees",
+                "url": "https://openreview.net/forum?id=S1zk9iRqF7&utm_source=se%D1%20uritylabru"
+            }
+        ]
     }
 ];
 

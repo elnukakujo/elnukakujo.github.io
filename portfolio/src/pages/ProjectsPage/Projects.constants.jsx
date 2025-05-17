@@ -358,6 +358,7 @@ import awsLogo from "../../assets/logo/tool/aws.png";
 import openaiLogo from "../../assets/logo/tool/openai.png";
 import figmaLogo from "../../assets/logo/tool/figma.png";
 import ue4Logo from "../../assets/logo/tool/ue4.png";
+import obsidianLogo from "../../assets/logo/tool/obsidian.png";
 
 export const skills = [
     {
@@ -927,5 +928,42 @@ export const skills = [
         'experience': [
             'internshipAppOX'
         ]
+    },
+    {
+        'id': 'gan',
+        'type': 'concept',
+        'name': 'Generative Adversarial Networks',
+        'projects': [],
+        'experience': [
+            'internshipAppOX'
+        ]
+    },
+    {
+        'id': 'data_privacy',
+        'type': 'concept',
+        'name': 'Data Privacy',
+        'projects': [],
+        'experience': [
+            'internshipAppOX'
+        ]
+    },
+    {
+        "id": "ae",
+        "type": "concept",
+        "name": "Autoencoders",
+        "projects": [],
+        "experience": [
+            "internshipAppOX"
+        ]
+    },
+    {
+        id: "obsidian",
+        type: "tool",
+        name: "Obsidian",
+        projects: [],
+        experience: [
+            "internshipAppOX"
+        ],
+        logo: obsidianLogo
     }
 ]
