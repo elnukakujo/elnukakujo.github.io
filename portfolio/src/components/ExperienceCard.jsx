@@ -8,7 +8,7 @@ function ExperienceCard({ exp }) {
         <header className="w-full flex flex-col gap-sm">
             <ProjectStatusTag status={exp.status} />
             <header className="flex justify-between gap-sm">
-                <div className="flex flex-col gap-sm">
+                <div className="flex flex-col gap-sm w-2/3">
                     <h2>{exp.title} @ {exp.company}</h2>
                     <p className="italic">{exp.date}</p>
                 </div>

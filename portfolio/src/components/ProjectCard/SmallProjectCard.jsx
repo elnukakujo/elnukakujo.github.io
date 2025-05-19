@@ -3,16 +3,20 @@ import { skills } from "../../pages/ProjectsPage/Projects.constants";
 import Tags from "../Tags/Tags";
 import SwipeLayout from '../../layouts/SwipeLayout';
 import scrollTo from "../../utils/scrollTo";
+import ProjectStatusTag from "../ProjectStatusTag";
 
 import "./ProjectCard.css";
 
 function SmallProjectCard({ project }) {
     return (
         <div className="card w-card-sm aspect-[0.618]">
-            <div className="card-header flex flex-col">
-                <h2>{project.title}</h2>
-                <p className="italic">{project.date}</p>
-            </div>
+            <header className="w-full flex flex-col gap-sm">
+                <ProjectStatusTag status={project.status} />
+                <div className="card-header flex flex-col">
+                    <h2>{project.title}</h2>
+                    <p className="italic">{project.date}</p>
+                </div>
+            </header>
             {project.images || project.videoUrl ? (
                 <SwipeLayout>
                     {project.videoUrl && (

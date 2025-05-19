@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
 
-import CV from '../../assets/docs/CV March 2025.pdf';
+import CV from '../../assets/docs/cv.pdf';
 import { handleDownload } from "../../utils/Download";
 import useNavigateTo from "../../utils/navigateTo";
 import './NavBar.css';

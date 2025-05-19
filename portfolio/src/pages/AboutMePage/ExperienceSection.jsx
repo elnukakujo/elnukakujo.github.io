@@ -3,13 +3,11 @@ import ExperienceCard from "../../components/ExperienceCard";
 
 function ExperienceSection() {
   return (
-    <section id="experience" className="w-fit mx-auto card bg-transparent shadow-none">
+    <section id="experience" className="w-main mx-auto flex flex-col gap-md items-center">
         <h1 className="w-full text-left">Experience</h1>
-        <div className="p-md">
-          {experience.map((exp, index) => (
-            <ExperienceCard key={index} exp={exp} />
-          ))}
-        </div>
+        {experience.map((exp, index) => (
+          <ExperienceCard key={index} exp={exp} />
+        ))}
     </section>
   );
 }

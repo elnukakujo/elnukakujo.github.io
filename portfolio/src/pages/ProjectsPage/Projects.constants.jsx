@@ -1,5 +1,6 @@
 export const projects = [
     {
+        status: 2,
         "id":"hackos4-2025",
         "title":"HackOS4-2025 Single Cell Perturbation Challenge",
         "tags": ["transformer", "svd", "embedding", "attention", "cnn", "regression", "deepl", "bioeng", "torch", "py", "r", "pd", "np", "sk", "huggingface", "plotly"],
@@ -39,6 +40,7 @@ export const projects = [
         "featured":true
     },
     {
+        "status": 2,
         "id": "my_memory_chat",
         "title": "My Memory Chat: A LLM Chatbot for Memory Recall",
         "tags": ["graph_rag", "generative_agents", "llm", "langchain", "neo4j", "flask", "react", "js", "full_stack", "prompt_eng", "gemini", "py", "figma", "api", "soft_eng", "ux_design"],
@@ -81,6 +83,7 @@ export const projects = [
         "featured": true
     },
     {
+        "status": 1,
         "id": "summoner_insight",
         "title": "Summoner-Insight: Real-Time Visualization and Prediction Assistant",
         "tags": ["react", "full_stack", "transformer", "huggingface", "torch", "js", "redux", "api", "soft_eng", "dotnet", "cs", "devops", "ux_design"],
@@ -100,6 +103,7 @@ export const projects = [
         "featured": true
     },
     {
+        "status": 2,
         "id": "my_family_story",
         "title": "Generative Agents for Large Language Model Family Story Generation",
         "tags": ["generative_agents", "graph_rag", "llm", "langchain", "neo4j", "prompt_eng", "gemini", "py"],
@@ -108,6 +112,7 @@ export const projects = [
         "date": "January - February 2025"
     },
     {
+        "status": 2,
         "id": "math_storytelling_llm_human_comparative_study",
         "title": "Empirical Study on Teaching Math through Storytelling",
         "tags": ["empirical_methods", "mixed_methods", "aws_elastic_beanstalk", "aws_cloudfront", "aws_amplify", "r", "llm", "hci", "js", "react", "cs", "dotnet"],
@@ -128,6 +133,7 @@ export const projects = [
         ]
     },
     {
+        "status": 2,
         "id": "openai_assistant_m2_gen",
         "title": "Model assistant for the design of meta-models using OpenAI API",
         "tags": ["mde", "prompt_eng", "openai", "api", "soft_eng", "py", "pd", "llm"],
@@ -156,6 +162,7 @@ export const projects = [
         ]
     },
     {
+        "status": 2,
         "id": "sign_language_recognition",
         "title": "Sign Language Recognition with Deep Neural Network using basic TensorFlow",
         "tags": ["py", "tf", "deepl", "cnn", "cv2", "plotly"],
@@ -179,6 +186,7 @@ export const projects = [
         ]
     },
     {
+        "status": 2,
         "id": "clothing_classification",
         "title": "Clothing classification Shallow Neural Networks with NumPy",
         "tags": ["py", "np", "deepl"],
@@ -206,6 +214,7 @@ export const projects = [
         ]
     },
     {
+        "status": 2,
         "id": "movie_search_app",
         "title": "Movie search app",
         "tags": ["cs", "dotnet", "js", "react", "full_stack", "api", "soft_eng"],
@@ -226,6 +235,7 @@ export const projects = [
         ]
     },
     {
+        "status": 2,
         "id": "sportsai_website",
         "title": "Soccer coaching with SportsAI",
         "tags": ["plotly", "dash", "flask", "css", "data_viz", "py"],
@@ -251,6 +261,7 @@ export const projects = [
         "featured": true
     },
     {
+        "status": 2,
         "id": "drawing_with_webcam",
         "title": "Drawing with a webcam",
         "tags": ["py", "cv2", "comp_viz", "mediapipe"],
@@ -271,6 +282,7 @@ export const projects = [
         ]
     },
     {
+        "status": 2,
         "id": "privacy_app_figma",
         "title": "Design of a privacy app with Figma",
         "tags": ["figma", "hci"],
@@ -280,6 +292,7 @@ export const projects = [
         "videoUrl": "https://www.youtube.com/embed/QCm1njo0ayM?si=wlDq4pp-bgf6woDg"
     },
     {
+        "status": 2,
         "id": "handwriting_generator",
         "title": "Handwriting Recognition with Tensorflow",
         "tags": ["deepl", "cnn", "tf", "py"],
@@ -288,6 +301,7 @@ export const projects = [
         "description": "Under the guidance of Prof. Dr. Luis A. Leiva at the University of Luxembourg, I implemented a Convolutional Neural Network (CNN) in Python with TensorFlow to recognize diverse handwriting styles. Using a dataset from a separate project, the model was trained to replicate various handwriting styles, showcasing the power of CNNs in pattern recognition for handwritten text. This project provided valuable insights into the application of deep learning for handwriting analysis."
     },
     {
+        "status": 2,
         "id": "chatbot",
         "title": "Conversational Chatbot with Tensorflow",
         "tags": ["deepl", "transformer", "tf", "py"],
@@ -296,6 +310,7 @@ export const projects = [
         "description": "Under the guidance of Prof. Dr. Christoph Schommer at the University of Luxembourg, I created a transformer architecture in Python using the TensorFlow library for building a chatbot. The project involved data extraction, cleaning, online article research, and defining and training a model before creating the chatbot interface. The model consisted of three parts: an encoding layer, an Attention layer, and a decoding layer. It was trained on Reddit threads containing parent commentaries in both French and English, allowing the chatbot to engage in small talk effectively."
     },
     {
+        "status": 2,
         "id": "q_learning_drone",
         "title": "Q Learning for a drone in a simulated environment",
         "tags": ["q_learning", "py", "robot"],
@@ -304,6 +319,7 @@ export const projects = [
         "description": "Under the guidance of Dr. Jose Luis Sanchez Lopez at the University of Luxembourg, I trained a drone to navigate and avoid obstacles in a simulated environment (AirSim) using Python. The drone's navigation was powered by Q-learning, where I defined a Q-table and implemented rewards to enable the drone to learn and improve its navigation strategy autonomously."
     },
     {
+        "status": 2,
         "id": "group_drone",
         "title": "Control of a group of drone with Unreal Engine 4 using Python",
         "tags": ["py", "ue4", "robot"],
@@ -313,6 +329,7 @@ export const projects = [
         "videoUrl": "https://www.youtube.com/embed/V8-CfdUBPYI?si=k667HmWQLU5A2UTB"
     },
     {
+        "status": 2,
         "id": "sparki",
         "title": "Chase with Sparki",
         "tags": ["arduino", "robot"],

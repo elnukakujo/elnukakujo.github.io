@@ -3,9 +3,11 @@ import WorldMap from "../../components/WorldMap";
 
 function CountriesVisitedSection() {
   return (
-    <section id='countries-visited' className="w-main mx-auto card">
-      <h1 className="w-full text-left">{countriesVisited.length} countries visited</h1>
-      <WorldMap visitedCountries={countriesVisited}/>
+    <section id='countries-visited' className="w-main mx-auto flex flex-col gap-lg">
+      <h1 className="w-full text-left">Outside Work</h1>
+      <div className="card w-card mx-auto">
+        <WorldMap visitedCountries={countriesVisited}/>
+      </div>
     </section>
   );
 }

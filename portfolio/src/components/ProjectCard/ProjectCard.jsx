@@ -3,6 +3,7 @@ import Tags from "../Tags/Tags";
 import SwipeLayout from '../../layouts/SwipeLayout';
 import GitHubCommit from "../GitHubCommit";
 import LifeCycleChart from "../LifeCycleChart";
+import ProjectStatusTag from "../ProjectStatusTag";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGoogleScholar } from "@fortawesome/free-brands-svg-icons";
@@ -16,28 +17,31 @@ import "./ProjectCard.css";
 function ProjectCard({ project }) {
   return (
     <div id={project.id} className='card w-card'>
-        <header className="card-header w-full flex flex-row justify-between items-center">
-            <div className="flex flex-col gap-sm w-2/3">
-                <h2>{project.title}</h2>
-                <p className="italic">{project.date}</p>
-            </div>
-            <div className="flex flex-row gap-sm items-center">
-                {project.articleUrl ? (
-                    <a href={project.articleUrl} target="_blank" rel="noreferrer">
-                        <FontAwesomeIcon icon={faGoogleScholar} className="interact shadow-none rounded-full text-[2.25rem]" />
-                    </a>
-                ) : null}
-                {project.websiteUrl ? (
-                    <a href={project.websiteUrl} target="_blank" rel="noreferrer">
-                        <FontAwesomeIcon icon={faCompass} className="interact shadow-none rounded-full text-[2.25rem]" />
-                    </a>
-                ) : null}
-                {project.githubUrl ? (
-                    <a href={project.githubUrl} target="_blank" rel="noreferrer">
-                        <img src={githubLogo} className="interact size-12 rounded-full" alt="Github Logo" />
-                    </a>
-                ) : null}
-            </div>
+        <header className="w-full flex flex-col gap-sm">
+            <ProjectStatusTag status={project.status} />
+            <header className="flex justify-between gap-sm">
+                <div className="flex flex-col gap-sm w-2/3">
+                    <h2>{project.title}</h2>
+                    <p className="italic">{project.date}</p>
+                </div>
+                <div className="flex flex-row gap-sm items-center">
+                    {project.articleUrl ? (
+                        <a href={project.articleUrl} target="_blank" rel="noreferrer">
+                            <FontAwesomeIcon icon={faGoogleScholar} className="interact shadow-none rounded-full text-[2.25rem]" />
+                        </a>
+                    ) : null}
+                    {project.websiteUrl ? (
+                        <a href={project.websiteUrl} target="_blank" rel="noreferrer">
+                            <FontAwesomeIcon icon={faCompass} className="interact shadow-none rounded-full text-[2.25rem]" />
+                        </a>
+                    ) : null}
+                    {project.githubUrl ? (
+                        <a href={project.githubUrl} target="_blank" rel="noreferrer">
+                            <img src={githubLogo} className="interact size-12 rounded-full" alt="Github Logo" />
+                        </a>
+                    ) : null}
+                </div>
+            </header>
         </header>
         {project.images || project.videoUrl ? (
             <SwipeLayout>

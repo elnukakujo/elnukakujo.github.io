@@ -35,9 +35,9 @@ function SideNav({ sections }) {
                         onClick={() => handleScroll(section.id)}
                     >
                         <div className={`cursor-pointer size-2.5 bg-text rounded-full opacity-50 group-hover/navitem:opacity-100 ${activeSection===section.id ? 'opacity-100' : '' }`}/>
-                        <summary className="list-none absolute invisible bg-secondary p-3 rounded-md group-hover/navitem:visible top-[50%] left-[1.5rem] w-[18rem] translate-y-[-50%] flex flex-col gap-sm items-center shadow-md">
+                        <summary className="list-none absolute invisible bg-secondary p-3 rounded-md group-hover/navitem:visible top-[50%] left-[1.5rem] w-fit translate-y-[-50%] flex flex-col gap-sm items-center shadow-md">
                             <h3>{section.title}</h3>
-                            {section.summary ? (<p className='text-justify'>{section.summary}</p>) : null}
+                            {section.summary ? (<p className='text-justify w-[20rem]'>{section.summary}</p>) : null}
                         </summary>
                     </div>
                 ))}

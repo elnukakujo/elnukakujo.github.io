@@ -25,7 +25,7 @@ function HeroLayout(){
                         <>
                             <img src={steveHead} alt="Icon" className="size-[5rem]" />
                             <CtaButton onClick={() => navigateTo('/aboutme', 'countries-visited')}>
-                                About Me
+                                Outside Work
                             </CtaButton>
                         </>
                     }
@@ -33,7 +33,7 @@ function HeroLayout(){
                         <>
                             <div className='w-full text-left'>
                                 <CtaButton onClick={() => navigateTo('/aboutme', 'countries-visited')}>
-                                    About Me
+                                    Outside Work
                                 </CtaButton>
                             </div>
                             <hr className='w-full border-1 border-text'/>
