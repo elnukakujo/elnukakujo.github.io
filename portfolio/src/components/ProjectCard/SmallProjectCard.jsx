@@ -38,7 +38,7 @@ function SmallProjectCard({ project }) {
                 </SwipeLayout>
             ) : null}
             <p>{project.summary}</p>
-            <div className="w-full max-h-[7rem] p-[0.5rem] overflow-y-clip">
+            <div className="w-full max-h-[5rem] p-[0.5rem] overflow-y-clip">
                 <Tags items={
                     project.tags.map((tag, index) => {
                         const skill = skills.find(s => s.id === tag);

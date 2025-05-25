@@ -1,6 +1,35 @@
 export const projects = [
     {
         status: 2,
+        id: "text2speechmultilingual",
+        title: "Text to Speech Multilingual",
+        tags: ["tts", "huggingface", "py"],
+        date: "May 2025",
+        summary: "Discovered Text2Speech tools for later projects purposes.",
+        description:'Text2SpeechMultiLingualApp is a short project exploring multilingual speech synthesis using Coqui’s xTTS v2 model. It generates speech in languages like French, Chinese, and Japanese using voice samples from friends and online sources. I learned to install Python with Homebrew, manage PATH variables on macOS, and use tools like ffmpeg and yt-dlp for audio processing.',
+        githubUrl: "https://github.com/elnukakujo/Text2SpeechMultiLingualApp",
+        external_ref: [
+            {
+                "title": "Coqui-TTS",
+                "url": "https://github.com/coqui-ai/TTS"
+            },
+            {
+                "title": "xTTS_v2",
+                "url": "https://huggingface.co/coqui/XTTS-v2"
+            },
+            {
+                title: "yt-dlp",
+                url: "https://github.com/yt-dlp/yt-dlp"
+            },
+            {
+                title: "ffmpeg",
+                url: "https://github.com/FFmpeg/FFmpeg"
+            }
+        ],
+        featured: false
+    },
+    {
+        status: 2,
         "id":"hackos4-2025",
         "title":"HackOS4-2025 Single Cell Perturbation Challenge",
         "tags": ["transformer", "svd", "embedding", "attention", "cnn", "regression", "deepl", "bioeng", "torch", "py", "r", "pd", "np", "sk", "huggingface", "plotly"],
@@ -367,6 +396,7 @@ import torchLogo from "../../assets/logo/framework/torch.png";
 import skLogo from "../../assets/logo/framework/sk.png";
 import huggingfaceLogo from "../../assets/logo/framework/huggingface.png";
 import tailwindLogo from "../../assets/logo/framework/tailwind.png";
+import coquiLogo from "../../assets/logo/framework/tts.png";
 
 // Tool logos
 import geminiLogo from "../../assets/logo/tool/gemini.png";
@@ -982,5 +1012,15 @@ export const skills = [
             "internshipAppOX"
         ],
         logo: obsidianLogo
+    },
+    {
+        id: "tts",
+        type: "framework",
+        name: "Coqui TTS",
+        projects: [
+            "text2speechmultilingual"
+        ],
+        experience: [],
+        logo: coquiLogo
     }
 ]
