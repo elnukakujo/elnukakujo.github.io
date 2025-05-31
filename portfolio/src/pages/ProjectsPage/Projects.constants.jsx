@@ -1,5 +1,16 @@
 export const projects = [
     {
+        status:2,
+        id:"vocabulary-dbms",
+        title: "Vocabulary Database Management System",
+        tags: ["dbms", "sql", "sqlalchemy", "py", "pd"],
+        date: "May 2025",
+        summary: "Created a Python tool to save my 300-pages Language manual vocabulary into a SQL database for later projects.",
+        description: "VocabularyDBMS is a Python tool designed to manage and store vocabulary per course units. It allows users to add vocabulary entries per pre-defined course unites, find duplicates and choose to keep or remove them, and export the vocabulary to a CSV file. The tool uses SQLAlchemy for database management and Pandas for data manipulation.",
+        githubUrl: "https://github.com/elnukakujo/vocabulary-dbms",
+        featured: false
+    },
+    {
         status: 2,
         id: "text2speechmultilingual",
         title: "Text to Speech Multilingual",
@@ -379,6 +390,7 @@ import cppLogo from "../../assets/logo/language/cpp.png";
 import htmlLogo from "../../assets/logo/language/html.png";
 import javaLogo from "../../assets/logo/language/java.png";
 import cssLogo from "../../assets/logo/language/css.png";
+import sqlLogo from "../../assets/logo/language/sql.png";
 
 // Framework logos
 import reactLogo from "../../assets/logo/framework/react.png";
@@ -397,6 +409,7 @@ import skLogo from "../../assets/logo/framework/sk.png";
 import huggingfaceLogo from "../../assets/logo/framework/huggingface.png";
 import tailwindLogo from "../../assets/logo/framework/tailwind.png";
 import coquiLogo from "../../assets/logo/framework/tts.png";
+import sqlAlchemyLogo from "../../assets/logo/framework/sqlalchemy.png";
 
 // Tool logos
 import geminiLogo from "../../assets/logo/tool/gemini.png";
@@ -1022,5 +1035,34 @@ export const skills = [
         ],
         experience: [],
         logo: coquiLogo
+    },
+    {
+        id: "dbms",
+        type: "concept",
+        name: "Database Management Systems",
+        projects: [
+            "vocabulary-dbms"
+        ],
+        experience: []
+    },
+    {
+        id: "sql",
+        type: "language",
+        name: "SQL",
+        projects: [
+            "vocabulary-dbms"
+        ],
+        experience: [],
+        logo: sqlLogo
+    },
+    {
+        id:"sqlalchemy",
+        type: "framework",
+        name:"SQLAlchemy",
+        projects: [
+            "vocabulary-dbms"
+        ],
+        experience: [],
+        logo: sqlAlchemyLogo
     }
 ]
