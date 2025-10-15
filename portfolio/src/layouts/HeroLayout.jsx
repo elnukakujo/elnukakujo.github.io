@@ -70,7 +70,7 @@ function HeroLayout(){
                         <>
                             <img src={profile} alt="Icon" className="size-[12rem] rounded-full -mt-45 shadow-lg" />
                             <h1>Noe Jager</h1>
-                            <h2 className='text-wrap text-center'>AI Engineer | Full-Stack Developer</h2>
+                            <h2 className='text-wrap text-center'>ML Engineer | Data Scientist</h2>
                             <SocialsBar size={3}/>
                         </>
                     }

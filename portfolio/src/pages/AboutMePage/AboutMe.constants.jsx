@@ -77,21 +77,28 @@ export const experience = [
         'date': "May 2025 - November 2025",
         'logo': appoxLogo,
         'websiteUrl': "https://appox.ai/",
-        'summary': "Evaluation of the robustness of data anonymization against re-identification attacks.",
-        'description': "Since May 2025, I’ve been interning on a project that focuses on testing the robustness of anonymization techniques and synthetic data generation using AI-based re-identification models. Currently, I’m in the first phase of the internship, where I’m reviewing literature on the concepts and the state of the art in data anonymization. I’m also planning the next steps of the project.",
-        'tags': ['data_anonymization', 'synthetic_data', 'research', 'py', 'torch', 'tf', 'gan', 'ae', 'data_privacy'],
+        'summary': "Contrastive Representation Learning for Tabular Data Anonymity Evaluation",
+        "description": {
+            "context":"As companies collect data from their users to offer them services, some of those information might be **sensitive and hurtful** if leaked. To avoid this, gouvernments **impose** on companies to **anonymize their collected data** to protect their users personal informations. However, as model can generate (anonymized) synthetic data that mimicking real user data, **some methods have been created to infer back real data information using those synthetic data**. Hence, it is crucial to evaluate the anonymity risk of those synthetic data.\n\n From the work of Giomi et al. (2022), we discovered that a **practical solution with lower computational cost** that previous metrics (k-Anonymity, l-Diversity, t-Closeness) is to **simulate attacks on the original dataset** using the synthetic dataset. From those attacks, they evaluate a risk score based on the accuracy of their attacks. However, those attacks **rely on the Gower Distance between records**, which is **not optimal for high-dimensional data** and does **not capture complex relationships between features**.",
+            "problem":"*Is using learned representations of synthetic records more accurate and generalizable to detect leaks in a synthetic dataset than using the Gower Distance?*",
+        },
+        'tags': ['data_anonymization', 'synthetic_data', 'research', 'py', 'torch', 'tf', 'gan', 'ae', 'data_privacy', 'mlflow', 'optuna', 'contrastive_learning', 'representation_learning'],
         "external_ref":[
             {
-                "title": "Modeling Tabular Data using Conditional GAN",
-                "url": "https://arxiv.org/abs/1907.00503"
+                "title": "Anonymity and the Netflix Dataset",
+                "url": "https://www.schneier.com/blog/archives/2007/12/anonymity_and_t_2.html"
             },
             {
-                "title": "Anonymization Procedures for Tabular Data : An Explanatory Technical and Legal Synthesis",
-                "url": "https://www.mdpi.com/2078-2489/14/9/487#"
+                "title": "How Strava leaks the Position of our World Leaders",
+                "url": "https://www.breakingnews.ie/world/fitness-app-strava-gives-away-location-of-world-leaders-french-newspaper-says-1688417.html"
             },
             {
-                "title": "PATE-GAN, Generating synthetic data with differential privacy guarantees",
-                "url": "https://openreview.net/forum?id=S1zk9iRqF7&utm_source=se%D1%20uritylabru"
+                "title": "Anonymeter: Unified Framework for Quantifying Privacy Risk in Synthetic Data",
+                "url": "https://github.com/statice/anonymeter"
+            },
+            {
+                "title": "A Simple Framework for Contrastive Learning of Visual Representations",
+                "url":"https://arxiv.org/abs/2002.05709"
             }
         ]
     }
@@ -99,7 +106,7 @@ export const experience = [
 
 export const countriesVisited = [
     "France", "Germany", "Italy", "Spain", "United Kingdom", "United States of America", "Canada", "Japan", "Morocco", "Vietnam",
-    "Belgium", "Czechia", "Netherlands", "Switzerland", "Austria", "Greece", "Poland", "Russia", "Montenegro", "Croatia", "Latvia", "Romania"
+    "Belgium", "Czechia", "Netherlands", "Switzerland", "Austria", "Greece", "Poland", "Russia", "Montenegro", "Croatia", "Latvia", "Romania", "China"
 ];
 
 import fushimiInari from "../../assets/img/fushimi-inari.png";

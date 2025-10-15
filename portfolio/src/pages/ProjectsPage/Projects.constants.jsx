@@ -1,14 +1,14 @@
 export const projects = [
     {
-        status:2,
-        id:"vocabulary-dbms",
-        title: "Vocabulary Database Management System",
-        tags: ["dbms", "sql", "sqlalchemy", "py", "pd"],
-        date: "May 2025",
-        summary: "Created a Python tool to save my 300-pages Language manual vocabulary into a SQL database for later projects.",
-        description: "VocabularyDBMS is a Python tool designed to manage and store vocabulary per course units. It allows users to add vocabulary entries per pre-defined course unites, find duplicates and choose to keep or remove them, and export the vocabulary to a CSV file. The tool uses SQLAlchemy for database management and Pandas for data manipulation.",
-        githubUrl: "https://github.com/elnukakujo/vocabulary-dbms",
-        featured: false
+        status:1,
+        id:"language-learning-app",
+        title: "Language Learning App: textbook support for learning a language",
+        tags: ["dbms", "sql", "sqlalchemy", "py", "pd", "fastapi", "nextjs", "full_stack", "soft_eng"],
+        date: "May 2025 - In Progress",
+        summary: "Application in production to add languages vocabulary, characters, grammars and exercises per course units, and keep a track of your progress.",
+        description: "This Language Learning App is designed to assist users in learning new languages by providing structured course units that include vocabulary, characters, grammar lessons, and exercises. Users can add new content to the app, track their progress through various units, and review previously learned material. The app is built using Python and SQLAlchemy for database management, ensuring efficient data handling and retrieval. It serves as a comprehensive tool for language learners to enhance their skills in an organized manner.",
+        githubUrl: "https://github.com/elnukakujo/language-learning-app",
+        featured: true
     },
     {
         status: 2,
@@ -298,7 +298,7 @@ export const projects = [
                 "description": "Radar Chart comparing Italy and England's performance in Euro 2020 across various metrics."
             }
         ],
-        "featured": true
+        "featured": false
     },
     {
         "status": 2,
@@ -391,6 +391,7 @@ import htmlLogo from "../../assets/logo/language/html.png";
 import javaLogo from "../../assets/logo/language/java.png";
 import cssLogo from "../../assets/logo/language/css.png";
 import sqlLogo from "../../assets/logo/language/sql.png";
+import typescriptLogo from "../../assets/logo/language/ts.png";
 
 // Framework logos
 import reactLogo from "../../assets/logo/framework/react.png";
@@ -410,6 +411,10 @@ import huggingfaceLogo from "../../assets/logo/framework/huggingface.png";
 import tailwindLogo from "../../assets/logo/framework/tailwind.png";
 import coquiLogo from "../../assets/logo/framework/tts.png";
 import sqlAlchemyLogo from "../../assets/logo/framework/sqlalchemy.png";
+import mlflowLogo from "../../assets/logo/framework/mlflow.png";
+import optunaLogo from "../../assets/logo/framework/optuna.png";
+import nextjsLogo from "../../assets/logo/framework/nextjs.png";
+import fastapiLogo from "../../assets/logo/framework/fastapi.svg";
 
 // Tool logos
 import geminiLogo from "../../assets/logo/tool/gemini.png";
@@ -1041,7 +1046,7 @@ export const skills = [
         type: "concept",
         name: "Database Management Systems",
         projects: [
-            "vocabulary-dbms"
+            "language-learning-app"
         ],
         experience: []
     },
@@ -1050,7 +1055,7 @@ export const skills = [
         type: "language",
         name: "SQL",
         projects: [
-            "vocabulary-dbms"
+            "language-learning-app"
         ],
         experience: [],
         logo: sqlLogo
@@ -1060,9 +1065,80 @@ export const skills = [
         type: "framework",
         name:"SQLAlchemy",
         projects: [
-            "vocabulary-dbms"
+            "language-learning-app"
         ],
         experience: [],
         logo: sqlAlchemyLogo
+    },
+    {
+        id: "mlflow",
+        type: "framework",
+        name: "MLflow",
+        projects: [],
+        experience: [
+            "internshipAppOX"
+        ],
+        logo: mlflowLogo
+    },
+    {
+        id: "optuna",
+        type: "framework",
+        name: "Optuna",
+        projects: [],
+        experience: [
+            "internshipAppOX"
+        ],
+        logo: optunaLogo
+    },
+    {
+        id: "contrastive_learning",
+        type: "concept",
+        name: "Contrastive Learning",
+        projects: [],
+        experience: [
+            "internshipAppOX"
+        ]
+    },
+    {
+        id: "self_supervised_learning",
+        type: "concept",
+        name: "Self-Supervised Learning",
+        projects: [],
+        experience: [
+            "internshipAppOX"
+        ]
+    },
+    {
+        id: "representation_learning",
+        type: "concept",
+        name: "Representation Learning",
+        projects: [],
+        experience: [
+            "internshipAppOX"
+        ]
+    },
+    {
+        id: "typescript",
+        type: "language",
+        name: "TypeScript",
+        projects: [],
+        experience: [],
+        logo: typescriptLogo
+    },
+    {
+        id: "nextjs",
+        type: "framework",
+        name: "Next.js",
+        projects: ["language-learning-app"],
+        experience: [],
+        logo: nextjsLogo
+    },
+    {
+        id: "fastapi",
+        type: "framework",
+        name: "FastAPI",
+        projects: ["language-learning-app"],
+        experience: [],
+        logo: fastapiLogo
     }
 ]

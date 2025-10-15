@@ -2,6 +2,10 @@ import Tags from "./Tags/Tags";
 import { skills } from "../pages/ProjectsPage/Projects.constants";
 import ProjectStatusTag from "./ProjectStatusTag";
 
+import LifeCycleChart from "./LifeCycleChart";
+import GitHubCommit from "./GitHubCommit";
+import Markdown from 'react-markdown';
+
 function ExperienceCard({ exp }) {
   return (
     <section id={exp.anchorId} className="card w-card flex flex-col gap-md">
@@ -22,9 +26,41 @@ function ExperienceCard({ exp }) {
                 <h2>Summary</h2>
                 <p>{exp.summary}</p>
             </article>
-            <article className="bg-primary p-md rounded-md shadow-md flex flex-col gap-sm">
-                <h2>Description</h2>
-                <p>{exp.description}</p>
+            <article className="flex flex-col gap-md">
+                {typeof exp.description === 'object' ? (
+                    Object.entries(exp.description).map(([key, value], index) => {
+                        const capitalizedKey = key.charAt(0).toUpperCase() + key.slice(1);
+                        return (
+                            <div className={`bg-primary p-md rounded-md shadow-md flex flex-col gap-sm`} key={index}>
+                                <h2>{capitalizedKey}</h2>
+                                <div className="p-sm text-justify">
+                                    <Markdown>{value}</Markdown>
+                                </div>
+                            </div>
+                        );
+                    })
+                ) : (
+                    <div className="bg-primary p-md rounded-md shadow-md text-justify">
+                        <Markdown>{project.description}</Markdown>
+                    </div>
+                )}
+                {exp.progress ? (
+                    <div className="bg-primary p-md rounded-md shadow-md flex flex-col gap-sm">
+                        <h2> Progress</h2>
+                        <section className="flex flex-col justify-evenly items-center flex-wrap">
+                            <LifeCycleChart phase={exp.progress.phase}/>
+                            <section className="flex flex-col gap-sm text-justify">
+                                {exp.progress.githubUrl ? (<GitHubCommit githubUrl={exp.progress.githubUrl}/>) : exp.githubUrl ?? (<GitHubCommit githubUrl={exp.githubUrl}/>)}
+                                {exp.progress.status_infos ? (
+                                    <span>
+                                        <h2>Last Update:</h2>
+                                        <Markdown>{exp.progress.status_infos}</Markdown>
+                                    </span>
+                                ): null}
+                            </section>
+                        </section>
+                    </div>
+                ) : null}
             </article>
         </section>
         <Tags items={
