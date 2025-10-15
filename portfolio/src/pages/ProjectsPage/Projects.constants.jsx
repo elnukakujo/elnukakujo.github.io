@@ -3,11 +3,41 @@ export const projects = [
         status:1,
         id:"language-learning-app",
         title: "Language Learning App: textbook support for learning a language",
-        tags: ["dbms", "sql", "sqlalchemy", "py", "pd", "fastapi", "nextjs", "full_stack", "soft_eng"],
+        tags: ["dbms", "sql", "sqlalchemy", "py", "pd", "fastapi", "nextjs", "full_stack", "soft_eng", "typescript"],
         date: "May 2025 - In Progress",
         summary: "Application in production to add languages vocabulary, characters, grammars and exercises per course units, and keep a track of your progress.",
         description: "This Language Learning App is designed to assist users in learning new languages by providing structured course units that include vocabulary, characters, grammar lessons, and exercises. Users can add new content to the app, track their progress through various units, and review previously learned material. The app is built using Python and SQLAlchemy for database management, ensuring efficient data handling and retrieval. It serves as a comprehensive tool for language learners to enhance their skills in an organized manner.",
         githubUrl: "https://github.com/elnukakujo/language-learning-app",
+        images:[
+            {
+                imageUrl: "https://raw.githubusercontent.com/elnukakujo/language-learning-app/refs/heads/main/assets/screenshots/home_page.png",
+                description: "Current home page where users can add new languages and have some high level information about each language course."
+            },
+            {
+                imageUrl: "https://raw.githubusercontent.com/elnukakujo/language-learning-app/refs/heads/main/assets/screenshots/unit_page.png",
+                description: "Example of a course unit page with vocabulary, characters, grammar and exercises sections."
+            },
+            {
+                imageUrl: "https://raw.githubusercontent.com/elnukakujo/language-learning-app/refs/heads/main/assets/screenshots/create_exercise_page.png",
+                description: "Example of the create exercise page where users can add new exercises to a course unit by selecting which type of exercise among Translate, Fill-in-the-Blank, Essay, True-False, Question Answering, and custom one."
+            },
+            {
+                imageUrl: "https://raw.githubusercontent.com/elnukakujo/language-learning-app/refs/heads/main/assets/screenshots/matching_exercise.png",
+                description: "Example of a matching exercise where users have to match pairs of elements."
+            },
+            {
+                imageUrl: "https://raw.githubusercontent.com/elnukakujo/language-learning-app/refs/heads/main/assets/screenshots/organize_exercise.png",
+                description: "Example of an organize exercise where users have to organize a list of elements in the correct order."
+            },
+            {
+                imageUrl: "https://raw.githubusercontent.com/elnukakujo/language-learning-app/refs/heads/main/assets/screenshots/fill_the_blank_exercise.png",
+                description: "Example of a fill-in-the-blank exercise where users have to fill in the missing words in a sentence."
+            },
+            {
+                imageUrl: "https://raw.githubusercontent.com/elnukakujo/language-learning-app/refs/heads/main/assets/screenshots/flashcard.png",
+                description: "Example of a flashcard where users can review vocabulary, characters, and grammar."
+            }
+        ],
         featured: true
     },
     {
