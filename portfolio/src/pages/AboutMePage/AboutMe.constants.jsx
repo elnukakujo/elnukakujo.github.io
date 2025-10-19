@@ -70,35 +70,45 @@ import appoxLogo from "../../assets/logo/experience/appox.png";
 
 export const experience = [
     {
-        'anchorId': "internshipAppOX",
-        'status': 1,
-        'title': "Research Internship",
-        'company': "AppOX",
-        'date': "May 2025 - November 2025",
-        'logo': appoxLogo,
-        'websiteUrl': "https://appox.ai/",
-        'summary': "Contrastive Representation Learning for Tabular Data Anonymity Evaluation",
-        "description": {
-            "context":"As companies collect data from their users to offer them services, some of those information might be **sensitive and hurtful** if leaked. To avoid this, gouvernments **impose** on companies to **anonymize their collected data** to protect their users personal informations. However, as model can generate (anonymized) synthetic data that mimicking real user data, **some methods have been created to infer back real data information using those synthetic data**. Hence, it is crucial to evaluate the anonymity risk of those synthetic data.\n\n From the work of Giomi et al. (2022), we discovered that a **practical solution with lower computational cost** that previous metrics (k-Anonymity, l-Diversity, t-Closeness) is to **simulate attacks on the original dataset** using the synthetic dataset. From those attacks, they evaluate a risk score based on the accuracy of their attacks. However, those attacks **rely on the Gower Distance between records**, which is **not optimal for high-dimensional data** and does **not capture complex relationships between features**.",
-            "problem":"*Is using learned representations of synthetic records more accurate and generalizable to detect leaks in a synthetic dataset than using the Gower Distance?*",
-        },
-        'tags': ['data_anonymization', 'synthetic_data', 'research', 'py', 'torch', 'tf', 'gan', 'ae', 'data_privacy', 'mlflow', 'optuna', 'contrastive_learning', 'representation_learning'],
-        "external_ref":[
+        id: "internshipAppOX",
+        status: 1,
+        title: "Research Internship",
+        company: [
             {
-                "title": "Anonymity and the Netflix Dataset",
-                "url": "https://www.schneier.com/blog/archives/2007/12/anonymity_and_t_2.html"
+                name: "AppOX",
+                url: "https://appox.ai/",
+                logo: appoxLogo
+            }
+        ],
+        date: "May 2025 - November 2025",
+        summary: "Contrastive Representation Learning for Tabular Data Anonymity Evaluation",
+        description: [
+            {title: "Context", text: [
+                "As companies collect data from their users to offer them services, some of those information might be **sensitive and hurtful** if leaked. To avoid this, gouvernments **impose** on companies to **anonymize their collected data** to protect their users personal informations. However, as model can generate (anonymized) synthetic data that mimicking real user data, **some methods have been created to infer back real data information using those synthetic data**. Hence, it is crucial to evaluate the anonymity risk of those synthetic data.",
+                "From the work of Giomi et al. (2022), we discovered that a **practical solution with lower computational cost** that previous metrics (k-Anonymity, l-Diversity, t-Closeness) is to **simulate attacks on the original dataset** using the synthetic dataset. From those attacks, they evaluate a risk score based on the accuracy of their attacks. However, those attacks **rely on the Gower Distance between records**, which is **not optimal for high-dimensional data** and does **not capture complex relationships between features**."]},
+            {title: "Problem", text: ["*Is using learned representations of synthetic records more accurate and generalizable to detect leaks in a synthetic dataset than using the Gower Distance?*"]}
+        ],
+        skills_id: ['data_anonymization', 'synthetic_data', 'research', 'py', 'torch', 'tf', 'gan', 'ae', 'data_privacy', 'mlflow', 'optuna', 'contrastive_learning', 'representation_learning'],
+        externalLink:[
+            {
+                type:"externalLink",
+                text: "Anonymity and the Netflix Dataset",
+                url: "https://www.schneier.com/blog/archives/2007/12/anonymity_and_t_2.html"
             },
             {
-                "title": "How Strava leaks the Position of our World Leaders",
-                "url": "https://www.breakingnews.ie/world/fitness-app-strava-gives-away-location-of-world-leaders-french-newspaper-says-1688417.html"
+                type:"externalLink",
+                text: "How Strava leaks the Position of our World Leaders",
+                url: "https://www.breakingnews.ie/world/fitness-app-strava-gives-away-location-of-world-leaders-french-newspaper-says-1688417.html"
             },
             {
-                "title": "Anonymeter: Unified Framework for Quantifying Privacy Risk in Synthetic Data",
-                "url": "https://github.com/statice/anonymeter"
+                type:"externalLink",
+                text: "Anonymeter: Unified Framework for Quantifying Privacy Risk in Synthetic Data",
+                url: "https://github.com/statice/anonymeter"
             },
             {
-                "title": "A Simple Framework for Contrastive Learning of Visual Representations",
-                "url":"https://arxiv.org/abs/2002.05709"
+                type:"externalLink",
+                text: "A Simple Framework for Contrastive Learning of Visual Representations",
+                url:"https://arxiv.org/abs/2002.05709"
             }
         ]
     }

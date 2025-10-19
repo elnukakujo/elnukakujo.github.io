@@ -1,5 +1,5 @@
+import SimpleCard from "../../components/organisms/Card/SimpleCard";
 import { education, ol } from "./AboutMe.constants";
-import UniCard from "../../components/UniCard";
 
 import React from "react";
 
@@ -12,7 +12,7 @@ function EducationSection() {
                     {education.map((uni, index) => {
                         return(
                             <React.Fragment key={index}>
-                                <UniCard uni={uni}/>
+                                <SimpleCard uni={uni}/>
                                 {index < education.length - 1 && (
                                     <div className="w-[20rem] h-[1.5px] lg:w-[1.5px] lg:h-[20rem] bg-text"></div>   
                                 )}

@@ -3,7 +3,7 @@ export const projects = [
         status:1,
         id:"language-learning-app",
         title: "Language Learning App: textbook support for learning a language",
-        tags: ["dbms", "sql", "sqlalchemy", "py", "pd", "fastapi", "nextjs", "full_stack", "soft_eng", "typescript"],
+        skills_id: ["dbms", "sql", "sqlalchemy", "py", "pd", "fastapi", "nextjs", "full_stack", "soft_eng", "typescript"],
         date: "May 2025 - In Progress",
         summary: "Application in production to add languages vocabulary, characters, grammars and exercises per course units, and keep a track of your progress.",
         description: "This Language Learning App is designed to assist users in learning new languages by providing structured course units that include vocabulary, characters, grammar lessons, and exercises. Users can add new content to the app, track their progress through various units, and review previously learned material. The app is built using Python and SQLAlchemy for database management, ensuring efficient data handling and retrieval. It serves as a comprehensive tool for language learners to enhance their skills in an organized manner.",
@@ -44,7 +44,7 @@ export const projects = [
         status: 2,
         id: "text2speechmultilingual",
         title: "Text to Speech Multilingual",
-        tags: ["tts", "huggingface", "py"],
+        skills_id: ["tts", "huggingface", "py"],
         date: "May 2025",
         summary: "Discovered Text2Speech tools for later projects purposes.",
         description:'Text2SpeechMultiLingualApp is a short project exploring multilingual speech synthesis using Coqui’s xTTS v2 model. It generates speech in languages like French, Chinese, and Japanese using voice samples from friends and online sources. I learned to install Python with Homebrew, manage PATH variables on macOS, and use tools like ffmpeg and yt-dlp for audio processing.',
@@ -73,7 +73,7 @@ export const projects = [
         status: 2,
         "id":"hackos4-2025",
         "title":"HackOS4-2025 Single Cell Perturbation Challenge",
-        "tags": ["transformer", "svd", "embedding", "attention", "cnn", "regression", "deepl", "bioeng", "torch", "py", "r", "pd", "np", "sk", "huggingface", "plotly"],
+        skills_id: ["transformer", "svd", "embedding", "attention", "cnn", "regression", "deepl", "bioeng", "torch", "py", "r", "pd", "np", "sk", "huggingface", "plotly"],
         "date": "March 24th - April 2nd 2025",
         "summary":"First place in the HackOS4 organized by McGill and Waterloo Universities. Developed a custom Encoder only Transformer model with 1d CNN to predict perturbations in a cell RNA under the influence of a drug molecule.",
         "images": [
@@ -113,7 +113,7 @@ export const projects = [
         "status": 2,
         "id": "my_memory_chat",
         "title": "My Memory Chat: A LLM Chatbot for Memory Recall",
-        "tags": ["graph_rag", "generative_agents", "llm", "langchain", "neo4j", "flask", "react", "js", "full_stack", "prompt_eng", "gemini", "py", "figma", "api", "soft_eng", "ux_design"],
+        skills_id: ["graph_rag", "generative_agents", "llm", "langchain", "neo4j", "flask", "react", "js", "full_stack", "prompt_eng", "gemini", "py", "figma", "api", "soft_eng", "ux_design"],
         "summary": "A client-server application integrating Gemini, Neo4j knowledge graphs, and the ReAct (Reason + Act) prompting method, allowing users to interact with an LLM to store life events and entities in a memory graph and receive insightful responses.",
         "description": {
             "context":"As digital interactions become more integrated into daily life, there is a growing need for AI assistants that can engage in **meaningful, long-term conversations while managing personal information securely**. Users want a system that not only remembers **key details** about their private lives—such as **people**, **events**, and **preferences**—but also **retrieves related images** to enhance interactions. However, ensuring data persistence, accessibility, and security remains a challenge. A robust memory system **must prevent data loss**, allow seamless external database access, and maintain user trust through reliable and structured information storage.",
@@ -156,7 +156,7 @@ export const projects = [
         "status": 1,
         "id": "summoner_insight",
         "title": "Summoner-Insight: Real-Time Visualization and Prediction Assistant",
-        "tags": ["react", "full_stack", "transformer", "huggingface", "torch", "js", "redux", "api", "soft_eng", "dotnet", "cs", "devops", "ux_design"],
+        skills_id: ["react", "full_stack", "transformer", "huggingface", "torch", "js", "redux", "api", "soft_eng", "dotnet", "cs", "devops", "ux_design"],
         "summary": "A real-time visualization and prediction assistant for League of Legends, leveraging Deep Learning models for highly accurate recommendations and predictions, combined with D3.js for dynamic visualizations.",
         "description": {
             "v0.1": "Version 0.1 features a clean interface where players can search for summoners across regions, view comprehensive player statistics, analyze detailed match histories, and easily navigate between different player profiles."
@@ -176,7 +176,7 @@ export const projects = [
         "status": 2,
         "id": "my_family_story",
         "title": "Generative Agents for Large Language Model Family Story Generation",
-        "tags": ["generative_agents", "graph_rag", "llm", "langchain", "neo4j", "prompt_eng", "gemini", "py"],
+        skills_id: ["generative_agents", "graph_rag", "llm", "langchain", "neo4j", "prompt_eng", "gemini", "py"],
         "summary": "Leveraging advancements in Retrieval-Augmented Generation (RAG) and Generative Agents, this application stores family images and comments in a knowledge graph to generate a personalized family storybook.",
         "description": "This project leverages Retrieval-Augmented Generation (RAG) and Generative Agents to create a personalized family storybook enriched with both text and visuals. A Neo4j knowledge graph stores family images, memories, and comments, allowing an LLM-powered agent to generate dynamic, context-aware narratives that reflect personal histories and relationships. Additionally, a dedicated image-selection agent explores the graph to retrieve relevant photos for each generated paragraph, ensuring meaningful visual storytelling. The final output is automatically formatted and converted into a Word document, providing a beautifully structured, shareable family album that brings memories to life in a seamless, AI-assisted storytelling experience.",
         "date": "January - February 2025"
@@ -185,7 +185,7 @@ export const projects = [
         "status": 2,
         "id": "math_storytelling_llm_human_comparative_study",
         "title": "Empirical Study on Teaching Math through Storytelling",
-        "tags": ["empirical_methods", "mixed_methods", "aws_elastic_beanstalk", "aws_cloudfront", "aws_amplify", "r", "llm", "hci", "js", "react", "cs", "dotnet"],
+        skills_id: ["empirical_methods", "mixed_methods", "aws_elastic_beanstalk", "aws_cloudfront", "aws_amplify", "r", "llm", "hci", "js", "react", "cs", "dotnet"],
         "date": "September - December 2024",
         "summary":"Study of LLM-generated vs. human-authored stories for teaching university-level math. An experiment with 16 students showed improved understanding of Gradient from AI-generated content, suggesting LLMs' potential in education.",
         "description": {
@@ -206,7 +206,7 @@ export const projects = [
         "status": 2,
         "id": "openai_assistant_m2_gen",
         "title": "Model assistant for the design of meta-models using OpenAI API",
-        "tags": ["mde", "prompt_eng", "openai", "api", "soft_eng", "py", "pd", "llm"],
+        skills_id: ["mde", "prompt_eng", "openai", "api", "soft_eng", "py", "pd", "llm"],
         "date": "September - December 2024",
         "summary": "Developed a Python Automated Model Assistant using OpenAI and Gemini to generate domain metamodels with Few-Shot learning, Task Decomposition, and Partial Solution Models. Achieved F1 scores of 0.90 (classes), 0.82 (attributes), and 0.79 (relations), reducing reliance on human experts.",
         "description": {
@@ -235,7 +235,7 @@ export const projects = [
         "status": 2,
         "id": "sign_language_recognition",
         "title": "Sign Language Recognition with Deep Neural Network using basic TensorFlow",
-        "tags": ["py", "tf", "deepl", "cnn", "cv2", "plotly"],
+        skills_id: ["py", "tf", "deepl", "cnn", "cv2", "plotly"],
         "date": "August 2024",
         "summary": "Built a TensorFlow Neural Network to recognize ASL letters from the Sign Language MNIST dataset, using OpenCV preprocessing and fully connected layers. Designed pipelines for hyperparameter tuning and optimization.",
         "description": {
@@ -259,7 +259,7 @@ export const projects = [
         "status": 2,
         "id": "clothing_classification",
         "title": "Clothing classification Shallow Neural Networks with NumPy",
-        "tags": ["py", "np", "deepl"],
+        skills_id: ["py", "np", "deepl"],
         "date": "August 2024",
         "summary":"Developed shallow neural networks in Python with NumPy to classify clothing images from the Fashion MNIST dataset. Implemented a single-layer network for binary classification and a three-layer network using ReLU, Softmax, and mini-batch gradient descent, with an optimized version using Adam.",
         "description": {
@@ -287,7 +287,7 @@ export const projects = [
         "status": 2,
         "id": "movie_search_app",
         "title": "Movie search app",
-        "tags": ["cs", "dotnet", "js", "react", "full_stack", "api", "soft_eng"],
+        skills_id: ["cs", "dotnet", "js", "react", "full_stack", "api", "soft_eng"],
         "date": "July 2024",
         "summary":"Developed a local movie search app with a React frontend and a .NET backend, integrating data from the TMDB API. Features include recommendations, search, movie and actor pages, ratings, and comments. A great learning experience in React and .NET development.",
         "description": {
@@ -308,7 +308,7 @@ export const projects = [
         "status": 2,
         "id": "sportsai_website",
         "title": "Soccer coaching with SportsAI",
-        "tags": ["plotly", "dash", "flask", "css", "data_viz", "py"],
+        skills_id: ["plotly", "dash", "flask", "css", "data_viz", "py"],
         "date": "May - June 2024",
         "summary": "Final project for the INF8808E: Data Visualization course at Polytechnique Montréal, using a dataset from the 2020 Euro Cup. Developed a web application for soccer coaches to analyze and enhance player performance for SportsAI.",
         "description": {
@@ -334,7 +334,7 @@ export const projects = [
         "status": 2,
         "id": "drawing_with_webcam",
         "title": "Drawing with a webcam",
-        "tags": ["py", "cv2", "comp_viz", "mediapipe"],
+        skills_id: ["py", "cv2", "comp_viz", "mediapipe"],
         "date": "February - June 2022",
         "summary": "Developed a real-time drawing application using Python and OpenCV under the guidance of Prof. Dr. Luis A. Leiva at the University of Luxembourg, leveraging finger position analysis for drawing actions.",
         "descriptions": [
@@ -355,7 +355,7 @@ export const projects = [
         "status": 2,
         "id": "privacy_app_figma",
         "title": "Design of a privacy app with Figma",
-        "tags": ["figma", "hci"],
+        skills_id: ["figma", "hci"],
         "summary": "A figma prototype of an IOS privacy app, designed in the context of my HCI bachelor course at the University of Luxembourg.",
         "description": "A figma prototype of an IOS privacy app, designed in the context of my HCI bachelor course at the University of Luxembourg.",
         "date": "September - December 2021",
@@ -365,7 +365,7 @@ export const projects = [
         "status": 2,
         "id": "handwriting_generator",
         "title": "Handwriting Recognition with Tensorflow",
-        "tags": ["deepl", "cnn", "tf", "py"],
+        skills_id: ["deepl", "cnn", "tf", "py"],
         "date": "September 2021 - January 2022",
         "summary":"Developed a Convolutional Neural Network (CNN) in Python with TensorFlow to recognize diverse handwriting styles under the guidance of Prof. Dr. Luis A. Leiva at the University of Luxembourg, using a dataset from a separate project.",
         "description": "Under the guidance of Prof. Dr. Luis A. Leiva at the University of Luxembourg, I implemented a Convolutional Neural Network (CNN) in Python with TensorFlow to recognize diverse handwriting styles. Using a dataset from a separate project, the model was trained to replicate various handwriting styles, showcasing the power of CNNs in pattern recognition for handwritten text. This project provided valuable insights into the application of deep learning for handwriting analysis."
@@ -374,7 +374,7 @@ export const projects = [
         "status": 2,
         "id": "chatbot",
         "title": "Conversational Chatbot with Tensorflow",
-        "tags": ["deepl", "transformer", "tf", "py"],
+        skills_id: ["deepl", "transformer", "tf", "py"],
         "date": "February - June 2021",
         "summary": "Developed a Transformer-based chatbot in Python with TensorFlow  at the University of Luxembourg. The model, featuring encoding, Bahdanau attention, and decoding, was trained on Reddit threads for French-English translation and small talk. The project included data extraction, cleaning, model training, and chatbot interface development.",
         "description": "Under the guidance of Prof. Dr. Christoph Schommer at the University of Luxembourg, I created a transformer architecture in Python using the TensorFlow library for building a chatbot. The project involved data extraction, cleaning, online article research, and defining and training a model before creating the chatbot interface. The model consisted of three parts: an encoding layer, an Attention layer, and a decoding layer. It was trained on Reddit threads containing parent commentaries in both French and English, allowing the chatbot to engage in small talk effectively."
@@ -383,7 +383,7 @@ export const projects = [
         "status": 2,
         "id": "q_learning_drone",
         "title": "Q Learning for a drone in a simulated environment",
-        "tags": ["q_learning", "py", "robot"],
+        skills_id: ["q_learning", "py", "robot"],
         "date": "September 2020 - January 2021",
         "summary": "Under the guidance of Dr. Jose Luis Sanchez Lopez at the University of Luxembourg, trained a drone to navigate and avoid obstacles in a simulated AirSim environment using Python and Q-learning with a defined Q-table and rewards.",
         "description": "Under the guidance of Dr. Jose Luis Sanchez Lopez at the University of Luxembourg, I trained a drone to navigate and avoid obstacles in a simulated environment (AirSim) using Python. The drone's navigation was powered by Q-learning, where I defined a Q-table and implemented rewards to enable the drone to learn and improve its navigation strategy autonomously."
@@ -392,7 +392,7 @@ export const projects = [
         "status": 2,
         "id": "group_drone",
         "title": "Control of a group of drone with Unreal Engine 4 using Python",
-        "tags": ["py", "ue4", "robot"],
+        skills_id: ["py", "ue4", "robot"],
         "date": "February - June 2020",
         "summary": "Under the guidance of Dr. Grégoire Danoy at the University of Luxembourg, developed a simulated quadrotor environment in Unreal Engine 4 with Python, enabling drones to navigate, avoid obstacles, and prevent collisions using linear algebra-based movement control.",
         "description": "Under the guidance of Dr. Gregoire Danoy at the University of Luxembourg, I created a simulated environment with quadrotors as agents using Unreal Engine 4 and Python. The project involved controlling drones to avoid obstacles and collisions, applying linear algebra concepts to ensure precise movements and enhance the drones' ability to navigate autonomously in the environment.",
@@ -402,7 +402,7 @@ export const projects = [
         "status": 2,
         "id": "sparki",
         "title": "Chase with Sparki",
-        "tags": ["arduino", "robot"],
+        skills_id: ["arduino", "robot"],
         "date": "September 2019 - January 2020",
         "summary": "Under the guidance of Dr. Grégoire Danoy at the University of Luxembourg, programmed Sparki robots in Sparkiduino to chase another Sparki while staying within an enclosure marked on the ground.",
         "description": "Under the guidance of Dr. Gregoire Danoy at the University of Luxembourg, I learned to work with the Sparki robot and programmed it using Sparkiduino. The task was to code Sparki to chase another Sparki while ensuring both robots stayed within an enclosure marked by ground markers. This project involved both robot control and spatial awareness programming."

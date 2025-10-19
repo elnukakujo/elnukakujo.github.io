@@ -1,16 +1,16 @@
 import AllProjectsSection from "./AllProjectsSection";
 import RecommendedSection from "./RecommendedSection";
+import PageLayout from "../../layouts/PageLayout";
 
 import { projects } from "./Projects.constants";
-import SideNav from "../../components/SideNav";
+import SideBar from "../../components/organisms/SideBar";
 
-function ProjectsPage() {
+export default function ProjectsPage() {
     return (
-        <div className="page">
+        <PageLayout>
             <RecommendedSection/>
-            <SideNav sections={projects} />
+            <SideBar sections={projects} />
             <AllProjectsSection/>
-        </div>
+        </PageLayout>
     );
 }
-export default ProjectsPage;

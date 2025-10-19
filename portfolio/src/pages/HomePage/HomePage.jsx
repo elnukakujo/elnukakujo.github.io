@@ -1,12 +1,13 @@
-import HeroLayout from "../../layouts/HeroLayout";
+import PageLayout from "../../layouts/PageLayout";
+import HeroSection from "./HeroSection";
 import SkillsSection from "./SkillsSection";
 
 function HomePage() {
     return (
-        <div className="page">
-            <HeroLayout/>
+        <PageLayout>
+            <HeroSection/>
             <SkillsSection />
-        </div>
+        </PageLayout>
     );
 }
 

@@ -1,5 +1,5 @@
 import { countriesVisited } from "./AboutMe.constants";
-import WorldMap from "../../components/WorldMap";
+import WorldMap from "../../components/atoms/WorldMap";
 
 function CountriesVisitedSection() {
   return (

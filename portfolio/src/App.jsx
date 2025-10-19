@@ -5,7 +5,6 @@ import './styles/global.css';
 
 import HomePage from './pages/HomePage/HomePage.jsx';
 import ProjectsPage from './pages/ProjectsPage/ProjectsPage.jsx';
-import NavBar from './components/NavBar/NavBar.jsx';
 import AboutMePage from './pages/AboutMePage/AboutMePage.jsx';
 
 function App() {
@@ -26,16 +25,13 @@ function App() {
   }, []);
 
   return (
-    <main>
-      <Router>
-        <NavBar />
-        <Routes>
-          <Route path='/' element={<HomePage/>} />
-          <Route path='/aboutme' element={<AboutMePage/>} />
-          <Route path='/projects' element={<ProjectsPage/>} />
-        </Routes>
-      </Router>
-    </main>
+    <Router>
+      <Routes>
+        <Route path='/' element={<HomePage/>} />
+        <Route path='/aboutme' element={<AboutMePage/>} />
+        <Route path='/projects' element={<ProjectsPage/>} />
+      </Routes>
+    </Router>
   )
 }
 

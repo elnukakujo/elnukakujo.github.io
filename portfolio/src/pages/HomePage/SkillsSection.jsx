@@ -1,5 +1,6 @@
 import { skills } from "../ProjectsPage/Projects.constants";
-import Tags from "../../components/Tags/Tags";
+import Text from "../../components/atoms/Text";
+import List from "../../components/molecules/List";
 
 function SkillsSection(){
     const skillsByType = {
@@ -10,24 +11,22 @@ function SkillsSection(){
     };
 
     return (
-        <div className="w-main mx-auto">
-            <div className="flex flex-col bg-transparent gap-lg">
-                <h1>Skills & Technologies</h1>
-                {
-                    Object.entries(skillsByType).map(([type, skills]) => (
-                        <div key={type}>
-                            <h2 className="mb-3">{type.charAt(0).toUpperCase() + type.slice(1)}s</h2>
-                            <Tags items={
-                                skills.map((skill) => {
-                                    return { name: skill.name, logo: skill.logo };
-                                })} 
-                            containerClass="tags" 
-                            tagClass="tag bg-secondary text-text hover:text-enhanced" />
-                        </div>
-                    ))
-                }
-            </div>
-        </div>
+        <section className="w-main mx-auto flex flex-col bg-transparent gap-lg">
+            <Text text="Skills & Technologies" type='header'/>
+            {
+                Object.entries(skillsByType).map(([type, skills]) => (
+                    <div key={type}>
+                        <Text text={type.charAt(0).toUpperCase() + type.slice(1)} type='sub-header'/>
+                        <List
+                            items={skills.map(skill => ({
+                                text: {text:skill.name, text:"paragraph"},
+                                image: {imageUrl: skill.logo, size: "small", altText: skill.name}
+                            }))}
+                        />
+                    </div>
+                ))
+            }
+        </section>
     );
 }
 

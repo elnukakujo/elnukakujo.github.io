@@ -1,14 +1,15 @@
 import { projects } from "./Projects.constants";
 
-import ProjectCard from "../../components/ProjectCard/ProjectCard";
+import Text from "../../components/atoms/Text";
+import ProjectCard from "../../components/organisms/Card/ProjectCard";
 
 function AllProjectsSection() {
     return (
         <section className="w-main mx-auto flex flex-col gap-md">
-            <h2 className="ml-10 text-left">All Projects</h2>
+            <Text text="All Projects" type="header" />
             <div className="flex flex-col gap-md items-center">
                 {projects.map((project, index) => (
-                    <ProjectCard key={index} project={project} />
+                    <ProjectCard key={index} size="large" project={project} />
                 ))}
             </div>
         </section>
