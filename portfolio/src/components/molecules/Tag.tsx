@@ -9,10 +9,10 @@ export default function Tag( { text, image, layer, className }: Tag) {
         <SimpleCard
             layer={layer}
             size="fit"
-            className={`interact cursor-pointer flex flex-row gap-sm items-center rounded-[1px] ${layer && layer%2 === 0 ? 'bg-primary' : 'bg-secondary'} ${className ? className : ''} group/tag`}>
-            {image && image.imageUrl && (
+            className={`interact cursor-pointer flex flex-row gap-sm items-center rounded-lg ${layer && layer%2 === 0 ? 'bg-primary' : 'bg-secondary'} ${className ? className : ''} group/tag`}>
+            {image && image.url && (
                 <Image 
-                    imageUrl={image.imageUrl}
+                    url={image.url}
                     caption={image.caption}
                     size={image.size}
                     altText={image.altText}
@@ -23,7 +23,7 @@ export default function Tag( { text, image, layer, className }: Tag) {
                 <Text 
                     text={text.text}
                     type={text.type}
-                    className={"group-hover/tag:text-enhanced transition-slow " + text.className}
+                    className={"group-hover/tag:text-enhanced " + text.className}
                 />
             )}
         </SimpleCard>

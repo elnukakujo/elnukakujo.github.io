@@ -3,9 +3,9 @@ import { useEffect } from 'react';
 
 import './styles/global.css';
 
-import HomePage from './pages/HomePage/HomePage.jsx';
-import ProjectsPage from './pages/ProjectsPage/ProjectsPage.jsx';
-import AboutMePage from './pages/AboutMePage/AboutMePage.jsx';
+import HomePage from './pages/HomePage/HomePage.tsx';
+import ProjectsPage from './pages/ProjectsPage/ProjectsPage.tsx';
+import AboutMePage from './pages/AboutMePage/AboutMePage.tsx';
 
 function App() {
   useEffect(() => {

@@ -4,7 +4,8 @@ export default interface Card {
     type?: 'card';
     size: 'fit' | 'small' | 'medium' | 'large';
     layer?: number;
-    children: React.ReactNode;
+    children?: React.ReactNode;
     header?: Header;
     className?: string;
+    id?: string;
 }

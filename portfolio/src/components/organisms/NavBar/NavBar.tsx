@@ -27,7 +27,7 @@ function NavBar() {
     }, [location]);
 
     return (
-        <header className={`fixed top-0 left-0 w-full ${scrolled?'bg-secondary shadow-lg':null} z-2 transition-all duration-300 ease-in-out`}>
+        <header className={`navbar fixed top-0 left-0 w-full ${scrolled?'bg-secondary shadow-lg':null} z-2 transition-all duration-300 ease-in-out`}>
             <nav className="min-w-[15rem] max-w-xl w-8/10 h-14 mx-auto flex flex-row justify-evenly items-center ">
                 <h2 className={currentPage == "home" ? "current" : ""} onClick={() => navigateTo("/")}>Home</h2>
                 <h2 className={currentPage == "aboutme" ? "current" : ""} onClick={() => navigateTo("/aboutme")}>About Me</h2>

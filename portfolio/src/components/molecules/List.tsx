@@ -27,14 +27,14 @@ export default function ListComponent({ items, direction, layer, className }: Li
         return arg.type === 'externalLink' || arg.type === 'internalLink';
     }
     return (
-        <ul className={`list-none flex ${direction === 'horizontal' ? 'flex-row' : 'flex-col'} ${className}`}>
+        <ul className={`${className} list-none flex ${direction === 'horizontal' ? 'flex-row flex-wrap' : 'flex-col'} gap-sm items-center`}>
             {items.map((item, index) => (
                 <li key={index} className="w-fit">
                     {isText(item) && (
                         <Text text={item.text} type={item.type} className={item.className} />
                     )}
                     {isImage(item) && (
-                        <Image imageUrl={item.imageUrl} caption={item.caption} size={item.size} altText={item.altText} className={item.className} />
+                        <Image url={item.url} caption={item.caption} size={item.size} altText={item.altText} className={item.className} />
                     )}
                     {isTag(item) && (
                         <Tag text={item.text} image={item.image} className={item.className} layer={layer} />

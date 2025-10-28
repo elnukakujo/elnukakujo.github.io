@@ -4,7 +4,7 @@ export default function PageLayout({ children }: { children: React.ReactNode }) 
     return (
         <div className="page-layout">
             <NavBar />
-            <main className="flex flex-col gap-lg my-[6rem] mx-auto ">
+            <main className="flex flex-col gap-lg my-[6rem] mx-auto items-center">
                 {children}
             </main>
         </div>

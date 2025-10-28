@@ -1,8 +1,9 @@
 export default interface Image {
     type?: 'image';
-    imageUrl: string;
+    url: string;
     caption?: string;
-    size: 'small' | 'medium' | 'large';
+    size?: 'logo' | 'small' | 'medium' | 'large' | 'fit';
     altText?: string;
     className?: string;
+    onClick?: () => void;
 }

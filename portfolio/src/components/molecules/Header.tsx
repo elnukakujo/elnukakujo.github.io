@@ -1,15 +1,15 @@
 import type HeaderType from '../../interface/Header';
+import type CityType from '../../interface/City';
 import StatusLabel from './StatusLabel';
 import Text from '../atoms/Text';
 import Link from '../atoms/Link';
 
-
 export default function Header({ header } : { header: HeaderType }) {
     let externalLinks = header.externalLinks ? [...header.externalLinks] : [];
-    if (header.company) {
-        header.company.forEach(c => {
-            const logo = (c as any).logo;
-            const url = (c as any).url;
+    if (header.organization) {
+        header.organization.forEach(c => {
+            const logo = (c as any).logoUrl;
+            const url = (c as any).websiteUrl;
             if (logo && url) {
                 externalLinks.push({
                     text: c.name,
@@ -22,12 +22,18 @@ export default function Header({ header } : { header: HeaderType }) {
         });
     }
     return (
-        <header className={`w-full flex flex-col justify-between gap-sm ${header.className ? header.className : ''}`}>
+        <header className={`w-full flex flex-col gap-sm ${header.className ? header.className : ''}`}>
             {header.status && <StatusLabel status={header.status} />}
             <main className="flex justify-between">
-                <div className="flex flex-col gap-sm w-2/3">
-                    <Text text={header.title} type="header" />
-                    {header.company && <Text text={header.company.map(c => c.name).join(", ")} type="subsubheader" />}
+                <div className="flex flex-col gap-sm">
+                    {header.title && <Text text={header.title} type="header" />}
+                    {header.organization && <Text text={header.organization.map(c => c.name).join(", ")} type="subsubheader" />}
+                    {header.location && (
+                        <>
+                            <Text type="subheader" text={header.location.map(city => city.name + (city.alias ? ` (${city.alias})` : '')).join(", ")} className="w-full" />
+                            <Text type="subsubheader" text={Array.from(new Set(header.location.map(city => city.country).filter(Boolean))).join(", ")} className="w-full" />
+                        </>
+                    )}
                     {header.date && <Text text={header.date} type="text" className="italic" />}
                 </div>
                 {externalLinks &&  (

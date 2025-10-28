@@ -23,47 +23,49 @@ import neuralNetwork from '../../assets/img/nn.png';
 
 export default function HeroSection(){ 
     return (
-        <section className="hero-layout w-main mx-auto lg:my-[3rem] flex flex-col lg:flex-row gap-lg items-center justify-center">
+        <section className="mx-auto lg:my-[3rem] flex flex-col lg:flex-row gap-lg items-center justify-center">
             <nav className='flex flex-col gap-lg order-1 lg:order-0'>
                 <BubbleCard
-                    size="small"
+                    size="fit"
                     backCard={
                         <>
-                            <Link text={"Outside Work"} path={['/aboutme', 'countries-visited']}/>
+                            <Link text={{text:"Outside Work", type:"subheader"}} path='/aboutme' id='countries-visited' className='w-full'/>
                             <hr className='w-full border-1 border-text'/>
-                            <Image imageUrl={shimanamiKaido} size="small" className='rounded-xl' altText='Picture of Shimanami Kaido cycling road in Japan'/>
+                            <Image url={shimanamiKaido} size="medium" className='rounded-xl' altText='Picture of Shimanami Kaido cycling road in Japan'/>
                         </>
                     }
+                    className='!w-50'
                 >
-                    <Image imageUrl={steveHead} size="small"/>
-                    <Link text={"Outside Work"} path={['/aboutme', 'countries-visited']}/>
+                    <Image url={steveHead} size="small"/>
+                    <Link text={{text:"Outside Work", type:"subheader"}} path='/aboutme' id='countries-visited'/>
                 </BubbleCard>
                 <BubbleCard
-                    size="small"
+                    size="fit"
                     backCard={
                         <>
-                            <Link text="Education" path={['/aboutme', 'education']}/>
+                            <Link text={{text:"Education", type:"subheader"}} path='/aboutme' id='education' className='w-full'/>
                             <hr className='w-full border-1 border-text'/>
-                            <Image imageUrl={udemImage} size="small" className="rounded-xl" altText='Picture of University of Montreal' />
+                            <Image url={udemImage} size="medium" className="rounded-xl" altText='Picture of University of Montreal' />
                         </>
                     }
+                    className='!w-50'
                 >
-                    <Image imageUrl={book} size="small" />
-                    <Link text="Education" path={['/aboutme', 'education']}/>
+                    <Image url={book} size="small" />
+                    <Link text={{text:"Education", type:"subheader"}} path='/aboutme' id='education'/>
                 </BubbleCard>
             </nav>
             <main className='mt-45 order-0 lg:mt-0 lg:order-1'>
                 <BubbleCard
-                    size="medium"
+                    size="large"
                 >
-                    <Image imageUrl={profile} altText='Picture of me' size='medium' className="size-[12rem] rounded-full -mt-45 shadow-lg"/>
+                    <Image url={profile} altText='Picture of me' size='medium' className="rounded-full -mt-45 shadow-lg"/>
                     <Text text="Noe Jager" type='header'/>
                     <Text text="Data Scientist | ML Engineer" type='subheader'/>
                     <List 
                         items={[
-                            { logoType: 'github', url: 'https://github.com/elnukakujo' },
-                            { logoType: 'linkedin', url: 'https://www.linkedin.com/in/noé-jager-2b4866236/' },
-                            { logoType: 'email', url: 'mailto:noe.p.jager@gmail.com' }
+                            { type: "externalLink", logoType: 'github', url: 'https://github.com/elnukakujo' },
+                            { type: "externalLink", logoType: 'linkedin', url: 'https://www.linkedin.com/in/noé-jager-2b4866236/' },
+                            { type: "externalLink", logoType: 'email', url: 'mailto:noe.p.jager@gmail.com' }
                         ]}
                         direction='horizontal'
                     />
@@ -71,23 +73,25 @@ export default function HeroSection(){
             </main>
             <nav className='flex flex-col gap-lg order-2'>
                 <BubbleCard
-                    size="small"
+                    size="fit"
                     backCard={
                         <>
-                            <Link text="Projects" path={['/projects']} />
+                            <Link text={{text:"Projects", type:"subheader"}} path='/projects' className='w-full'/>
                             <hr className='w-full border-1 border-text'/>
-                            <Image size="small" imageUrl={neuralNetwork} altText="Visualization of Neural Network/Multi Layer Perceptron" className='rounded-xl'/>
+                            <Image size="medium" url={neuralNetwork} altText="Visualization of Neural Network/Multi Layer Perceptron" className='rounded-xl'/>
                         </>
                     }
+                    className='!w-50'
                 >
-                    <Image size="small" imageUrl={pickaxe} altText="Minecraft Pickaxe Icon"/>
-                    <Link text="Projects" path={['/projects']} />
+                    <Image size="small" url={pickaxe} altText="Minecraft Pickaxe Icon"/>
+                    <Link text={{text:"Projects", type:"subheader"}} path='/projects' />
                 </BubbleCard>
                 <BubbleCard
-                    size="small"
+                    size="fit"
+                    className='!w-50'
                 >
-                    <Image size="small" imageUrl={expBottle} altText="Minecraft Experience Bottle Icon" />
-                    <Link text="Experience" path={['/aboutme', 'experience']} />
+                    <Image size="small" url={expBottle} altText="Minecraft Experience Bottle Icon" />
+                    <Link text={{text:"Experience", type:"subheader"}} path='/aboutme' id='experience' />
                 </BubbleCard>
             </nav>
         </section>

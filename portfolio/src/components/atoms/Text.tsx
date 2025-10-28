@@ -1,6 +1,7 @@
 import type Text from "../../interface/Text";
 
 export default function Text({ text, type, className }: Text) {
+    className += " text-wrap";
     switch (type) {
         case 'header':
             return <h1 className={className}>{text}</h1>;

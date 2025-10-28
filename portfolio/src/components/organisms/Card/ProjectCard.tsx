@@ -4,41 +4,48 @@ import type ExternalLink from "../../../interface/Link/ExternalLink";
 import { skills } from "../../../pages/ProjectsPage/Projects.constants";
 
 import SimpleCard from "./SimpleCard";
-import Image from "../../atoms/Image";
+import InteractiveImage from "../../molecules/InteractiveImage";
 import Text from "../../atoms/Text";
 import Video from "../../atoms/Video";
-import Tag from "../../molecules/Tag";
 import List from "../../molecules/List";
 import SwipeElement from "../SwipeElement";
+import Link from "../../atoms/Link";
 
 import Markdown from "react-markdown";
-import TagType from "../../../interface/Tag";
+
+import type TagType from "../../../interface/Tag";
 
 type ProjectCardProps = {
     project: Project;
-    size: 'medium' | 'large';
+    size: 'small' | 'medium' | 'large';
     layer: number;
     className?: string;
+    overview?: boolean;
 };
 
-export default function ProjectCard({ size, layer, className, project }: ProjectCardProps) {
+export default function ProjectCard({ size, layer, className, project, overview }: ProjectCardProps) {
+    size = overview ? 'small' : size;
+
     const header = {
         title: project.title,
-        company: project.company,
+        organization: project.company,
         date: project.date,
         status: project.status,
-        externalLinks: size === 'large' && project.externalLink ? project.externalLink.filter((link): link is ExternalLink => !!link && ('logoType' in link || 'imageUrl' in link)) : undefined,
+        externalLinks: !overview && project.externalLink ? project.externalLink.filter((link): link is ExternalLink => !!link && ('logoType' in link || 'imageUrl' in link)) : undefined,
     };
     const tags: TagType[] = (project.skills_id ?? []).map((skill, index) => (
-        {type: "tag", text: {type: "text", text: skills.find(s => s.id === skill)?.name || skill}, image: {type: "image", imageUrl: skills.find(s => s.id === skill)?.logo || undefined, size: "small"}}
+        {type: "tag", text: {type: "text", text: skills.find(s => s.id === skill)?.name || skill}, image: {type: "image", url: skills.find(s => s.id === skill)?.logo || undefined, size: "logo"}}
     ));
-    console.log(tags);
+    if (overview) {
+        tags.splice(4);
+    }
     return (
         <SimpleCard
             header={header}
             size={size}
             layer={layer}
             className={className}
+            id={size !== "small" ? project.id : undefined}
         >
             {project.images || project.videos ? (
                 <SwipeElement>
@@ -48,27 +55,17 @@ export default function ProjectCard({ size, layer, className, project }: Project
                             url={video.url}
                             caption={video.caption}
                             altText={`Project ${project.title} video ${index + 1}`}
-                            size={video.size}
+                            size={size !== "small" ? "large" : "medium"}
                             className={video.className}
                         />
                     ))}
                     {project.images?.map((image, index) => (
-                        <Image
+                        <InteractiveImage
                             key={index}
-                            imageUrl={image.imageUrl}
+                            url={image.url}
                             caption={image.caption}
                             altText={`Project ${project.title} image ${index + 1}`}
-                            size={image.size}
-                            className={image.className}
-                        />
-                    ))}
-                    {project.images?.map((image, index) => (
-                        <Image
-                            key={index}
-                            imageUrl={image.imageUrl}
-                            caption={image.caption}
-                            altText={image.altText || `Project ${project.title} image ${index + 1}`}
-                            size={image.size}
+                            size={size !== "small" ? "large" : "medium"}
                             className={image.className}
                         />
                     ))}
@@ -76,8 +73,8 @@ export default function ProjectCard({ size, layer, className, project }: Project
             ) : null}
             <span className="flex flex-col gap-md">
                 <Text text={project.summary} type="text" className="italic"/>
-                {size === "large" && project.description.map((paragraph, index) => (
-                    <SimpleCard key={index} size="medium" layer={layer+1}>
+                {!overview && project.description.map((paragraph, index) => (
+                    <SimpleCard key={index} size="medium" layer={layer+1} className="items-start">
                         {paragraph.title && <Text text={paragraph.title} type="subsubheader" className="w-full"/>}
                         {paragraph.text.map((text, index) => (
                             <Markdown key={index}>{text}</Markdown>
@@ -87,19 +84,24 @@ export default function ProjectCard({ size, layer, className, project }: Project
             </span>
             {project.skills_id && (<List
                 direction="horizontal"
-                className="flex-wrap gap-sm items-center"
                 items={tags}
                 layer={layer+1}
+                className=""
             />)}
-            {project.externalLink && (
+            {!overview && project.externalLink && project.externalLink.some(link => link.text && !link.imageUrl && !link.logoType) && (
                 <span className="w-full text-left space-y-2">
                     <Text text="External Links" type="subheader"/>
                     <List
-                        items={project.externalLink.filter(link => link.text && !link.imageUrl)}
+                        items={project.externalLink.filter(( link ): link is ExternalLink => Boolean(link.text && !link.imageUrl && !link.logoType)).map((link, index) => (
+                            {type: "externalLink", text: link.text, url: link.url}
+                        ) as ExternalLink)}
                         direction="vertical"
-                        className="ml-[1rem] gap-sm"
+                        className="ml-[1rem] items-baseline! "
                     />
                 </span>
+            )}
+            {overview && (
+                <Link text="View More" path="/projects" id={project.id} className="w-full mx-2"/>
             )}
         </SimpleCard>
   );

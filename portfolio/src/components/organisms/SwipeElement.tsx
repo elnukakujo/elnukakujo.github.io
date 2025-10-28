@@ -20,18 +20,18 @@ export default function SwipeElement({ children } : { children: React.ReactNode 
   const swipeRef = useSwipe(handleSwipe);
 
   return (
-    <div ref={swipeRef} className="overflow-x-clip flex flex-col items-center gap-sm">
-      <div className="relative flex flex-row gap-sm items-center shrink w-full min-w-xs">
+    <div ref={swipeRef} className="overflow-x-clip flex flex-col items-center gap-sm w-full">
+      <div className="relative flex flex-row gap-sm items-center shrink w-full">
         <button onClick={() => setCurrent((i) => Math.max(i - 1, 0))} className={`${current===0?'opacity-0 pointer-events-none':'opacity-60'} absolute left-2 cursor-pointer z-1 rounded-full size-12 flex items-center justify-center hover:opacity-90 hover:-translate-x-1 transition-transform duration-500 ease-in-out`}>
           <FontAwesomeIcon icon={faChevronLeft} className="text-text text-[1.5rem]" />
         </button>
         <div
-          className="flex flex-row transition-transform duration-500 w-full"
+          className="flex flex-row transition-transform duration-500 w-full items-center"
           style={{ transform: `translateX(-${current * 100}%)` }}
         >
           {slides.map((slide, i) => (
             <div key={i} className="flex-shrink-0 w-full flex justify-center" onDragStart={(e) => e.preventDefault()} >
-              <div className="max-w-fit select-none">{slide}</div>
+              <div className="w-full select-none">{slide}</div>
             </div>
           ))}
         </div>

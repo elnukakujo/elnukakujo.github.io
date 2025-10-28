@@ -12,11 +12,14 @@ import {
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 
+import Image from "./Image";
+import type TextType from "../../interface/Text";
+
 type LinkProps = {
   url?: string;
-  path?: string[];
+  path?: string;
   id?: string;
-  text?: string;
+  text?: string | TextType;
   imageUrl?: string;
   logoType?: "github" | "google-scholar" | "website" | "email" | "linkedin";
   className?: string;
@@ -34,7 +37,7 @@ export default function Link({
   const navigateTo = useNavigateTo();
 
   const baseClasses =
-    "cursor-pointer shadow-none translate-0 interact flex flex-row items-center gap-[1rem] hover:gap-[1.5rem] transition-slow group/link";
+    "cursor-pointer shadow-none translate-0 interact flex flex-row items-center gap-[1rem] hover:gap-[1.5rem] transition-slow group/link text-wrap";
 
   const iconMap = {
     email: faEnvelope,
@@ -48,10 +51,11 @@ export default function Link({
     <a
       {...(onClick ? { onClick } : { href: url, target: "_blank", rel: "noreferrer" })}
     >
-      <img
-        src={imageUrl!}
-        className="interact size-12 rounded-full"
-        alt={text || "External Link"}
+      <Image
+        url={imageUrl!}
+        className="interact rounded-lg"
+        altText={"External Link"}
+        size="small"
       />
     </a>
   );
@@ -59,9 +63,13 @@ export default function Link({
   const renderTextLink = (onClick?: () => void) => (
     <a
       {...(onClick ? { onClick } : { href: url, target: "_blank", rel: "noreferrer" })}
-      className={`${baseClasses} ${className}`}
+      className={`${baseClasses} text-nowrap ${className}`}
     >
-      <Text text={text!} type="text" className="group-hover/link:text-enhanced transition-slow "/>
+      {typeof text === "string" ? (
+        <Text text={text} type="text" className="group-hover/link:text-enhanced transition-slow"/>
+      ):(
+        <Text text={text!.text} type={text!.type} className="group-hover/link:text-enhanced transition-slow"/>
+      )}
       <FontAwesomeIcon icon={faChevronRight} className="group-hover/link:text-enhanced" />
     </a>
   );
@@ -81,7 +89,7 @@ export default function Link({
         <a href={url} target="_blank" rel="noreferrer">
           <FontAwesomeIcon
             icon={iconMap[logoType]}
-            className="interact shadow-none rounded-full text-[2.25rem]"
+            className="interact shadow-none text-[2.25rem]"
           />
         </a>
       );

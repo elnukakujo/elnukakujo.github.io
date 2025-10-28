@@ -66,7 +66,7 @@
     }
 
     section {
-        @apply w-full max-w-[90rem] px-6;
+        @apply w-full max-w-[80rem] px-6;
     }
 }
 @layer components {
@@ -74,10 +74,8 @@
         @apply hover:shadow-md hover:shadow-enhanced hover:drop-shadow-md
             hover:text-enhanced
             hover:opacity-80
-            hover:-translate-y-1 transition-all duration-300 ease-in-out;
-    }
-    .card {
-        @apply flex flex-col justify-between items-center;
+            hover:-translate-y-1
+            transition-all duration-300 ease-in-out;
     }
     
     .transition-slow {
@@ -86,33 +84,32 @@
 }
 @layer utilities {
     .card-large {
-        @apply w-full max-w-[40rem] sm:max-w-[64rem] shadow-xl rounded-[3rem] gap-6 py-6 px-10;
+        @apply w-full max-w-[40rem] sm:max-w-[64rem] shadow-xl gap-3 md:gap-6 py-3 md:py-6 px-5 md:px-10;
     }
     .card-medium {
-        @apply w-full max-w-[35rem] sm:max-w-[56rem] shadow-lg rounded-[3rem] gap-4 py-4 px-6;
+        @apply w-full max-w-[35rem] sm:max-w-[56rem] shadow-lg gap-2 md:gap-4 py-2 md:py-4 px-3 md:px-6;
     }
     .card-small {
-        @apply w-full max-w-[26rem] shadow-md rounded-[3rem] gap-2 py-2 px-3;
+        @apply w-full max-w-[26rem] shadow-md gap-2 py-3 px-4;
     }
     .card-fit {
-        @apply w-fit shadow-md rounded-[0.5rem] gap-2 py-2 px-3;
+        @apply w-fit shadow-md gap-2 py-2 px-3;
     }
 
     .image-large {
-        @apply h-[12rem];
+        @apply max-h-[16rem] w-auto;
     }
     .image-medium {
-        @apply h-[6rem];
+        @apply max-h-[12rem] w-auto;
     }
     .image-small {
-        @apply h-[2.25rem] object-fill;
+        @apply max-h-[4rem] w-auto;
     }
-
-    .size-media {
-        @apply w-[18rem] lg:w-md aspect-[1.62];
+    .image-logo {
+        @apply h-[2rem] object-fill;
     }
-    .size-media-sm {
-        @apply w-[16rem] aspect-[1.62];
+    .image-fit {
+        @apply h-auto w-auto max-w-full max-h-[80vh] object-contain;
     }
 
     .gap-sm {
@@ -129,13 +126,13 @@
     }
 
     .p-sm {
-        @apply p-[0.5rem];
-    }
-    .p-md {
         @apply p-[1.5rem];
     }
-    .p-lg {
+    .p-md {
         @apply p-[3rem];
+    }
+    .p-lg {
+        @apply p-[4.5rem];
     }
     .p-xl {
         @apply p-[6rem];
