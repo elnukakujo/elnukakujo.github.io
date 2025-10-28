@@ -68,7 +68,7 @@ export default function Link({
       {typeof text === "string" ? (
         <Text text={text} type="text" className="group-hover/link:text-enhanced transition-slow"/>
       ):(
-        <Text text={text!.text} type={text!.type} className="group-hover/link:text-enhanced transition-slow"/>
+        <Text text={text!.text} type={text!.type} className={`${text!.className} group-hover/link:text-enhanced transition-slow`}/>
       )}
       <FontAwesomeIcon icon={faChevronRight} className="group-hover/link:text-enhanced" />
     </a>
