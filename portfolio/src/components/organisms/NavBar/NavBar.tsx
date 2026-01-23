@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import Text from "../../atoms/Text";
 
 // @ts-ignore
 import CV from '../../../assets/docs/cv.pdf';
@@ -29,10 +30,10 @@ function NavBar() {
     return (
         <header className={`navbar fixed top-0 left-0 w-full ${scrolled?'bg-secondary shadow-lg':null} z-2 transition-all duration-300 ease-in-out`}>
             <nav className="min-w-[15rem] max-w-xl w-8/10 h-14 mx-auto flex flex-row justify-evenly items-center ">
-                <h2 className={currentPage == "home" ? "current" : ""} onClick={() => navigateTo("/")}>Home</h2>
-                <h2 className={currentPage == "aboutme" ? "current" : ""} onClick={() => navigateTo("/aboutme")}>About Me</h2>
-                <h2 className={currentPage == "projects" ? "current" : ""} onClick={() => navigateTo("/projects")}>Projects</h2>
-                <h2 onClick={() => handleDownload(CV, 'NoeJagerCV.pdf')}>CV</h2>
+                <Text text="Home" type="subheader" className={currentPage == "home" ? "current" : ""} onClick={() => navigateTo("/")}/>
+                <Text text="About Me" type="subheader" className={currentPage == "aboutme" ? "current" : ""} onClick={() => navigateTo("/aboutme")}/>
+                <Text text="Projects" type="subheader" className={currentPage == "projects" ? "current" : ""} onClick={() => navigateTo("/projects")}/>
+                <Text text="CV" type="subheader" onClick={() => handleDownload(CV, 'NoeJagerCV.pdf')}/>
             </nav>
         </header>
     );

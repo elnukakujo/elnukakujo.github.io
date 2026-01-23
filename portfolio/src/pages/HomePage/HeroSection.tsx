@@ -34,7 +34,7 @@ export default function HeroSection(){
                             <Image url={shimanamiKaido} size="medium" className='rounded-xl' altText='Picture of Shimanami Kaido cycling road in Japan'/>
                         </>
                     }
-                    className='!w-50'
+                    className='!w-50 md:w-58!'
                 >
                     <Image url={steveHead} size="small"/>
                     <Link text={{text:"Outside Work", type:"subheader", className:"text-nowrap!"}} path='/aboutme' id='countries-visited'/>
@@ -48,7 +48,7 @@ export default function HeroSection(){
                             <Image url={udemImage} size="medium" className="rounded-xl" altText='Picture of University of Montreal' />
                         </>
                     }
-                    className='!w-50'
+                    className='!w-50 md:w-58!'
                 >
                     <Image url={book} size="small" />
                     <Link text={{text:"Education", type:"subheader", className:"text-nowrap!"}} path='/aboutme' id='education'/>
@@ -81,14 +81,14 @@ export default function HeroSection(){
                             <Image size="medium" url={neuralNetwork} altText="Visualization of Neural Network/Multi Layer Perceptron" className='rounded-xl'/>
                         </>
                     }
-                    className='!w-50'
+                    className='!w-50 md:w-58!'
                 >
                     <Image size="small" url={pickaxe} altText="Minecraft Pickaxe Icon"/>
                     <Link text={{text:"Projects", type:"subheader", className:"text-nowrap!"}} path='/projects' />
                 </BubbleCard>
                 <BubbleCard
                     size="fit"
-                    className='!w-50'
+                    className='!w-50 md:w-58!'
                 >
                     <Image size="small" url={expBottle} altText="Minecraft Experience Bottle Icon" />
                     <Link text={{text:"Experience", type:"subheader"}} path='/aboutme' id='experience' />

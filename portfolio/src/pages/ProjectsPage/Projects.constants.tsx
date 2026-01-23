@@ -2,6 +2,104 @@ import type ProjectType from "../../interface/Project";
 
 export const projects: ProjectType[] = [
     {
+        status: 1,
+        id:"behavior-1k",
+        title:"Behavior-1k Challenge: Multi-Task Robotic Learning in Simulation",
+        skills_id:["robotics", "huggingface", "lerobot", "vla", "py"],
+        date:"December 2025 - In Progress",
+        summary:"As team lead of the Aachen Data Science Club, I fine-tuned open-source VLA models from Hugging Face on the Behavior-1k dataset using the LeRobot platform to build a multi-task generalist robotics agent. This project was completed in collaboration with the Robotics Club, with evaluation on simulated household tasks to demonstrate scalable robot learning and strong multi-task performance.",
+        description:[],
+        externalLink:[
+            {
+                logoType: "github",
+                url: "https://github.com/Aachen-Data-Science-Club/behavior-1k"
+            },
+            {
+                text: "Behavior-1k Challenge Presentation",
+                url: "https://behavior.stanford.edu/challenge/index.html"
+            },
+            {
+                text: "Behavior-1k Challenge Dataset",
+                url: "https://huggingface.co/datasets/behavior-1k/2025-challenge-demos"
+            },
+            {
+                text: "Aachen Data Science Club Website",
+                url: "https://data-science-club.de/"
+            },
+            {
+                text: "SmolVLA Model on Hugging Face",
+                url: "https://huggingface.co/blog/smolvla"
+            },
+            {
+                text: "LeRobot Github Repository",
+                url: "https://github.com/huggingface/lerobot"
+            }
+        ],
+        featured: true
+    },
+    {
+        status: 1,
+        id: "neural_blueprints",
+        title: "neural_blueprint — Modular Deep Learning Framework",
+        skills_id: ["py", "pd", "deepl", "torch", "transformer", "data_viz", "attention", "ae", "pydantic", "oop", "torchinfo", "torchvista", "representation_learning"],
+        date: "October 2025 - In Progress",
+        summary: "neural_blueprint is an open-source PyTorch framework for designing deep learning models using modular, blueprint-driven building blocks. It focuses on reproducible, tabular-first architectures while laying the groundwork for scalable, multi-modal learning systems.",
+        description: [
+            {
+                title: "Overview",
+                text: [
+                    "neural_blueprint is an open-source Python framework that enables modular and reproducible deep learning model design. It uses a blueprint-driven approach to assemble architectures from reusable building blocks, simplifying experimentation and reducing low-level implementation overhead."
+                ]
+            },
+            {
+                title: "Core Features",
+                text: [
+                    "- Modular building blocks (core and composite components) for fast model assembly,",
+                    "- Tabular-first projection system that integrates tabular data across architectures,",
+                    "- Config-driven training pipeline with typed dataset outputs,",
+                    "- Multiple loss functions supported, including VAE, reconstruction, and classification losses,",
+                    "- Implemented architectures: MLP, AE, VAE, Transformer."
+                ]
+            },
+            {
+                title: "Current Focus",
+                text: [
+                    "The project is currently optimized for tabular data and representation learning, providing a strong foundation for building and testing diverse neural architectures."
+                ]
+            },
+            {
+                title: "Future Directions",
+                text: [
+                    "- Expand modality support to text, images, and audio",
+                    "- Implement custom self-attention and cross-attention mechanisms",
+                    "- Add data augmentation and balancing utilities",
+                    "- Grow the architecture library with more advanced model types"
+                ]
+            },
+        ],
+        images: [
+            {
+                url: "https://raw.githubusercontent.com/elnukakujo/neural-blueprints/refs/heads/main/assets/img/1769117521031.jpeg",
+                caption: "Example of a Tabluar VAE configuration."
+            },
+            {
+                url: "https://raw.githubusercontent.com/elnukakujo/neural-blueprints/refs/heads/main/assets/img/1769117520301.jpeg",
+                caption: "Example of the output of torchinfo for the VAE blueprint showing the parameters component per component."
+            },
+            {
+                url: "https://raw.githubusercontent.com/elnukakujo/neural-blueprints/refs/heads/main/assets/img/1769117520842.jpeg",
+                caption: "Example of a Tabular VAE visualization with torchvista in the blueprint method."
+            },
+        ],
+        externalLink: [
+            {
+                logoType: "github",
+                url: "https://github.com/elnukakujo/neural-blueprints"
+            }
+        ],
+        featured: true
+    },
+    {
         status:1,
         id:"language-learning-app",
         title: "Language Learning App: textbook support for learning a language",
@@ -226,7 +324,7 @@ export const projects: ProjectType[] = [
                 url: "http://dev.summonerinsight.com/"
             }
         ],
-        featured: true
+        featured: false
     },
     {
         status: 2,
@@ -711,6 +809,8 @@ import optunaLogo from "../../assets/logo/framework/optuna.png";
 import nextjsLogo from "../../assets/logo/framework/nextjs.png";
 //@ts-ignore
 import fastapiLogo from "../../assets/logo/framework/fastapi.svg";
+//@ts-ignore
+import lerobotLogo from "../../assets/logo/framework/lerobot.png";
 
 // Tool logos
 //@ts-ignore
@@ -1443,5 +1543,58 @@ export const skills = [
         projects: ["language-learning-app"],
         experience: [],
         logo: fastapiLogo
+    },
+    {
+        id: "pydantic",
+        type: "framework",
+        name: "Pydantic",
+        projects: ["neural_blueprints"]
+    },
+    {
+        id: "oop",
+        type: "concept",
+        name: "Object-Oriented Programming",
+        projects: ["neural_blueprints"]
+    },
+    {
+        id:"torchinfo",
+        type: "framework",
+        name:"TorchInfo",
+        projects: [
+            "neural_blueprints"
+        ]
+    },
+    {
+        id:"torchvista",
+        type: "framework",
+        name:"TorchVista",
+        projects: [
+            "neural_blueprints"
+        ]
+    },
+    {
+        id: "robotics",
+        type: "concept",
+        name: "Robotics",
+        projects: [
+            "behavior-1k"
+        ]
+    },
+    {
+        id:"lerobot",
+        type: "framework",
+        name:"LeRobot",
+        projects: [
+            "behavior-1k"
+        ],
+        logo: lerobotLogo
+    },
+    {
+        id:"vla",
+        type: "concept",
+        name:"Vision Language Action model",
+        projects: [
+            "behavior-1k"
+        ]
     }
 ]

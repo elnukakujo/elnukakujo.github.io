@@ -1,11 +1,16 @@
 import {useState,useEffect,useMemo} from 'react';
 import useVisibleSection from '../../hooks/useVisibleSection';
+import Text from '../atoms/Text';
+import Link from '../atoms/Link';
+import { useLocation } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 
 export default function SideBar({ sections } : { sections: { title: string; id: string; summary?: string }[] }) {
+    const location = useLocation();
+    const currentPath = location.pathname;
     const [isOpen, setIsOpen] = useState<boolean>(false);
 
     const [activeSection, setActiveSection] = useState<string | null>(null);
@@ -32,12 +37,11 @@ export default function SideBar({ sections } : { sections: { title: string; id: 
                     <div
                         className='relative group/navitem'
                         key={index}
-                        onClick={() => handleScroll(section.id)}
                     >
-                        <div className={`cursor-pointer size-2.5 bg-text rounded-full opacity-50 group-hover/navitem:opacity-100 ${activeSection===section.id ? 'opacity-100' : '' }`}/>
-                        <summary className="list-none absolute invisible bg-secondary p-3 rounded-md group-hover/navitem:visible top-[50%] left-[1.5rem] w-fit translate-y-[-50%] flex flex-col gap-sm items-center shadow-md">
-                            <h3>{section.title}</h3>
-                            {section.summary ? (<p className='text-justify w-[20rem]'>{section.summary}</p>) : null}
+                        <div className={`cursor-pointer size-2.5 bg-text rounded-full opacity-50 group-hover/navitem:opacity-100 ${activeSection===section.id ? 'opacity-100' : '' }`} onClick={() => handleScroll(section.id)}/>
+                        <summary className="list-none absolute invisible bg-secondary p-3 rounded-md group-hover/navitem:visible top-[50%] left-[1.5rem] w-fit min-w-[12rem] translate-y-[-50%] flex flex-col gap-sm items-center shadow-md">
+                            <Text text={section.title} type='subheader'/>
+                            {section.summary ? (<Text text={section.summary} type='text'/>) : null}
                         </summary>
                     </div>
                 ))}
@@ -50,9 +54,9 @@ export default function SideBar({ sections } : { sections: { title: string; id: 
                         <FontAwesomeIcon icon={faBars} className='text-text text-[1.5rem]' onClick={() => setIsOpen(true)}/>
                     }
                 </button>
-                <nav className={`${isOpen?'w-full':'w-0'} fixed top-14 left-0 bg-secondary h-[calc(100lvh-3.5rem)] overflow-x-hidden overflow-y-scroll flex flex-col gap-md transition-all duration-500 ease-in-out`}>
+                <nav className={`${isOpen?'w-full px-4':'w-0'} py-2 fixed top-14 left-0 bg-secondary h-[calc(100lvh-3.5rem)] overflow-x-hidden overflow-y-scroll flex flex-col gap-md transition-all duration-500 ease-in-out`}>
                     {sections.map((section, index) => (
-                        <h3 key={index} className='cursor-pointer interact shadow-none w-[100vw]' onClick={() => handleScroll(section.id)}>{section.title}</h3>
+                        <Link key={index} text={{text: section.title, type: 'subheader'}} path={currentPath} id={section.id}/>
                     ))}
                 </nav>
             </div>

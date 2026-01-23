@@ -111,13 +111,31 @@ export const experience: ProjectType[] = [
                 logoUrl: appoxLogo
             }
         ],
-        date: "May 2025 - November 2025",
-        summary: "Contrastive Representation Learning for Tabular Data Anonymity Evaluation",
+        date: "May 2025 - In Progress",
+        summary: "Representation Learning for Tabular Data Confidentiality Evaluation",
         description: [
-            {title: "Context", text: [
-                "As companies collect data from their users to offer them services, some of those information might be **sensitive and hurtful** if leaked. To avoid this, gouvernments **impose** on companies to **anonymize their collected data** to protect their users personal informations. However, as model can generate (anonymized) synthetic data that mimicking real user data, **some methods have been created to infer back real data information using those synthetic data**. Hence, it is crucial to evaluate the anonymity risk of those synthetic data.",
-                "From the work of Giomi et al. (2022), we discovered that a **practical solution with lower computational cost** that previous metrics (k-Anonymity, l-Diversity, t-Closeness) is to **simulate attacks on the original dataset** using the synthetic dataset. From those attacks, they evaluate a risk score based on the accuracy of their attacks. However, those attacks **rely on the Gower Distance between records**, which is **not optimal for high-dimensional data** and does **not capture complex relationships between features**."]},
-            {title: "Problem", text: ["*Is using learned representations of synthetic records more accurate and generalizable to detect leaks in a synthetic dataset than using the Gower Distance?*"]}
+            {
+                title: "Context", 
+                text: [
+                    "Organizations often publish synthetic datasets as a privacy-preserving alternative to real user data. However, generative models can unintentionally learn and reproduce subtle patterns from the original data. These patterns can then be exploited to infer sensitive information, meaning synthetic data is not automatically safe. Evaluating the privacy risk of synthetic tabular data is therefore essential.",
+                    "Traditional evaluation methods rely on distance-based metrics (e.g., Gower Distance) to simulate attacks between synthetic and real records. While effective for low-dimensional data, these approaches struggle with high-dimensional tabular datasets and fail to capture complex feature interactions."
+                ]
+            },
+            {
+                title: "Approach",
+                text: [
+                    "To improve privacy evaluation, I investigated whether representation learning can better capture the structure of synthetic records. I built a benchmarking framework that compares: \n- Anonymeter-style attack simulations using Gower distance.\nvs\n- Learned representations obtained from contrastive learning and variational autoencoders (VAE)",
+                    "The core idea is that learned embeddings should better model feature relationships and improve attack accuracy in high-dimensional settings."
+                ]
+            },
+            {
+                title: "Outcome",
+                text: [
+                    "Results show that:",
+                    "- Representation learning approaches can match or exceed the performance of distance-based attacks in high-dimensional datasets.",
+                    "- Contrastive learning achieves strong detection performance while reducing computation time, demonstrating a scalable alternative for privacy risk assessment."
+                ]
+            }
         ],
         skills_id: ['data_anonymization', 'synthetic_data', 'research', 'py', 'torch', 'tf', 'gan', 'ae', 'data_privacy', 'mlflow', 'optuna', 'contrastive_learning', 'representation_learning'],
         externalLink:[

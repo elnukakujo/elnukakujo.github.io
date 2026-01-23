@@ -1,12 +1,18 @@
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import type ImageType from "../../interface/Image";
 import Text from "../atoms/Text";
+import { useState } from 'react';
 
 export default function Image({ url, caption, size, altText, className, onClick }: ImageType) {
+    const [loaded, setLoaded] = useState(false);
+
     return (
         <figure className={`flex flex-col items-center ${className} overflow-hidden`}>
-            <img
+            {!loaded && <div className={`bg-gray-300 animate-pulse h-screen image-${size} aspect-[16/9]`} />}
+            <LazyLoadImage
                 src={url}
                 alt={altText}
+                afterLoad={() => setLoaded(true)}
                 onClick={onClick}
                 className={`max-w-full image-${size}`}
             />

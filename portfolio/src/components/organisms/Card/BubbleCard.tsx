@@ -21,7 +21,7 @@ export default function BubbleCard({
       header={header}
       className={`relative group transition-slow 
         ${hasBack ? "rounded-xl lg:rounded-full hover:rounded-xl" : "rounded-full"} 
-        aspect-square items-center justify-center
+        aspect-square items-center justify-center transition-slow
         ${className}`}
     >
       {/* Front side */}
