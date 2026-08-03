@@ -2,9 +2,6 @@ import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import Text from "../../atoms/Text";
 
-// @ts-ignore
-import CV from '../../../assets/docs/cv.pdf';
-import { handleDownload } from "../../../utils/Download";
 import useNavigateTo from "../../../utils/navigateTo";
 import './NavBar.css';
 
@@ -33,7 +30,7 @@ function NavBar() {
                 <Text text="Home" type="subheader" className={currentPage == "home" ? "current" : ""} onClick={() => navigateTo("/")}/>
                 <Text text="About Me" type="subheader" className={currentPage == "aboutme" ? "current" : ""} onClick={() => navigateTo("/aboutme")}/>
                 <Text text="Projects" type="subheader" className={currentPage == "projects" ? "current" : ""} onClick={() => navigateTo("/projects")}/>
-                <Text text="CV" type="subheader" onClick={() => handleDownload(CV, 'NoeJagerCV.pdf')}/>
+                <a href="/cv.pdf" download className="text-wrap"><h2 className="undefined text-wrap">CV</h2></a>
             </nav>
         </header>
     );

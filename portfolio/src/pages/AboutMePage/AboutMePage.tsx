@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { Head, ClientOnly } from 'vite-react-ssg';
+import { Head } from 'vite-react-ssg';
 
 import EducationSection from "./EducationSection";
 import ExperienceSection from "./ExperienceSection";
@@ -34,17 +34,11 @@ function AboutMePage() {
                 <title>About Me — Noé Jager</title>
                 <meta name="description" content="Education, work experience, and background of Noé Jager — ML Engineer with a Master's in Computer Science from University of Montréal." />
             </Head>
-            <ClientOnly>
-                {() => (
-                    <>
-                        <EducationSection/>
-                        <SideBar sections={navItems} />
-                        <ExperienceSection/>
-                        <HobbiesSection/>
-                        <TravelSection/>
-                    </>
-                )}
-            </ClientOnly>
+            <EducationSection/>
+            <SideBar sections={navItems} />
+            <ExperienceSection/>
+            <HobbiesSection/>
+            <TravelSection/>
         </>
     );
 }

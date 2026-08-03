@@ -1,4 +1,4 @@
-import { Head, ClientOnly } from 'vite-react-ssg';
+import { Head } from 'vite-react-ssg';
 import AllProjectsSection from "./AllProjectsSection";
 import RecommendedSection from "./RecommendedSection";
 
@@ -12,15 +12,9 @@ export default function ProjectsPage() {
                 <title>Projects — Noé Jager</title>
                 <meta name="description" content="Projects by Noé Jager — deep learning frameworks, full-stack AI applications, robotics, LLM agents, and self-hosted infrastructure." />
             </Head>
-            <ClientOnly>
-                {() => (
-                    <>
-                        <RecommendedSection/>
-                        <SideBar sections={projects} />
-                        <AllProjectsSection/>
-                    </>
-                )}
-            </ClientOnly>
+            <RecommendedSection/>
+            <SideBar sections={projects} />
+            <AllProjectsSection/>
         </>
     );
 }
