@@ -3,6 +3,26 @@ import type ProjectType from "../../interface/Project";
 export const projects: ProjectType[] = [
     {
         status: 1,
+        id: "home_lab",
+        title: "Home Lab — Self-Hosted Infrastructure on Recycled Hardware",
+        skills_id: ["proxmox", "kubernetes", "docker", "llm", "devops", "py"],
+        date: "May 2026 - Present",
+        summary: "Built a two-node home server cluster from repurposed gaming laptops running Proxmox VE and Kubernetes, orchestrating Dockerised workloads including local LLM inference, media serving, and self-hosted productivity services.",
+        description: [
+            {
+                title: "Overview",
+                text: [
+                    "Built a two-node home server cluster from repurposed gaming laptops, running Proxmox VE for bare-metal hypervisor management and hardware resource isolation.",
+                    "Deployed a Kubernetes cluster across both nodes, orchestrating Dockerised workloads including local LLM inference, media and file serving, and self-hosted productivity services.",
+                    "Hands-on experience with on-premise LLM inference on constrained hardware — directly relevant to sovereign AI deployment patterns."
+                ]
+            }
+        ],
+        externalLink: [],
+        featured: true
+    },
+    {
+        status: 1,
         id:"behavior-1k",
         title:"Behavior-1k Challenge: Multi-Task Robotic Learning in Simulation",
         skills_id:["robotics", "huggingface", "lerobot", "vla", "py"],
@@ -102,45 +122,21 @@ export const projects: ProjectType[] = [
     {
         status:1,
         id:"language-learning-app",
-        title: "Language Learning App: textbook support for learning a language",
-        skills_id: ["dbms", "sql", "sqlalchemy", "py", "pd", "fastapi", "nextjs", "full_stack", "soft_eng", "typescript"],
+        title: "Fluence — Multi-User Language Learning Platform with AI Tutoring",
+        skills_id: ["dbms", "sql", "sqlalchemy", "py", "flask", "nextjs", "full_stack", "soft_eng", "typescript", "docker", "kubernetes", "llm", "tailwind", "postgresql", "alembic"],
         date: "May 2025 - In Progress",
-        summary: "Application in production to add languages vocabulary, characters, grammars and exercises per course units, and keep a track of your progress.",
-        description: [{text: ["This Language Learning App is designed to assist users in learning new languages by providing structured course units that include vocabulary, characters, grammar lessons, and exercises. Users can add new content to the app, track their progress through various units, and review previously learned material. The app is built using Python and SQLAlchemy for database management, ensuring efficient data handling and retrieval. It serves as a comprehensive tool for language learners to enhance their skills in an organized manner."]}],
+        summary: "A full-stack, multi-user language learning platform deployed on Kubernetes with per-user configurable LLM backends for AI-assisted content generation, speech evaluation, and tutor feedback. Features 10+ exercise types, CJK enrichment, global search, and study tracking with daily stats and streak tracking.",
+        description: [{
+            text: [
+                "Fluence is a full-stack, multi-user language learning platform designed to organize vocabulary, grammar, characters, words, passages, and exercises across structured lessons.",
+                "Key features: multi-user system with per-user preferences and AI API configuration; 10+ exercise types including speaking, conversation, and quizz; AI-assisted example sentences, word definitions, and TTS audio via user-configured OpenAI-compatible endpoints; speech evaluation using Whisper STT with embedding-based scoring; LLM-generated tutor feedback with few-shot prompts; global CJK-aware search; study tracking with daily stats, commitment log, and practice heatmap; sources and tags for metadata on any learning element; automatic CJK enrichment (pinyin, romanization, stroke count, gloss translation); action-based backup system; Kubernetes deployment with PVC persistence.",
+                "Backend: Flask, SQLAlchemy with Alembic migrations, PostgreSQL/SQLite, APScheduler. Frontend: Next.js 15, React 19, TypeScript, Tailwind CSS 4. Infrastructure: Docker, Kubernetes (k3s). AI/ML: OpenAI-compatible API integration, Whisper, spaCy, Sentence Transformers, language-tool-python."
+            ]
+        }],
         externalLink: [
             {
                 logoType: "github",
-                url: "https://github.com/elnukakujo/language-learning-app"
-            }
-        ],
-        images:[
-            {
-                url: "https://raw.githubusercontent.com/elnukakujo/language-learning-app/refs/heads/main/assets/screenshots/home_page.png",
-                caption: "Current home page where users can add new languages and have some high level information about each language course."
-            },
-            {
-                url: "https://raw.githubusercontent.com/elnukakujo/language-learning-app/refs/heads/main/assets/screenshots/unit_page.png",
-                caption: "Example of a course unit page with vocabulary, characters, grammar and exercises sections."
-            },
-            {
-                url: "https://raw.githubusercontent.com/elnukakujo/language-learning-app/refs/heads/main/assets/screenshots/create_exercise_page.png",
-                caption: "Example of the create exercise page where users can add new exercises to a course unit by selecting which type of exercise among Translate, Fill-in-the-Blank, Essay, True-False, Question Answering, and custom one."
-            },
-            {
-                url: "https://raw.githubusercontent.com/elnukakujo/language-learning-app/refs/heads/main/assets/screenshots/matching_exercise.png",
-                caption: "Example of a matching exercise where users have to match pairs of elements."
-            },
-            {
-                url: "https://raw.githubusercontent.com/elnukakujo/language-learning-app/refs/heads/main/assets/screenshots/organize_exercise.png",
-                caption: "Example of an organize exercise where users have to organize a list of elements in the correct order."
-            },
-            {
-                url: "https://raw.githubusercontent.com/elnukakujo/language-learning-app/refs/heads/main/assets/screenshots/fill_the_blank_exercise.png",
-                caption: "Example of a fill-in-the-blank exercise where users have to fill in the missing words in a sentence."
-            },
-            {
-                url: "https://raw.githubusercontent.com/elnukakujo/language-learning-app/refs/heads/main/assets/screenshots/flashcard.png",
-                caption: "Example of a flashcard where users can review vocabulary, characters, and grammar."
+                url: "https://github.com/elnukakujo/fluence"
             }
         ],
         featured: true
@@ -152,7 +148,7 @@ export const projects: ProjectType[] = [
         skills_id: ["tts", "huggingface", "py"],
         date: "May 2025",
         summary: "Discovered Text2Speech tools for later projects purposes.",
-        description:[{text: ['Text2SpeechMultiLingualApp is a short project exploring multilingual speech synthesis using Coqui’s xTTS v2 model. It generates speech in languages like French, Chinese, and Japanese using voice samples from friends and online sources. I learned to install Python with Homebrew, manage PATH variables on macOS, and use tools like ffmpeg and yt-dlp for audio processing.']}],
+        description:[{text: ['Text2SpeechMultiLingualApp is a short project exploring multilingual speech synthesis using Coqui\'s xTTS v2 model. It generates speech in languages like French, Chinese, and Japanese using voice samples from friends and online sources. I learned to install Python with Homebrew, manage PATH variables on macOS, and use tools like ffmpeg and yt-dlp for audio processing.']}],
         externalLink: [
             {
                 logoType: "github",
@@ -294,6 +290,22 @@ export const projects: ProjectType[] = [
         featured: true
     },
     {
+        status: 2,
+        id: "my_family_story",
+        title: "Generative Agents for Large Language Model Family Story Generation",
+        skills_id: ["generative_agents", "graph_rag", "llm", "langchain", "neo4j", "prompt_eng", "gemini", "py"],
+        summary: "Leveraging advancements in Retrieval-Augmented Generation (RAG) and Generative Agents, this application stores family images and comments in a knowledge graph to generate a personalized family storybook.",
+        description: [
+            {
+                text: [
+                    "This project leverages Retrieval-Augmented Generation (RAG) and Generative Agents to create a personalized family storybook enriched with both text and visuals. A Neo4j knowledge graph stores family images, memories, and comments, allowing an LLM-powered agent to generate dynamic, context-aware narratives that reflect personal histories and relationships. Additionally, a dedicated image-selection agent explores the graph to retrieve relevant photos for each generated paragraph, ensuring meaningful visual storytelling. The final output is automatically formatted and converted into a Word document, providing a beautifully structured, shareable family album that brings memories to life in a seamless, AI-assisted storytelling experience."
+                ]
+            }
+        ],
+        date: "January - February 2025",
+        featured: false
+    },
+    {
         status: 1,
         id: "summoner_insight",
         title: "Summoner-Insight: Real-Time Visualization and Prediction Assistant",
@@ -325,21 +337,6 @@ export const projects: ProjectType[] = [
             }
         ],
         featured: false
-    },
-    {
-        status: 2,
-        id: "my_family_story",
-        title: "Generative Agents for Large Language Model Family Story Generation",
-        skills_id: ["generative_agents", "graph_rag", "llm", "langchain", "neo4j", "prompt_eng", "gemini", "py"],
-        summary: "Leveraging advancements in Retrieval-Augmented Generation (RAG) and Generative Agents, this application stores family images and comments in a knowledge graph to generate a personalized family storybook.",
-        description: [
-            {
-                text: [
-                    "This project leverages Retrieval-Augmented Generation (RAG) and Generative Agents to create a personalized family storybook enriched with both text and visuals. A Neo4j knowledge graph stores family images, memories, and comments, allowing an LLM-powered agent to generate dynamic, context-aware narratives that reflect personal histories and relationships. Additionally, a dedicated image-selection agent explores the graph to retrieve relevant photos for each generated paragraph, ensuring meaningful visual storytelling. The final output is automatically formatted and converted into a Word document, providing a beautifully structured, shareable family album that brings memories to life in a seamless, AI-assisted storytelling experience."
-                ]
-            }
-        ],
-        date: "January - February 2025"
     },
     {
         status: 2,
@@ -377,7 +374,8 @@ export const projects: ProjectType[] = [
                 text: "Mathemyths: Leveraging Large Language Models to Teach Mathematical Language through Child-AI Co-Creative Storytelling",
                 url: "https://arxiv.org/abs/2402.01927"
             }
-        ]
+        ],
+        featured: false
     },
     {
         status: 2,
@@ -423,7 +421,8 @@ export const projects: ProjectType[] = [
                 text: "Matters of (Meta-)Modeling",
                 url: "https://link.springer.com/article/10.1007/s10270-006-0017-9"
             }
-        ]
+        ],
+        featured: false
     },
     {
         status: 2,
@@ -467,7 +466,8 @@ export const projects: ProjectType[] = [
                 logoType: "github",
                 url: "https://github.com/elnukakujo/sign_language_recognition"
             }
-        ]
+        ],
+        featured: false
 
     },
     {
@@ -516,7 +516,8 @@ export const projects: ProjectType[] = [
                 logoType: "github",
                 url: "https://github.com/elnukakujo/clothing_classification"
             }
-        ]
+        ],
+        featured: false
     },
     {
         status: 2,
@@ -560,7 +561,8 @@ export const projects: ProjectType[] = [
                 text: "TMDB API",
                 url: "https://www.themoviedb.org/documentation/api"
             }
-        ]
+        ],
+        featured: false
     },
     {
         status: 2,
@@ -634,7 +636,24 @@ export const projects: ProjectType[] = [
                 text: "MediaPipe",
                 url: "https://github.com/google-ai-edge/mediapipe"
             }
-        ]
+        ],
+        featured: false
+    },
+    {
+        status: 2,
+        id: "handwriting_generator",
+        title: "Handwriting Recognition with Tensorflow",
+        skills_id: ["deepl", "cnn", "tf", "py"],
+        date: "September 2021 - January 2022",
+        summary: "Developed a Convolutional Neural Network (CNN) in Python with TensorFlow to recognize diverse handwriting styles under the guidance of Prof. Dr. Luis A. Leiva at the University of Luxembourg, using a dataset from a separate project.",
+        description: [
+            {
+                text: [
+                    "Under the guidance of Prof. Dr. Luis A. Leiva at the University of Luxembourg, I implemented a Convolutional Neural Network (CNN) in Python with TensorFlow to recognize diverse handwriting styles. Using a dataset from a separate project, the model was trained to replicate various handwriting styles, showcasing the power of CNNs in pattern recognition for handwritten text. This project provided valuable insights into the application of deep learning for handwriting analysis."
+                ]
+            }
+        ],
+        featured: false
     },
     {
         status: 2,
@@ -655,22 +674,8 @@ export const projects: ProjectType[] = [
                 url: "https://www.youtube.com/embed/QCm1njo0ayM?si=dLWsbZZNMrXH4XxF",
                 caption: "Privacy App Figma Prototype Overview"
             }
-        ]
-    },
-    {
-        status: 2,
-        id: "handwriting_generator",
-        title: "Handwriting Recognition with Tensorflow",
-        skills_id: ["deepl", "cnn", "tf", "py"],
-        date: "September 2021 - January 2022",
-        summary: "Developed a Convolutional Neural Network (CNN) in Python with TensorFlow to recognize diverse handwriting styles under the guidance of Prof. Dr. Luis A. Leiva at the University of Luxembourg, using a dataset from a separate project.",
-        description: [
-            {
-                text: [
-                    "Under the guidance of Prof. Dr. Luis A. Leiva at the University of Luxembourg, I implemented a Convolutional Neural Network (CNN) in Python with TensorFlow to recognize diverse handwriting styles. Using a dataset from a separate project, the model was trained to replicate various handwriting styles, showcasing the power of CNNs in pattern recognition for handwritten text. This project provided valuable insights into the application of deep learning for handwriting analysis."
-                ]
-            }
-        ]
+        ],
+        featured: false
     },
     {
         status: 2,
@@ -685,7 +690,8 @@ export const projects: ProjectType[] = [
                     "Under the guidance of Prof. Dr. Christoph Schommer at the University of Luxembourg, I created a transformer architecture in Python using the TensorFlow library for building a chatbot. The project involved data extraction, cleaning, online article research, and defining and training a model before creating the chatbot interface. The model consisted of three parts: an encoding layer, an Attention layer, and a decoding layer. It was trained on Reddit threads containing parent commentaries in both French and English, allowing the chatbot to engage in small talk effectively."
                 ]
             }
-        ]
+        ],
+        featured: false
     },
     {
         status: 2,
@@ -700,7 +706,8 @@ export const projects: ProjectType[] = [
                     "Under the guidance of Dr. Jose Luis Sanchez Lopez at the University of Luxembourg, I trained a drone to navigate and avoid obstacles in a simulated environment (AirSim) using Python. The drone's navigation was powered by Q-learning, where I defined a Q-table and implemented rewards to enable the drone to learn and improve its navigation strategy autonomously."
                 ]
             }
-        ]
+        ],
+        featured: false
     },
     {
         status: 2,
@@ -721,7 +728,8 @@ export const projects: ProjectType[] = [
                 url: "https://www.youtube.com/embed/V8-CfdUBPYI?si=eejS9f7BtOpMigFP",
                 caption: "Group Drone Simulation Overview"
             }
-        ]
+        ],
+        featured: false
     },
     {
         status: 2,
@@ -736,7 +744,8 @@ export const projects: ProjectType[] = [
                     "Under the guidance of Dr. Gregoire Danoy at the University of Luxembourg, I learned to work with the Sparki robot and programmed it using Sparkiduino. The task was to code Sparki to chase another Sparki while ensuring both robots stayed within an enclosure marked by ground markers. This project involved both robot control and spatial awareness programming."
                 ]
             }
-        ]
+        ],
+        featured: false
     }
 ]
 
@@ -943,7 +952,8 @@ export const skills = [
         "projects": [
             "my_family_story",
             "math_storytelling_llm_human_comparative_study",
-            "openai_assistant_m2_gen"
+            "openai_assistant_m2_gen",
+            "language-learning-app"
         ]
     },
     {
@@ -1237,7 +1247,8 @@ export const skills = [
         "type": "framework",
         "name": "Flask",
         "projects": [
-            "my_memory_chat"
+            "my_memory_chat",
+            "language-learning-app"
         ],
         "logo": flaskLogo
     },
@@ -1367,7 +1378,7 @@ export const skills = [
         "id": "tailwind",
         "type": "framework",
         "name": "Tailwind CSS",
-        "projects": [],
+        "projects": ["language-learning-app"],
         "logo": tailwindLogo
     },
     {
@@ -1524,7 +1535,7 @@ export const skills = [
         id: "typescript",
         type: "language",
         name: "TypeScript",
-        projects: [],
+        projects: ["language-learning-app"],
         experience: [],
         logo: typescriptLogo
     },
@@ -1540,7 +1551,7 @@ export const skills = [
         id: "fastapi",
         type: "framework",
         name: "FastAPI",
-        projects: ["language-learning-app"],
+        projects: [],
         experience: [],
         logo: fastapiLogo
     },
@@ -1596,5 +1607,50 @@ export const skills = [
         projects: [
             "behavior-1k"
         ]
+    },
+    {
+        id: "docker",
+        type: "tool",
+        name: "Docker",
+        projects: ["home_lab", "language-learning-app"],
+        experience: ["tpquants"]
+    },
+    {
+        id: "kubernetes",
+        type: "tool",
+        name: "Kubernetes",
+        projects: ["home_lab", "language-learning-app"]
+    },
+    {
+        id: "proxmox",
+        type: "tool",
+        name: "Proxmox VE",
+        projects: ["home_lab"]
+    },
+    {
+        id: "postgresql",
+        type: "language",
+        name: "PostgreSQL",
+        projects: ["language-learning-app"],
+        experience: ["tpquants"]
+    },
+    {
+        id: "aws",
+        type: "tool",
+        name: "AWS",
+        projects: ["math_storytelling_llm_human_comparative_study"],
+        experience: ["tpquants"]
+    },
+    {
+        id: "rag",
+        type: "concept",
+        name: "RAG",
+        projects: ["my_family_story", "my_memory_chat"]
+    },
+    {
+        id: "alembic",
+        type: "framework",
+        name: "Alembic",
+        projects: ["language-learning-app"]
     }
 ]

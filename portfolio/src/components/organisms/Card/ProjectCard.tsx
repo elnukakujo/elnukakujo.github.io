@@ -11,8 +11,6 @@ import List from "../../molecules/List";
 import SwipeElement from "../SwipeElement";
 import Link from "../../atoms/Link";
 
-import Markdown from "react-markdown";
-
 import type TagType from "../../../interface/Tag";
 
 type ProjectCardProps = {
@@ -76,8 +74,8 @@ export default function ProjectCard({ size, layer, className, project, overview 
                 {!overview && project.description.map((paragraph, index) => (
                     <SimpleCard key={index} size="medium" layer={layer+1} className="items-start">
                         {paragraph.title && <Text text={paragraph.title} type="subsubheader" className="w-full"/>}
-                        {paragraph.text.map((text, index) => (
-                            <Markdown key={index}>{text}</Markdown>
+                        {paragraph.text.map((text, i) => (
+                            <p key={i}>{text}</p>
                         ))}
                     </SimpleCard>
                 ))}

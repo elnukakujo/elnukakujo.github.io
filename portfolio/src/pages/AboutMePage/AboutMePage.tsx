@@ -1,20 +1,18 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { Head, ClientOnly } from 'vite-react-ssg';
 
-import PageLayout from '../../layouts/PageLayout';
 import EducationSection from "./EducationSection";
 import ExperienceSection from "./ExperienceSection";
-import CountriesVisitedSection from "./CountriesVisitedSection";
-import TripsSection from "./TripsSection";
+import TravelSection from "./TravelSection";
 import HobbiesSection from "./HobbiesSection";
 import SideBar from "../../components/organisms/SideBar";
 
 const navItems = [
     { title: "Education", id: "education" },
     { title: "Experience", id: "experience" },
-    { title: "Countries visited", id: "countries-visited" },
-    { title: "Trips", id: "trips" },
     { title: "Hobbies", id: "hobbies" },
+    { title: "Travel", id: "travel" },
 ];
 
 function AboutMePage() {
@@ -31,14 +29,23 @@ function AboutMePage() {
     }, []);
 
     return (
-        <PageLayout>
-            <EducationSection/>
-            <SideBar sections={navItems} />
-            <ExperienceSection/>
-            <CountriesVisitedSection/>
-            <TripsSection/>
-            <HobbiesSection/>
-        </PageLayout>
+        <>
+            <Head>
+                <title>About Me — Noé Jager</title>
+                <meta name="description" content="Education, work experience, and background of Noé Jager — ML Engineer with a Master's in Computer Science from University of Montréal." />
+            </Head>
+            <ClientOnly>
+                {() => (
+                    <>
+                        <EducationSection/>
+                        <SideBar sections={navItems} />
+                        <ExperienceSection/>
+                        <HobbiesSection/>
+                        <TravelSection/>
+                    </>
+                )}
+            </ClientOnly>
+        </>
     );
 }
 

@@ -14,14 +14,14 @@ function NavBar() {
     const [scrolled, setScrolled] = useState(false);
     const navigateTo = useNavigateTo();
 
-    const handleScroll = () => {
-        const isScrolled = window.scrollY > 75;
-        if (isScrolled !== scrolled) {
-            setScrolled(isScrolled);
-        }
-    };
-    
-    window.addEventListener('scroll', handleScroll);
+    useEffect(() => {
+        const handleScroll = () => {
+            const isScrolled = window.scrollY > 75;
+            setScrolled(prev => isScrolled !== prev ? isScrolled : prev);
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     useEffect(() => {
         setCurrentPage(location.pathname === "/" ? "home" :location.pathname.substring(1));

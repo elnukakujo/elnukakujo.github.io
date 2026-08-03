@@ -5,4 +5,11 @@ import tailwindcss from '@tailwindcss/vite'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss(), 'babel-plugin-react-compiler'],
+  ssr: {
+    noExternal: [
+      '@fortawesome/react-fontawesome',
+      '@fortawesome/free-solid-svg-icons',
+      '@fortawesome/free-brands-svg-icons',
+    ],
+  },
 })

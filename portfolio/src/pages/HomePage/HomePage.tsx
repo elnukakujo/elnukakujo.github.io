@@ -1,13 +1,23 @@
-import PageLayout from "../../layouts/PageLayout";
+import { Head, ClientOnly } from 'vite-react-ssg';
 import HeroSection from "./HeroSection";
 import SkillsSection from "./SkillsSection";
 
 function HomePage() {
     return (
-        <PageLayout>
-            <HeroSection/>
-            <SkillsSection />
-        </PageLayout>
+        <>
+            <Head>
+                <title>Noé Jager — ML Engineer</title>
+                <meta name="description" content="ML Engineer portfolio — AI/ML, full-stack development, cloud infrastructure. Projects in deep learning, LLMs, data privacy, and self-hosted infrastructure." />
+            </Head>
+            <ClientOnly>
+                {() => (
+                    <>
+                        <HeroSection/>
+                        <SkillsSection />
+                    </>
+                )}
+            </ClientOnly>
+        </>
     );
 }
 

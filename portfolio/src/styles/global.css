@@ -82,6 +82,13 @@
         @apply transition-all duration-300 ease-in-out;
     }
 }
+@layer components {
+    .section-container {
+        @apply flex flex-col w-full max-w-[80rem];
+        gap: 3rem;
+    }
+}
+
 @layer utilities {
     .card-large {
         @apply w-full max-w-[40rem] sm:max-w-[64rem] shadow-xl gap-3 md:gap-6 py-3 md:py-6 px-5 md:px-10;

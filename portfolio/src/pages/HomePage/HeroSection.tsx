@@ -29,15 +29,15 @@ export default function HeroSection(){
                     size="fit"
                     backCard={
                         <>
-                            <Link text={{text:"Outside Work", type:"subheader", className:"text-nowrap!"}} path='/aboutme' id='countries-visited' className='w-full'/>
+                            <Link text={{text:"Travel", type:"subheader", className:"text-nowrap!"}} path='/aboutme' id='travel' className='w-full'/>
                             <hr className='w-full border-1 border-text'/>
                             <Image url={shimanamiKaido} size="medium" className='rounded-xl' altText='Picture of Shimanami Kaido cycling road in Japan'/>
                         </>
                     }
-                    className='!w-50 md:w-58!'
+                    className='w-50! md:w-58!'
                 >
                     <Image url={steveHead} size="small"/>
-                    <Link text={{text:"Outside Work", type:"subheader", className:"text-nowrap!"}} path='/aboutme' id='countries-visited'/>
+                    <Link text={{text:"Travel", type:"subheader", className:"text-nowrap!"}} path='/aboutme' id='travel'/>
                 </BubbleCard>
                 <BubbleCard
                     size="fit"
@@ -48,7 +48,7 @@ export default function HeroSection(){
                             <Image url={udemImage} size="medium" className="rounded-xl" altText='Picture of University of Montreal' />
                         </>
                     }
-                    className='!w-50 md:w-58!'
+                    className='w-50! md:w-58!'
                 >
                     <Image url={book} size="small" />
                     <Link text={{text:"Education", type:"subheader", className:"text-nowrap!"}} path='/aboutme' id='education'/>
@@ -60,7 +60,7 @@ export default function HeroSection(){
                 >
                     <Image url={profile} altText='Picture of me' size='medium' className="rounded-full -mt-45 shadow-lg"/>
                     <Text text="Noe Jager" type='header'/>
-                    <Text text="Data Scientist | ML Engineer" type='subheader'/>
+                    <Text text="ML Engineer" type='subheader'/>
                     <List 
                         items={[
                             { type: "externalLink", logoType: 'github', url: 'https://github.com/elnukakujo' },
@@ -81,14 +81,14 @@ export default function HeroSection(){
                             <Image size="medium" url={neuralNetwork} altText="Visualization of Neural Network/Multi Layer Perceptron" className='rounded-xl'/>
                         </>
                     }
-                    className='!w-50 md:w-58!'
+                    className='w-50! md:w-58!'
                 >
                     <Image size="small" url={pickaxe} altText="Minecraft Pickaxe Icon"/>
                     <Link text={{text:"Projects", type:"subheader", className:"text-nowrap!"}} path='/projects' />
                 </BubbleCard>
                 <BubbleCard
                     size="fit"
-                    className='!w-50 md:w-58!'
+                    className='w-50! md:w-58!'
                 >
                     <Image size="small" url={expBottle} altText="Minecraft Experience Bottle Icon" />
                     <Link text={{text:"Experience", type:"subheader"}} path='/aboutme' id='experience' />

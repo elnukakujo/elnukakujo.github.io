@@ -12,7 +12,7 @@ function SkillsSection(){
     };
 
     return (
-        <section className="w-main mx-auto flex flex-col bg-transparent gap-lg">
+        <section className="mx-auto flex flex-col bg-transparent gap-lg">
             <Text text="Skills & Technologies" type='header'/>
             {
                 Object.entries(skillsByType).map(([type, skills]) => (

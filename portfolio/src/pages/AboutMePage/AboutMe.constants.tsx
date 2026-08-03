@@ -12,10 +12,10 @@ import Degree from "../../interface/Degree";
 
 export const education: Degree[] = [
     {
-        status: 1,
+        status: 2,
         id: "masterUdem",
         name: "M.Sc in Informatics",
-        date: "September 2022 - Upcoming",
+        date: "September 2022 - March 2026",
         university: [{
             id: "udem",
             name: "University of Montréal",
@@ -100,9 +100,40 @@ import appoxLogo from "../../assets/logo/experience/appox.png";
 
 export const experience: ProjectType[] = [
     {
-        id: "internshipAppOX",
+        id: "tpquants",
         status: 1,
-        title: "Research Internship",
+        title: "Software & Cloud Engineer (CDD)",
+        company: [
+            {
+                id: "tpquants",
+                name: "TPQuants",
+            }
+        ],
+        date: "May 2026 - August 2026",
+        summary: "Led full rewrite of a Replit prototype into a production-grade React/TypeScript + PostgreSQL application for automated Transfer Pricing Audit report generation, with AWS infrastructure from scratch.",
+        description: [
+            {
+                title: "Context",
+                text: [
+                    "TPQuants needed to transform a rapid prototype built on Replit into a robust, production-grade client-server application for automated Transfer Pricing Audit report generation."
+                ]
+            },
+            {
+                title: "Approach",
+                text: [
+                    "Led the full rewrite into a React / TypeScript + PostgreSQL application.",
+                    "Designed and deployed AWS infrastructure from scratch: VPC, EC2 instances, Aurora RDS cluster, and S3 buckets — including network segmentation, IAM policies, and secure connectivity.",
+                    "Drove ongoing migration, maintenance, and monitoring of cloud resources, establishing repeatable deployment patterns for future engineering team."
+                ]
+            }
+        ],
+        skills_id: ['react', 'typescript', 'sql', 'postgresql', 'aws', 'full_stack', 'soft_eng', 'devops', 'py', 'flask'],
+        externalLink: []
+    },
+    {
+        id: "internshipAppOX",
+        status: 2,
+        title: "ML/Data Intern",
         company: [
             {
                 id: "appox",
@@ -111,7 +142,7 @@ export const experience: ProjectType[] = [
                 logoUrl: appoxLogo
             }
         ],
-        date: "May 2025 - In Progress",
+        date: "May 2025 - February 2026",
         summary: "Representation Learning for Tabular Data Confidentiality Evaluation",
         description: [
             {
