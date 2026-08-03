@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://elnukakujo.github.io/sitemap.xml
