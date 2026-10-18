@@ -97,6 +97,8 @@ import type ProjectType from "../../interface/Project";
 
 // @ts-ignore
 import appoxLogo from "../../assets/logo/experience/appox.png";
+// @ts-ignore
+import tpquantsLogo from "../../assets/logo/experience/tpquants.png";
 
 export const experience: ProjectType[] = [
     {
@@ -107,9 +109,11 @@ export const experience: ProjectType[] = [
             {
                 id: "tpquants",
                 name: "TPQuants",
+                websiteUrl: "https://www.tpquants.com/",
+                logoUrl: tpquantsLogo
             }
         ],
-        date: "May 2026 - August 2026",
+        date: "May 2026 - Now",
         summary: "Led full rewrite of a Replit prototype into a production-grade React/TypeScript + PostgreSQL application for automated Transfer Pricing Audit report generation, with AWS infrastructure from scratch.",
         description: [
             {
